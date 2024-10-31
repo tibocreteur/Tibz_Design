@@ -54,12 +54,6 @@ section.top-page {
     z-index: -1; /* Place la vidéo derrière le contenu */
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-
-}
-
 a {
     text-decoration: none;
     color: #ffffff;
