@@ -1,0 +1,72 @@
+.skills-section {
+
+    background-color: #000000; /* Couleur de fond de la section */
+    height: auto;
+    padding-bottom: 70px;
+}
+
+/* Titre de la section */
+.skills-section h2 {
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* Liste des compétences */
+.skills-list {
+    list-style-type: none; /* Enlève les puces par défaut */
+    padding: 0;
+    margin: 0 auto;
+    
+}
+
+/* Chaque compétence */
+.skills-list li {
+    color: #ffffff;
+    font-size: 20px;
+    transform-origin: left;
+    padding: 7px 0px; /* Ajoute du padding pour l'espacement interne */
+    transition: transform 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: fit-content;
+    margin-left: 70px;
+}
+
+/* Effet au survol de chaque compétence */
+.skills-list li:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'élément au survol */
+    color: #a6ff00;
+    text-decoration: underline;
+}
+
+.skills-list li h3 {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+    text-transform: lowercase; /* Force les titres à être en minuscule */
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: normal; /* Enlève le gras */
+}
+
+/* Pseudo-élément pour le point */
+.skills-list li h3::before {
+    content: '';
+    font-family: "IBM Plex Mono", monospace;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    background-color: #a6ff00; /* Le point est blanc par défaut */
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease; /* Ajoute la transition de couleur */
+    text-decoration: underline; /* Soulignement lors du survol */
+}
+
+h3 {
+    font-size: 25px;
+    text-transform: uppercase; /* Met le texte en majuscules */
+    color: #ffffff; /* Couleur du titre du projet */
+    font-family: "IBM Plex Mono", monospace;
+}

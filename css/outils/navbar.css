@@ -1,0 +1,142 @@
+@import url('police.css');
+
+::selection {
+    background-color: #ff6600; /* Couleur de fond du surlignement */
+}
+
+.top-page {
+    display:flex;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.entete img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit l'écran sans déformer la vidéo */
+    z-index: -1; /* Place la vidéo derrière le contenu */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nomduprojet {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.2rem;
+}
+
+.prestataire {
+    font-family: "IBM Plex Mono", monospace;
+    display: flex; /* Pour aligner les éléments horizontalement */
+    align-items: center; /* Pour centrer verticalement */
+}
+
+h3, .prestataire span {
+    font-family: "IBM Plex Mono", monospace;
+    margin: 0; /* Supprime les marges par défaut */
+}
+
+.link.boutontry {
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+    background-color: #a6ff0000;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.link.boutontry:hover {
+    color: #434343; /* Couleur du texte au survol */
+    background-color: #ffffff; /* Couleur de fond au survol */
+}
+
+.navbar {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #000000a3;
+    padding: 1.5rem;
+    padding-right: 0.5rem;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    color: white;
+}
+
+.navbar h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.social-contact {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.insta img {
+    height: 40px;
+    margin-right: 10px; /* Espace entre l'icône Instagram et le bouton */
+    padding: 5px 15px;
+    margin-top: 4px;
+}
+
+
+.petitlogo img {
+    margin-top: 4px;
+    width: 35px;
+    margin-right: 60px;
+
+}
+.boutonmecontacter {
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+    background-color: #a6ff0000;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 3px solid rgb(255, 255, 255);
+    transition: background-color 0.5s ease; 
+    transition: color 0.5s ease; 
+}
+
+.boutonmecontacter:hover {
+    color: #434343;
+    background-color: #ffffff;
+
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+a:hover {
+    color: #d8f4ff;
+}
+
+.barre-verticale {
+    width: 2px; /* Largeur de la barre */
+    height: 25px; /* Hauteur de la barre */
+    background-color: #ffffff; /* Couleur de la barre */
+    margin-inline: 10px; /* Espacement autour de la barre */
+}
