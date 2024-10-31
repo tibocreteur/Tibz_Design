@@ -6,10 +6,13 @@
 
 }
 
+html {
+    font-size: 16px;
+}
 /*image de fond*/
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: #ffffff;
     font-family: "IBM Plex Mono", monospace;
