@@ -1,6 +1,6 @@
 .skills-section {
 
-    background-color: #000000; /* Couleur de fond de la section */
+    background-color: var(--backgroundaccueil);/* Couleur de fond de la section */
     height: auto;
     padding-bottom: 70px;
 }
@@ -69,4 +69,5 @@ h3 {
     text-transform: uppercase; /* Met le texte en majuscules */
     color: #ffffff; /* Couleur du titre du projet */
     font-family: "IBM Plex Mono", monospace;
-}
+}  
+

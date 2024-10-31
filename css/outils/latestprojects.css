@@ -1,44 +1,23 @@
-section.latestprojectstitre {
-    background-color: #000000;
-}
-
-.latestprojectstitre {
-    color: #ffffff;
-    place-items: center;
-    padding: 50px;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 .projects-section {
     display: flex;
     flex-wrap: wrap; /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
     justify-content: center; /* Centre les panneaux */
-    background-color: #000000;
+    background-color: var(--backgroundaccueil);
     height: auto;
     
-}
-
-.project-info {
-    display: flex; /* Utilise flexbox pour aligner les éléments */
-    align-items: center; /* Centre verticalement le contenu */
-    size: 30%;
-
 }
 
 .project-panel {
     position: relative;
     margin-inline: 2px;
+    gap: 2px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 30%; /* Mettre à 30% de la largeur du conteneur */
     overflow: hidden;
-    opacity: 0.9; /* Opacité réduite par défaut */
     transition: opacity 0.3s ease; 
 }
 
 .project-image {
-    border-radius: 5px;
     width: 100%; /* Largeur à 100% du conteneur */
     height: 240px; /* Hauteur fixée pour créer un carré */
     object-fit: cover;
@@ -47,36 +26,15 @@ section.latestprojectstitre {
 
 .project-image:hover {
     filter: grayscale(0%) contrast(1); /* Applique le noir et blanc */
-    border-radius: 5px;
-    transition: filter 0.9s ease;
+    transition: 0.3s ease;
 }
-
-.project-panel:hover {
-    opacity: 1; /* Opacité à 100% quand on survole la section */
-}
-
-.project-panel:hover h3 {
-    transition: color 0.5s ease; /* Ajoute une transition fluide */
-}
-
-.project-panel:hover span{
-    color: #ffffff; /* Change la couleur du titre quand on survole l'image */
-    transition: color 0.3s ease; /* Ajoute une transition fluide */
-}
-
-.project-panel:hover .barre-verticale{
-    background-color: #ffffff; /* La barre devient blanche au survol */
-    transition: background-color 0.3s ease; /* Transition fluide pour le changement de couleur */
-}
-
 
 @media (max-width: 768px) {
     .projects-section {
         display: flex;
         flex-wrap: wrap; /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
-        flex-direction: column ;
-        flex-wrap:nowrap ;
         align-items: center;
+        flex-shrink: 2;
 
     }
     .projects-section img {
@@ -87,7 +45,7 @@ section.latestprojectstitre {
 
     }
     .project-panel {
-        width: 90%; /* Mettre à 30% de la largeur du conteneur */
+        width: 40%; /* Mettre à 30% de la largeur du conteneur */
     }
 
 }

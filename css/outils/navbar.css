@@ -1,18 +1,9 @@
 @import url('police.css');
-
-::selection {
-    background-color: #ff6600; /* Couleur de fond du surlignement */
-}
+@import url('color.css');
 
 html {
     font-size: 16px;
 }
-
-h3{
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 1.2rem;
-}
-
 
 a {
     text-decoration: none;
@@ -52,9 +43,9 @@ a:hover {
     align-items: center;
 }
 
-.navbar-project {
+.navbar-project h3{
     font-family: "IBM Plex Mono", monospace;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     margin-left: 65px;
 }
 
@@ -83,6 +74,7 @@ a:hover {
     backdrop-filter: blur(10px);
     z-index: 1000;
     color: white;
+    user-select: none;
 }
 
 .social-contact {
@@ -111,8 +103,8 @@ a:hover {
     border-radius: 10px;
     outline: none;
     border: 3px solid rgb(255, 255, 255);
-    transition: background-color 0.5s ease; 
-    transition: color 0.5s ease; 
+    transition: background-color 0.7s ease-in-out; 
+    transition: color 0.1s ease-in-out; 
 }
 
 .navbar-button:hover {
@@ -140,5 +132,18 @@ a:hover {
     height: 25px; /* Hauteur de la barre */
     background-color: #ffffff; /* Couleur de la barre */
     margin-inline: 10px; /* Espacement autour de la barre */
+}
+
+@media (max-width: 768px) {
+    .navbar-client {
+            visibility: hidden;
+    }
+    
+    .navbar-client span {
+        visibility: hidden;
+    }
+    .navbar-project h3{
+        visibility: hidden;
+    }
 }
 

@@ -44,3 +44,8 @@ p {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
+
+@keyframes textFadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}

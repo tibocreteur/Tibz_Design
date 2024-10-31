@@ -1,6 +1,7 @@
-@import url(../outils/latestprojects.css);
+@import url('../outils/latestprojects.css');
 @import url('../outils/navbar.css');
 @import url('../outils/skills.css');
+@import url('../outils/color.css');
 
 html {
     font-size: 16px;
@@ -77,6 +78,19 @@ a:hover{
     width: 250px;
     display: flex;
     place-items: center;
+    animation: textFadeIn 1s ease-in-out;
 }
 
-/*------------------------------
+section.latestprojectstitre {
+    background-color: var(--backgroundaccueil);
+}
+
+.latestprojectstitre {
+    background-color: #000000;
+    color: #ffffff;
+    place-items: center;
+    padding: 50px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
