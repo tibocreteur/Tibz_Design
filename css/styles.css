@@ -1,3 +1,10 @@
+@import url('palettecouleur.css');
+@import url('police.css');
+
+html {
+    font-size: 16px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,21 +13,14 @@
 
 }
 
-html {
-    font-size: 16px;
-}
-/*image de fond*/
-
 h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #ffffff;
-    font-family: "IBM Plex Mono", monospace;
-    
+    font-family: "IBM Plex Mono", monospace; 
 }
 
 p {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 20px;
     color: #ffffff;
@@ -178,6 +178,7 @@ section.latestprojectstitre {
     justify-content: center; /* Centre les panneaux */
     background-color: #000000;
     height: auto;
+    margin: -4px;
     
 }
 
@@ -229,10 +230,13 @@ h3 {
     object-fit: cover;
     filter: grayscale(80%) contrast(0.5) ; /* Applique le noir et blanc */
     transition: filter 0.5s ease;
+    transition: padding 0.5s ease;
+
 }
 
 .project-image:hover {
     filter: grayscale(0%) contrast(1); /* Applique le noir et blanc */
+    padding: 7px;
 }
 
 .project-panel:hover {
@@ -361,35 +365,7 @@ h3 {
     height: auto;
 }
 
-/* Section Gauche (Sidebar) */
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 200px; /* Largeur de la sidebar */
-    height: 100%;
-    background-color: #000000; /* Couleur de fond */
-    color: #ecf0f1; /* Couleur du texte */
-    padding-left: 40px;
-    padding-right: 20px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-}
 
-.sidebar a{
-    display: center;
-    margin-top: 350px; /* Marge en haut du lien */
-    text-align: center;
-    padding: 20px;
-    background-color: #a6ff00; /* Couleur de fond du lien */
-    color: rgb(0, 0, 0); /* Couleur du texte */
-    text-decoration: none; /* Enlève le soulignement */
-    border-radius: 10px;
-    font-family: "IBM Plex Mono", monospace;
-    transition: all 0.3s ease; /* Pour une transition douce */
-    width: auto;
-}
 
 .link:hover {
     background-color: #ffffff; /* Couleur de fond au survol */
@@ -478,7 +454,6 @@ h3 {
 }
 
 .infomouvaplan {
-
     margin-top: 30px;
     height: auto;
     background-color: #ffffff;
@@ -585,46 +560,6 @@ h3 {
 }
 
 /* Style pour l'explication */
-.palette {
-    display: flex; /* Utiliser le flex pour l'alignement horizontal */
-    width: 100%; /* Occupe toute la largeur de l'écran */
-    border-radius: 25px; /* Coins arrondis pour le conteneur */
-    overflow: hidden; /* Cache le débordement lors de l'élargissement */
-    height: 300px;
-}
-
-.color {
-    flex: 1; /* Chaque couleur prendra une part égale de l'espace disponible */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transition: flex 0.45s ease;
-}
-
-.color:hover {
-    flex: 1.2; /* Élargir la couleur au survol */
-}
-
-.color-name {
-    color: white;
-    font-size: 24px;
-    opacity: 0.1;
-    transition: opacity 0.45s ease;
-}
-
-.color:hover .color-name {
-    opacity: 0.4;
-}
-
-.palette span{
-    font-family:Arial, Helvetica, sans-serif;
-    color: black;
-    font-size: 1.3em;
-    font-weight: bold;
-}
 
 .carte iframe{
 
@@ -792,40 +727,6 @@ h3 {
     color: #333;
     margin-top: 40px;
 }
-
-
-
-
-
-@font-face {
-    font-family: 'Gruno Trial'; /* Nom que tu veux donner à la police */
-    src: url('polices/Gruno Trial.otf') format('opentype'); /* Chemin vers le fichier de police */
-    font-weight: normal; /* Poids normal */
-    font-style: normal; /* Style normal */
-}
-
-@font-face {
-    font-family: 'Inter'; /* Nom que tu veux donner à la police */
-    src: url('polices/Inter_28pt-Regular.ttf') format('truetype'); /* Chemin vers le fichier de police */
-    font-weight: normal; /* Poids normal */
-    font-style: normal; /* Style normal */
-}
-
-@font-face {
-    font-family: 'EricaOne-Regular'; /* Nom que tu veux donner à la police */
-    src: url('polices/EricaOne-Regular.ttf') format('truetype'); /* Chemin vers le fichier de police */
-    font-weight: normal; /* Poids normal */
-    font-style: normal; /* Style normal */
-}
-
-@font-face {
-    font-family: 'Inter'; /* Nom de la même police */
-    src: url('polices/Inter_28pt-Black.ttf') format('truetype'); /* Chemin vers le fichier de police black */
-    font-weight: bold; /* Indique que c'est une police en gras (ou black) */
-    font-style: normal; /* Style normal */
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
 
 .presentionfont {
     display: flex; /* Utilise Flexbox pour l'alignement */
