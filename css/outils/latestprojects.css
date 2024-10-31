@@ -68,3 +68,26 @@ section.latestprojectstitre {
     background-color: #ffffff; /* La barre devient blanche au survol */
     transition: background-color 0.3s ease; /* Transition fluide pour le changement de couleur */
 }
+
+
+@media (max-width: 768px) {
+    .projects-section {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
+        flex-direction: column ;
+        flex-wrap:nowrap ;
+        align-items: center;
+
+    }
+    .projects-section img {
+        width: 100%;
+        filter: grayscale(0%) contrast(1) ; /* Applique le noir et blanc */
+        height: 150px;
+        margin-bottom: 5px;
+
+    }
+    .project-panel {
+        width: 90%; /* Mettre à 30% de la largeur du conteneur */
+    }
+
+}

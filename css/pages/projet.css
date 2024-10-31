@@ -85,20 +85,22 @@
 
 }
 
-/* Style pour le titre */
-.titredelexplication{
-    margin-right: px; /* Espace entre le titre et l'explication */
-}
 
 /* Style pour l'explication */
 .texteexplicatif{
     margin-right: 5%;
     max-width: 100%; /* Limite la largeur de l'explication si besoin */
     text-align: justify;
-    line-height: 1.7; /* Augmente l'espacement entre les lignes */
+    line-height: 1.5; /* Augmente l'espacement entre les lignes */
     max-width: 610px; /* Limite la largeur du pavé pour une meilleure lisibilité */
     margin-bottom: -30px;
+    font-size: 1rem;
 
+}
+
+.titredelexplication h2{
+    font-size: 9rem;
+    c
 }
 
 .doubleimagemouvaplan{

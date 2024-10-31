@@ -34,7 +34,7 @@ p {
 
 section.top-page {
     background-color: #000000;
-    background: url('../video/Trailer\ KAIZEN\ Everest.mp4');
+    background: url('../../video/tout.mp4');
     background-size: cover;
     background-position: center;
     height: 100vh;

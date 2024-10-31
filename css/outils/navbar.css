@@ -4,6 +4,11 @@
     background-color: #ff6600; /* Couleur de fond du surlignement */
 }
 
+html {
+    font-size: 16px;
+}
+
+
 .top-page {
     display:flex;
     height: 100vh;
@@ -140,3 +145,4 @@ a:hover {
     background-color: #ffffff; /* Couleur de la barre */
     margin-inline: 10px; /* Espacement autour de la barre */
 }
+
