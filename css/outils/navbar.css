@@ -27,9 +27,16 @@ html {
     z-index: -1; /* Place la vidéo derrière le contenu */
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nomduprojet {
     font-family: "IBM Plex Mono", monospace;
     font-size: 1.2rem;
+    margin-left: 65px;
 }
 
 .prestataire {
@@ -96,8 +103,6 @@ h3, .prestataire span {
 .petitlogo img {
     margin-top: 4px;
     width: 35px;
-    margin-right: 60px;
-
 }
 .boutonmecontacter {
     font-size: 1rem;
