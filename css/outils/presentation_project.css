@@ -20,8 +20,8 @@
   }
 
 .fullscreen ::selection {
-    background-color: #ffd900; /* Couleur de surlignage (jaune doré) */
-    color: #ff44007a; /* Couleur du texte surligné */
+    background-color: #323d5290; /* Couleur de surlignage (jaune doré) */
+    color: #ffffff; /* Couleur du texte surligné */
 }
 
 .fullscreen {
