@@ -14,6 +14,11 @@
 
 }
 
+.tri-images img:hover {
+    transform: scale(1.02); /* Agrandit l'image à 110% lorsqu'on la survole */
+    transition: 0.3s ease;
+  }
+
 .fullscreen ::selection {
     background-color: #ffd900; /* Couleur de surlignage (jaune doré) */
     color: #ff44007a; /* Couleur du texte surligné */

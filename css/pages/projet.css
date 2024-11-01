@@ -430,7 +430,7 @@
     color: #000000; /* Couleur noire */
 }
 
-.presentation-app{
+.presentation-50-50{
     display: flex;
     gap:30px;
     justify-content: space-between;
@@ -439,10 +439,11 @@
     margin: 0px;
 }
 
-.presentation-app img{
+.presentation-50-50 img{
     width: calc((100% - 30px) / 2); /* subtracting total gap to keep each image equally sized */
     height: auto;
     object-fit: cover;
+    background-color: var(--greymouvaplan);
 
 }
 .presentation-app2 {
@@ -460,6 +461,7 @@
   }
   
   .presentation-app2 img {
+    background-color: var(--greymouvaplan);
     width: 100%;
     height: 100%;
     object-fit: cover; /* Applique l'effet de remplissage */
