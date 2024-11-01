@@ -1,0 +1,43 @@
+
+/*Meteo*/
+
+.tri-images{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.tri-images img{
+    width: calc((100% - 60px) / 3); /* subtracting total gap to keep each image equally sized */
+    height: auto;
+
+}
+
+.fullscreen ::selection {
+    background-color: #ffd900; /* Couleur de surlignage (jaune doré) */
+    color: #ff44007a; /* Couleur du texte surligné */
+}
+
+.fullscreen {
+    flex-direction: column;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    padding: 40px;
+    background-image: url(/image/ciel.jpg);
+    gap: 40px;
+}
+
+.text-meteo{
+    width: 50%;
+    
+}
+
+.texteexplicatifmeteo{
+    max-width: 100%; /* Limite la largeur de l'explication si besoin */
+    text-align: justify;
+    line-height: 1.5; /* Augmente l'espacement entre les lignes */
+    font-size: 1rem;
+}
