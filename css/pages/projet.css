@@ -444,7 +444,7 @@
 
 .fullscreen ::selection {
     background-color: #ffd900; /* Couleur de surlignage (jaune doré) */
-    color: #000000; /* Couleur du texte surligné */
+    color: #ff44007a; /* Couleur du texte surligné */
 }
 
 .fullscreen {

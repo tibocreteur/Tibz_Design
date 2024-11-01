@@ -74,7 +74,10 @@ a:hover {
     backdrop-filter: blur(10px);
     z-index: 1000;
     color: white;
-    user-select: none;
+}
+
+.navbar ::selection {
+    background-color: #ffffff4e; /* Couleur de surlignage (jaune doré) */
 }
 
 .social-contact {
