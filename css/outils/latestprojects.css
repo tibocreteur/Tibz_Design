@@ -20,13 +20,20 @@
     width: 100%; /* Largeur à 100% du conteneur */
     height: 300px; /* Hauteur fixée pour créer un carré */
     object-fit: cover;
-    filter:contrast(50%) contrast(1) ; /* Applique le noir et blanc */
+    filter: grayscale(100%) contrast(0.5) ; /* Applique le noir et blanc */
 }
+
+.project-image img{
+    filter: grayscale(100%) contrast(1) ; /* Applique le noir et blanc */
+}
+
 
 .project-image:hover {
     filter:contrast(100%) contrast(1); /* Applique le noir et blanc */
+    filter: grayscale(%);
     transition: 0.5s ease;
     padding: 4px;
+    filter: grayscale(0%) contrast(1) ; /* Applique le noir et blanc */
 }
 
 @media (max-width: 768px) {
