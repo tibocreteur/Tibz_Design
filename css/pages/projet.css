@@ -104,6 +104,24 @@ p{
     color: #3B7958; /* Couleur de surlignage (jaune doré) */
 }
 
+.explicationconsole{
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between; /* Sépare les éléments à gauche et à droite */
+    align-items: flex-start; /* Aligne en haut de chaque bloc */
+    position: relative;
+
+}
+
+.explicationconsole p{
+    width: 40%;
+}
+
+.explicationconsole ::selection {
+    background-color: #000000;
+    color: #ffffff; /* Couleur de surlignage (jaune doré) */
+}
+
 /* Style pour l'explication */
 .texteexplicatif{
     margin-right: 5%;

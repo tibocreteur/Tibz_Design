@@ -1,0 +1,67 @@
+@import url('../outils/navbar.css');
+@import url('../outils/color.css');
+@import url('../outils/police.css');
+@import url('../pages/projet.css');
+
+
+.headeromodaka {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-image: url('/image/Omodaka/fond.jpg');
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+
+}
+
+.headeromodaka img{
+    width: 1500px;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+.paletteomodaka {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
+    justify-content: center; /* Centre les panneaux */
+    height: auto;
+    gap: 30px;
+}
+
+.paletteomodaka > div{
+    width: calc((100% - 30px) / 2); /* subtracting total gap to keep each image equally sized */
+    justify-content: center;
+}
+
+.explicationomodaka{
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between; /* Sépare les éléments à gauche et à droite */
+    align-items: flex-start; /* Aligne en haut de chaque bloc */
+    position: relative;
+
+}
+
+.explicationomodaka p{
+    width: 40%;
+}
+
+.explicationomodaka ::selection {
+    background-color: #ffffff00;
+    color: #FFBC21; /* Couleur de surlignage (jaune doré) */
+}
+
+.uneimageomodaka{
+    border-radius: 30px;
+    background-color: var(--greymouvaplan);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uneimageomodaka img{
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+}
