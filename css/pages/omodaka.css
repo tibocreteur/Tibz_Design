@@ -47,8 +47,8 @@
 }
 
 .explicationomodaka ::selection {
-    background-color: #ffffff00;
-    color: #FFBC21; /* Couleur de surlignage (jaune doré) */
+    background-color: #ffbc216c;
+    color: black; /* Couleur de surlignage (jaune doré) */
 }
 
 .uneimageomodaka{

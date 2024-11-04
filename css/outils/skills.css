@@ -1,73 +1,92 @@
+section.skills {
+    background-color: var(--backgroundaccueil);
+}
+
+.skills {
+    color: #ffffff;
+    place-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--backgroundaccueil);
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+}
+
 .skills-section {
-
-    background-color: var(--backgroundaccueil);/* Couleur de fond de la section */
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--backgroundaccueil);
+    align-items: center;
     height: auto;
-    padding-bottom: 70px;
+    justify-content: start;
 }
 
-/* Titre de la section */
-.skills-section h2 {
-    font-size: 2em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #ffffff;
-}
-
-/* Liste des compétences */
-.skills-list {
-    list-style-type: none; /* Enlève les puces par défaut */
-    padding: 0;
-    margin: 0 auto;
-    
-}
-
-/* Chaque compétence */
-.skills-list li {
-    color: #ffffff;
-    font-size: 20px;
-    transform-origin: left;
-    padding: 7px 0px; /* Ajoute du padding pour l'espacement interne */
-    transition: transform 0.3s ease;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    max-width: fit-content;
-    margin-left: 70px;
-}
-
-/* Effet au survol de chaque compétence */
-.skills-list li:hover {
-    transform: scale(1.05); /* Agrandit légèrement l'élément au survol */
-    color: #a6ff00;
-    text-decoration: underline;
-}
-
-.skills-list li h3 {
+.skills-panel {
     position: relative;
-    display: inline-block;
-    transition: color 0.3s ease;
-    text-transform: lowercase; /* Force les titres à être en minuscule */
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: normal; /* Enlève le gras */
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s ease;
+    height: 150px;
 }
 
-/* Pseudo-élément pour le point */
-.skills-list li h3::before {
-    content: '';
-    font-family: "IBM Plex Mono", monospace;
+.skills-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(0.5);
+    transition: 0.5s ease;
+}
+
+.skills-panel:hover .skills-image {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    filter: grayscale(0%) contrast(1);
+}
+
+.titre-skills {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
     position: absolute;
-    right: -20px;
     top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    background-color: #a6ff00; /* Le point est blanc par défaut */
-    border-radius: 50%;
-    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease; /* Ajoute la transition de couleur */
-    text-decoration: underline; /* Soulignement lors du survol */
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); /* Initialise l'échelle */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    opacity: 0; /* Invisible par défaut */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition plus douce */
+    z-index: 1;
+    pointer-events: none; /* Évite que le survol du texte affecte l'animation de l'image */
 }
 
-h3 {
-    font-size: 25px;
-    text-transform: uppercase; /* Met le texte en majuscules */
-    color: #ffffff; /* Couleur du titre du projet */
-    font-family: "IBM Plex Mono", monospace;
-}  
+.skills-panel:hover .titre-skills {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(3); /* Agrandit le texte */
+}
 
+
+
+
+@media (max-width: 768px) {
+    .projects-section {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
+        align-items: center;
+        flex-shrink: 2;
+
+    }
+    .projects-section img {
+        width: 100%;
+        filter: grayscale(0%) contrast(1) ; /* Applique le noir et blanc */
+        height: 150px;
+        margin-bottom: 5px;
+
+    }
+    .project-panel {
+        width: 40%; /* Mettre à 30% de la largeur du conteneur */
+    }
+
+}

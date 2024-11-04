@@ -6,14 +6,6 @@
     height: 300px;
 }
 
-.palette2 {
-    display: flex;
-    width: 100%;
-    border-radius: 25px;
-    overflow: hidden;
-    height: 200px;
-}
-
 .color {
     flex: 1;
     display: flex;
@@ -31,14 +23,13 @@
 .color-name {
     color: black;
     font-size: 1.2rem;
-    opacity: 0.1;
-    transition: font-size 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
+    opacity: 0;
+    transition: 0.5s ease;
 }
 
 .color:hover .color-name {
-    opacity: 0.3;
+    opacity: 0.2;
     font-size: 1.2rem;
-    transform: scale(1.2);
 }
 
 .palette span {
@@ -46,10 +37,31 @@
     font-weight: bold;
 }
 
+.palette2 {
+    display: flex;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 200px;
+}
+
+.color-name2 {
+    color: black;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: font-size 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
+}
+
+.color:hover .color-name2 {
+    opacity: 0.1;
+    font-size: 1rem;
+}
+
 .palette2 span {
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
+
 @media (max-width: 768px) {
     .palette {
         display: flex;

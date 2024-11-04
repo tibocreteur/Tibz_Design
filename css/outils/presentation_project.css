@@ -11,12 +11,12 @@
 .tri-images img{
     width: calc((100% - 60px) / 3); /* subtracting total gap to keep each image equally sized */
     height: auto;
+    transition: 0.3s ease;
 
 }
 
 .tri-images img:hover {
     transform: scale(1.02); /* Agrandit l'image à 110% lorsqu'on la survole */
-    transition: 0.3s ease;
   }
 
 .fullscreen ::selection {
