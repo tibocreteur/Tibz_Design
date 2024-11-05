@@ -14,13 +14,13 @@
     height: 30%;
 }
 
-.section.infomouvaplan {
+.section.infoprojet {
 
     background-color: var(--backgroundproject);
 
 }
 
-.infomouvaplan {
+.infoprojet {
     padding-top: 30px;
     height: 100%;
     width: 100%;
@@ -29,18 +29,18 @@
     padding-right:  40px;
 }
 
-.infomouvaplan img {
+.infoprojet img {
     width: 100%;
     border-radius: 25px;
     
 }
 
-.infomouvaplan video {
+.infoprojet video {
     width: 100%;
     border-radius: 25px;
 }
 
-.infomouvaplan h2 {
+.infoprojet h2 {
     color: black ;
     padding-left: 100px;
     font-size: 40px;
@@ -48,13 +48,13 @@
     margin-top: 40px;
 }
 
-.infomouvaplan p {
+.infoprojet p {
     margin-top: 20px;
     color: black ;
     
 }
 
-.infomouvaplan > div {
+.infoprojet > div {
     margin-bottom: 30px;
 
 }
