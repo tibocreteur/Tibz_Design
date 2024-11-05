@@ -47,8 +47,8 @@
 }
 
 .explicationomodaka ::selection {
-    background-color: #ffbc216c;
-    color: black; /* Couleur de surlignage (jaune doré) */
+    background-color: #ffb300;
+    color: rgb(255, 255, 255); /* Couleur de surlignage (jaune doré) */
 }
 
 .uneimageomodaka{
@@ -64,4 +64,21 @@
     height: 500px;
     width: auto;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .headeromodaka img{
+        width: 600px;
+    }
+    .headeromodaka {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        background-image: url('/image/Omodaka/fond.jpg');
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+    
+    }
+
 }
