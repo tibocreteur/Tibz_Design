@@ -1,20 +1,6 @@
 @import url('../outils/police.css');
 @import url('../outils/color.css');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Jacquarda Bastarda 9", serif;
-
-}
-
-p{
-        text-align: justify;
-        line-height: 1.5;
-        font-size: 1rem;
-}
-
 .entete img{
     width: 100%;
     height: 100%;
@@ -171,91 +157,6 @@ p{
     width: 100%;
     filter: grayscale(0) contrast(1.1);
     padding-bottom: 30px;
-}
-
-.triplette {
-    display: flex;
-    gap: 30px; /* Espace entre les colonnes */
-    height: 800px; /* Hauteur de la section */
-}
-
-.left-video {
-    flex: 1;
-    display: flex;
-}
-
-.left-video video {
-    width: 100%;
-    height: 100%; /* La vidéo prend toute la hauteur de la section */
-    object-fit: cover; /* Ajuste la vidéo sans déformation */
-}
-
-.right-videos {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.right-videos video {
-    width: 100%;
-    height: 48.1%; /* Chaque vidéo prend la moitié de la hauteur de la section */
-    object-fit: cover;
-}
-
-.content-left {
-    width: 40%;
-    flex: 1;
-    display: flex;
-}
-
-.content-left video{
-    width: 100%;
-    height: 100%; /* La vidéo prend toute la hauteur de la section */
-    object-fit: cover; /* Ajuste la vidéo sans déformation */
-}
-
-.content-right {
-    height: 48.1%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    
-}
-
-.content-right video{
-    width: 100%;
-    height: 100%; /* La vidéo prend toute la hauteur de la section */
-    object-fit: cover; /* Ajuste la vidéo sans déformation */
-}
-
-.content-box {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.content-box2 {
-    position: relative;
-    width: 100%;
-    height: 50%;
-}
-.content-box video {
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-.content-number {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    color: rgba(0, 0, 0, 0.192);
-    padding: 5px 10px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 /*--------------*/
 .legend {
@@ -494,11 +395,3 @@ p{
     height: 400px; /* Fixe la hauteur des deux conteneurs */
   }
   
-
-/* Style de la section principale pour diviser en deux colonnes et arrondir les coins */
-.figma-section {
-    display: flex;
-    width: 100%; /* Largeur totale de la section */
-    height: 700px; /* Prend toute la hauteur de l'écran */
-    overflow: hidden; /* Cache les débordements pour garder les coins arrondis */
-}

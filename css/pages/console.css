@@ -1,0 +1,85 @@
+
+.triplette {
+    display: flex;
+    gap: 30px; /* Espace entre les colonnes */
+    height: 800px; /* Hauteur de la section */
+}
+
+.left-video {
+    flex: 1;
+    display: flex;
+}
+
+.left-video video {
+    width: 100%;
+    height: 100%; /* La vidéo prend toute la hauteur de la section */
+    object-fit: cover; /* Ajuste la vidéo sans déformation */
+}
+
+.right-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.right-videos video {
+    width: 100%;
+    height: 48.1%; /* Chaque vidéo prend la moitié de la hauteur de la section */
+    object-fit: cover;
+}
+
+.content-left {
+    width: 40%;
+    flex: 1;
+    display: flex;
+}
+
+.content-left video{
+    width: 100%;
+    height: 100%; /* La vidéo prend toute la hauteur de la section */
+    object-fit: cover; /* Ajuste la vidéo sans déformation */
+}
+
+.content-right {
+    height: 48.1%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.content-right video{
+    width: 100%;
+    height: 100%; /* La vidéo prend toute la hauteur de la section */
+    object-fit: cover; /* Ajuste la vidéo sans déformation */
+}
+
+.content-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.content-box2 {
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+.content-box video {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.content-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: rgba(0, 0, 0, 0.192);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
