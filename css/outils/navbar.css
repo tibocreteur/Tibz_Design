@@ -37,20 +37,6 @@ p{
     font-size: 1rem;
 }
 
-a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1rem;
-}
-
-li {
-    list-style: none;
-}
-
-a:hover {
-    color: #d8f4ff;
-}
-
 .top-page {
     display:flex;
     height: 100vh;
@@ -171,7 +157,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .navbar-client {
-            visibility: hidden;
+        visibility: hidden;
     }
     
     .navbar-client span {
