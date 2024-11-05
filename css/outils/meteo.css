@@ -31,7 +31,7 @@
     align-items: center;
     height: 700px;
     padding: 40px;
-    background-image: url(./../image/mouvaplan/ciel.jpg);
+    background-image: url(./../../image/mouvaplan/ciel.jpg);
     gap: 40px;
 }
 
