@@ -1,0 +1,37 @@
+@import url('./../outils/palettecouleur.css');
+@import url('./../outils/meteo.css');
+
+/* Style de la section principale pour diviser en deux colonnes et arrondir les coins */
+.figma-section {
+    display: flex;
+    width: 100%; /* Largeur totale de la section */
+    height: 700px; /* Prend toute la hauteur de l'écran */
+    overflow: hidden; /* Cache les débordements pour garder les coins arrondis */
+}
+
+/* Partie gauche avec l'image */
+.figma-image-side {
+    flex: 2; /* Prend 50% de la largeur */
+    background-color: var(--greymouvaplan);
+    background-image: url('./../../image/mouvaplan/planfigma.jpg'); /* Lien vers votre image */
+    background-size: cover; /* L'image couvre toute la partie */
+    background-position: center; /* Centrage de l'image */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrage vertical et horizontal du texte */
+}
+
+/* Partie droite avec fond coloré */
+.figma-content-side {
+    flex: 1; /* Prend 50% de la largeur */
+    background-color: #1b1b1b; /* Couleur de fond */
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: center;
+}
+
+.figma-content-side p{
+    padding-right: 60px;
+    padding-bottom: 60px;
+}
