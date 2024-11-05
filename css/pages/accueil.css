@@ -17,6 +17,8 @@ section.top-page {
     object-fit: cover; /* Remplit l'écran sans déformer la vidéo */
     z-index: -1; /* Place la vidéo derrière le contenu */
 }
+
+
 /*gros logo*/
 .logo-grand img{
     position: absolute;
