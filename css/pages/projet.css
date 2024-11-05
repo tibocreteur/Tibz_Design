@@ -510,7 +510,7 @@ p{
 .figma-image-side {
     flex: 2; /* Prend 50% de la largeur */
     background-color: var(--greymouvaplan);
-    background-image: url('/image/Capture\ d’écran\ 2024-11-01\ à\ 23.28.52.jpg'); /* Lien vers votre image */
+    background-image: url('./../image/Capture\ d’écran\ 2024-11-01\ à\ 23.28.52.jpg'); /* Lien vers votre image */
     background-size: cover; /* L'image couvre toute la partie */
     background-position: center; /* Centrage de l'image */
     display: flex;
