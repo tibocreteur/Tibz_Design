@@ -248,24 +248,20 @@
 
 
 .presenationfontdroite {
-    flex: 1; /* Prend de l'espace disponible */
+    flex: 2; /* Prend de l'espace disponible */
     border-radius: 30px;
     background-color: #B3E3A2;
     padding: 50px;
-    padding-left: 70px;
-    padding-bottom: 30px;
 }
 
 .font-name {
     font-size: 36px; /* Taille de la police pour le nom */
     color: #FFFCE2; /* Couleur du texte */
-    margin-bottom: 10px; /* Espacement en bas */
 }
 
 .font-sample {
     font-size: 20px; /* Taille de la police d'exemple */
     color: #FFFCE2; /* Couleur du texte */
-    margin: 5px 0; /* Espacement vertical */
 }
 
 .Ericaone {
@@ -281,7 +277,6 @@
     font-family: 'Erica One', sans-serif;
     color: #3B7958;
     font-size: 50px;
-    margin-bottom: px;
 }
 .leslettresErica p{
     font-family: 'Erica One', sans-serif;
