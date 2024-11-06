@@ -35,3 +35,176 @@
     padding-right: 60px;
     padding-bottom: 60px;
 }
+
+.font-presentation {
+    font-family: 'Satoshi', sans-serif;
+    background-color: #f5f5eb;
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Style pour le nom de la police */
+.font-name {
+    font-size: 48px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style pour l'exemple de texte de la police */
+.font-sample, .font-sample-numbers {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Style pour les différentes variantes de police */
+.font-styles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.font-style {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.font-example {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.style-name {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Description */
+.font-description {
+    font-size: 18px;
+    color: #333;
+    margin-top: 40px;
+}
+
+.presentionfont {
+    display: flex; /* Utilise Flexbox pour l'alignement */
+    justify-content: space-between; /* Espace entre les colonnes */
+    width: 100%; /* Prend toute la largeur */
+}
+
+.presentionfont p{
+    margin-top: 0px;
+}
+.presentationfontgauche {
+    flex: 1; /* Prend de l'espace disponible */
+    padding-right: 20px; /* Espace à droite */
+}
+
+
+.presenationfontdroite {
+    flex: 2; /* Prend de l'espace disponible */
+    border-radius: 30px;
+    background-color: #B3E3A2;
+    padding: 50px;
+}
+
+.font-name {
+    font-size: 36px; /* Taille de la police pour le nom */
+    color: #FFFCE2; /* Couleur du texte */
+}
+
+.font-sample {
+    font-size: 20px; /* Taille de la police d'exemple */
+    color: #FFFCE2; /* Couleur du texte */
+}
+
+.Ericaone {
+    padding-bottom: 20px;
+
+}
+
+.Ericaone p{
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.Ericaone H1{
+    font-family: 'Erica One', sans-serif;
+    color: #3B7958;
+    font-size: 50px;
+}
+.leslettresErica p{
+    font-family: 'Erica One', sans-serif;
+    color: #3B7958;
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 0.9; 
+
+}
+
+.Interblack {
+    padding-bottom: 20px;
+
+}
+
+.Interblack p {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+
+.Interblack H1{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #3B7958;
+    font-size: 35px;
+    color: #3B7958;
+    margin-bottom: 10px;
+}
+.leslettresInterblack p{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #3B7958;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    line-height: 1; 
+
+}
+
+.Inter {
+    padding-bottom: 20px;
+
+}
+
+.Inter p {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+
+.Inter H1{
+    font-family: 'Inter', sans-serif;
+    font-weight:normal;
+    color: #3B7958;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.leslettresInter p{
+    font-family: 'Inter', sans-serif;
+    color: #3B7958;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    line-height: 1; 
+
+}
+
+.style-name {
+    font-family: 'Arial', sans-serif; /* Changez 'Arial' par la police de votre choix */
+    font-size: 16px; /* Taille de la police pour le nom de style */
+    color: #000000; /* Couleur noire */
+}

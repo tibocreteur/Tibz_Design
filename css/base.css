@@ -6,8 +6,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Jacquarda Bastarda 9", serif;
-
 }
 /*image de fond*/
 
@@ -40,3 +38,5 @@ li {
 a:hover{
   color: #d8f4ff;
 }
+
+
