@@ -2,4 +2,5 @@
     --backgroundaccueil: #000000;
     --backgroundproject: rgb(255, 255, 255);
     --greymouvaplan: #ededed;
+    --gradient-black-to-white: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.6));
 }

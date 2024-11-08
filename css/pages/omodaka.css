@@ -66,6 +66,11 @@
     object-fit: cover;
 }
 
+.femme img{
+    height: 400px ;
+    object-fit: cover;
+}
+
 @media (max-width: 768px) {
     .headeromodaka img{
         width: 600px;

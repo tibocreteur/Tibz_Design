@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/pages/omodaka.css">
     <link rel="stylesheet" href="../css/outils/navbar.css">
+    <link rel="stylesheet" href="../css/outils/footer.css">
     <link rel="stylesheet" href="../css/pages/projet.css"> 
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/outils/comparaisonimage.css">
 </head>
 <body>
     <section class="top-page">
@@ -49,7 +51,7 @@
     </section>
     <section class="citation">
         <blockquote id="quote">
-            "A walk that takes you on a sensory journey, unveiling the scents of the world and soothing your mind."
+            "The journey of a thousand miles begins with a single step." — Lao Tseu
         </blockquote>
     </section>  
     <section class="infoprojet">
@@ -57,9 +59,38 @@
             <h2 class="titredelexplication">Omodaka</h2>
             <p class="texteexplicatif">Is a brand I created to bring serenity and tranquility to those seeking refuge from the turmoil of dailylife. My approach is based on the idea that calmness is essential for mental and emotional well-being. The word Omodaka comes from Japanese (オモダカ), where it refers to an aquatic plant known as the "arrowhead" (Sagittaria trifolia in Latin). This plant is often found in serene environments like ponds and rivers, symbolizing tranquility and the purity of nature.</p>   
         </div>
-        <div class="presentation-50-50">
-            <img src="/image/omodaka/icon1.jpg" alt="">
-            <img src="/image/omodaka/icon2.jpg" alt="">
+        <div class="femme">
+            <img src="./../image/omodaka/sieste.jpg" alt="">
+        </div>
+
+        <div class="image-comparison">
+            <div class="images-container">
+              <img class="before-image" src="/image/omodaka/icon1.png" alt="" />
+              <img class="after-image" src="/image/omodaka/icon2.jpg" alt="" />
+              <div class="slider-line"></div>
+              <div class="slider-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                  />
+                </svg>
+              </div>
+              <input type="range" class="slider" min="0" max="100" />
+            </div>
+          </div>
+          <script src="./../java/comparaison.js"></script>
+        <div class="explicationomodaka">
+            <h2 class="titredelexplication"></h2>
+            <p class="texteexplicatif">I simplified complex patterns into minimalist icons and logos, aiming to capture the visual essence through simple shapes and clean lines. The goal was to create clear and calming representations while maintaining visual impact and readability. This work explores graphic reduction to achieve designs that are both functional and aesthetic.</p>   
         </div>
         <div class="paletteomodaka">
             <div class="palette2">
@@ -151,4 +182,24 @@
             <img src="../image/omodaka/boite.png" alt="">
         </div> 
     </section>
+    <footer>
+        <footer class="footerprojects">
+            <ul class="menu">
+              <li class="menu-elem">
+                <a href="./index.html" class="menu-icon"> Home </a>
+              </li>
+              <li class="menu-elem">
+                <a href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20en%20savoir%20plus%20sur%20vos%20services." class="menu-icon"> Me contacter </a>
+              </li>
+            </ul>
+            <p class="text">@2024 | © 2024 TibzDesign. All rights reserved.</p>
+          </footer>
+          <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+          ></script>
+          <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+          ></script>
 </body>
