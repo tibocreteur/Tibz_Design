@@ -244,6 +244,20 @@ blockquote {
     color: #000000;
     font-family: "IBM Plex Mono", monospace;
     display: inline-block;
-    white-space: nowrap;
     overflow: hidden;  /* Cache le texte qui n'est pas encore affiché */
+}
+
+.citationdefin{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+    padding: 60px;
+}
+
+.citationdefin li{
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
 }

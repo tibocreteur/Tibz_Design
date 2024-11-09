@@ -29,13 +29,11 @@
 }
 
 .content-left {
-    width: 40%;
     flex: 1;
     display: flex;
 }
 
 .content-left video{
-    width: 100%;
     height: 100%; /* La vidéo prend toute la hauteur de la section */
     object-fit: cover; /* Ajuste la vidéo sans déformation */
 }
