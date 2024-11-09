@@ -65,18 +65,21 @@
     color: white;
     font-size: 1rem;
     display: inline-block;
-    text-decoration: none;
-    margin: 5px 10px;
-    opacity: 0.5;
     transition: 0.3s;
     font-family: "IBM Plex Mono", monospace;
     margin-inline: 30px;
+    background-color: rgba(0, 0, 0, 0.381);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-inline: 10px;
+    border-radius: 10px;
   }
   
   .menu-icon:hover {
     opacity: 1;
     color: white;
     scale: 1.05;
+    background-color: rgb(0, 0, 0);
   }
   
   .text {
