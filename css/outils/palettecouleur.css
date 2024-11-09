@@ -42,19 +42,19 @@
     width: 100%;
     border-radius: 25px;
     overflow: hidden;
-    height: 200px;
+    height: 300px;
 }
 
 .color-name2 {
     color: black;
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: 0;
     transition: font-size 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
 }
 
 .color:hover .color-name2 {
     opacity: 0.1;
-    font-size: 1rem;
+    font-size: 1.09rem;
 }
 
 .palette2 span {
