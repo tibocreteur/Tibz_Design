@@ -1,12 +1,14 @@
-const slider = document.querySelector(".image-comparison .slider");
-const beforeImage = document.querySelector(".image-comparison .before-image");
-const sliderLine = document.querySelector(".image-comparison .slider-line");
-const sliderIcon = document.querySelector(".image-comparison .slider-icon");
+document.querySelectorAll(".image-comparison").forEach((comparison) => {
+  const slider = comparison.querySelector(".slider");
+  const beforeImage = comparison.querySelector(".before-image");
+  const sliderLine = comparison.querySelector(".slider-line");
+  const sliderIcon = comparison.querySelector(".slider-icon");
 
-slider.addEventListener("input", (e) => {
-  let sliderValue = e.target.value + "%";
+  slider.addEventListener("input", (e) => {
+      let sliderValue = e.target.value + "%";
 
-  beforeImage.style.width = sliderValue;
-  sliderLine.style.left = sliderValue;
-  sliderIcon.style.left = sliderValue;
+      beforeImage.style.width = sliderValue;
+      sliderLine.style.left = sliderValue;
+      sliderIcon.style.left = sliderValue;
+  });
 });

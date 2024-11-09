@@ -62,17 +62,18 @@
     list-style: none;
   }
   .menu-icon {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     display: inline-block;
     transition: 0.3s;
     font-family: "IBM Plex Mono", monospace;
     margin-inline: 30px;
-    background-color: rgba(0, 0, 0, 0.381);
+    background-color: rgba(0, 0, 0, 0.23);
     padding-top: 7px;
     padding-bottom: 7px;
     padding-inline: 10px;
     border-radius: 10px;
+    opacity: 1;
   }
   
   .menu-icon:hover {

@@ -158,11 +158,9 @@
 /* Style pour l'explication */
 
 .carte iframe{
-
     border-radius: 25px;
     width: 100%;
-    filter: grayscale(0) contrast(1.1);
-    padding-bottom: 30px;
+    margin-top: 30px;
 }
 /*--------------*/
 .legend {
