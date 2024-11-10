@@ -92,6 +92,68 @@
     object-fit: cover; /* Remplir sans distorsion */
   }
 
+  .decors {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-inline: 40px;
+    width: 100%; /* Assure que la section occupe toute la largeur */
+    padding-bottom: 30px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center; /* Centre le contenu dans chaque wrapper */
+    width: 100%;
+}
+
+.decors-container {
+    display: flex;
+    align-items: center;
+    gap: 0; /* Enlève l'espace entre l'image et les informations */
+    border-radius: 25px; /* Bords arrondis pour l'ensemble du bloc image + infos */
+    overflow: hidden; /* Masque la partie de l'image ou du fond qui dépasse des bords arrondis */
+    width: 100%; /* Le conteneur occupe 100% de la largeur disponible */
+    max-width: 100%; /* Le conteneur ne dépasse pas la largeur de son parent */
+}
+
+.decors img {
+    width: calc(100% - 400px); /* L'image occupe 100% moins la largeur de la section d'informations (300px) */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0; /* L'image n'a pas de bords arrondis pour que le contour global reste arrondi */
+}
+
+.infodecors {
+    width: 400px; /* Largeur fixe de la zone d'information */
+    height: 300px;
+    background-color: var(--greymouvaplan); /* Couleur de fond pour la section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Sépare le nom du lieu et les coordonnées */
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px; /* Applique les bords arrondis uniquement à la section d'information */
+}
+
+.infodecors h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.infodecors p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #555;
+    padding-left: 30px;
+}
+
+
+
+
+
 @media (max-width: 768px) {
     .headeromodaka img{
         width: 600px;
