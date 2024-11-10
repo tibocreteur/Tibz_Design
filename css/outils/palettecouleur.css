@@ -51,6 +51,7 @@
     opacity: 0;
     transition: font-size 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
     writing-mode: vertical-lr; /* Affiche le texte verticalement de haut en bas */
+    transform: rotate(180deg)
 }
 
 .color:hover .color-name2 {
