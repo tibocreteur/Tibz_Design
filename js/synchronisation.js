@@ -20,6 +20,7 @@ video1.addEventListener('play', function() {
     }
 });
 
+
 video2.addEventListener('play', function() {
     if (video1.paused) {
         video1.play();
@@ -37,6 +38,7 @@ video3.addEventListener('play', function() {
         video2.play();
     }
 });
+
 
 // Synchroniser les vidéos lors d'un changement de position (seek)
 video1.addEventListener('seeked', syncVideos);

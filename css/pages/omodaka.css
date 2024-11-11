@@ -150,7 +150,36 @@
     padding-left: 30px;
 }
 
+.plants{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    background-color: var(--greymouvaplan);
+    border-radius: 25px;
+    object-fit: cover;}
 
+.plants video{
+    height: 100%;
+    width:  auto;
+    object-fit: cover;
+}
+
+.plants2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-color: var(--greymouvaplan);
+    border-radius: 25px;
+    object-fit: cover;}
+
+.plants2 video{
+    height: 100%;
+    object-fit: cover;
+}
 
 
 
