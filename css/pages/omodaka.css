@@ -164,6 +164,7 @@
 }
 
 .plants{
+    position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -173,28 +174,27 @@
     border-radius: 25px;
     object-fit: cover;}
 
-.plants video{
-    height: 100%;
+.plants img{
+    height: 900px;
     width:  auto;
     object-fit: cover;
 }
 
 .plants2{
+    position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 250px;
+    height: 200px;
     background-color: var(--greymouvaplan);
     border-radius: 25px;
     object-fit: cover;}
 
-.plants2 video{
-    height: 100%;
+.plants2 img{
+    height: 200px;
     object-fit: cover;
 }
-
-
 
 @media (max-width: 768px) {
     .headeromodaka img{
