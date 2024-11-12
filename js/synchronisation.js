@@ -1,46 +1,25 @@
-// Synchroniser les vidéos
-const video1 = document.getElementById('video1');
-const video2 = document.getElementById('video2');
-const video3 = document.getElementById('video3');
+// When the entire page is loaded
+window.addEventListener("load", (event) => {
+    // Initialize the syncImages function every 1.5 seconds to synchronize the images every 1.5 seconds
+    window.setInterval(() => {
+        const syncImgContainers = document.querySelectorAll(".js-sync-image-container");
 
-// Fonction pour synchroniser les vidéos
-function syncVideos() {
-    // Mettre les vidéos 2 et 3 à la même position que la vidéo 1
-    video2.currentTime = video1.currentTime;
-    video3.currentTime = video1.currentTime;
-}
+        // Loop through each container and synchronize the images within it
+        syncImgContainers.forEach((syncImgContainer) => {
+            // Get all the images within the container and find the currently active image
+            const images = syncImgContainer.getElementsByTagName('img');
+            let currentIndex = Array.from(images).findIndex(image => image.classList.contains('active'))
+            let nextIndex = currentIndex + 1;
 
-// Démarrage de la lecture (synchroniser les vidéos à l'ouverture)
-video1.addEventListener('play', function() {
-    if (video2.paused) {
-        video2.play();
-    }
-    if (video3.paused) {
-        video3.play();
-    }
+            // If there are no more images, reset the index to the first image
+            if (nextIndex >= images.length) {
+                nextIndex = 0;
+            }
+
+            // Remove the active class from the current image and add it to the next image
+            images[currentIndex].classList.remove('active');
+            images[nextIndex].classList.add('active');
+        })
+    }, 1500 // You can change the time duration of the event, 1500 = 1.5s, 2000 = 2s...
+    )
 });
-
-
-video2.addEventListener('play', function() {
-    if (video1.paused) {
-        video1.play();
-    }
-    if (video3.paused) {
-        video3.play();
-    }
-});
-
-video3.addEventListener('play', function() {
-    if (video1.paused) {
-        video1.play();
-    }
-    if (video2.paused) {
-        video2.play();
-    }
-});
-
-
-// Synchroniser les vidéos lors d'un changement de position (seek)
-video1.addEventListener('seeked', syncVideos);
-video2.addEventListener('seeked', syncVideos);
-video3.addEventListener('seeked', syncVideos);

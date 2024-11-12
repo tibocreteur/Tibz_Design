@@ -42,3 +42,11 @@ a:hover{
 .video{
     
 }
+
+.js-sync-image-container img {
+  display: none;
+}
+
+.js-sync-image-container img.active {
+  display: block;
+}
