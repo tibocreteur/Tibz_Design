@@ -67,12 +67,12 @@
     display: inline-block;
     transition: 0.3s;
     font-family: "IBM Plex Mono", monospace;
-    margin-inline: 30px;
+    margin-inline: 35px;
     background-color: rgba(0, 0, 0, 0.23);
     padding-top: 7px;
     padding-bottom: 7px;
-    padding-inline: 10px;
-    border-radius: 10px;
+    padding-inline: 15px;
+    border-radius: 11px;
     opacity: 1;
   }
   
@@ -80,53 +80,8 @@
     opacity: 1;
     color: white;
     scale: 1.05;
-    background-color: rgb(96, 96, 255);
+    background-color: rgb(25, 124, 101);
   }
-
-  .menu-icon2 {
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    display: inline-block;
-    transition: 0.3s;
-    font-family: "IBM Plex Mono", monospace;
-    margin-inline: 30px;
-    background-color: rgba(0, 0, 0, 0.23);
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-inline: 10px;
-    border-radius: 10px;
-    opacity: 1;
-  }
-  
-  .menu-icon2:hover {
-    opacity: 1;
-    color: white;
-    scale: 1.05;
-    background-color: rgb(154, 255, 144);
-  }
-
-  .menu-icon3 {
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    display: inline-block;
-    transition: 0.3s;
-    font-family: "IBM Plex Mono", monospace;
-    margin-inline: 30px;
-    background-color: rgba(0, 0, 0, 0.23);
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-inline: 10px;
-    border-radius: 10px;
-    opacity: 1;
-  }
-  
-  .menu-icon3:hover {
-    opacity: 1;
-    color: white;
-    scale: 1.05;
-    background-color: rgb(255, 96, 96);
-  }
-  
   .text {
     color: white;
     text-align: center;
