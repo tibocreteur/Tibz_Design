@@ -71,21 +71,34 @@
     object-fit: cover;
 }
 
-.logovideo video{
-    height: 500px;
-    object-fit: cover;
+.logovideo{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     width: 100%;
 }
 
-.sectiondeuxlogo {
+.logovideo img{
+    height: 400px;
+    object-fit: cover;
+}
+
+.logobas {
     display: flex; /* Aligner les vidéos horizontalement */
+    gap: 25px;
     justify-content: space-between; /* Créer de l'espace entre les vidéos */
-    height: 350px; /* Hauteur de la section */
     width: 100%; /* La section prend toute la largeur de son conteneur */
 
   }
+
+.logohaut {
+    gap: 25px;
+    justify-content: space-between; /* Créer de l'espace entre les vidéos */
+    width: 100%; /* La section prend toute la largeur de son conteneur */
+
+}
   
-  .videodeslogos {
+.videodeslogos {
     border-radius: 25px; /* Coins arrondis pour les vidéos */
     width: calc(50% - 17.5px); /* Chaque vidéo prend 1/3 de la largeur moins 30px pour l'écart entre les vidéos et 10px de padding */
     height: 100%; /* La hauteur des vidéos est 100% de la section */
