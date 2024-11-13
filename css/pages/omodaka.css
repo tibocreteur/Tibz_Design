@@ -198,27 +198,48 @@
     object-fit: cover;
 }
 
-.sac img{
-    height: 300px;
+.sac {
+    width: 60%;
+    height: 500px;
+    background-color: var(--greymouvaplan); /* ou toute autre couleur de fond */
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */
+    overflow: hidden;
+    border-radius: 25px;
 }
 
 .sac img{
-    object-fit: cover;
     height: 100%;
+    object-fit: cover;
+}
+
+.bougie{
+    width: 40%;
+    height: 500px;
+    background-color: var(--greymouvaplan); /* ou toute autre couleur de fond */
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.bougie img{
+    height: 110%;
+    object-fit: cover;
+}
+
+.deuxpack{
+    display: flex;
+    gap: 30px;
+    
 }
 
 .logoomodaka{
     scale: 1;
-}
-
-.bougie{
-    border-radius: 25px;
-    display: flex;
-    background-color: var(--greymouvaplan);
-    height: 500px;
-    width: calc(50% - 25px);
-    align-items: center;
-    justify-items: center;
 }
 
 @media (max-width: 768px) {

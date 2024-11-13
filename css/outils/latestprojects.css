@@ -42,7 +42,77 @@ section.latestprojectstitre {
 .project-image:hover {
     filter: grayscale(0%) contrast(1) ; /* Applique le noir et blanc */
     padding: 10px;
+
 }
+
+.project-panel:hover div.petitbouton{
+    opacity: 1;
+    scale: 0.9;
+}
+
+.petitbouton{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    gap: 10px;
+    z-index: 1000; /* Place la vidéo derrière le contenu */
+    scale: 0;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.new{
+    background-color: rgb(105, 238, 52);
+    color: rgb(72, 156, 46);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "IBM Plex Mono", monospace; 
+}
+
+.uiux{
+    background-color: rgb(38, 86, 231);
+    color: rgb(24, 43, 138);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "IBM Plex Mono", monospace; 
+}
+
+.uiux{
+    background-color: rgb(38, 86, 231);
+    color: rgb(24, 43, 138);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "IBM Plex Mono", monospace; 
+}
+
+
+.troisd{
+    background-color: rgb(231, 160, 38);
+    color: rgb(138, 100, 24);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "IBM Plex Mono", monospace; 
+}
+
+.da{
+    background-color: rgb(231, 38, 205);
+    color: rgb(138, 24, 132);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "IBM Plex Mono", monospace; 
+}
+
 
 @media (max-width: 768px) {
     .projects-section {
