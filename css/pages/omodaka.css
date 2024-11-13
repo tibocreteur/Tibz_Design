@@ -36,6 +36,7 @@
 .explicationomodaka{
     padding-bottom: 40px;
     display: flex;
+    width: 100%;
     justify-content: space-between; /* Sépare les éléments à gauche et à droite */
     align-items: flex-start; /* Aligne en haut de chaque bloc */
     position: relative;
@@ -44,6 +45,7 @@
 
 .explicationomodaka p{
     width: 40%;
+    width: 100%;
 }
 
 .explicationomodaka ::selection {
@@ -196,9 +198,35 @@
     object-fit: cover;
 }
 
+.sac img{
+    height: 300px;
+}
+
+.sac img{
+    object-fit: cover;
+    height: 100%;
+}
+
+.logoomodaka{
+    scale: 1;
+}
+
+.bougie{
+    border-radius: 25px;
+    display: flex;
+    background-color: var(--greymouvaplan);
+    height: 500px;
+    width: calc(50% - 25px);
+    align-items: center;
+    justify-items: center;
+}
+
 @media (max-width: 768px) {
     .headeromodaka img{
         width: 600px;
+    }
+    .logoomodaka{
+        scale: 0.5;
     }
     .headeromodaka {
         display: flex;

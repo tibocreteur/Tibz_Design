@@ -29,4 +29,5 @@ section.top-page {
     display: flex;
     place-items: center;
     animation: textFadeIn 1s ease-in-out;
+    
 }
