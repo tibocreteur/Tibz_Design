@@ -1,0 +1,39 @@
+.new{
+    background-color: rgb(105, 238, 52);
+    color: rgb(72, 156, 46);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "IBM Plex Mono", monospace; 
+}
+
+.troisd{
+    background-color: rgb(231, 160, 38);
+    color: rgb(138, 100, 24);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "IBM Plex Mono", monospace; 
+}
+
+.uiux{
+    background-color: rgb(38, 86, 231);
+    color: rgb(24, 43, 138);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "IBM Plex Mono", monospace; 
+}
+
+.da{
+    background-color: rgb(231, 38, 205);
+    color: rgb(138, 24, 132);
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "IBM Plex Mono", monospace; 
+}
