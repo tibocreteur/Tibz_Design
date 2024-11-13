@@ -37,3 +37,16 @@
     border-radius: 5px;
     font-family: "IBM Plex Mono", monospace; 
 }
+
+.enbasbadge{
+    display: flex;
+    position: absolute;
+    bottom: -15px;
+    left: 50px;
+    gap: 10px;
+    z-index: 3; /* Place la vidéo derrière le contenu */
+    scale: 1;
+    opacity: 1;
+    transition: 0.3s ease;
+    pointer-events: none; 
+}
