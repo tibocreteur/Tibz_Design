@@ -159,9 +159,8 @@
 }
 /*--------------*/
 .legend {
-    margin-left : 40px;
-    font-size: 16px;
-    color: #000000;
+    font-size: 1rem;
+    padding-bottom: 30px;
 }
 
 .legend p {

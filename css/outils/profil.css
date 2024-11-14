@@ -15,7 +15,7 @@
     background-color:rgb(33, 33, 33);
     background-size: cover;
     width: 900px;
-    height: 540px;
+    height: 520px;
     border-radius: 25px;
     display: flex;
     border-style:solid;
@@ -72,7 +72,8 @@
 }
 
 .profilbas{
-    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
 }
 
 .profilbas p{
@@ -83,7 +84,18 @@
     font-family: "IBM Plex Mono", monospace;
     text-align:inherit;
     pointer-events: none;
+    animation: blink-cursor 0.7s step-end infinite;
+    white-space: pre-line; /* Préserve les retours à la ligne */
 }
+
+
+/* Animation du curseur clignotant */
+@keyframes blink-cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
 
 .profilbas h2{
     font-size: 2rem;
