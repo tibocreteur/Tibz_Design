@@ -12,8 +12,9 @@
 
 
 .caseprofil {
-    background-color:rgb(33, 33, 33);
+    background-image: url('./../../image/tete.png');
     background-size: cover;
+    background-position: -15px;
     width: 900px;
     height: 520px;
     border-radius: 25px;
@@ -24,11 +25,12 @@
     scale: 0.85;
     transition: transform 0.3s ease;
     position: relative;
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.293);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.24);
 }
 
 .mention{
-    background-color:rgb(33, 33, 33);
+    background-color: rgba(23, 23, 23, 0.751);
+    backdrop-filter: blur(30px);
     background-size: cover;
     border-radius: 25px;
     display: flex;
@@ -44,7 +46,7 @@
     transition: transform 0.3s ease;
     overflow: hidden;
     position: absolute;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.293);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.24);
     z-index: 1000;
 }
 
@@ -88,21 +90,11 @@
     white-space: pre-line; /* Préserve les retours à la ligne */
 }
 
-
-/* Animation du curseur clignotant */
-@keyframes blink-cursor {
-    50% {
-        border-color: transparent;
-    }
-}
-
-
 .profilbas h2{
     font-size: 2rem;
 }
 
 .profilgauche{
-    background-image: url('./../../image/101_0153-2.jpg');
     background-size: cover;
     width: 450px;
     border-top-left-radius: 23px;
@@ -110,12 +102,17 @@
 }
 
 .profildroit{
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    background-color: rgba(23, 23, 23, 0.751);
+    backdrop-filter: blur(30px);
     width: 700px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 25px;
 }
+
 
 @media (max-width: 768px) {
     .caseprofil {
