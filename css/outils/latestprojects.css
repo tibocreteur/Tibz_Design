@@ -24,12 +24,12 @@ section.latestprojectstitre {
     justify-content: center; /* Centre les panneaux */
     background-color: var(--backgroundaccueil);
     height: auto;
+    gap: 4px;
     
 }
 
 .project-panel {
     position: relative;
-    margin-inline: 2px;
     gap: 2px;
     width: 30%; /* Mettre à 30% de la largeur du conteneur */
     overflow: hidden;
@@ -51,12 +51,12 @@ section.latestprojectstitre {
 }   
 
 .project-panel:hover { /* Largeur à 100% du conteneur */
-    scale: 0.92;
+    scale: 0.94;
 }  
 
 .project-image:hover {
     filter: grayscale(0%) contrast(1) ; /* Applique le noir et blanc */
-    scale: 1.14;
+    scale: 1.17;
 
 }
 
