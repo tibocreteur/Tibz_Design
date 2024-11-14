@@ -23,32 +23,6 @@
     font-family: "IBM Plex Mono", monospace;
     background-color: black;
   }
-
-  .social-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 10px 5px;
-    flex-wrap: wrap;
-  }
-  
-  .icon-elem {
-    list-style: none;
-  }
-  
-  .icon {
-    color: white;
-    font-size: 32px;
-    display: inline-block;
-    margin: 0 10px;
-    transition: 0.5s;
-  }
-  
-  .icon:hover {
-    transform: translateY(-10px);
-  }
-  
   .menu {
     display: flex;
     justify-content: center;
@@ -78,9 +52,9 @@
   
   .menu-icon1:hover {
     opacity: 1;
-    color: white;
+    color: rgb(0, 0, 0);
     scale: 1.05;
-    background-color: rgb(25, 124, 101);
+    background-color: rgb(255, 255, 255);
   }
   .text {
     color: white;
