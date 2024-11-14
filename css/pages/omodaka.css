@@ -34,18 +34,19 @@
 }
 
 .explicationomodaka{
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: flex;
     width: 100%;
-    justify-content: space-between; /* Sépare les éléments à gauche et à droite */
-    align-items: flex-start; /* Aligne en haut de chaque bloc */
+    justify-content: space-between; /* Sépare les éléments à gauche et à droite *//* Aligne en haut de chaque bloc */
     position: relative;
 
 }
 
 .explicationomodaka p{
-    width: 40%;
-    width: 100%;
+    width: calc(50% - 12.5px);
+    margin: 0;
+    padding: 0;
 }
 
 .explicationomodaka ::selection {

@@ -30,7 +30,6 @@
 }
 
 .infoprojet {
-    height: 100%;
     width: 100%;
     background-color: var(--backgroundproject);
     padding-left:  40px;    
@@ -49,14 +48,11 @@
 
 .infoprojet h2 {
     color: black ;
-    padding-left: 100px;
     font-size: 40px;
     line-height: 1; /* Augmente l'espacement entre les lignes */
-    margin-top: 40px;
 }
 
 .infoprojet p {
-    margin-top: 20px;
     color: black ;
     
 }
@@ -114,13 +110,11 @@
 
 /* Style pour l'explication */
 .texteexplicatif{
-    margin-right: 5%;
-    max-width: 100%; /* Limite la largeur de l'explication si besoin */
     text-align: justify;
-    line-height: 1.5; /* Augmente l'espacement entre les lignes */
-    max-width: 610px; /* Limite la largeur du pavé pour une meilleure lisibilité */
+    line-height: 1.5; /* Augmente l'espacement entre les lignes */ /* Limite la largeur du pavé pour une meilleure lisibilité */
     margin-bottom: -30px;
     font-size: 1rem;
+    
 
 }
 

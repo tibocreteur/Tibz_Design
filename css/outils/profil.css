@@ -15,7 +15,7 @@
     background-color:rgb(33, 33, 33);
     background-size: cover;
     width: 900px;
-    height: 500px;
+    height: 540px;
     border-radius: 25px;
     display: flex;
     border-style:solid;
@@ -23,7 +23,6 @@
     border-color: rgb(98, 98, 98);
     scale: 0.85;
     transition: transform 0.3s ease;
-    overflow: hidden;
     position: relative;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.293);
 }
@@ -36,15 +35,17 @@
     border-style:solid;
     border-width: 2px;
     border-color: rgb(98, 98, 98);
-    padding: 20px;
+    padding: 15px;
+    padding-inline: 25px;
+    bottom: -30px;
+    left: 140px;
     gap: 20px;
-    scale: 0.85;
+    scale: 1;
     transition: transform 0.3s ease;
     overflow: hidden;
-    top: -60px;
-    position: relative;
+    position: absolute;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.293);
-    z-index: 10;
+    z-index: 1000;
 }
 
 
@@ -70,10 +71,6 @@
     pointer-events: none;
 }
 
-.caseprofil, .caseprofil * {
-    user-select: none;
-  }
-
 .profilbas{
     justify-content: flex-end;
 }
@@ -86,27 +83,43 @@
     font-family: "IBM Plex Mono", monospace;
     text-align:inherit;
     pointer-events: none;
-
 }
 
 .profilbas h2{
-    line-height: 1.5; /* Augmente l'espacement entre les lignes */
+    font-size: 2rem;
 }
 
 .profilgauche{
-    background-image: url('./../../image/console/fond.jpg');
+    background-image: url('./../../image/101_0153-2.jpg');
     background-size: cover;
-    background-position-x: -150px;
     width: 450px;
-    border-radius: 5px;
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
 }
 
 .profildroit{
-
-    justify-content: space-between;
     width: 700px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    .caseprofil {
+        background-color:rgb(33, 33, 33);
+        background-size: cover;
+        width: 900px;
+        height: 540px;
+        border-radius: 25px;
+        display: flex;
+        border-style:solid;
+        border-width: 2px;
+        border-color: rgb(98, 98, 98);
+        scale: 0.4;
+        transition: transform 0.3s ease;
+        position: relative;
+        box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.293);
+    }
+
 }
