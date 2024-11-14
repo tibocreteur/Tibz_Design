@@ -1,57 +1,96 @@
+@import url(./../../css/outils/color.css);
+
 .profil{
     display: flex;
-    width: 100%;
-    height: 500px;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;  
+    padding-top: 200px;
     background-color: rgb(0, 0, 0);
     align-items: center;
     place-content: center;
 }
 
-.caseprofil{
-    background-color: rgb(48, 51, 54);
-    width: 700px;
-    height: 400px;
+
+.caseprofil {
+    background-color:rgb(33, 33, 33);
+    background-size: cover;
+    width: 850px;
+    height: 500px;
     border-radius: 25px;
     display: flex;
-    border-style:ridge;
-    border-color: rgba(255, 255, 255, 0.465);
+    border-style:solid;
     border-width: 2px;
+    border-color: rgb(98, 98, 98);
+    padding: 20px;
+    gap: 20px;
+    scale: 0.85;
+    perspective: 1000px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    
 }
+.caseprofil:hover{
+    transform: scale(1.02);
+  }
 
 .profilhaut{
-    justify-content: flex-end;
-    height: 60px;
-    background-color: aqua;
+    display: flex;
+    justify-content: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profilhaut li{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.561);
 }
 
 .badgesprofil{
-    justify-content: flex-end;
-    position: relative;
-    top: 10px;
-    right: 30px;
+    justify-content: flex;
     display: flex;
     gap: 10px;
     z-index: 3; /* Place la vidéo derrière le contenu */
     scale: 1;
     opacity: 1;
-    pointer-events: none; 
+    pointer-events: none;
 }
+
+.caseprofil, .caseprofil * {
+    user-select: none;
+  }
 
 .profilbas{
     justify-content: flex-end;
-    height: calc(100% - 60px);
-    background-color: blue;
+}
+
+.profilbas p{
+    line-height: 1; /* Augmente l'espacement entre les lignes */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    font-family: "IBM Plex Mono", monospace;
+    text-align:inherit;
+    pointer-events: none;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+
+}
+
+.profilbas h2{
+    line-height: 1.5; /* Augmente l'espacement entre les lignes */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
 .profilgauche{
-    background-color: red;
-    width: 300px;
+    background-image: url('./../../image/101_0153-2.jpg');
+    background-size: cover;
+    background-position-x: -150px;
+    width: 450px;
+    border-radius: 5px;
 }
 
-.profildroite{
-    position: absolute;
-    background-color: brown;
-    width: 100%;
+.profildroit{
+    width: 700px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
