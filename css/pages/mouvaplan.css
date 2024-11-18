@@ -1,6 +1,23 @@
 @import url('./../outils/palettecouleur.css');
 @import url('./../outils/meteo.css');
 
+
+.explication{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Sépare les éléments à gauche et à droite *//* Aligne en haut de chaque bloc */
+    position: relative;
+
+}
+
+.explication p{
+    width: calc(50% - 12.5px);
+    margin: 0;
+    padding: 0;
+}
+
 /* Style de la section principale pour diviser en deux colonnes et arrondir les coins */
 .figma-section {
     display: flex;
@@ -93,38 +110,35 @@
 
 .presentionfont {
     display: flex; /* Utilise Flexbox pour l'alignement */
-    justify-content: space-between; /* Espace entre les colonnes */
-    width: 100%; /* Prend toute la largeur */
+    justify-content: space-between; /* Espace entre les colonnes */ /* Prend toute la largeur */
+    gap: 20px;
 }
 
 .presentionfont p{
     margin-top: 0px;
 }
 .presentationfontgauche {
-    flex: 1; /* Prend de l'espace disponible */
-    padding-right: 20px; /* Espace à droite */
+
 }
 
 
 .presenationfontdroite {
-    flex: 2; /* Prend de l'espace disponible */
     border-radius: 25px;
     background-color: #B3E3A2;
-    padding-inline: 50px;
+    padding: 20px 40px;
 }
 
-.font-name {
-    font-size: 36px; /* Taille de la police pour le nom */
-    color: #FFFCE2; /* Couleur du texte */
+.presenationfontdroite h1{
+    padding: 0;
+    margin: 0;
 }
+
 
 .font-sample {
     font-size: 20px; /* Taille de la police d'exemple */
     color: #FFFCE2; /* Couleur du texte */
 }
 
-.Ericaone {
-}
 
 .Ericaone p{
     font-family: "IBM Plex Mono", monospace;
@@ -185,7 +199,7 @@
     font-weight:normal;
     color: #3B7958;
     font-size: 25px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 .leslettresInter p{
     font-family: 'Inter', sans-serif;

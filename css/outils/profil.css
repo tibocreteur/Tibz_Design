@@ -36,7 +36,8 @@
 }
 
 .mention{
-    background-color: rgba(23, 23, 23, 0.751);
+    width: 620px;
+    background-color: rgb(23, 23, 23);
     backdrop-filter: blur(0px);
     background-size: cover;
     border-radius: 25px;
@@ -46,15 +47,14 @@
     border-color: rgb(98, 98, 98);
     padding: 15px;
     padding-inline: 25px;
-    bottom: -30px;
-    left: 140px;
-    gap: 20px;
-    scale: 1;
-    transition: transform 0.3s ease;
     overflow: hidden;
     position: absolute;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.24);
+    justify-content: center;
     z-index: 1000;
+    left: 50%;                /* Placer la div au milieu horizontalement */
+    bottom: -30px;                /* Placer la div en bas de la page */
+    transform: translateX(-50%);
 }
 
 

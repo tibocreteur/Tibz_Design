@@ -264,3 +264,19 @@ blockquote {
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.explication{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Sépare les éléments à gauche et à droite *//* Aligne en haut de chaque bloc */
+    position: relative;
+
+}
+
+.explication p{
+    width: calc(50% - 12.5px);
+    margin: 0;
+    padding: 0;
+}
