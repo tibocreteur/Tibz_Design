@@ -22,12 +22,12 @@ buttons.forEach(button => {
         }, 1500); // Le message disparaît après 1,5 seconde
 
         // Changer la couleur de fond du bouton en vert
-        button.style.backgroundColor = 'black';  // Le vert que tu souhaites
+        button.style.backgroundColor = 'white';  // Le vert que tu souhaites
 
         // Optionnel : Remettre la couleur initiale après quelques secondes (par exemple 1 seconde)
         setTimeout(() => {
             button.style.backgroundColor = '';  // Remet la couleur d'origine
-        }, 1000);  // Après 1 seconde
+        }, 110);  // Après 1 seconde
     });
 });
 

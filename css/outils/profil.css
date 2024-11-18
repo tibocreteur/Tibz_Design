@@ -16,15 +16,14 @@
     align-items: center;
     background-color: black;
     width: 100%;
-    gap: 20px;
 }
 
 .caseprofil {
     background-image: url('./../../image/tete.png');
-    background-size: cover;
-    background-position: -15px;
-    width: 900px;
-    height: 520px;
+    background-size: 130%;
+    background-position: -50px;
+    width: 850px;
+    height: 570px;
     border-radius: 25px;
     display: flex;
     border-style:solid;
@@ -36,7 +35,7 @@
 }
 
 .mention{
-    width: 620px;
+    width: 745px;
     background-color: rgb(23, 23, 23);
     backdrop-filter: blur(0px);
     background-size: cover;
@@ -102,18 +101,19 @@
 }
 
 .profilgauche{
+    width: 350px;
     background-size: cover;
-    width: 450px;
+
     border-top-left-radius: 23px;
     border-bottom-left-radius: 23px;
 }
 
 .profildroit{
-    border-top-right-radius: 23px;
-    border-bottom-right-radius: 23px;
+    width: 500px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
     background-color: rgba(23, 23, 23, 0.751);
     backdrop-filter: blur(30px);
-    width: 700px;
     display: flex;
     flex-direction: column;
     gap: 20px;
