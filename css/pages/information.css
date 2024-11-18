@@ -9,10 +9,14 @@
     position: relative;
 }
 
-/* Styles pour le texte cliquable */
+::selection {
+    background-color: #ffffff3b; /* Couleur du fond */
+}
 
-
-/* Optionnel : style pour indiquer que l'élément a été copié *
+/* Pour les navigateurs WebKit (Chrome, Safari) */
+::-webkit-selection {
+    background-color: #ffffff3b;
+}
 
 /* Style pour le conteneur des boutons */
 .button-container {
@@ -49,23 +53,6 @@
 }
 
 /* Style du message "copié" */
-.copied-message {
-    position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(52, 238, 139);
-    color:  rgb(31, 148, 85);
-    padding: 5px 10px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: bold;
-    display: none; /* Caché par défaut */
-
-    z-index: 9999;
-}
 
 @media (max-width: 768px) {
     .profilinformation{

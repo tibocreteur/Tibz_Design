@@ -4,32 +4,34 @@ const copiedMessage = document.querySelector('.copied-message');
 
 // Fonction de copie et affichage du message
 buttons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', async () => {
         const textToCopy = button.getAttribute('data-text');
 
-        // Créer un champ input temporaire pour copier le texte
-        const tempInput = document.createElement('input');
-        document.body.appendChild(tempInput);
-        tempInput.value = textToCopy;
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
+        try {
+            // Utilise l'API moderne pour copier du texte
+            await navigator.clipboard.writeText(textToCopy);
 
-        // Afficher le message "copié"
-        copiedMessage.style.display = 'block';
-        setTimeout(() => {
-            copiedMessage.style.display = 'none';
-        }, 1500); // Le message disparaît après 1,5 seconde
+            // Afficher le message "copié"
+            copiedMessage.style.display = 'block';
+            setTimeout(() => {
+                copiedMessage.style.display = 'none';
+            }, 1500); // Le message disparaît après 1,5 seconde
 
-        // Changer la couleur de fond du bouton en vert
-        button.style.backgroundColor = 'white';  // Le vert que tu souhaites
+            // Changer rapidement la couleur de fond du bouton en blanc
+            button.style.backgroundColor = 'white';
 
-        // Optionnel : Remettre la couleur initiale après quelques secondes (par exemple 1 seconde)
-        setTimeout(() => {
-            button.style.backgroundColor = '';  // Remet la couleur d'origine
-        }, 110);  // Après 1 seconde
+            // Remettre la couleur initiale après un délai très court (100ms)
+            setTimeout(() => {
+                button.style.backgroundColor = ''; // Réinitialise la couleur
+            }, 100); // Après 100ms
+        } catch (err) {
+            console.error('Échec de la copie : ', err);
+            alert('La copie a échoué. Veuillez réessayer.');
+        }
     });
 });
+
+
 
 
 

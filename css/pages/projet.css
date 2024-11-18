@@ -215,7 +215,15 @@
     height: 400px; /* Fixe la hauteur des deux conteneurs */
   }
   
+  
+.citation ::selection {
+    background-color: #ffd700; /* Couleur du fond */
+}
 
+/* Pour les navigateurs WebKit (Chrome, Safari) */
+.citation ::-webkit-selection {
+    background-color: #ffd700;
+}
 
   .citation {
     display: flex;
