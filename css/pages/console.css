@@ -1,4 +1,6 @@
 /* Conteneur principal */
+
+
 .triplette {
     display: flex; /* Utilisation de flexbox pour aligner horizontalement */
     gap: 30px; /* Espace de 30px entre la vidéo de gauche et les vidéos de droite */
