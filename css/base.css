@@ -59,6 +59,7 @@ a:hover{
 }
 
 .copied-message {
+  display: flex;
   position: fixed;
   top: 10%;
   left: 50%;

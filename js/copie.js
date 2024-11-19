@@ -18,12 +18,12 @@ buttons.forEach(button => {
             }, 900); // Le message disparaît après 1,5 seconde
 
             // Changer rapidement la couleur de fond du bouton en blanc
-            button.style.backgroundColor = 'white';
+            button.style.backgroundColor = 'black';
 
             // Remettre la couleur initiale après un délai très court (100ms)
             setTimeout(() => {
                 button.style.backgroundColor = ''; // Réinitialise la couleur
-            }, 100); // Après 100ms
+            }, 150); // Après 100ms
         } catch (err) {
             console.error('Échec de la copie : ', err);
             alert('La copie a échoué. Veuillez réessayer.');
