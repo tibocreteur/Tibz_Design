@@ -17,10 +17,10 @@ colors.forEach(color => {
 
         // Afficher un message "copié"
         copiedMessage.style.display = 'block';
-        copiedMessage.textContent = `Copied !`;  // Affiche le code couleur copié
+        copiedMessage.textContent = `Copied`;  // Affiche le code couleur copié
         setTimeout(() => {
             copiedMessage.style.display = 'none';
-        }, 1500); // Le message disparaît après 1,5 seconde
+        }, 900); // Le message disparaît après 1,5 seconde
     });
 });
 
