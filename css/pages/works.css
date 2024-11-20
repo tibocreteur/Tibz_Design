@@ -1,0 +1,122 @@
+
+/* Fondworks : Conteneur principal */
+.fondworks {
+    display: flex;
+    width: 100%;
+    padding-top: 90px;
+    justify-content: space-between;
+}
+
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nom{
+    display: flex;
+    align-items: center;
+}
+
+.nom h3{
+    font-size: 1.7rem;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.nom span{
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.logiciel span{
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.barre-verticaleblack {
+    width: 2px; /* Largeur de la barre */
+    height: 25px; /* Hauteur de la barre */
+    background-color: #000000; /* Couleur de la barre */
+    margin-inline: 10px; /* Espacement autour de la barre */
+}
+
+/* Travaux : Section des projets */
+.works {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+}
+
+/* Projet individuel */
+.projet1 {
+    z-index: 12;
+    padding: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    background: var(--greymouvaplan);
+    color: black;
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+
+.imagesworks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap
+}
+
+.imagesworks img{
+    width: 33.33%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.imagesworks video{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.texteworks p{
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+/* Barre verticale */
+
+.droite{
+    width: 150px;
+    display: flex;
+    padding-left: 27px;
+}
+
+.barreverticale {
+    width: 4px;
+    background: var(--greymouvaplan);
+    border-radius: 5px;
+    position: relative;
+}
+
+.imgcent img{
+    width: 100%;
+}
+
+.date{
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+    background-color: var(--greymouvaplan);
+    padding: 10px;
+    padding-inline: 20px;
+    position: absolute;
+    color: rgb(86, 86, 86);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    right: 30px;
+    margin-top: -30px;
+
+}
