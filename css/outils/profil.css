@@ -19,8 +19,8 @@
 }
 
 .caseprofil {
-    background-image: url('./../../image/tete.png');
-    background-size: 130%;
+    background-image: url('./../../image/photofun.jpg');
+    background-size: 110%;
     background-position: -50px;
     width: 850px;
     height: 570px;
@@ -109,9 +109,9 @@
 
 .profildroit{
     width: 500px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background-color: rgba(23, 23, 23, 0.751);
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    background-color: rgba(23, 23, 23, 0.503);
     backdrop-filter: blur(30px);
     display: flex;
     flex-direction: column;
