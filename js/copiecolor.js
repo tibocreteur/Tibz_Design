@@ -17,7 +17,7 @@ colors.forEach(color => {
 
         // Afficher un message "copié"
         copiedMessage.style.display = 'block';
-        copiedMessage.textContent = `💾 Information copied`;  // Affiche le code couleur copié
+        copiedMessage.textContent = `💾 Copied`;  // Affiche le code couleur copié
         setTimeout(() => {
             copiedMessage.style.display = 'none';
         }, 900); // Le message disparaît après 1,5 seconde

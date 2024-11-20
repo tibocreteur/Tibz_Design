@@ -19,8 +19,8 @@
 }
 
 .caseprofil {
-    background-image: url('./../../image/photofun.jpg');
-    background-size: 110%;
+    background-image: url('./../../image/tete.png');
+    background-size: cover;
     background-position: -50px;
     width: 850px;
     height: 570px;
