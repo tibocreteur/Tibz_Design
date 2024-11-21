@@ -132,7 +132,8 @@
     position: relative;
 }
 
-.imgcent {
+.imgcent{
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -141,6 +142,26 @@
 
 .imgcent img{
     width: 100%;
+}
+
+.imgcinq{
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.imgcinq img{
+    height: 500px;
+    object-fit: contain;
+    max-width: 50%;
+}
+
+.imgvingt{
+    display: flex;
+}
+
+.imgvingt img{
+    width: 20%;
 }
 
 .lienprojets{

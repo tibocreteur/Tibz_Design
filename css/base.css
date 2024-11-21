@@ -61,13 +61,13 @@ a:hover{
 .copied-message {
   display: flex;
   position: fixed;
-  top: 10%;
+  top: 12%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(52, 238, 139);
   color:  rgb(31, 148, 85);
   padding: 5px 10px;
-  font-size: 18px;
+  font-size: 1.3rem;
   font-weight: bold;
   border-radius: 5px;
   font-family: "IBM Plex Mono", monospace;

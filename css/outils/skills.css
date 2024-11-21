@@ -1,92 +1,149 @@
-section.skills {
-    background-color: var(--backgroundaccueil);
-}
-
+/* Conteneur principal */
+/* Conteneur principal */
 .skills {
-    color: #ffffff;
-    place-items: center;
+    background-color: black;
+}
+
+.container-skills {
+    background: linear-gradient(135deg, #151515, #434343, #343434); /* Dégradé */
+    border-width: 2px;
+    border-style: solid;
+    border-top-color: rgb(129, 129, 129);
+    border-bottom-color: rgb(81, 81, 81);
+    border-left-color: rgb(81, 81, 81);
+    border-right-color: rgb(81, 81, 81);
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--backgroundaccueil);
     align-items: center;
-    gap: 4px;
-    padding: 4px;
+    width: 90%;
+    margin: 0 auto; /* Centre la div */
 }
 
-.skills-section {
-    flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--backgroundaccueil);
-    align-items: center;
-    height: auto;
-    justify-content: start;
-}
-
+/* Chaque skill panel */
 .skills-panel {
+    text-align: center;
+    margin: 20px; /* Espacement entre les cercles */
+    margin-bottom: 25px; /* Espacement entre les cercles */
+    flex: 0 1 calc(25% - 40px); /* Ajustement pour 4 cercles par ligne */
+    box-sizing: border-box;
+}
+
+/* Lien pour la transition */
+.transition-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+}
+
+/* Le cercle principal */
+.circle {
+    border-style: solid;
+    border-width: 2px;
+    border-top-color: rgb(129, 129, 129);
+    border-bottom-color: rgb(81, 81, 81);
+    border-left-color: rgb(81, 81, 81);
+    border-right-color: rgb(81, 81, 81);
+    height: 100px;
     width: 100%;
-    overflow: hidden;
-    transition: 0.3s ease;
-    height: 150px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #151515, #222); /* Dégradé sombre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 10px 0px rgba(0, 0, 0, 0.522);
+    transition: box-shadow 0.3s;
 }
 
-.skills-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%) contrast(0.5);
-    transition: 0.5s ease;
-}
-
-.skills-panel:hover .skills-image {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    filter: grayscale(0%) contrast(1);
-}
-
-.titre-skills {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
+/* Cercle intérieur */
+.circle::after {
+    content: '';
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 15px;
+    background-color: rgba(255, 200, 0, 0.2); /* Couleur par défaut faible opacité */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(2); /* Initialise l'échelle */
-    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease-in-out, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Texte (Titre) dans le bouton */
+.titre-skills {
+    font-size: 1.4rem;
     font-weight: bold;
-    opacity: 0; /* Invisible par défaut */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition plus douce */
-    z-index: 1;
-    pointer-events: none; /* Évite que le survol du texte affecte l'animation de l'image */
+    color: rgba(255, 255, 255, 0.6); /* Semi-transparent par défaut */
+    font-family: "IBM Plex Mono", monospace;
+    position: absolute;
+    pointer-events: none; /* Empêche d'interférer avec le hover */
+    transition: color 0.3s ease-in-out;
 }
 
-.skills-panel:hover .titre-skills {
-    opacity: 0.5;
-    transform: translate(-50%, -50%) scale(3); /* Agrandit le texte */
+/* Effet hover sur le cercle */
+.circle:hover {
 }
 
+.circle:hover::after {
+    box-shadow: 0 0 200px currentColor; /* Utilisation de la couleur actuelle */
+}
 
+.circle:hover .titre-skills {
+    color: rgb(39, 27, 5); /* Couleur foncée liée au bouton */
+}
 
+/* Couleurs liées à l'ID */
+#troisd .circle::after {
+    background-color: rgba(255, 165, 0, 0.2); /* Orange clair */
+    color: rgba(255, 165, 0, 1); /* Utilisé pour le box-shadow */
+}
 
-@media (max-width: 768px) {
-    .projects-section {
-        display: flex;
-        flex-wrap: wrap; /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
-        align-items: center;
-        flex-shrink: 2;
+#troisd .circle:hover::after {
+    background-color: rgba(255, 165, 0, 0.8); /* Orange intense */
+}
 
-    }
-    .projects-section img {
-        width: 100%;
-        filter: grayscale(0%) contrast(1) ; /* Applique le noir et blanc */
-        height: 150px;
-        margin-bottom: 5px;
+#troisd .circle:hover .titre-skills {
+    color: rgb(255, 140, 0); /* Orange plus foncé */
+}
 
-    }
-    .project-panel {
-        width: 40%; /* Mettre à 30% de la largeur du conteneur */
-    }
+#posters .circle::after {
+    background-color: rgba(255, 105, 180, 0.2); /* Rose clair */
+    color: rgb(169, 72, 120);
+}
 
+#posters .circle:hover::after {
+    background-color: rgba(255, 105, 180, 0.8); /* Rose intense */
+}
+
+#posters .circle:hover .titre-skills {
+    color: rgb(220, 20, 60); /* Rose foncé */
+}
+
+#character .circle::after {
+    background-color: rgba(173, 255, 47, 0.2); /* Vert citron clair */
+    color: rgba(173, 255, 47, 1);
+}
+
+#character .circle:hover::after {
+    background-color: rgba(173, 255, 47, 0.8); /* Vert citron intense */
+}
+
+#character .circle:hover .titre-skills {
+    color: rgb(124, 252, 0); /* Vert citron foncé */
+}
+
+/* Couleurs liées à l'ID */
+#animation .circle::after {
+    background-color: rgba(75, 0, 130, 0.2); /* Violet clair */
+    color: rgba(75, 0, 130, 1); /* Utilisé pour le box-shadow */
+}
+
+#animation .circle:hover::after {
+    background-color: rgba(138, 43, 226, 0.8); /* Violet intense */
+}
+
+#animation .circle:hover .titre-skills {
+    color: rgb(72, 61, 139); /* Violet foncé */
 }
