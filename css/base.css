@@ -58,6 +58,29 @@ a:hover{
   display: block;
 }
 
+.off{
+  color: #ffffff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1000000; /* Place la vidéo derrière le contenu */
+  text-align: center;  
+  padding: 10%;
+
+}
+
+@media (max-width: 768px) {
+  .off{
+    display: flex;
+  }
+}
+
 .copied-message {
   display: flex;
   position: fixed;
