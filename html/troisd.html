@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./../css/pages/projet.css">
     <link rel="stylesheet" href="./../css/pages/works.css">
     <link rel="stylesheet" href="./../css/base.css">
+    <link rel="stylesheet" href="./../css/outils/comparaisonimage.css">
     <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
 
 </head>
@@ -64,8 +65,29 @@
                     <div class="date">2024</div>
                 </div>
                 <div class="projet1">
-                    <div class="imgcent">
-                        <img src="./../image/works/drime/fonddrime.avif" alt="">
+                    <div class="image-comparison">
+                        <div class="images-container">
+                          <img class="before-image" src="./../image/works/drime/drime4.jpg" alt="" />
+                          <img class="after-image" src="./../image/works/drime/drime2.jpg" alt="" />
+                          <div class="slider-line"></div>
+                          <div class="slider-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="w-6 h-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+                              />
+                            </svg>
+                          </div>
+                          <input type="range" class="slider" min="0" max="100" />
+                        </div>
                     </div>
                     <div class="titre">
                         <div class="infotitre">
