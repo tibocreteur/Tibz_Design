@@ -182,8 +182,8 @@
 
 .lienprojets:hover{
     color: white;
-    padding: 12px;
-    padding-inline: 18px;
+    transform: scale(1.05);
+
 }
 
 .date{

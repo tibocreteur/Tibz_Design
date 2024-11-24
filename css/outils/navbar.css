@@ -98,7 +98,7 @@ p{
     display: flex;
     align-items: center;
     /*margin-right: 1rem;*/
-    gap: 25px;
+    gap: 15px;
 }
 
 .button-insta img {
