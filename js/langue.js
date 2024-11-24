@@ -1,48 +1,67 @@
-// scripts.js
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("languageToggle");
+    const contactLink = document.querySelector(".navbar-button");
 
-// Déclaration de l'objet pour stocker les traductions des différentes langues
-const translations = {
-    fr: {},
-    en: {}
-};
+    // Récupérer la langue depuis le localStorage ou définir l'anglais par défaut
+    let currentLanguage = localStorage.getItem("language") || "en";
 
-// Fonction pour charger les traductions depuis les fichiers JSON
-async function loadTranslations(lang) {
-    const response = await fetch(`./json/${lang}.json`);
-    translations[lang] = await response.json();
-}
+    // Charger les traductions depuis des fichiers JSON
+    async function loadLanguage(lang) {
+        try {
+            const response = await fetch(`../json/${lang}.json`); // Le chemin vers les fichiers JSON
+            const translations = await response.json();
+            updateTexts(translations);
+        } catch (error) {
+            console.error("Erreur lors du chargement des traductions :", error);
+        }
+    }
 
-// Fonction pour mettre à jour le texte de la page selon la langue sélectionnée
-function updateTexts(lang) {
-    const elements = document.querySelectorAll('[data-key]'); // Tous les éléments avec l'attribut data-key
-    elements.forEach(el => {
-        const key = el.getAttribute('data-key'); // Clé de traduction
-        el.textContent = translations[lang][key] || el.textContent; // Remplacer le texte par la traduction
+    // Fonction pour convertir les retours à la ligne (\n) en balises HTML <br>
+    function convertNewlinesToHTML(text) {
+        return text.replace(/\n/g, "<br>");
+    }
+
+    // Mettre à jour les textes du site
+    function updateTexts(translations) {
+        document.querySelectorAll("[data-key]").forEach((element) => {
+            const key = element.getAttribute("data-key");
+            if (translations[key]) {
+                element.innerHTML = convertNewlinesToHTML(translations[key]); // Utilisation de innerHTML pour interpréter les <br>
+            }
+        });
+
+        // Mise à jour du lien "mailto" avec le texte correct
+        contactLink.href = `mailto:tibzdesign@gmail.com?subject=${encodeURIComponent(
+            translations["contactSubject"]
+        )}&body=${encodeURIComponent(translations["contactBody"])}`;
+    }
+
+    // Basculer entre anglais et français
+    button.addEventListener("click", () => {
+        if (currentLanguage === "en") {
+            currentLanguage = "fr";
+            button.classList.remove("uk-flag");
+            button.classList.add("fr-flag");
+        } else {
+            currentLanguage = "en";
+            button.classList.remove("fr-flag");
+            button.classList.add("uk-flag");
+        }
+
+        // Stocker la langue dans localStorage pour qu'elle persiste
+        localStorage.setItem("language", currentLanguage);
+
+        // Ensuite, charger la langue correspondante
+        loadLanguage(currentLanguage);
     });
 
-    // Mettre à jour l'attribut lang de la balise HTML
-    document.documentElement.lang = lang;
-}
+    // Initialiser avec la langue stockée dans le localStorage ou l'anglais par défaut
+    if (currentLanguage === "fr") {
+        button.classList.add("fr-flag");
+    } else {
+        button.classList.add("uk-flag");
+    }
 
-// Fonction pour récupérer la langue sauvegardée ou la langue du navigateur
-function setLanguage() {
-    const savedLang = localStorage.getItem('lang'); // Récupérer la langue dans le localStorage
-    const userLang = savedLang || (navigator.language.startsWith('fr') ? 'fr' : 'en'); // Si pas de langue sauvegardée, utiliser la langue du navigateur
-    updateTexts(userLang); // Appliquer la langue
-}
-
-// Fonction pour changer la langue au clic sur les boutons
-document.getElementById('btn-fr').addEventListener('click', () => {
-    updateTexts('fr'); // Appliquer le français
-    localStorage.setItem('lang', 'fr'); // Sauvegarder la langue dans le localStorage
-});
-
-document.getElementById('btn-en').addEventListener('click', () => {
-    updateTexts('en'); // Appliquer l'anglais
-    localStorage.setItem('lang', 'en'); // Sauvegarder la langue dans le localStorage
-});
-
-// Charger les traductions et définir la langue au démarrage
-Promise.all([loadTranslations('fr'), loadTranslations('en')]).then(() => {
-    setLanguage(); // Appliquer la langue sauvegardée ou celle détectée du navigateur
+    // Charger la langue lors du chargement de la page
+    loadLanguage(currentLanguage);
 });

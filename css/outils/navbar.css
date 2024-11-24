@@ -94,10 +94,6 @@ p{
     color: white;
 }
 
-.navbar ::selection {
-    background-color: #ffffff4e; /* Couleur de surlignage (jaune doré) */
-}
-
 .social-contact {
     display: flex;
     align-items: center;
@@ -123,7 +119,7 @@ p{
     padding: 2px 10px;
     border-radius: 10px;
     outline: none;
-    border: 3px solid rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
     transition: background-color 0.7s ease-in-out; 
     transition: color 0.1s ease-in-out; 
 }
@@ -148,11 +144,34 @@ a:hover {
     color: #d8f4ff;
 }
 
+.language-button {
+    border-radius: 5px;
+    padding:15px;
+    padding-inline:25px;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease;
+}
+
+.language-button:hover {
+    transform: scale(1.05);
+}
+
 .barre-verticale {
     width: 2px; /* Largeur de la barre */
     height: 25px; /* Hauteur de la barre */
     background-color: #ffffff; /* Couleur de la barre */
     margin-inline: 10px; /* Espacement autour de la barre */
+}
+
+.uk-flag {
+    background-image: url('./../../image/drapeau/eng.png');
+}
+
+.fr-flag {
+    background-image: url('./../../image/drapeau/fr.jpg');
 }
 
 @media (max-width: 768px) {

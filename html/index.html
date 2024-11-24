@@ -38,10 +38,11 @@
                     <img src="../image/logoinsta.png" alt="Instagram">
                 </a>
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour%20Tibo%2C%0A%0AJ'aimerais%20avoir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">
+                <a data-key="contactme" href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour%20Tibo%2C%0A%0AJ'aimerais%20avoir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">
                     CONTACT ME
                     <i class="fa-sharp-duotone fa-solid fa-paper-plane"></i>
                 </a>
+                <button id="languageToggle" class="language-button"></button>
             </div>
         </header>
         <div class="logo-grand">
@@ -50,7 +51,7 @@
     </section>
     <section class="latestprojectstitre">
         <header class="latestprojects">
-            <h1>Projects</h1>
+            <h1 data-key="projects">Projects</h1>
         </header>
     </section>
     <section class="projects-section">
@@ -76,7 +77,7 @@
             <a href="omodaka.html">
                 <div class="petitbouton">
                     <li class="new">NEW</li>
-                    <li class="da">IDENTITY</li>
+                    <li data-key="identity" class="da">IDENTITY</li>
                 </div>
                 <img src="./../image/omodaka/omodaka.jpg" alt="Omodaka" class="project-image">
             </a>
@@ -128,6 +129,6 @@
         <p class="text">@2024 | ©TibzDesign. All rights reserved.</p>
     </footer>
 </html>
-
+<script src="./../js/langue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
