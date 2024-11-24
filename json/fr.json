@@ -56,7 +56,35 @@
         "colors": "Couleurs",
         "poster": "AFFICHES",
         "logiciel": "Logiciel : ",
-
+        "discover":"Découvrir",
+    
+    "3D": "",
+        
+        "DRIME": "",
+        
+            "titredrime": "Accueil du site de DRIME",
+            "explicationdrime": "La demande de Drime était de créer le fond de la page d'accueil de leur site, en s'inspirant du style de Windows ou Office.",
+        
+    "POSTER": "",
+                    
+        "RATZ": "",
+            
+            "technicaldrawing": "Dessin technique",
+            "explicationratz": "J'ai créé le plan technique de la voiture Ratz, en respectant ses proportions et son esthétique de dessin animé. Ce travail m'a permis d'analyser ses détails et de les traduire en un schéma précis et fidèle, à la fois ludique et technique.",
+            
+        "MAGICBALL": "",
+            
+            "explicationmagicball": "J'ai créé le plan technique de la Magic Ball, en veillant à préserver ses proportions et son esthétique de dessin animé. Ce travail m'a permis d'analyser ses détails uniques et de les traduire en un schéma précis et fidèle, alliant créativité et précision technique.",
+            
+        "LESBELLESANCIENNES": "",
+            
+            "explicationlesbellesanciennes": "J'ai conçu ce poster en mettant en avant l'élégance et la nostalgie des voitures anciennes. J'ai utilisé une typographie Art Déco pour refléter l'esprit vintage de l'événement, tout en intégrant des couleurs chaudes et un visuel attractif pour capter l'attention. La mise en page claire et hiérarchique assure une lecture fluide des informations clés.",
+            
+        "ENVIEDECREUVER": "",
+            
+                "explicationenviedecreuver": "J'ai conçu un poster basé sur la phrase : \"Le chocolat est meilleur quand on a envie de mourir.\" Il juxtapose la silhouette d'une personne dégustant un morceau de chocolat avec celle d'un crâne, symbolisant l'équilibre entre le désespoir et le réconfort. Les couleurs vibrantes contrastent avec le message sombre, tandis que la typographie audacieuse renforce l'impact de la phrase. Cette composition transmet visuellement l'idée du chocolat comme plaisir réconfortant dans les moments difficiles.",
+    
+                
     "FOOTER": "",
     
         "sitation": "Que cette création éveille votre inspiration. (• ◡•)",

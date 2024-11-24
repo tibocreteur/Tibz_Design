@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("languageToggle");
     const contactLink = document.querySelector(".navbar-button");
 
-    // Définir les liens d'images pour les drapeaux
-    const flagImages = {
-        en: './../image/drapeau/eng.png',  // Remplacez par le chemin de votre image du drapeau anglais
-        fr: './../image/drapeau/fr.jpg'    // Remplacez par le chemin de votre image du drapeau français
+    // Définir les couleurs pour les drapeaux
+    const flagColors = {
+        en: "#ffffff32",  // Exemple de couleur bleue pour l'anglais
+        fr: "#ffffff32"   // Exemple de couleur bleue pour le français (change cette couleur si nécessaire)
     };
 
     // Récupérer la langue depuis le localStorage ou définir l'anglais par défaut
@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
         if (currentLanguage === "en") {
             currentLanguage = "fr";
-            button.style.backgroundImage = `url(${flagImages.fr})`;  // Changer l'image du drapeau
+            button.style.backgroundColor = flagColors.fr;  // Changer la couleur de fond
         } else {
             currentLanguage = "en";
-            button.style.backgroundImage = `url(${flagImages.en})`;  // Changer l'image du drapeau
+            button.style.backgroundColor = flagColors.en;  // Changer la couleur de fond
         }
 
         // Stocker la langue dans localStorage pour qu'elle persiste
@@ -61,12 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialiser avec la langue stockée dans le localStorage ou l'anglais par défaut
     if (currentLanguage === "fr") {
-        button.style.backgroundImage = `url(${flagImages.fr})`;  // Initialiser l'image
+        button.style.backgroundColor = flagColors.fr;  // Initialiser la couleur de fond
     } else {
-        button.style.backgroundImage = `url(${flagImages.en})`;  // Initialiser l'image
+        button.style.backgroundColor = flagColors.en;  // Initialiser la couleur de fond
     }
 
     // Charger la langue lors du chargement de la page
     loadLanguage(currentLanguage);
 });
+
 

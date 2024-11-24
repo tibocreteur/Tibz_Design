@@ -1,28 +1,33 @@
 // Sélectionner toutes les couleurs
 const colors = document.querySelectorAll('.color');
-const copiedMessage = document.querySelector('.copied-message');  // Message "copié"
+const copiedMessage = document.querySelector('.copied-message');
 
 // Fonction de copie et affichage du message
 colors.forEach(color => {
-    color.addEventListener('click', () => {
-        const colorCode = color.getAttribute('data-text'); // Récupérer le code couleur (data-text)
+    color.addEventListener('click', async () => {
+        const colorCode = color.getAttribute('data-text'); // Récupère le code couleur (data-text)
 
-        // Créer un champ input temporaire pour copier le texte
-        const tempInput = document.createElement('input');
-        document.body.appendChild(tempInput);
-        tempInput.value = colorCode;
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
+        try {
+            // Utilise l'API moderne pour copier du texte
+            await navigator.clipboard.writeText(colorCode);
 
-        // Afficher un message "copié"
-        copiedMessage.style.display = 'block';
-        copiedMessage.textContent = `💾 Copied`;  // Affiche le code couleur copié
-        setTimeout(() => {
-            copiedMessage.style.display = 'none';
-        }, 900); // Le message disparaît après 1,5 secondea
+            // Affiche le message "copié"
+            copiedMessage.style.display = 'block';
+
+            // Cache le message après 900ms
+            setTimeout(() => {
+                copiedMessage.style.display = 'none';
+            }, 900); // Le message disparaît après 900ms
+
+        } catch (err) {
+            console.error('Échec de la copie : ', err);
+            alert('La copie a échoué. Veuillez réessayer.');
+        }
     });
 });
+
+
+
 
 
 
