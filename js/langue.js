@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("languageToggle");
     const contactLink = document.querySelector(".navbar-button");
 
+    // Définir les liens d'images pour les drapeaux
+    const flagImages = {
+        en: './../image/drapeau/eng.png',  // Remplacez par le chemin de votre image du drapeau anglais
+        fr: './../image/drapeau/fr.jpg'    // Remplacez par le chemin de votre image du drapeau français
+    };
+
     // Récupérer la langue depuis le localStorage ou définir l'anglais par défaut
     let currentLanguage = localStorage.getItem("language") || "en";
 
@@ -40,12 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
         if (currentLanguage === "en") {
             currentLanguage = "fr";
-            button.classList.remove("uk-flag");
-            button.classList.add("fr-flag");
+            button.style.backgroundImage = `url(${flagImages.fr})`;  // Changer l'image du drapeau
         } else {
             currentLanguage = "en";
-            button.classList.remove("fr-flag");
-            button.classList.add("uk-flag");
+            button.style.backgroundImage = `url(${flagImages.en})`;  // Changer l'image du drapeau
         }
 
         // Stocker la langue dans localStorage pour qu'elle persiste
@@ -57,11 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialiser avec la langue stockée dans le localStorage ou l'anglais par défaut
     if (currentLanguage === "fr") {
-        button.classList.add("fr-flag");
+        button.style.backgroundImage = `url(${flagImages.fr})`;  // Initialiser l'image
     } else {
-        button.classList.add("uk-flag");
+        button.style.backgroundImage = `url(${flagImages.en})`;  // Initialiser l'image
     }
 
     // Charger la langue lors du chargement de la page
     loadLanguage(currentLanguage);
 });
+
