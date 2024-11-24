@@ -1,22 +1,70 @@
-{
-    "contactme": "ME CONTACTER",
-    "contactSubject": "Demande d'information",
-    "contactBody": "Bonjour Tibo,%0A%0AJ'aimerais avoir plus d'informations sur vos services de design.%0A%0AMerci !",
-    "projects": "Projets",
-    "personalwork":"Travail personnel",
-    "identity": "IDENTITÉ",
-    "citationomodaka": "\"Le voyage de mille lieues commence par un seul pas.\" — Lao Tseu",
-    "presentationomodaka": "Omodaka est un projet que j'ai créé pour apporter sérénité et tranquillité à ceux qui cherchent refuge face au chaos de la vie quotidienne. Mon approche repose sur la conviction que le calme est essentiel pour le bien-être mental et émotionnel.\n\nLe mot Omodaka vient du japonais (オモダカ), où il fait référence à une plante aquatique connue sous le nom de \"tête de flèche\" (Sagittaria trifolia en latin). Cette plante, souvent trouvée dans des environnements paisibles tels que les étangs et les rivières, symbolise la tranquillité et la pureté de la nature. Le projet Omodaka s'inspire des paysages du monde entier, capturant l'essence de différents lieux à travers des fragrances uniques.\n\nChaque parfum reflète l'atmosphère et les émotions évoquées par ces régions, offrant une expérience sensorielle immersive. Chez Omodaka, chaque fragrance est conçue pour vous emmener dans un voyage apaisant et sensoriel, vous permettant de vous reconnecter avec vous-même et la nature à travers l'odeur de ces paysages inspirants.",
-    "researchs": "Recherches",
-    "researchsomodaka":"J'ai simplifié des motifs complexes en icônes et logos minimalistes, cherchant à capturer l'essence visuelle à travers des formes simples et des lignes épurées. L'objectif était de créer des représentations claires et apaisantes tout en conservant un impact visuel et une lisibilité. Ce travail explore la réduction graphique pour parvenir à des designs à la fois fonctionnels et esthétiques.",
-    "colorsomodaka": "J'ai choisi une palette de couleurs qui reflète l'atmosphère et l'harmonie des lieux que mes produits représentent. Les tons orange et jaune pastel apportent chaleur et lumière douce. Le beige incarne la simplicité et les environnements naturels. Le violet ajoute de la profondeur et de la sérénité. Ensemble, ces couleurs créent une ambiance équilibrée, à la fois apaisante et stimulante.",
-    "logoomodaka": "Le logo que j'ai créé pour Omodaka utilise la typographie de manière subtile pour évoquer l'univers des parfums. La lettre \"O\" est déformée de manière à ressembler à un cercle, symbolisant un flacon ou un contenant de parfum. Dans l'une des variations, ce \"O\" est positionné sous un rectangle, représentant un rebord, d'où émergent des bâtonnets, semblables à ceux utilisés pour diffuser des senteurs. Ce détail fait directement référence à l'expérience sensorielle et à l'art de parfumer les espaces. La typographie reste minimaliste et élégante, créant un équilibre entre modernité et raffinement, tout en symbolisant l'atmosphère apaisante et l'harmonie que les produits apportent à la maison.",
-    "packagingomodaka":"L'emballage d'Omodaka a été conçu pour évoquer la sérénité et l'élégance, en harmonie avec l'essence de la marque. J'ai choisi une forme cubique pour la boîte, symbolisant la simplicité et l'équilibre, des valeurs profondément ancrées dans la culture japonaise. Ce design minimaliste s'inspire des éléments traditionnels japonais, qui mettent en valeur la beauté dans la simplicité et l'harmonie des formes.\n\nUn bandeau autour de la boîte ajoute une touche de sophistication tout en créant un sentiment de protection, reflétant l'idée de refuge et de calme que nous souhaitons offrir à nos utilisateurs. La carte du lieu sur la boîte rend hommage aux paysages inspirants qui ont guidé la création de chaque fragrance, permettant aux utilisateurs de s'embarquer dans un voyage sensoriel. Cette carte renforce l'immersion et le concept d'évasion vers des lieux emplis de tranquillité.",
-    "copied":"💾 Copié",
-    "information2":"// Le site a été développé par mes soins ! 🚀",
-    "phone": "Tel: 07.83.78.48.72",
-    "mail": "Mail: tibzdesign@gmail.com",
-    "colors": "Couleurs",
-    "sitation": "Que cette création éveille votre inspiration. (• ◡•)",
-    "footer":"@2024 | ©TibzDesign. Tous droits réservés."
+{   
+    "NAVBAR": "",
+
+        "langue": "FR",
+        "contactme": "CONTACTE-MOI",
+        "contactSubject": "Demande d'information",
+        "contactBody": "Bonjour Tibo,%0A%0AJe souhaite obtenir plus d'informations sur vos services de design.%0A%0AMerci !",
+        "try":"Essayer",
+
+    "OMODAKA": "",
+
+        "The Lofoten Islands": "Les îles Lofoten",
+        "cambodia": "Cambodge",
+        "norway": "- Norvège",
+        "italia": " - Italie",
+        "legende1packagingomodaka": "Boîte principale – La structure principale contenant le produit.",
+        "legende2packagingomodaka": "Bande périphérique – La bande entourant la boîte.",
+        "logoomodaka":"Le logo que j'ai créé pour Omodaka utilise la typographie de manière subtile pour évoquer l'univers des fragrances. La lettre \"O\" est déformée pour ressembler à un cercle, symbolisant une bouteille de parfum ou un contenant. Dans l'une des variations, ce \"O\" est positionné sous un rectangle, représentant un bord, duquel émergent des bâtons, similaires à ceux utilisés pour diffuser des senteurs. Ce détail fait directement référence à l'expérience sensorielle et à l'art de parfumer les espaces. La typographie reste minimaliste et élégante, créant un équilibre entre modernité et raffinement, tout en symbolisant l'atmosphère apaisante et l'harmonie que les produits apportent à la maison.",
+        "colorsomodaka": "L'idée derrière chaque fragrance Omodaka vient de l'observation des couleurs naturelles des lieux choisis. Chaque région inspire non seulement une senteur, mais aussi des teintes spécifiques qui capturent son essence. Par exemple, la Provence évoque des tons lavande et dorés, tandis que les îles Lofoten, avec leurs paysages enneigés, inspirent des bleus glacés et des blancs purs. Cette approche permet à chaque fragrance de refléter l'atmosphère du lieu, offrant ainsi un voyage sensoriel à la fois visuel et olfactif.",
+        "citationomodaka": "\"Le voyage de mille lieues commence par un pas.\" — Lao Tseu",
+        "presentationomodaka": "Omodaka est un projet que j'ai créé pour apporter sérénité et tranquillité à ceux qui cherchent refuge face au chaos de la vie quotidienne. Mon approche repose sur la conviction que le calme est essentiel au bien-être mental et émotionnel.<br><br>Le mot Omodaka vient du japonais (オモダカ), où il désigne une plante aquatique connue sous le nom de 'pied-d'arrow' (Sagittaria trifolia en latin). Cette plante, souvent trouvée dans des environnements paisibles tels que des étangs et des rivières, symbolise la tranquillité et la pureté de la nature. Le projet Omodaka s'inspire des paysages du monde entier, capturant l'essence de différents lieux à travers des fragrances uniques.\n\nChaque parfum reflète l'atmosphère et les émotions évoquées par ces régions, offrant une expérience sensorielle immersive. Chez Omodaka, chaque fragrance est créée pour vous emmener dans un voyage apaisant et sensoriel, vous permettant de vous reconnecter avec vous-même et la nature à travers l'odeur de ces paysages inspirants.",
+        "researchs": "Recherches",
+        "packagingomodaka": "L'emballage d'Omodaka a été conçu pour évoquer sérénité et élégance, en harmonie avec l'essence de la marque. J'ai choisi une forme cubique pour la boîte, symbolisant la simplicité et l'équilibre, des valeurs profondément ancrées dans la culture japonaise. Ce design minimaliste s'inspire des éléments traditionnels japonais, qui mettent en valeur la beauté de la simplicité et l'harmonie des formes.\n\nUne bande autour de la boîte ajoute une touche de sophistication tout en créant un sentiment de protection, reflétant l'idée de refuge et de calme que nous souhaitons offrir à nos utilisateurs. La carte de l'emplacement sur la boîte rend hommage aux paysages inspirants qui ont guidé la création de chaque fragrance, permettant aux utilisateurs de s'embarquer dans un voyage sensoriel. Cette carte renforce l'immersion et le concept d'évasion vers des lieux emplis de tranquillité.",
+
+    "MOUVAPLAN": "",
+
+        "citationmouvaplan": "\"Découvrez la vie en mouvement du parc du Plan de la Garde et suivez l'évolution de sa faune et de sa flore au rythme de la nature.\"",
+        "presentatioomodaka": "Après plusieurs observations au parc naturel du Plan de la Garde, Margaux et moi avons remarqué que les emplacements des points d'observation intéressants n'étaient pas suffisamment mis en valeur pour les visiteurs. C'est pourquoi nous avons pris l'initiative de créer une application mobile pour résoudre ce problème. Le principe de base de l'application repose sur un système de carte où les utilisateurs peuvent voir des points d'intérêt : plantes, sources d'eau, faune et flore.\n\nLes utilisateurs peuvent visiter les points d'intérêt mis en évidence par le parc, mais ils peuvent également placer leurs propres emplacements. Ensuite, une banque d'images publique est créée pour chaque point, permettant aux utilisateurs de suivre l'évolution de la nature.",
+        "colorsmouvaplan": "Les différentes nuances de vert évoquent directement la nature, symbolisant la fraîcheur et la vitalité. Elles créent une atmosphère apaisante qui encourage l'exploration et la connexion avec l'environnement. Nous avons ajouté une teinte beige pour apporter de la chaleur et de l'accueil, équilibrant ainsi le vert dominant. Cela crée un espace visuellement agréable et invitant pour l'utilisateur. Enfin, l'orange a été intégré pour introduire une touche dynamique. Cette couleur vive capte l'attention et ajoute une énergie sportive, encourageant l'exploration et les activités en extérieur. Ensemble, ces couleurs établissent une expérience visuelle harmonieuse et engageante, parfaitement adaptée à notre thème.",
+        "logomouvaplan": "Le logo combine une icône de localisation et un héron pour symboliser l'équilibre entre la technologie et la nature. L'icône représente la fonction de suivi, tandis que le héron reflète la faune du parc et l'atmosphère paisible. Cette fusion met en avant l'idée de guider les utilisateurs tout en restant connectés à l'environnement naturel.",
+        "markers": "Marqueurs",
+        "marckersmouvaplan": "Nous devions créer des marqueurs clairs qui inspirent le mouvement. C'est pourquoi nous avons choisi de nous inspirer de la silhouette d'une goutte d'eau.",
+        "howmouvaplan": "En réfléchissant au moyen approprié pour impliquer tous les publics dans le processus de création, le choix de créer une application mobile est devenu évident. Nous avons donc décidé de développer une application en utilisant le logiciel Figma.",
+        "figmamouvaplan": "Pour la création de Mouvaplan, j'ai choisi Figma car c'était le moyen le plus simple et le plus rapide de donner vie à mes designs. L'outil m'a permis de prototyper facilement mes idées et d'avoir une vision claire de l'interface. De plus, sa flexibilité et sa facilité d'utilisation m'ont permis de me concentrer sur la créativité plutôt que sur les aspects techniques.",
+        "meteomouvaplan": "J'ai intégré un système météorologique en temps réel dans l'application pour améliorer l'expérience des visiteurs. Cette fonctionnalité ne se contente pas d'informer ; elle guide les choix d'activités et les suggestions d'itinéraires, permettant à chaque utilisateur de profiter du parc dans des conditions idéales. C'est une façon de rendre l'application véritablement utile et personnalisée, allant au-delà d'un simple guide.",
+
+    "CONSOLE": "",
+
+        "citationconsole": "\"L'avenir est déjà là\" — William Gibson",
+        "presentationconsole": "\"流\" (Liú) signifie \"courant\" ou \"flux\", et \"智\" (Zhì) signifie \"intelligence\". Liúzhì pourrait véhiculer l'impression d'un flux d'intelligence, comme si la console possédait une forme de conscience technologique qui coule à travers le temps. C'est une console rétro-futuriste inspirée des premiers appareils portables des années 1980, comme le Game Boy. Avec son design robuste et minimaliste, elle semble à la fois familière et venue d'un futur alternatif, évoquant des films de science-fiction comme Blade Runner, où chaque objet a une histoire mystérieuse. Son écran affiche \"Now Loading\" en lettres vertes lumineuses, renforçant l'idée qu'elle télécharge quelque chose de spécial. Mais à la fin du chargement, ce n'est pas une prophétie ou un message cryptique qui apparaît : c’est un jeu. Tel un artefact perdu, Liúzhì transforme l'attente en un moment d'anticipation, transformant l'acte simple de charger un jeu en une expérience unique, où la nostalgie du passé rencontre l'intrigue d'un futur inconnu.",
+        "consolelegende1": "1. Console de jeu.",
+        "consolelegende2": "2. Mousqueton.",
+        "consolelegende3": "3. Porte-clé.",
+
+    "PROJECTS": "",
+
+        "how": "Comment ?",
+        "bigtitle": "GROS TITRE",
+        "title": "Titre",
+        "text": "texte",
+        "typography": "Typographie",
+        "projects": "Projets",
+        "personalwork": "Travail personnel",
+        "identity": "IDENTITÉ",
+        "copied": "💾 Copié",
+        "colors": "Couleurs",
+        "poster": "AFFICHES",
+        "logiciel": "Logiciel : ",
+
+    "FOOTER": "",
+    
+        "sitation": "Que cette création éveille votre inspiration. (• ◡•)",
+        "footer": "@2024 | ©TibzDesign. Tous droits réservés.",
+
+    "INFORMATIONS": "",
+    
+        "information2": "// Le site a été conçu & réalisé par moi-même ! 🚀",
+        "phone": "Téléphone: +33.7.83.78.48.72",
+        "mail": "Mail: tibzdesign@gmail.com"
 }

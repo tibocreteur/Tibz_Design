@@ -159,11 +159,27 @@
     padding-left: 30px;
 }
 
+.espace{
+    background-color: #ffb300;
+    width: 0.7rem;
+}
+
 .infodecors p {
+    font-size: 1rem;
+    margin: 0px;
+    color: #555;
+    padding: 0px;
+}
+
+.petiteinfos {
+    display: flex;
+    align-items: center;
+    font-family: "IBM Plex Mono", monospace;
     font-size: 1rem;
     margin-top: 10px;
     color: #555;
     padding-left: 30px;
+    padding-bottom: 30px;
 }
 
 .plants{
