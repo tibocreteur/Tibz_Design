@@ -20,7 +20,7 @@ colors.forEach(color => {
         copiedMessage.textContent = `💾 Copied`;  // Affiche le code couleur copié
         setTimeout(() => {
             copiedMessage.style.display = 'none';
-        }, 900); // Le message disparaît après 1,5 seconde
+        }, 900); // Le message disparaît après 1,5 secondea
     });
 });
 
