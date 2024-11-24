@@ -32,10 +32,11 @@
                     <img src="../image/logoinsta.png" alt="Instagram">
                 </a>
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour%20Tibo%2C%0A%0AJ'aimerais%20avoir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">
+                <a data-key="contactme" href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour%20Tibo%2C%0A%0AJ'aimerais%20avoir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">
                     CONTACT ME
                     <i class="fa-sharp-duotone fa-solid fa-paper-plane"></i>
                 </a>
+                <button id="languageToggle" class="language-button"></button>
             </div>
         </header>
         <section class="profilinformation">
@@ -55,26 +56,25 @@
                     </div>
                 </div>
                 <div class="mention">
-                    <p>// The site was Built & designed by yours truly! 🚀</p>
+                    <p data-key="information2">// The site was Built & designed by truly! 🚀</p>
                 </div>
             </div>
             <script src="./../js/machine.js"></script>
             <div class="button-container">
-                <button class="copy-button" data-text="+33 7 83 78 48 72">
+                <button data-key="phone" class="copy-button" data-text="+33 7 83 78 48 72">
                     Phone: +33.7.83.78.48.72 
                     <i class="fas fa-copy"></i>
                 </button>
-                <button class="copy-button" data-text="tibzdesign@gmail.com">
+                <button data-key="mail" class="copy-button" data-text="tibzdesign@gmail.com">
                     Email: tibzdesign@gmail.com 
                     <i class="fas fa-copy"></i>
                 </button>
             </div>
-        
-            <div class="copied-message">💾 Copied</div>
+            <div data-key="copied" class="copied-message">Copied !</div>
         </section>
         <script src="./../js/copie.js"></script>
     <footer class="footerinformation">
-            <p class="text">@2024 | ©TibzDesign. All rights reserved.</p>
+        <p data-key="footer" class="text">@2024 | ©TibzDesign. All rights reserved.</p>
     </footer>
     </section>
 </body>
