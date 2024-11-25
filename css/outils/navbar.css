@@ -183,11 +183,6 @@ a:hover {
     font-weight: bold;
 }
 
-.language-button:hover {
-    transform: scale(1.08);
-    background-color: #ffffff84;
-}
-
 .barre-verticale {
     width: 2px; /* Largeur de la barre */
     height: 25px; /* Hauteur de la barre */
