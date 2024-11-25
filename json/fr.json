@@ -12,12 +12,12 @@
 
     "OMODAKA": "",
 
-        "The Lofoten Islands": "Les îles Lofoten",
+        "thelofotenislands": "Les îles Lofoten",
         "cambodia": "Cambodge",
         "norway": "- Norvège",
         "italia": " - Italie",
-        "legende1packagingomodaka": "Boîte principale – La structure principale contenant le produit.",
-        "legende2packagingomodaka": "Bande périphérique – La bande entourant la boîte.",
+        "legendeunpackagingomodaka": "Boîte principale – La structure principale contenant le produit.",
+        "legendedeuxpackagingomodaka": "Bande périphérique – La bande entourant la boîte.",
         "logoomodaka":"Le logo que j'ai créé pour Omodaka utilise la typographie de manière subtile pour évoquer l'univers des fragrances. La lettre \"O\" est déformée pour ressembler à un cercle, symbolisant une bouteille de parfum ou un contenant. Dans l'une des variations, ce \"O\" est positionné sous un rectangle, représentant un bord, duquel émergent des bâtons, similaires à ceux utilisés pour diffuser des senteurs. Ce détail fait directement référence à l'expérience sensorielle et à l'art de parfumer les espaces. La typographie reste minimaliste et élégante, créant un équilibre entre modernité et raffinement, tout en symbolisant l'atmosphère apaisante et l'harmonie que les produits apportent à la maison.",
         "colorsomodaka": "L'idée derrière chaque fragrance Omodaka vient de l'observation des couleurs naturelles des lieux choisis. Chaque région inspire non seulement une senteur, mais aussi des teintes spécifiques qui capturent son essence. Par exemple, la Provence évoque des tons lavande et dorés, tandis que les îles Lofoten, avec leurs paysages enneigés, inspirent des bleus glacés et des blancs purs. Cette approche permet à chaque fragrance de refléter l'atmosphère du lieu, offrant ainsi un voyage sensoriel à la fois visuel et olfactif.",
         "citationomodaka": "\"Le voyage de mille lieues commence par un pas.\" — Lao Tseu",
@@ -41,9 +41,9 @@
 
         "citationconsole": "\"L'avenir est déjà là\" — William Gibson",
         "presentationconsole": "\"流\" (Liú) signifie \"courant\" ou \"flux\", et \"智\" (Zhì) signifie \"intelligence\". Liúzhì pourrait véhiculer l'impression d'un flux d'intelligence, comme si la console possédait une forme de conscience technologique qui coule à travers le temps.\n\nC'est une console rétro-futuriste inspirée des premiers appareils portables des années 1980, comme le Game Boy. Avec son design robuste et minimaliste, elle semble à la fois familière et venue d'un futur alternatif, évoquant des films de science-fiction comme Blade Runner, où chaque objet a une histoire mystérieuse. Son écran affiche \"Now Loading\" en lettres vertes lumineuses, renforçant l'idée qu'elle télécharge quelque chose de spécial. Mais à la fin du chargement, ce n'est pas une prophétie ou un message cryptique qui apparaît : c’est un jeu. Tel un artefact perdu, Liúzhì transforme l'attente en un moment d'anticipation, transformant l'acte simple de charger un jeu en une expérience unique, où la nostalgie du passé rencontre l'intrigue d'un futur inconnu.",
-        "consolelegende1": "1. Console de jeu.",
-        "consolelegende2": "2. Mousqueton.",
-        "consolelegende3": "3. Porte-clé.",
+        "consolelegendeun": "1. Console de jeu.",
+        "consolelegendedeux": "2. Mousqueton.",
+        "consolelegendetrois": "3. Porte-clé.",
 
     "PROJECTS": "",
 
@@ -95,8 +95,9 @@
 
     "INFORMATIONS": "",
     
-        "information2": "// Le site a été conçu & réalisé par moi-même ! 🚀",
-        "phone": "Téléphone: +33.7.83.78.48.72",
+        "informationdeux": "// Le site a été conçu & réalisé par moi-même ! 🚀",
+        "dataphone":"07.83.78.48.72",
+        "phone": "Téléphone: 07.83.78.48.72",
         "mail": "Mail: tibzdesign@gmail.com",
-        "information":"Je suis étudiant en deuxième année de design graphique basé en France. Passionné par la créativité visuelle,<br>je travaille dans divers domaines du design en tant qu’artiste 3D, motion designer et graphiste.<br>Je m'intéresse particulièrement à la création d’identités visuelles et au développement de projets multimédias. Toujours en quête de nouvelles idées et d’inspiration, j’aime expérimenter différents styles graphiques et explorer l’impact du design dans la communication.<br>Mon objectif est de développer une esthétique unique tout en maîtrisant les techniques modernes du design."
+        "information":"Je suis étudiant en deuxième année de design graphique basé en France. Passionné par la créativité visuelle, je travaille dans divers domaines du design en tant qu’artiste 3D, motion designer et graphiste.<br>Je m'intéresse particulièrement à la création d’identités visuelles et au développement de projets multimédias. Toujours en quête de nouvelles idées et d’inspiration, j’aime expérimenter différents styles graphiques et explorer l’impact du design dans la communication.<br>Mon objectif est de développer une esthétique unique tout en maîtrisant les techniques modernes du design."
 }

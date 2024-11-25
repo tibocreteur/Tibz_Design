@@ -179,6 +179,10 @@ a:hover {
     font-weight: bold;
 }
 
+#navbar-buttondeux{
+    font-weight: bold;
+}
+
 .language-button:hover {
     transform: scale(1.08);
     background-color: #ffffff84;

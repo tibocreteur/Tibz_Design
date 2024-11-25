@@ -12,13 +12,13 @@
 
     "OMODAKA": "",
 
-        "The Lofoten Islands": "The Lofoten Islands",
+        "thelofotenislands": "The Lofoten Islands",
         "norway": "- Norway",
         "cambodia": "Cambodia",
         "italia": " - Italia",
         "packagingomodaka":"The packaging of Omodaka was designed to evoke serenity and elegance, in harmony with the essence of the brand. I chose a cubic shape for the box, symbolizing simplicity and balance—values deeply rooted in Japanese culture. This minimalist design is inspired by traditional Japanese elements, which highlight the beauty of simplicity and the harmony of shapes.\n\nA band around the box adds a touch of sophistication while creating a sense of protection, reflecting the idea of refuge and calm that we wish to offer our users. The map of the location on the box pays tribute to the inspiring landscapes that guided the creation of each fragrance, allowing users to embark on a sensory journey. This map enhances the immersion and the concept of escape to places filled with tranquility.",
-        "legende1packagingomodaka":"Main Box – The primary structure containing the product.",
-        "legende2packagingomodaka":"Perimeter Band – The band encircling the box.",
+        "legendeunpackagingomodaka":"Main Box – The primary structure containing the product.",
+        "legendedeuxpackagingomodaka":"Perimeter Band – The band encircling the box.",
         "colorsomodaka": "The concept behind each Omodaka fragrance comes from observing the natural colors of the chosen locations. Each region inspires not only a scent but also specific shades that capture its essence. For example, Provence evokes lavender and golden tones, while the Lofoten Islands, with their snowy landscapes, inspire icy blues and pure whites. This approach allows each fragrance to reflect the atmosphere of the place, offering a sensory journey that is both visual and aromatic.",
         "logoomodaka": "The logo I created for Omodaka uses typography in a subtle way to evoke the world of fragrances. The letter \"O\" is distorted to resemble a circle, symbolizing a perfume bottle or container. In one of the variations, this \"O\" is positioned beneath a rectangle, representing a rim, from which sticks emerge, similar to those used to diffuse scents. This detail directly references the sensory experience and the art of perfuming spaces. The typography remains minimalist and elegant, creating a balance between modernity and refinement, while symbolizing the calming atmosphere and harmony the products bring to the home.",
         "citationomodaka": "\"The journey of a thousand miles begins with a single step.\" — Lao Tseu",
@@ -41,9 +41,9 @@
 
         "citationconsole":"\"The future is already here\" — William Gibson",
         "presentationconsole":"\"流\" (Liú) means \"current\" or \"flow,\" and \"智\" (Zhì) means \"intelligence.\" Liúzhì could convey an impression of flow of intelligence,\" as if the console possessed a form of technological consciousness that flows through time.\n\nIt's a retro-futuristic console inspired by early portable devices from the 1980s, like the Game Boy. With its sturdy and minimalist design, it appears both familiar and from an alternate future, evoking sci-fi films like Blade Runner, where every object has a mysterious story. Its screen displays \"Now Loading\" in glowing green letters, reinforcing the idea that it is downloading something special. But at the end of the loading, it is not a prophecy or a cryptic message that appears: it’s a game. Like a lost artifact, Liúzhì makes waiting a moment of anticipation, transforming the simple act of loading a game into a unique experience, where the nostalgia of the past meets the intrigue of an unknown future.",
-        "consolelegende1":"1.Game console.",
-        "consolelegende2":"2.Carabiner.",
-        "consolelegende3":"3.Key ring.",
+        "consolelegendeun":"1.Game console.",
+        "consolelegendedeux":"2.Carabiner.",
+        "consolelegendetrois":"3.Key ring.",
 
     "PROJECTS": "",
 
@@ -95,7 +95,8 @@
 
     "INFORMATIONS": "",
 
-        "information2":"// The site was Built & designed by yours truly! 🚀",
+        "informationdeux":"// The site was Built & designed by yours truly! 🚀",
+        "dataphone":"+33.7.83.78.48.72",
         "phone": "Phone: +33.7.83.78.48.72",
         "mail": "Email: tibzdesign@gmail.com",
         "information":"I’m a second-year graphic design student based in France. Passionate about visual creativity,<br>I work across various design fields as a 3D artist, motion designer,and graphic designer.<br>I’m particularly interested in building visual identities and developing multimedia projects. Always seeking new ideas and inspiration, I enjoy experimenting with different graphic styles and exploring the impact of design in communication.<br>My goal is to develop a unique aesthetic while mastering modern design techniques."
