@@ -1,4 +1,7 @@
 {   
+    "otherlangues":"en",
+    "curentlangue":"FR",
+
     "NAVBAR": "",
 
         "langue": "FR",
@@ -94,5 +97,6 @@
     
         "information2": "// Le site a été conçu & réalisé par moi-même ! 🚀",
         "phone": "Téléphone: +33.7.83.78.48.72",
-        "mail": "Mail: tibzdesign@gmail.com"
+        "mail": "Mail: tibzdesign@gmail.com",
+        "information":"Je suis étudiant en deuxième année de design graphique basé en France. Passionné par la créativité visuelle,<br>je travaille dans divers domaines du design en tant qu’artiste 3D, motion designer et graphiste.<br>Je m'intéresse particulièrement à la création d’identités visuelles et au développement de projets multimédias. Toujours en quête de nouvelles idées et d’inspiration, j’aime expérimenter différents styles graphiques et explorer l’impact du design dans la communication.<br>Mon objectif est de développer une esthétique unique tout en maîtrisant les techniques modernes du design."
 }

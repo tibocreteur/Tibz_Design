@@ -119,6 +119,10 @@
 
 }
 
+.titredelexplication{
+    text-align: right;
+}
+
 .titredelexplication h2{
     font-size: 9rem;
 }

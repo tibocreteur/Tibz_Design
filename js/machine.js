@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
             index++;
 
             // Délai entre chaque caractère (ajustable pour la vitesse)
-            const randomDelay = Math.random() * (50 - 20) + 20; // Délai compris entre 20ms et 50ms
+            const randomDelay = Math.random() * (30 - 20) + 5; // Délai compris entre 20ms et 50ms
             if (Math.random() > 0.9) {
-                const longPause = Math.random() * (250 - 150) + 150; // Pause plus longue entre certains caractères
+                const longPause = Math.random() * (100 - 50) + 50; // Pause plus longue entre certains caractères
                 setTimeout(typeWriter, longPause);
             } else {
                 setTimeout(typeWriter, randomDelay); // Intervalle de temps plus court entre les caractères
