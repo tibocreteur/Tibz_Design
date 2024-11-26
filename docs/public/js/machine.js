@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     const profilElement = document.querySelector(".profilbas p");
     const profilHTML = profilElement.innerHTML; // Récupère le contenu HTML avec les <br> et autres éléments
+    const height = profilElement.offsetHeight;
+    profilElement.style.height = height + "px";
+
     profilElement.innerHTML = ""; // Vide temporairement le contenu du <p>
+    profilElement.style.opacity = 1;
+
     let index = 0;
     let isTextAnimated = false;
 
@@ -31,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 setTimeout(typeWriter, randomDelay); // Intervalle de temps plus court entre les caractères
             }
+        } else {
+            profilElement.style.height = 'auto';
         }
     }
 
@@ -40,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (entry.isIntersecting && !isTextAnimated) {
                 // L'élément est visible dans la fenêtre
                 isTextAnimated = true;  // Pour éviter de lancer l'animation plusieurs fois
-                
+
                 // Ajoute un délai de 500ms avant de commencer l'animation (ajustable)
                 setTimeout(() => {
                     typeWriter(); // Lance l'animation après le délai
