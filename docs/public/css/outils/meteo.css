@@ -1,48 +1,50 @@
 
 /*Meteo*/
-
-.tri-images{
+/* Mise à jour du CSS */
+.tri-images {
     display: flex;
     gap: 30px;
-    justify-content: space-between;
     justify-content: center;
 }
 
-.tri-images img{
-    width: calc((100% - 60px) / 3); /* subtracting total gap to keep each image equally sized */
+.tri-images img {
+    width: 100%;
     height: auto;
     transition: 0.3s ease;
+}
 
+#fondmeteo {
+    transition: background-image 0.6s ease-in-out;
+    background-size: cover;
+    background-position: center;
 }
 
 .tri-images img:hover {
-    transform: scale(1.02); /* Agrandit l'image à 110% lorsqu'on la survole */
-  }
-
-.fullscreen ::selection {
-    background-color: #323d5290; /* Couleur de surlignage (jaune doré) */
-    color: #ffffff; /* Couleur du texte surligné */
+    transform: scale(1.02); /* Agrandit l'image à 102% au survol */
 }
 
 .fullscreen {
-    flex-direction: column;  
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 700px;
     padding: 40px;
-    background-image: url(../../image/mouvaplan/ciel.jpg);
     gap: 40px;
+    background-image: url(/docs/public/image/mouvaplan/ciel3.jpg); /* Fond par défaut */
 }
 
-.text-meteo{
+.text-meteo {
     width: 50%;
-    
 }
 
-.texteexplicatifmeteo{
-    max-width: 100%; /* Limite la largeur de l'explication si besoin */
+.text-meteo  p{
+    color: rgba(0, 0, 0, 0.495);
+}
+
+.texteexplicatifmeteo {
+    max-width: 100%;
     text-align: justify;
-    line-height: 1.5; /* Augmente l'espacement entre les lignes */
+    line-height: 1.5;
     font-size: 1rem;
 }

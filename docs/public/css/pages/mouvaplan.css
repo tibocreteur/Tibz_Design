@@ -126,6 +126,7 @@
     border-radius: 25px;
     background-color: #B3E3A2;
     padding: 20px 40px;
+    min-width: 60%;
 }
 
 .presenationfontdroite h1{

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="../docs/public/image/logo.png" type="images/x-icon">
+    <title>MOTION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/navbar.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/footer.css">
+    <link rel="stylesheet" href="../docs/public/css/pages/projet.css">
+    <link rel="stylesheet" href="../docs/public/css/pages/works.css">
+    <link rel="stylesheet" href="../docs/public/css/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
+
+</head>
+    <body>
+        <header class="navbar">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-button-logo">
+                        <img src="../docs/public/image/logo.png" alt="logo du site">
+                    </a>
+                    <div class="navbar-project">
+                        <h3>MOTION</h3>
+                    </div>
+                </div>
+                <div class="social-contact">
+                    <!-- Logo Instagram cliquable -->
+                    <!-- Bouton "ME CONTACTER" -->
+                    <a href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20en%20savoir%20plus%20sur%20vos%20services." class="navbar-button">{{contactme}}</a>
+                    <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/motion.html">{{curentlangue}}</a>
+                </div>
+            </header>
+            <section class="fondworks">
+                <!-- Travaux (Projets) -->
+                <div class="works">
+                    <div class="projet1">
+                        <div class="imagesworks">
+                            <video id="video1" src="../docs/public/video/walk.mp4" autoplay muted playsinline loop></video>
+                        </div>
+                        <div class="titre">
+                            <div class="infotitre">
+                                <div class="nom">
+                                    <h3>Walks</h3>
+                                    <div class="barre-verticaleblack"></div>
+                                    <span>{{personalwork}}</span>
+                                </div>
+                            </div>
+                            <div class="logiciel">
+                                <span>{{logiciel}}</span>
+                                <span>ADOBE After Effects</span>
+                            </div>
+                        </div>
+                        <div class="date" id="un">2024</div>
+                    </div>
+                    <div class="projet1">
+                        <div class="imagesworks">
+                            <video id="video1" src="../docs/public/video/robot.mp4" autoplay muted playsinline loop></video>
+                        </div>
+                        <div class="titre">
+                            <div class="infotitre">
+                                <div class="nom">
+                                    <h3>Robots</h3>
+                                    <div class="barre-verticaleblack"></div>
+                                    <span>{{personalwork}}</span>
+                                </div>
+                            </div>
+                            <div class="logiciel">
+                                <span>{{logiciel}}</span>
+                                <span>ADOBE After Effects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="droite">
+                    <div class="barreverticale"></div>
+                </div>
+            </section>
+            <section class="infoprojet">
+                <div class="citationdefin">
+                    <li>Credit : TibzDesign</li>
+                    <p>{{sitation}}</p>
+                </div>
+            </section>
+            <script src="../docs/public/js/comparaison.js"></script>
+            <script src="../docs/public/js/synchronisation.js"></script>
+            <footer class="footerprojects">
+                <ul class="menu">
+                    <li class="menu-elem">
+                        <a href="./information.html" class="menu-icon1"> Informations </a>
+                    </li>
+                </ul>
+                <p data-key="footer" class="text">{{footer}}</p>
+            </footer>
+    </body>
+</html>

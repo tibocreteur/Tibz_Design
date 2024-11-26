@@ -107,6 +107,7 @@
 }
 
 .imagesworks video{
+    max-height: 80vh;
     width: 100%;
     padding: 0px;
     margin: 0px;

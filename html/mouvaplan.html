@@ -40,7 +40,7 @@
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
                 <a href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20en%20savoir%20plus%20sur%20vos%20services." class="navbar-button">{{contactme}}</a>
-                <a id="navbar-buttondeux" class="navbar-button" href="./../{{otherlangues}}/mouvaplan.html">{{curentlangue}}</a>
+                <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/mouvaplan.html">{{curentlangue}}</a>
             </div>
         </header>
         <section class="entete">
@@ -164,16 +164,20 @@
             <img src="../docs/public/image/mouvaplan/telephone2.png" alt="deux telephone sur l'application">
         </div> 
     </section>
-    <section class="fullscreen">
+    <section id="fondmeteo" class="fullscreen">
         <div class="tri-images">
-            <img src="../docs/public/image/meteo/variant4.png" alt="carte meteo dans l'application mauvais temp">
-            <img src="../docs/public/image/meteo/variant5.png" alt="carte meteo dans l'application nuageux">
-            <img src="../docs/public/image/meteo/variant6.png" alt="carte meteo dans l'application beau temp">
-        </div>
-        <div class="text-meteo">
-            <p class="texteexplicatifmeteo">{{meteomouvaplan}}</p>   
+            <div class="image-container" id="image1">
+                <img id="metteo" src="../docs/public/image/meteo/variant4.png" alt="carte meteo dans l'application mauvais temp">
+            </div>
+            <div class="image-container" id="image2">
+                <img id="metteo1" src="../docs/public/image/meteo/variant5.png" alt="carte meteo dans l'application nuageux">
+            </div>
+            <div class="image-container" id="image3">
+                <img id="metteo2" src="../docs/public/image/meteo/variant6.png" alt="carte meteo dans l'application beau temp">
+            </div>
         </div>
     </section>
+    <script src="../docs/public/js/meteo.js"></script>
     <section class=infoprojet>
         <div class="carte">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.2365897246764!2d6.012833476551184!3d43.120555886716936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9191a4655d86d%3A0x5d962357139e1021!2sParc%20naturel%20du%20Plan!5e0!3m2!1sfr!2sfr!4v1730000027618!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
