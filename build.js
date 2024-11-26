@@ -12,15 +12,15 @@ const getNestedTranslation = (obj, keyPath) => {
 };
 
 const fixPath = (template) => {
-    const regex = new RegExp(/(\"\.\/\.\.\/)/, 'g');
-    const regex2 = new RegExp(/(\"\.\.\/)/, 'g');
+    // const regex = new RegExp(/(\"\.\/\.\.\/)/, 'g');
+    const regex2 = new RegExp(/(\"\.\.\/docs)/, 'g');
 
-    template = template.replace(regex, (match, key) => {
-        return key + '../';
-    });
+    // template = template.replace(regex, (match, key) => {
+    //     return key + '../';
+    // });
 
     template = template.replace(regex2, (match, key) => {
-        return key + '../';
+        return '"./..';
     })
 
     return template;
