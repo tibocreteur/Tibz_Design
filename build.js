@@ -1,7 +1,7 @@
 const fs = require('fs');
 var path = require('path');
 
-const translationsFolder = './json/';
+const translationsFolder = './docs/public/json/';
 const buildDir = './docs/'
 const htmlDir = './html/'
 

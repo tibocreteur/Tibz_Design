@@ -1,4 +1,4 @@
-@import url(./../../css/outils/color.css);
+@import url(color.css);
 
 .profil{
     display: flex;
@@ -19,7 +19,7 @@
 }
 
 .caseprofil {
-    background-image: url('./../../image/tete.png');
+    background-image: url('../../image/tete.png');
     background-size: cover;
     background-position: -50px;
     width: 850px;

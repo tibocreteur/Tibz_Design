@@ -1,5 +1,5 @@
-@import url('./../outils/palettecouleur.css');
-@import url('./../outils/meteo.css');
+@import url('../outils/palettecouleur.css');
+@import url('../outils/meteo.css');
 
 
 .explication{
@@ -30,7 +30,7 @@
 .figma-image-side {
     flex: 2; /* Prend 50% de la largeur */
     background-color: var(--greymouvaplan);
-    background-image: url('./../../image/mouvaplan/planfigma.jpg'); /* Lien vers votre image */
+    background-image: url('../../image/mouvaplan/planfigma.jpg'); /* Lien vers votre image */
     background-size: cover; /* L'image couvre toute la partie */
     background-position: center; /* Centrage de l'image */
     display: flex;

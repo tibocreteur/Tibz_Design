@@ -17,28 +17,28 @@ p {
 
 @font-face {
     font-family: 'Gruno Trial'; /* Nom que tu veux donner à la police */
-    src: url('polices/Gruno Trial.otf') format('opentype'); /* Chemin vers le fichier de police */
+    src: url('../../policesolices/Gruno Trial.otf') format('opentype'); /* Chemin vers le fichier de police */
     font-weight: normal; /* Poids normal */
     font-style: normal; /* Style normal */
 }
 
 @font-face {
     font-family: 'Inter'; /* Nom que tu veux donner à la police */
-    src: url('polices/Inter_28pt-Regular.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    src: url('../../policesolices/Inter_28pt-Regular.ttf') format('truetype'); /* Chemin vers le fichier de police */
     font-weight: normal; /* Poids normal */
     font-style: normal; /* Style normal */
 }
 
 @font-face {
     font-family: 'EricaOne-Regular'; /* Nom que tu veux donner à la police */
-    src: url('polices/EricaOne-Regular.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    src: url('../../policesolices/EricaOne-Regular.ttf') format('truetype'); /* Chemin vers le fichier de police */
     font-weight: normal; /* Poids normal */
     font-style: normal; /* Style normal */
 }
 
 @font-face {
     font-family: 'Inter'; /* Nom de la même police */
-    src: url('polices/Inter_28pt-Black.ttf') format('truetype'); /* Chemin vers le fichier de police black */
+    src: url('../../policesolices/Inter_28pt-Black.ttf') format('truetype'); /* Chemin vers le fichier de police black */
     font-weight: bold; /* Indique que c'est une police en gras (ou black) */
     font-style: normal; /* Style normal */
 }

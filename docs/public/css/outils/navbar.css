@@ -191,11 +191,11 @@ a:hover {
 }
 
 .uk-flag {
-    background-image: url('./../../image/drapeau/eng.png');
+    background-image: url('../../image/drapeau/eng.png');
 }
 
 .fr-flag {
-    background-image: url('./../../image/drapeau/fr.jpg');
+    background-image: url('../../image/drapeau/fr.jpg');
 }
 
 @media (max-width: 768px) {
