@@ -4,6 +4,7 @@ var path = require('path');
 const translationsFolder = './docs/public/json/';
 const buildDir = './docs/'
 const htmlDir = './html/'
+const mode = process.argv[2] ? process.argv[2] : 'prod'
 
 const getNestedTranslation = (obj, keyPath) => {
     return keyPath.split('.').reduce((acc, part) => {
@@ -23,6 +24,13 @@ const fixPath = (template) => {
         return '"./..';
     })
 
+    if (mode != 'dev') {
+        const regChangeLang = new RegExp(/(\"\/Tibz_Design\/docs)/)
+        template = template.replace(regChangeLang, (match, key) => {
+            return '"/Tibz_Design';
+        })
+    }
+
     return template;
 }
 
@@ -35,7 +43,6 @@ fs.readdir(translationsFolder, (err, files) => {
         }
 
         const translations = JSON.parse(fs.readFileSync(translationsFolder + file, 'utf-8'));
-        console.log(translations)
 
         fs.readdir(htmlDir, (err, files) => {
             files.forEach(file => {
