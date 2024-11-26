@@ -3,14 +3,16 @@
 /* Mise à jour du CSS */
 .tri-images {
     display: flex;
-    gap: 30px;
+    gap: 0px;
     justify-content: center;
+    padding-inline: 90px;
 }
 
 .tri-images img {
     width: 100%;
     height: auto;
     transition: 0.3s ease;
+    scale: 0.95;
 }
 
 #fondmeteo {
@@ -20,7 +22,7 @@
 }
 
 .tri-images img:hover {
-    transform: scale(1.02); /* Agrandit l'image à 102% au survol */
+    transform: scale(1.07); /* Agrandit l'image à 102% au survol */
 }
 
 .fullscreen {

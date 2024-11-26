@@ -120,10 +120,19 @@
 }
 /* Barre verticale */
 
-.droite{
+.droite {
+    position: relative; /* Définit le contexte de positionnement pour les enfants */
     width: 150px;
     display: flex;
     padding-left: 27px;
+    overflow: hidden; /* Masque les éléments qui dépassent */
+}
+
+.swinging-image {
+    position: absolute; /* Relative à .droite */
+    bottom: -10px; /* Ajuster la position pour qu'elle commence dans .droite */
+    right: 10px;
+    z-index: 99999;
 }
 
 .barreverticale {
@@ -131,6 +140,7 @@
     background: var(--greymouvaplan);
     border-radius: 5px;
     position: relative;
+    overflow: hidden;
 }
 
 .imgcent{

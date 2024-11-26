@@ -1,41 +1,30 @@
-.new{
-    background-color: rgb(52, 238, 139);
-    color:  rgb(31, 148, 85);
+.badge{
     padding: 5px 10px;
     font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
     font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase
 }
 
-.troisd{
+#new{
+    background-color: rgb(52, 238, 139);
+    color:  rgb(31, 148, 85);
+}
+
+#troisd{
     background-color: rgb(231, 160, 38);
     color: rgb(138, 100, 24);
-    padding: 5px 10px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    font-family: "IBM Plex Mono", monospace; 
 }
 
-.uiux{
+#uiux{
     background-color: rgb(83, 122, 239);
     color: rgb(46, 65, 160);
-    padding: 5px 10px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    font-family: "IBM Plex Mono", monospace; 
 }
 
-.da{
+#da{
     background-color: rgb(231, 38, 205);
     color: rgb(138, 24, 132);
-    padding: 5px 10px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    font-family: "IBM Plex Mono", monospace; 
 }
 
 .enbasbadge{
