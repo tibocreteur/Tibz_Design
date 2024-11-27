@@ -29,7 +29,7 @@
     pointer-events: none;
     position: absolute;
     height:100%; /* La vidéo prend toute la hauteur de son conteneur */
-    transition: 0.5s ease;
+    transition: 0.5s ease-in-out;
     scale: 0.9;
     z-index: 100; /* Place la vidéo derrière le contenu */
 }
@@ -65,7 +65,7 @@
     pointer-events: none;
     width: 100%; /* La vidéo prend toute la largeur de son conteneur */
     height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
-    transition: 0.5s ease;
+    transition: 0.5s ease-in-out;
     z-index: 100; /* Place la vidéo derrière le contenu */
     scale: 1.2;
 }
