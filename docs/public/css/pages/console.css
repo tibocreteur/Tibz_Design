@@ -1,6 +1,18 @@
 /* Conteneur principal */
+.partie{
+    padding: 40px;
+    overflow: hidden;
+    color: black;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: -80px;
+    margin-bottom: -50px;
+}
 
 .triplette {
+    padding: 0;
+    margin: 0;
+    background-color: none;
     height: 70vh;
     display: flex; /* Utilisation de flexbox pour aligner horizontalement */
     gap: 30px; /* Espace de 30px entre la vidéo de gauche et les vidéos de droite */
@@ -17,7 +29,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Pour placer le texte */
     width: 100%; /* Assure que la vidéo prend toute la largeur de son conteneur */
     height: 100%; /* Remplir toute la hauteur */
     border-radius: 25px;
@@ -27,7 +38,6 @@
 .content-left video {
     background-color: none;
     pointer-events: none;
-    position: absolute;
     height:100%; /* La vidéo prend toute la hauteur de son conteneur */
     transition: 0.4s ease-in-out;
     scale: 0.9;
