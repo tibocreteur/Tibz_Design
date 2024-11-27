@@ -39,7 +39,7 @@
     height: 700px;
     padding: 40px;
     gap: 40px;
-    background-image: url(/docs/public/image/mouvaplan/ciel2.jpg); /* Fond par défaut */
+    background-image: url(./../public/image/mouvaplan/ciel2.jpg); /* Fond par défaut */
 }
 
 .text-meteo {
