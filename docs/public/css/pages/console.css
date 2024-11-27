@@ -89,6 +89,10 @@
     z-index:15;
 }
 
+.videoomodaka{
+    display: block;
+}
+
 .videoomodaka::-webkit-media-controls {
     display: none !important; /* Cache les contrôles pour les navigateurs basés sur WebKit */
 }

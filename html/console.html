@@ -86,6 +86,13 @@
                 </div>
             </div>
         </div>
+        <script>
+            const video = document.querySelector('.videoconsole');
+            video.addEventListener('canplaythrough', function() {
+                // Ajouter les contrôles après que la vidéo est prête à être lue sans interruption
+                video.setAttribute('controls', 'true');
+            });
+        </script>
         <div class="legend">
             <p><span class="legend-number">1.</span>{{consolelegendeun}}</p>
             <p><span class="legend-number">2.</span>{{consolelegendedeux}}</p>
