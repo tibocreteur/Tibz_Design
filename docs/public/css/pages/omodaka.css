@@ -197,12 +197,13 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
     background-color: var(--greymouvaplan);
     border-radius: 25px;
-    padding: 20px;
 }
 
 .plants img{
+    max-height: 80vh;
     height:100%;
     width: 100%;
     object-fit: cover;
@@ -213,14 +214,14 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    width: 40%;
     background-color: var(--greymouvaplan);
     border-radius: 25px;
     object-fit: cover;
-    padding: 0px;
+    padding: 20px;
 }
 
 .plants2 img{
+    max-height: 80vh;
     height:100%;
     width: 100%;
 }
