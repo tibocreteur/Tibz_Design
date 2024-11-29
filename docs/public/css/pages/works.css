@@ -9,14 +9,10 @@
 
 img{
     max-height: 80vh;
-    width: ;: auto; /* Maintient les proportions */
-    display: block; /* Évite les espaces blancs sous l'image */
 }
 
 video{
     max-height: 80vh;
-    width: auto; /* Maintient les proportions */
-    display: block; /* Évite les espaces blancs sous l'image */
 }
 
 .titre{
