@@ -72,8 +72,10 @@ video{
 
 
 .imagesworks {
+    justify-content: center;
     justify-items: center;
     align-items: center;
+    align-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -87,6 +89,10 @@ video{
 }
 
 .imagesworkspop {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -169,6 +175,10 @@ video{
 }
 
 .imgcent img{
+    max-width: 100%;
+}
+
+.imgcent video{
     max-width: 100%;
 }
 
