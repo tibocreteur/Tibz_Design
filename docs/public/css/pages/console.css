@@ -1,39 +1,33 @@
 /* Conteneur principal */
 .partie{
-    padding: 40px;
     overflow: hidden;
     color: black;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin-top: -80px;
-    margin-bottom: -50px;
+    padding: 80px 40px;
+    margin: -80px 0 -50px 0;
     width: 100%;
 }
 
 .triplette {
-    padding: 0;
-    margin: 0;
-    background-color: none;
-    height: 70vh;
-    display: flex; /* Utilisation de flexbox pour aligner horizontalement */
-    gap: 30px; /* Espace de 30px entre la vidéo de gauche et les vidéos de droite */
-    width: 100%; /* Prend toute la largeur disponible */
+    display: flex;
+    gap: 30px; /* Espacement entre les colonnes */
+    height: 70vh; /* Hauteur de la section */
+    width: 100%; /* Largeur pleine */
 }
 
 /* Conteneur de la vidéo à gauche (prend 2/3 de la largeur) */
 .content-left {
     flex: 2; /* 2/3 de l'espace disponible */
-    width: 100%; /* Remplir toute la largeur de son conteneur */
 }
 
 .content-left .content-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Assure que la vidéo prend toute la largeur de son conteneur */
-    height: 100%; /* Remplir toute la hauteur */
+    width: 100%;
+    height: 100%; /* Occupe toute la hauteur */
     border-radius: 25px;
     background-color: var(--greymouvaplan);
+    position: relative; /* Pour positionner le numéro */
 }
 
 .content-left video {
@@ -58,7 +52,6 @@
     display: flex; /* Utilisation de flexbox pour empiler les vidéos verticalement */
     flex-direction: column; /* Empiler les vidéos les unes sur les autres */
     height: 100%; /* Prendre toute la hauteur disponible */
-    di
 }
 
 .content-right .content-box {
@@ -87,18 +80,6 @@
 }
 
 /* Style pour les numéros dans les vidéos */
-.content-number {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    color: rgba(0, 0, 0, 0.192);
-    padding: 5px 10px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index:15;
-}
 
 .videoomodaka{
     display: block;

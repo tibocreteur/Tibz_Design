@@ -267,14 +267,14 @@ blockquote {
 
 .content-number {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 25px;
     color: rgba(0, 0, 0, 0.192);
-    padding: 5px 10px;
     font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
+    z-index: 99999999;
 }
 
 .explication ::selection {
