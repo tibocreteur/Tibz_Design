@@ -192,6 +192,7 @@ video{
 
 .imgcinq img{
     object-fit: contain;
+    max-height: 80vh;
     max-width: calc(50% - 10px);
 }
 
