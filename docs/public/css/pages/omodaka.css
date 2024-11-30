@@ -196,7 +196,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 100%;
     background-color: var(--greymouvaplan);
     border-radius: 25px;
@@ -214,15 +213,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     background-color: var(--greymouvaplan);
     border-radius: 25px;
     padding: 20px;
 }
 
 .plants2 img{
-    padding: 0px;
-    margin: 0px;
     height:100%;
     max-height: 100vh;
     width: auto;
