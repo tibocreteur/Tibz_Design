@@ -10,7 +10,7 @@
 .triplette {
     display: flex;
     gap: 30px; /* Espacement entre les colonnes */
-    height: 70vh; /* Hauteur de la section */
+    height: 750px; /* Hauteur de la section */
     width: 100%; /* Largeur pleine */
 }
 
