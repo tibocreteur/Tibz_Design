@@ -30,7 +30,7 @@
 .enbasbadge{
     display: flex;
     position: absolute;
-    bottom: -15px;
+    top: -17px;
     left: 50px;
     gap: 10px;
     z-index: 3; /* Place la vidéo derrière le contenu */
