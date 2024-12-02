@@ -61,7 +61,7 @@ a:hover{
 .copied-message {
   display: flex;
   position: fixed;
-  top: 12%;
+  top: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(52, 238, 139);
@@ -73,6 +73,5 @@ a:hover{
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   display: none; /* Caché par défaut */
-
-  z-index: 9999;
+  z-index: 999999;
 }
