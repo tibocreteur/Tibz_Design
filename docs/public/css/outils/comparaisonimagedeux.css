@@ -34,7 +34,7 @@
     position: absolute;
     height: 100%;
     width: 4px;
-    background: #ffffff;
+    background: var(--greymouvaplan);
     left: 50%;
     transform: translateX(-50%);
   }
@@ -45,6 +45,6 @@
     top: 50%;
     width: 60px;
     height: 60px;
-    color: #ffffff;
+    color: var(--greymouvaplan);
     transform: translate(-50%, -50%) rotateZ(90deg);
   }
