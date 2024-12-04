@@ -41,7 +41,7 @@ section.latestprojectstitre {
     width: 100%; /* Largeur à 100% du conteneur */
     height: 300px; /* Hauteur fixée pour créer un carré */
     object-fit: cover;
-    filter: grayscale(100%) contrast(0.5) ; /* Applique le noir et blanc */
+    filter: grayscale(100%) contrast(1) ; /* Applique le noir et blanc */
     transition: 0.2s ease;
     position: relative;
     display: flex;
