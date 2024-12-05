@@ -37,6 +37,10 @@
     transition: 0.4s ease-in-out;
     scale: 0.9;
     z-index: 100; /* Place la vidéo derrière le contenu */
+    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer */
+    user-select: none;  
 }
 
 .content-left:hover video{
@@ -72,6 +76,10 @@
     transition: 0.4s ease-in-out;
     z-index: 100; /* Place la vidéo derrière le contenu */
     scale: 1.2;
+    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer */
+    user-select: none;  
 }
 
 .content-right :hover video{

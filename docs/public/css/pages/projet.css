@@ -11,6 +11,10 @@
     background-size: cover;
     height: 100%;
     max-height: 1200px;
+    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer */
+    user-select: none;  
 }
 
 .entete {
@@ -188,6 +192,10 @@
     font-size: 1rem;
 }
 
+.legend ::selection {
+    background-color: #ffd700;
+}
+
 .legend p {
     margin: 2px 0;
 }
@@ -296,7 +304,11 @@ blockquote {
     font-weight: bold;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    z-index: 99999999;
+    z-index: 9999;
+    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer */
+    user-select: none;  
 }
 
 .explication ::selection {

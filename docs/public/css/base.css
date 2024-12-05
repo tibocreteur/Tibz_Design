@@ -8,6 +8,13 @@ html {
   }
 }
 
+img{
+  -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+  -moz-user-select: none;    /* Pour Firefox */
+  -ms-user-select: none;     /* Pour Internet Explorer */
+  user-select: none;  
+}
+
 * {
   margin: 0;
   padding: 0;
