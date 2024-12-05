@@ -53,6 +53,14 @@
     padding-bottom: 60px;
 }
 
+.figma-content-side p strong {
+    font-weight: bold;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+    
+}
+
 .font-presentation {
     font-family: 'Satoshi', sans-serif;
     background-color: #f5f5eb;
@@ -116,9 +124,6 @@
 
 .presentionfont p{
     margin-top: 0px;
-}
-.presentationfontgauche {
-
 }
 
 

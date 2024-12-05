@@ -57,6 +57,16 @@
 
 .infoprojet p {
     color: black ;
+    font-family: "IBM Plex Mono", monospace;
+    
+}
+
+.infoprojet p strong {
+    color: rgb(49, 49, 49) ;
+    font-weight: bold;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
     
 }
 
@@ -86,6 +96,15 @@
 
 .explicationmouvaplan p{
     width: 40%;
+}
+
+.explicationmouvaplan p strong {
+    color: rgb(49, 49, 49) ;
+    font-weight: bold;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+    
 }
 
 .explicationmouvaplan ::selection {
