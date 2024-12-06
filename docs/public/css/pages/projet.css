@@ -372,6 +372,10 @@ blockquote {
 .panneauqrcode img {
             position: relative;
             height: 250px;
+            -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+            -moz-user-select: none;    /* Pour Firefox */
+            -ms-user-select: none;     /* Pour Internet Explorer */
+            user-select: none; 
         }
 
         .panneauqrcode a {
