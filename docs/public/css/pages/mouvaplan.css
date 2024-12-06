@@ -225,21 +225,19 @@
     display: flex;
     border-radius: 25px;
     justify-content: space-between;
-    padding: 70px;
+    padding: 50px;
     align-items: center;
     background-color: var(--greymouvaplan);
-    padding-inline: 100px;
 }
 
 .marckers img{
-    width: 10rem;
-    height: 10rem;
+    width: calc(20% - 40px);
     scale: 1;
     transition: 0.3s ease;
     border-radius: 50%;
 }
 
 .marckers img:hover{
-    scale: 1.2;
+    scale: 1.1;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.101);
 }

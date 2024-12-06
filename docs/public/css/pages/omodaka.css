@@ -8,7 +8,7 @@
     display: flex;
     height: 100%;
     width: 100%;
-    background-image: url('../../image/omodaka/fond.jpg');
+    background-image: url('../../image/omodaka/decors4.jpg');
     align-items: center;
     justify-content: center;
     background-size: cover;
@@ -17,7 +17,7 @@
 
 .headeromodaka img{
     width: 700px;
-    animation: textFadeIn 2s ease-in-out;
+    animation: textFadeIn 1s ease-in-out;
 }
 
 .paletteomodaka {

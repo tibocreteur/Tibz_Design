@@ -367,6 +367,11 @@ blockquote {
     align-items: center;
     justify-content: center;
     align-content: center;
+    flex-direction: row;
+}
+
+.fleche{
+    color: #000000;
 }
 
 .panneauqrcode img {
@@ -383,13 +388,16 @@ blockquote {
             font-family:"IBM Plex Mono", monospace; ;
             text-decoration: none;
             color: #000000;
-            transition: 0.5s ease-in-out;
+            transition: 0.3s ease-in-out;
             font-size: 1rem;
+            padding-inline: 20px;
+            text-decoration: underline;
+            text-underline-offset: 5px;
         }
 
         .panneauqrcode a:hover {
-            text-decoration:underline;
             color: #000000;
+            padding-inline: 10px;
         }
 
         .panneauqrcode .close-btn {
