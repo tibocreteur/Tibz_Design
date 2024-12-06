@@ -404,5 +404,7 @@ blockquote {
             background: rgba(0, 0, 0, 0.677);
             z-index: 9;
             display: none;
-            backdrop-filter: blur(10px); /* Effet de flou */
+            backdrop-filter: blur(2px); /* Effet de flou */
+            display: none;
         }
+        

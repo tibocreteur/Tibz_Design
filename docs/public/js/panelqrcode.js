@@ -19,4 +19,6 @@ function closePanel() {
 document.querySelector('.navbar-button').addEventListener('click', function (event) {
         event.preventDefault(); // Empêche le comportement par défaut
         openPanel(); // Appelle ta fonction pour ouvrir le panneau
+
+
 });
