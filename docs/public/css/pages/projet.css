@@ -353,6 +353,8 @@ blockquote {
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    justify-content: center;
+    align-content: center;
     display: none;
     gap: 20px;
 }
