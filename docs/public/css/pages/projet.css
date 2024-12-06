@@ -20,6 +20,7 @@
 .entete {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 
@@ -227,11 +228,11 @@
   
   .presentation-app2-gauche, 
   .presentation-app2-droite {
-    flex: 1; /* Distribue l'espace de manière égale au début */
+    flex: 2; /* Distribue l'espace de manière égale au début */
   }
   
   .presentation-app2-gauche {
-    flex: 2; /* Rend la gauche deux fois plus large que la droite */
+    flex: 1; /* Rend la gauche deux fois plus large que la droite */
   }
   
   .presentation-app2 img {
@@ -266,7 +267,7 @@
     width: 100%;
     font-family: "IBM Plex Mono", monospace;
     height: 200px;
-    padding: 100px;
+    padding: 100px 33.33vh;
 }
 
 /* Style du blockquote */
@@ -330,10 +331,78 @@ blockquote {
 
 }
 
-
 .explication p{
     width: calc(50% - 12.5px);
     margin: 0;
     padding: 0;
 }
 
+
+/* Styles pour le panneau QR code */
+.panneauqrcode {
+    position: fixed;
+    z-index: 9;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000; /* Plus haut que la navbar */
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10vh 20vh;
+    flex-direction: column;
+    justify-items: center;
+    display: none;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.panneauqrcode img {
+            width: 200px;
+        }
+
+        .panneauqrcode a {
+            margin-top: 20px;
+            white-space: nowrap;
+            position: absolute;
+            font-family:"IBM Plex Mono", monospace; ;
+            text-decoration: none;
+            color: #000000;
+            transform: translate(-50%, -50%);
+        }
+
+        .panneauqrcode a:hover {
+            font-family:"IBM Plex Mono", monospace; ;
+            text-decoration: none;
+            color: #000000;
+            text-decoration:underline;
+        }
+
+        .panneauqrcode .close-btn {
+            position: absolute;
+            top: 8px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: gray;
+            transition: 0.3s ease-in-out;
+
+            padding: 2px;
+        }
+
+        .panneauqrcode .close-btn:hover {
+            color: rgb(0, 0, 0);
+            scale: 1.1;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.677);
+            z-index: 9;
+            display: none;
+            backdrop-filter: blur(10px); /* Effet de flou */
+        }

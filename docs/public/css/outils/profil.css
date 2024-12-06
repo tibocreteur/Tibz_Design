@@ -38,6 +38,7 @@
 .mention{
     background-color: rgb(23, 23, 23);
     backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px); /* Support pour Safari */
     background-size: cover;
     border-radius: 25px;
     display: flex;
@@ -114,6 +115,7 @@
     border-bottom-right-radius: 23px;
     background-color: rgba(23, 23, 23, 0.503);
     backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px); /* Support pour Safari */
     display: flex;
     flex-direction: column;
     gap: 20px;

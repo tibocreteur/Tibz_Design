@@ -47,6 +47,7 @@
 
     "PROJECTS": "",
 
+        "continueonthebrowser":"-> Continuer sur le navigateur <-",
         "how": "Comment ?",
         "bigtitle": "GROS TITRE",
         "title": "Titre",

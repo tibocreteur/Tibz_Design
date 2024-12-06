@@ -91,7 +91,7 @@ p{
     padding: 0 1.5rem;
     position: fixed;
     backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index: 100000;
     color: white;
 }
 
@@ -190,14 +190,6 @@ a:hover {
     height: 25px; /* Hauteur de la barre */
     background-color: #ffffff; /* Couleur de la barre */
     margin-inline: 10px; /* Espacement autour de la barre */
-}
-
-.uk-flag {
-    background-image: url('../../image/drapeau/eng.png');
-}
-
-.fr-flag {
-    background-image: url('../../image/drapeau/fr.jpg');
 }
 
 @media (max-width: 768px) {

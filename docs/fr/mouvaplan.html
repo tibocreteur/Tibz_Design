@@ -32,7 +32,7 @@
                     <div class="barre-verticale"></div>
                     <span>La Grande Tourrache</span>
                 </div>
-                <a href="https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet?page-id=0%3A1&node-id=1-14&node-type=canvas&viewport=-2896%2C8%2C0.61&t=g9zDxxvSjsLum9Rj-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A14&show-proto-sidebar=1" class="navbar-button" target="_blank">
+                <a href="#" class="navbar-button" onclick="openPanel()">
                     <p>Essayer</p><i class="fa-sharp-duotone fa-solid fa-vial"></i>
                 </a>
             </div>
@@ -48,6 +48,18 @@
             <script src="./../public/js/animation.js"></script>
         </section>
     </section> 
+    <section id="popup-container">
+        <!-- Overlay -->
+        <div class="overlay" id="overlay" onclick="closePanel()"></div>
+        
+        <!-- Panneau QR Code -->
+        <div class="panneauqrcode" id="panel">
+            <button class="close-btn" onclick="closePanel()">×</button>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet?page-id=0%3A1&node-id=1-14&node-type=canvas&viewport=-1278%2C-685%2C1.47&t=up3dAEfRHYqgSdDa-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A14" alt="QR Code">
+            <p><a href="https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet?page-id=0%3A1&node-id=1-14&node-type=canvas&viewport=-1278%2C-685%2C1.47&t=up3dAEfRHYqgSdDa-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A14" target="_blank">-> Continuer sur le navigateur <-</a></p>
+        </div>
+        <script src="./../public/js/panelqrcode.js"></script>
+    </section>
     <section class="citation">
         <div class="enbasbadge">
             <li id="new" class="badge">new</li>
@@ -127,10 +139,10 @@
         </div>
         <div class="presentation-app2">
             <div class="presentation-app2-gauche">
-                <img src="./../public/image/mouvaplan/barreicon.png" alt="icon app sur un telephone">
+                <img src="./../public/image/mouvaplan/logocrayon.png" alt="icon app sur un telephone">
             </div>
             <div class="presentation-app2-droite">
-                <img src="./../public/image/mouvaplan/logocrayon.png" alt="tracé de création de l'icon de l'app">
+                <img src="./../public/image/mouvaplan/barreicon.png" alt="tracé de création de l'icon de l'app">
             </div>
         </div>
         <div class="explication">
