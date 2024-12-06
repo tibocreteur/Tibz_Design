@@ -361,7 +361,7 @@ blockquote {
 }
 
 .qrcode{
-    margin-bottom: 20px;
+    margin-top: 20px;
     display: flex;
     justify-items: center;
     align-items: center;
