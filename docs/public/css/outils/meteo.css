@@ -14,7 +14,7 @@
     height: auto;
     transition: 0.3s ease-in-out;
     scale: 1;
-    border-radius: 27px;
+    border-radius: 3vh;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.33);
 }
 

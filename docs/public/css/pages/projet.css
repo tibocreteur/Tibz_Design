@@ -369,6 +369,7 @@ blockquote {
             font-family:"IBM Plex Mono", monospace; ;
             text-decoration: none;
             color: #000000;
+            font-size: 1rem;
         }
 
         .panneauqrcode a:hover {
@@ -383,7 +384,7 @@ blockquote {
             right: 20px;
             background: transparent;
             border: none;
-            font-size: 30px;
+            font-size: 2rem;
             cursor: pointer;
             color: gray;
             transition: 0.3s ease-in-out;
