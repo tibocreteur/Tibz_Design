@@ -346,7 +346,7 @@ blockquote {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10000; /* Plus haut que la navbar */
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 12vh 20vh 10vh 20vh;
     display: flex;
@@ -359,10 +359,18 @@ blockquote {
     gap: 20px;
 }
 
+.qrcode{
+    margin-bottom: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
 .panneauqrcode img {
             position: relative;
             height: 250px;
-            padding-bottom: 20px;
         }
 
         .panneauqrcode a {
