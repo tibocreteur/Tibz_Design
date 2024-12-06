@@ -348,8 +348,8 @@ blockquote {
     z-index: 10000; /* Plus haut que la navbar */
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    width: 50%;
-    height: 50%;
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-items: center;
