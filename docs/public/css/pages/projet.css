@@ -384,8 +384,8 @@ blockquote {
         }
 
         .panneauqrcode a:hover {
-            text-decoration:dashed;
-            color: #4382e2;
+            text-decoration:underline;
+            color: #000000;
         }
 
         .panneauqrcode .close-btn {
