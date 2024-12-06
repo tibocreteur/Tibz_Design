@@ -348,29 +348,27 @@ blockquote {
     z-index: 10000; /* Plus haut que la navbar */
     background: rgb(255, 255, 255);
     border-radius: 20px;
-    padding: 10vh 20vh;
+    padding: 12vh 20vh 10vh 20vh;
+    display: flex;
     flex-direction: column;
     justify-items: center;
     display: none;
-    transition: opacity 1s ease, transform 1s ease;
+    gap: 20px;
 }
 
 .panneauqrcode img {
-            width: 200px;
+            width: 25vh;
+            padding-bottom: 20px;
         }
 
         .panneauqrcode a {
-            margin-top: 20px;
             white-space: nowrap;
-            position: absolute;
             font-family:"IBM Plex Mono", monospace; ;
             text-decoration: none;
             color: #000000;
-            transform: translate(-50%, -50%);
         }
 
         .panneauqrcode a:hover {
-            font-family:"IBM Plex Mono", monospace; ;
             text-decoration: none;
             color: #000000;
             text-decoration:underline;
@@ -386,8 +384,6 @@ blockquote {
             cursor: pointer;
             color: gray;
             transition: 0.3s ease-in-out;
-
-            padding: 2px;
         }
 
         .panneauqrcode .close-btn:hover {
