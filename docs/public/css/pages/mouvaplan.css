@@ -223,15 +223,57 @@
 
 .marckers{
     display: flex;
-    border-radius: 25px;
+    border-radius: 25px 25px 0px 0px ;
     justify-content: space-between;
     padding: 50px;
     align-items: center;
     background-color: var(--greymouvaplan);
 }
 
+.mouvaplanicons{
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+}
+
+.mouvaplanicons img{
+    max-height: 50vh;
+    object-fit: cover;
+    border-radius:  0px 0px 25px 25px;
+}
+
+.telmouvaplan{
+    margin-top: 40px;
+    background-color: var(--greymouvaplan);
+    border-radius: 25px;
+    display: flex;
+    padding: 50px;
+    gap: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.telgroupe{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    transition: 0.3s ease-in-out;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.telgroupe span{
+    transition: 0.3s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.192);
+}
+
 .marckers img{
-    width: calc(20% - 40px);
+    width: calc(20% - 50px);
     scale: 1;
     transition: 0.3s ease;
     border-radius: 50%;

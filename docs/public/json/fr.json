@@ -36,6 +36,13 @@
         "howmouvaplan": "En réfléchissant au moyen approprié pour impliquer tous les publics dans le processus de création, le choix de créer une application mobile est devenu évident. Nous avons donc décidé de développer une application en utilisant le logiciel <strong>Figma</strong>.",
         "figmamouvaplan": "Pour la création de Mouvaplan, j'ai choisi <strong>Figma</strong> car c'était le moyen le plus simple et le plus rapide de donner vie à mes designs. L'outil m'a permis de prototyper facilement mes idées et d'avoir une vision claire de l'interface. De plus, sa flexibilité et sa facilité d'utilisation m'ont permis de me concentrer sur la créativité plutôt que sur les aspects techniques.",
         "meteomouvaplan": "J'ai intégré un système météorologique en temps réel dans l'application pour améliorer l'expérience des visiteurs. Cette fonctionnalité ne se contente pas d'informer ; elle guide les choix d'activités et les suggestions d'itinéraires, permettant à chaque utilisateur de profiter du parc dans des conditions idéales. C'est une façon de rendre l'application véritablement utile et personnalisée, allant au-delà d'un simple guide.",
+        "mouvaplanhome": "Accueil",
+        "mouvaplanlogin": "Connexion",
+        "mouvaplanstory": "Story",
+        "mouvaplanplan": "Carte",
+        "mouvaplanfavorisinfos": "Informations",
+        "mouvaplanfavoris": "Favoris",
+        
 
     "CONSOLE": "",
 
