@@ -8,7 +8,7 @@ section.latestprojectstitre {
     background-color: #000000;
     color: #ffffff;
     place-items: center;
-    padding: 100px;
+    padding: 80px 0px 60px 0px;
     justify-content: center;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -16,6 +16,8 @@ section.latestprojectstitre {
 
 .latestprojects h1 {
     font-size: 2.5rem;
+    background-color: ;
+    color: #000000;
 }
 
 .projects-section {
@@ -24,45 +26,50 @@ section.latestprojectstitre {
     justify-content: center; /* Centre les panneaux */
     background-color: var(--backgroundaccueil);
     height: auto;
-    gap: 4px;
+    gap: 40px;
+    padding-inline: 5%;
     
 }
 
 .project-panel {
     position: relative;
-    gap: 2px;
-    width: 30%; /* Mettre à 30% de la largeur du conteneur */
+    width: calc(100% / 2 - 20px); /* Mettre à 30% de la largeur du conteneur */
     overflow: hidden;
-    transition:0.2s ease;
+    transition:1s ease;
     scale: 1;
+    border-radius: 15px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#dernierprojet{
+    width: 100%;
 }
 
 .project-image {
-    width: 100%; /* Largeur à 100% du conteneur */
-    height: 300px; /* Hauteur fixée pour créer un carré */
+    width: 100%;
     object-fit: cover;
-    filter: grayscale(100%) contrast(1) ; /* Applique le noir et blanc */
-    transition: 0.2s ease;
+    transition: 1s ease;
     position: relative;
     display: flex;
-    justify-content: center; /* Centre l'image horizontalement */
-    align-items: center; /* Centre l'image verticalement */
     overflow: hidden;
+    filter: brightness(85%);
 }   
 
 .project-panel:hover { /* Largeur à 100% du conteneur */
-    scale: 0.94;
+
 }  
 
 .project-image:hover {
-    filter: grayscale(0%) contrast(1) ; /* Applique le noir et blanc */
-    scale: 1.17;
+    filter: brightness(100%);
+    scale: 1.1;
 }
 
 .project-panel:hover div.petitbouton{
     opacity: 1;
     scale: 0.9;
-    top: 5px;
+    top: 4px;
     left: 0px;
     padding: 10px;
 }
@@ -76,8 +83,32 @@ section.latestprojectstitre {
     z-index: 3; /* Place la vidéo derrière le contenu */
     scale: 0;
     opacity: 0;
-    transition: 0.2s ease;
+    transition: 0.5s ease;
     pointer-events: none; 
+}
+
+.infoprojets{
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    left: 28.5px;
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    user-select: none;
+}
+
+.infoprojets H1{
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+}
+.infoprojets p{
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -90,7 +121,6 @@ section.latestprojectstitre {
     }
     .projects-section img {
         width: 100%;
-        filter: grayscale(0%) contrast(1) ; /* Applique le noir et blanc */
         height: 150px;
         margin-bottom: 5px;
 
