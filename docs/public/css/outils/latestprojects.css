@@ -26,14 +26,14 @@ section.latestprojectstitre {
     justify-content: center; /* Centre les panneaux */
     background-color: var(--backgroundaccueil);
     height: auto;
-    gap: 40px;
+    gap: 30px;
     padding-inline: 5%;
     
 }
 
 .project-panel {
     position: relative;
-    width: calc(100% / 2 - 20px); /* Mettre à 30% de la largeur du conteneur */
+    width: calc(100% / 2 - 15px); /* Mettre à 30% de la largeur du conteneur */
     overflow: hidden;
     transition:1s ease;
     scale: 1;

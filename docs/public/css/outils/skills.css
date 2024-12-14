@@ -1,4 +1,5 @@
 .skills{
+    padding-top: 30px;
     padding-inline: 5%;
     background-color: var(--backgroundaccueil);
     padding-bottom: 50px;
@@ -8,51 +9,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(50% - 20px);
+    width: calc(25% - 22.5px);
     height: 100px;
     background-color: #ffffff16;
-    color: grey;
-    font-size: 1.5rem;
+    color: #00000068;
+    font-size: 1.2rem;
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    transition: border-color,background-color 1s , letter-spacing 0.3s ease-in-out , scale 0.25s ease-in-out;
-    letter-spacing: 0.5rem;
+    transition: 0.4s ease-in-out;
     text-decoration: none;
     border-style: solid;
-    background-size: 5px;
-    border-color: grey;
+    border-color: #00000068;
     text-align: center;
     font-family: "IBM Plex Mono", monospace;
 
 }
 .button:hover {
-    background-color: rgba(255, 255, 255, 0.385);
     border-color: rgb(0, 0, 0);
     z-index: 100;
-    letter-spacing: 2rem;
     color: rgb(0, 0, 0);
-}
-
-#bouton1:hover{
-}
-
-#bouton2:hover{
-
-}
-#bouton3:hover{
-
-}
-#bouton4:hover{
-
-}
-#bouton5:hover{
-
+    font-size: 1.3rem;
 }
