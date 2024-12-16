@@ -28,6 +28,7 @@ section.latestprojectstitre {
     height: auto;
     gap: 30px;
     padding-inline: 5%;
+    padding-top: 1vh;
     
 }
 
@@ -45,6 +46,10 @@ section.latestprojectstitre {
 
 #dernierprojet{
     width: 100%;
+}
+
+#projettrente{
+    width: calc(100% / 3 - 20px);
 }
 
 .project-image {
