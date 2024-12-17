@@ -194,7 +194,7 @@
 }
 
 .legend ::selection {
-    background-color: #ffd700;
+    background-color: var(--soulignage);
 }
 
 .legend p {
@@ -249,12 +249,12 @@
   
   
 .citation ::selection {
-    background-color: #ffd700; /* Couleur du fond */
+    background-color: var(--soulignage);
 }
 
 /* Pour les navigateurs WebKit (Chrome, Safari) */
 .citation ::-webkit-selection {
-    background-color: #ffd700;
+    background-color: var(--soulignage);
 }
 
 .citation {
@@ -312,12 +312,12 @@ blockquote {
 }
 
 .explication ::selection {
-    background-color: #ffd700; /* Couleur du fond */
+    background-color: var(--soulignage);
 }
 
 /* Pour les navigateurs WebKit (Chrome, Safari) */
 .explication ::-webkit-selection {
-    background-color: #ffd700;
+    background-color: var(--soulignage);
 }
 
 .explication{
