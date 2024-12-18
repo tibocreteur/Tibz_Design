@@ -141,16 +141,19 @@
     line-height: 1.5; /* Augmente l'espacement entre les lignes */ /* Limite la largeur du pavé pour une meilleure lisibilité */
     margin-bottom: -30px;
     font-size: 1rem;
+    cursor: default;
     
 
 }
 
 .titredelexplication{
     text-align: right;
+    cursor: default;
 }
 
 .titredelexplication h2{
     font-size: 9rem;
+    cursor: default;
 }
 
 .doubleimagemouvaplan{
@@ -191,6 +194,7 @@
 /*--------------*/
 .legend {
     font-size: 1rem;
+    cursor: default;
 }
 
 .legend ::selection {
@@ -199,6 +203,7 @@
 
 .legend p {
     margin: 2px 0;
+    
 }
 
 .legend-number {
@@ -267,6 +272,7 @@
     font-family: "IBM Plex Mono", monospace;
     height: 200px;
     padding: 100px 33.33vh;
+    cursor: default;
 }
 
 /* Style du blockquote */
@@ -290,12 +296,18 @@ blockquote {
     padding-top: 100px;
 }
 
+.citationdefin ::selection{
+    background-color: rgba(0, 255, 208, 0.145);
+}
+
 .citationdefin li{
     font-size: 1rem;
     font-family: "IBM Plex Mono", monospace;
+    cursor: default;
 }
 
 .content-number {
+    cursor: default;
     position: absolute;
     top: 20px;
     left: 25px;

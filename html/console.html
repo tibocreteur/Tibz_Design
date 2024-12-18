@@ -58,6 +58,24 @@
         </div>
     </section>
     <section class="partie">
+        <div class="rueconsole">
+            <video src="../docs/public/video/rueconsole2.mp4" autoplay muted playsinline loop></video>
+                <script>
+                    // Récupérer la vidéo
+                    const rueConsoleVideo = document.querySelector('.rueconsole video');
+
+                    // Activer le son lors du survol
+                    rueConsoleVideo.addEventListener('mouseenter', () => {
+                    rueConsoleVideo.muted = false; // Désactiver "muted"
+                    rueConsoleVideo.volume = 1.0; // Mettre le son à 100%
+                    });
+
+                    // Réactiver le mode "mute" lorsque la souris quitte la vidéo
+                    rueConsoleVideo.addEventListener('mouseleave', () => {
+                    rueConsoleVideo.muted = true; // Réactiver "muted"
+                    });
+                </script>
+        </div>
         <div class="triplette">
             <div class="content-left">
                 <div class="content-box">

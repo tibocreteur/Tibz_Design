@@ -22,10 +22,14 @@
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacement de 20px entre les boutons */
+    gap: 40px; /* Espacement de 20px entre les boutons */
     position: relative;
     align-items: flex-start; /* Aligner les boutons à gauche */
     right: 2px;
+}
+
+.button-container button{
+    cursor:copy;
 }
 
 /* Style des boutons */

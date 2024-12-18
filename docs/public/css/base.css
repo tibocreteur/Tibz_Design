@@ -27,6 +27,7 @@ h1 {
   padding-top: 4rem;
   color: #ffffff;
   font-family: "IBM Plex Mono", monospace;
+  cursor: default;
 }
 
 p {
@@ -36,6 +37,7 @@ p {
   font-family: "IBM Plex Mono", monospace;
   text-align: justify;
   font-size: 1rem;
+  cursor: default;
 }
 
 a {
@@ -46,6 +48,7 @@ a {
 
 li {
   list-style: none;
+  cursor: default;
 }
 
 a:hover{

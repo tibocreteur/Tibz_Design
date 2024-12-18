@@ -93,6 +93,7 @@ p{
     backdrop-filter: blur(10px);
     z-index: 100000;
     color: white;
+    cursor: default;
 }
 
 .social-contact {
