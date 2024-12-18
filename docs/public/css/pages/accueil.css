@@ -18,7 +18,6 @@ section.top-page {
     z-index: -1; /* Place la vidéo derrière le contenu */
 }
 
-
 /*gros logo*/
 .logo-grand img{
     position: absolute;
@@ -29,5 +28,4 @@ section.top-page {
     display: flex;
     place-items: center;
     animation: textFadeIn 1s ease-in-out;
-    
 }

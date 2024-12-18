@@ -63,6 +63,7 @@
     padding-inline: 15px;
     border-radius: 11px;
     opacity: 1;
+    text-transform: uppercase;
   }
   
   .menu-icon1:hover {

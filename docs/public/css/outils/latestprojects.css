@@ -16,7 +16,6 @@ section.latestprojectstitre {
 
 .latestprojects h1 {
     font-size: 2.5rem;
-    background-color: ;
     color: #000000;
 }
 
@@ -60,11 +59,8 @@ section.latestprojectstitre {
     display: flex;
     overflow: hidden;
     filter: brightness(85%);
+    max-height: 80vh;
 }   
-
-.project-panel:hover { /* Largeur à 100% du conteneur */
-
-}  
 
 .project-image:hover {
     filter: brightness(100%);
