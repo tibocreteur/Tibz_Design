@@ -90,6 +90,23 @@
     background-size: 11px 11px;
   }
   
+.poster {
+   display: flex;
+   border-radius: 0;
+   align-items: center;
+   flex-direction: row;
+   gap: 30px;
+
+}
+
+.poster img{
+    max-height: 50vh;
+    width: auto;
+    border-radius: 0;
+    max-width: 80%;
+}
+
+
 .explicationmouvaplan{
     padding-bottom: 40px;
     display: flex;
@@ -336,10 +353,17 @@ blockquote {
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
+    gap: 30px;
     width: 100%;
     justify-content: space-between; /* Sépare les éléments à gauche et à droite *//* Aligne en haut de chaque bloc */
     position: relative;
+}
 
+.explication img{
+    width: auto;
+    max-width: 50%;
+    max-height: 85vh;
+    border-radius: 0;
 }
 
 .explication p{

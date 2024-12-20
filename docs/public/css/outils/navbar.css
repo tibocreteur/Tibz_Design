@@ -62,6 +62,11 @@ p{
     align-items: center;
 }
 
+.navbar-left > img{
+    height: 1.7rem;
+    margin-left: 10px;
+}
+
 .navbar-project h3{
     font-family: "IBM Plex Mono", monospace;
     font-size: 1.7rem;
@@ -77,7 +82,6 @@ p{
 .navbar-client span {
     font-family: "IBM Plex Mono", monospace;
     margin: 0; /* Supprime les marges par défaut */
-    margin-right: 1.2rem;
 }
 
 .navbar {

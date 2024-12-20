@@ -21,6 +21,11 @@
     color: rgb(138, 100, 24);
 }
 
+#print{
+    background-color: rgb(232, 67, 67);
+    color: rgb(146, 42, 42);
+}
+
 #uiux{
     background-color: rgb(83, 122, 239);
     color: rgb(46, 65, 160);
@@ -42,4 +47,10 @@
     opacity: 1;
     transition: 0.3s ease;
     pointer-events: none; 
+    justify-items: center;
+    align-items: center;
+}
+
+.enbasbadge img{
+    height: 2rem;
 }

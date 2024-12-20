@@ -41,10 +41,23 @@ section.latestprojectstitre {
     display: flex;
     justify-items: center;
     align-items: center;
+    max-height: 85vh;
+    object-fit: contain;
 }
 
 #dernierprojet{
     width: 100%;
+}
+
+.titre{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+.titre img{
+    height: 2rem;
+    margin-left: 1rem;
 }
 
 #projettrente{
@@ -59,7 +72,6 @@ section.latestprojectstitre {
     display: flex;
     overflow: hidden;
     filter: brightness(85%);
-    max-height: 80vh;
 }   
 
 .project-image:hover {
@@ -80,7 +92,7 @@ section.latestprojectstitre {
     position: absolute;
     top: 50px;
     left: 25px;
-    gap: 10px;
+    gap:15px;
     z-index: 3; /* Place la vidéo derrière le contenu */
     scale: 0;
     opacity: 0;
