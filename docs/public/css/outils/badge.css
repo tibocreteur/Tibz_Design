@@ -49,7 +49,7 @@
 .enbasbadge{
     display: flex;
     position: absolute;
-    top: -17px;
+    top: 30px;
     left: 50px;
     gap: 10px;
     z-index: 3; /* Place la vidéo derrière le contenu */
@@ -59,8 +59,4 @@
     pointer-events: none; 
     justify-items: center;
     align-items: center;
-}
-
-.enbasbadge img{
-    height: 2rem;
 }

@@ -227,25 +227,40 @@ video{
 
 .lienprojets {
     z-index: 2000;
-    color: rgb(0, 0, 0);
+    color: rgb(171, 171, 171);
     font-size: 1rem;
     font-family: "IBM Plex Mono", monospace;
     background-color: rgba(255, 255, 255, 0.624);
-    padding: 5px 10px;
+    padding: 0px 15px;
     border-radius: 10px;
     transition: 0.2s ease;
-    backdrop-filter: blur(5px);
     text-align: center; /* Pour centrer le texte du bouton */
     text-transform: uppercase;
-    font-weight: bold;
     margin-left: 1rem;
+    border-style: solid;
+    border-color: rgb(171, 171, 171);
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lienprojets img{
+    width: 1.3rem;
+    padding: 0;
+    margin: 0;
+    opacity: 0.3;
 }
 
 .lienprojets:hover{
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
-    transform: scale(1.05);
+    border-color: #000000;
+}
 
+.lienprojets:hover img{
+    transition: 0.2s ease-in-out;
+    opacity: 1;
 }
 
 .date{
