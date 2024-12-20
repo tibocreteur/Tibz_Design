@@ -68,13 +68,19 @@ p{
     justify-items: center;
     align-items: center;
     flex-direction: row;
-    gap:1rem;
+    gap:2px;
     margin-left: 40px;
+}
+
+.navbar-project span{
+    font-family: "IBM Plex Mono", monospace;
+    display: flex; /* Pour aligner les éléments horizontalement */
+    align-items: center; /* Pour centrer verticalement */
 }
 
 .navbar-project img{
     height: 1.7rem;
-    padding: 0;
+    padding-left: 1rem;
     margin: 0;
 }
 

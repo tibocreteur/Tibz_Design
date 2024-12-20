@@ -87,17 +87,18 @@ section.latestprojectstitre {
 
 .project-panel:hover div.petitbouton{
     opacity: 1;
-    scale: 0.9;
-    top: 15px;
-    left: 15px;
+    scale: 1;
+    padding: 15px;
+    top: 0;
+    left: 0;
 }
 
 .petitbouton{
     display: flex;
     position: absolute;
     flex-direction: row;
-    top: 0;
-    left: 0;
+    top: 1rem;
+    left: 1rem;
     gap:15px;
     z-index: 3; /* Place la vidéo derrière le contenu */
     scale: 0;
