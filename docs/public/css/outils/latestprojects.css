@@ -32,7 +32,6 @@ section.latestprojectstitre {
 }
 
 .project-panel {
-    position: relative;
     width: calc(100% / 2 - 15px); /* Mettre à 30% de la largeur du conteneur */
     overflow: hidden;
     transition:1s ease;
@@ -42,12 +41,21 @@ section.latestprojectstitre {
     justify-items: center;
     align-items: center;
     max-height: 85vh;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 #dernierprojet{
     width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-content: center;
 }
+#dernierprojet .project-image {
+    position: relative;
+    height: 100%;
+    width: 200%;
+}   
+
 
 .titre{
     display: flex;
