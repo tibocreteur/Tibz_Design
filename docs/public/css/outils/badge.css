@@ -12,6 +12,7 @@
     user-select: none;  
     z-index: 50;
     white-space: nowrap;
+    margin: 0;
 }
 
 #new{

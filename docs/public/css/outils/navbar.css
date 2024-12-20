@@ -146,7 +146,8 @@ p{
     transition: background-color 0.7s ease-in-out; 
     transition: color 0.1s ease-in-out; 
     transition: transform 0.2s ease;
-    text-transform: uppercase
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 
