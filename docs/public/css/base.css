@@ -98,6 +98,7 @@ a:hover{
   gap: 30px;
   padding: 40px;
   display: none;
+  overflow: hidden;
 }
 
 .error span{
