@@ -309,12 +309,13 @@ blockquote {
     justify-content: center;
     flex-direction: column;
     font-size: 1rem;
-    padding: 60px;
-    padding-top: 100px;
+    gap: 1rem;
+    padding: 60px 0px 60px 0px;
 }
 
 .citationdefin ::selection{
-    background-color: rgba(0, 255, 208, 0.145);
+    background-color: #b8fff0;
+    color: #06b27e;
 }
 
 .citationdefin li{

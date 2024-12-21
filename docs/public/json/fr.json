@@ -118,6 +118,11 @@
         "footer": "@2024 | ©TibzDesign. Tous droits réservés.",
         "about":"informations",
 
+    "erreur":"",
+
+        "erreurun":"Ce site n'est pas encore disponible sur mobile.",
+        "erreurdeux":"Je vous invite à revenir depuis un ordinateur pour une meilleure expérience.",
+
     "INFORMATIONS": "",
 
 
