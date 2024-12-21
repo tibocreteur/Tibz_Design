@@ -230,9 +230,10 @@
     border-radius: 25px;
 }
 
-.mouvaplanicons img{
+.mouvaplanicons >img{
     max-height: 50vh;
     object-fit: cover;
+    filter: grayscale(1);
     border-radius:  0px 0px 25px 25px;
 }
 
