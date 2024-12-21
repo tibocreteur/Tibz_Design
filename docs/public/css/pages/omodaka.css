@@ -79,12 +79,13 @@
     flex-direction: column;
     gap: 25px;
     width: 100%;
+    
 }
 
 .logovideo img{
-    height: 400px;
+    height: calc(50vh - 70px);
     object-fit: cover;
-    max-height:400px,
+    max-height:calc(50vh - 70px),
 }
 
 .logobas {

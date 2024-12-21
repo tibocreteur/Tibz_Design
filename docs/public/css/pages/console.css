@@ -2,7 +2,7 @@
 .partie{
     overflow: hidden;
     color: black;
-    padding: 80px 40px;
+    padding: 50px 40px 80px 40px;
     margin: -80px 0 -50px 0;
     width: 100%;
 }
@@ -10,7 +10,7 @@
 .triplette {
     display: flex;
     gap: 30px; /* Espacement entre les colonnes */
-    height: 750px; /* Hauteur de la section */
+    height: 70vh; /* Hauteur de la section */
     width: 100%; /* Largeur pleine */
 }
 
@@ -63,6 +63,7 @@
     padding:0px;
     min-height: calc(100%/2 - 30px); /* Chaque vidéo prend la moitié de la hauteur de la section */
     border-radius: 25px;
+    max-height: 80vh;
     height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
     background-color: var(--greymouvaplan);
 }
@@ -72,6 +73,7 @@
     background-color: none;
     pointer-events: none;
     width: 100%; /* La vidéo prend toute la largeur de son conteneur */
+    max-height: 80vh;
     height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
     transition: 0.4s ease-in-out;
     z-index: 100; /* Place la vidéo derrière le contenu */
@@ -84,6 +86,7 @@
 
 .content-right :hover video{
     scale: 1.6;
+    max-height: 80vh;
 }
 
 /* Style pour les numéros dans les vidéos */
@@ -120,4 +123,11 @@
 
 .videoomodaka::-webkit-media-controls {
     display: none !important; /* Cache les contrôles pour les navigateurs basés sur WebKit */
+}
+
+.explication video{
+    width: 50%;
+    border-radius: 25px;
+    height: auto;
+    object-fit: cover;
 }

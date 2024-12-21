@@ -215,14 +215,14 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .navbar-client {
-        visibility: hidden;
-    }
     
-    .navbar-client span {
-        visibility: hidden;
+    .barre-verticale {
+        display: none;
+    }
+    .navbar-left span {
+        display: none;
     }
     .navbar-project h3{
-        visibility: hidden;
+        display:  none;
     }
 }

@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center; /* Centre horizontalement */
     align-items: center;  
-    padding-top: 200px;
     background-color: rgb(0, 0, 0);
     flex-direction: column;
     gap: 0px;
@@ -20,9 +19,6 @@
 }
 
 .caseprofil {
-    background-image: url('../../image/tete.png');
-    background-size: cover;
-    background-position: -50px;
     width: 850px;
     border-radius: 25px;
     display: flex;
@@ -33,6 +29,7 @@
     position: relative;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.24);
     z-index: 2;
+    margin: 40px;
 }
 
 .mention{
@@ -110,9 +107,8 @@
 }
 
 .profildroit{
-    width: 500px;
-    border-top-right-radius: 23px;
-    border-bottom-right-radius: 23px;
+    width: 100%;
+    border-radius: 23px;
     background-color: rgba(23, 23, 23, 0.503);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px); /* Support pour Safari */
