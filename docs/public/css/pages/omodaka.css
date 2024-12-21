@@ -189,7 +189,6 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
-    height: 85vh;
 }
 
 .plants{
@@ -197,16 +196,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     background-color: var(--greymouvaplan);
     border-radius: 25px;
+    width: 80%;
 }
 
 .plants img{
     max-height: 80vh;
-    height:100%;
-    width: 100%;
-    object-fit: cover;
+    padding: 30px;
 }
 
 .plants2{
@@ -216,14 +213,12 @@
     justify-content: center;
     background-color: var(--greymouvaplan);
     border-radius: 25px;
-    padding: 20px;
+    width: 20%;
 }
 
 .plants2 img{
-    height:100%;
-    max-height: 100vh;
-    width: auto;
-    object-fit: cover;
+    max-height: 80vh;
+    padding: 30px;
 }
 
 .sac {

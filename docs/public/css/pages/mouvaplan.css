@@ -248,13 +248,20 @@
 }
 
 .telgroupe{
+    height: auto;
     display: flex;
     flex-direction: column;
-    max-width: 30%;
     transition: 0.3s ease-in-out;
     justify-items: center;
     align-items: center;
     gap: 5px;
+    width: 30%;
+    position: relative;
+}
+
+.telgroupe img{
+    max-height: 80vh;
+    object-fit: contain;
 }
 
 .telgroupe span{
