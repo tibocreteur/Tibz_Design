@@ -88,20 +88,20 @@ section.latestprojectstitre {
 .project-panel:hover div.petitbouton{
     opacity: 1;
     scale: 1;
-    padding: 15px;
     top: 0;
     left: 0;
 }
 
 .petitbouton{
     display: flex;
+    padding: 15px;
     position: absolute;
     flex-direction: row;
-    top: 1rem;
-    left: 1rem;
+    top: 0;
+    left: 0;
     gap:15px;
     z-index: 3; /* Place la vidéo derrière le contenu */
-    scale: 0;
+    scale: 1;
     opacity: 0;
     transition: 0.5s ease;
     pointer-events: none; 
@@ -117,6 +117,7 @@ section.latestprojectstitre {
     flex-direction: column;
     pointer-events: none;
     user-select: none;
+
 }
 
 .infoprojets H1{

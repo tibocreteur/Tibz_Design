@@ -24,12 +24,11 @@
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
     text-decoration: none;
-
     text-align: center;
     font-family: "IBM Plex Mono", monospace;
-    letter-spacing: 0.5rem;
+    font-size: 1rem;
 
 }
 .button:hover {
@@ -38,4 +37,6 @@
     z-index: 100;
     color: rgb(255, 255, 255);
     background-color: rgb(205, 205, 205);
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
 }
