@@ -6,8 +6,8 @@
 
         "langue": "FR",
         "contactme": "ME CONTACTER",
-        "contactSubject": "Demande d'information",
-        "contactBody": "Bonjour Tibo,%0A%0AJe souhaite obtenir plus d'informations sur vos services de design.%0A%0AMerci !",
+        "contactsubject": "Demande%20d'information",
+        "contactbody": "Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!",
         "try": "Essayer",
 
     "OMODAKA": "",

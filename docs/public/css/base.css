@@ -68,7 +68,7 @@ a:hover{
 .copied-message {
   display: flex;
   position: fixed;
-  top: 100px;
+  top: 120px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgb(52, 238, 139);

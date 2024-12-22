@@ -40,8 +40,8 @@ video{
 }
 
 .nom img{
-    height: 2rem;
-    padding-right: 0.5rem;
+    height: 1.8rem;
+    margin: 0.5rem;
 }
 
 .nom span{

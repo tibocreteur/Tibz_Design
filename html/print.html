@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
-    <link rel="icon" href="./../public/image/logo.png" type="images/x-icon">
-    <title>PRINT</title>
+    <link rel="icon" href="../docs/public/image/logo.png" type="images/x-icon">
+    <title>{{graphic}}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./../public/css/outils/navbar.css">
-    <link rel="stylesheet" href="./../public/css/outils/footer.css">
-    <link rel="stylesheet" href="./../public/css/pages/projet.css">
-    <link rel="stylesheet" href="./../public/css/pages/works.css">
-    <link rel="stylesheet" href="./../public/css/base.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/navbar.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/footer.css">
+    <link rel="stylesheet" href="../docs/public/css/pages/projet.css">
+    <link rel="stylesheet" href="../docs/public/css/pages/works.css">
+    <link rel="stylesheet" href="../docs/public/css/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <section class="error">
-        <img class="errorlogo" src="./../public/image/logo.png" alt="">
-        <span>Ce site n'est pas encore disponible sur mobile.</span>
-        <span>Je vous invite à revenir depuis un ordinateur pour une meilleure expérience.</span>
+        <img class="errorlogo" src="../docs/public/image/logo.png" alt="">
+        <span>{{erreurun}}</span>
+        <span>{{erreurdeux}}</span>
     </section>
     <header class="navbar">
         <div class="navbar-left">
             <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo.png" alt="logo du site">
+                    <img src="../docs/public/image/logo.png" alt="logo du site">
                 </a>
                 <div class="navbar-project">
-                    <h3>PRINT</h3>
+                    <h3>{{graphic}}</h3>
                 </div>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">ME CONTACTER</a>
-                <a id="switch-lang" class="navbar-button" href="./../en/posters.html">en</a>
+                <a href="mailto:tibzdesign@gmail.com?subject={{contactsubject}}&body={{contactbody}}" class="navbar-button">{{contactme}}</a>
+                <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/posters.html">{{otherlangues}}</a>
             </div>
         </header>
         <section class="fondworks">
@@ -45,38 +45,38 @@
             <div class="works">
                 <div class="projet1">
                     <div class="imagesworksposters">
-                        <img src="./../public/image/works//posters/regatta2.jpg" alt="">
+                        <img src="../docs/public/image/works//posters/regatta2.jpg" alt="">
                     </div>
                     <div class="titre">
                         <div class="infotitre">
                                 <div class="nom">
-                                    <img src="./../public/image/medaillenoir.svg" alt="">
                                     <h3>Toulon Provence Regatta 2025</h3>
                                     <div class="barre-verticaleblack"></div>
                                     <span>12 MED EVENT</span>
-                                    <a class=lienprojets href="./regatta.html">Découvrir
-                                        <img src="./../public/image/oeil.svg" alt="">
+                                    <img src="../docs/public/image/medaillenoir.svg" alt="">
+                                    <a class=lienprojets href="./regatta.html">{{discover}}
+                                        <img src="../docs/public/image/oeil.svg" alt="">
                                     </a>
                                 </div>
                         </div>
                         <div class="logiciel">
-                            <span>Logiciel : </span>
+                            <span>{{logiciel}}</span>
                             <span>Illustrator</span>
                         </div>
                     </div>
                     <div class="texteworks">
-                        <p>Conçue à la demande de 12 MED EVENT, cette affiche pour la Regatta de Toulon 2025 a remporté le concours officiel et sera exposée dans toute la ville de Toulon et ses environs. Elle capture à la fois l’énergie et l’élégance de cet événement emblématique.<br><br>Le design met en avant le dynamisme de la course grâce à des voiliers en mouvement, tout en célébrant l’identité unique de la ville à travers des éléments emblématiques comme le téléphérique du Mont Faron. La composition minimaliste, combinée à une palette de couleurs maritimes, reflète le prestige de cette compétition et renforce son attractivité auprès du public.</p>
+                        <p>{{explicationregatta}}</p>
                     </div>
                     <div class="date">2024</div>
                 </div>
                 <div id="nemo-section" class="projet1">
                     <div class="imgcinq">
-                        <img src="./../public/image/nemo/nemorecto.jpg" alt="">
-                        <img class="coverpaul" src="./../public/image/nemo/nemoverso.jpg" alt="">
+                        <img src="../docs/public/image/nemo/nemorecto.jpg" alt="">
+                        <img class="coverpaul" src="../docs/public/image/nemo/nemoverso.jpg" alt="">
                     </div>
                     <div class="imgcinq">
-                        <img src="./../public/image/nemo/disquefacea.png" alt="">
-                        <img src="./../public/image/nemo/disquefaceb.png" alt="">
+                        <img src="../docs/public/image/nemo/disquefacea.png" alt="">
+                        <img src="../docs/public/image/nemo/disquefaceb.png" alt="">
                     </div>
                     <div class="titre">
                         <div class="infotitre">
@@ -87,55 +87,55 @@
                                 </div>
                         </div>
                         <div class="logiciel">
-                            <span>Logiciel : </span>
+                            <span>{{logiciel}}</span>
                             <span>ADOBE Photoshop</span>
                         </div>
                         
                     </div>
                     <div class="texteworks">
-                        <p>Pour l’album Nemo de E!ght, j’ai conçu le verso du vinyle en m’inspirant de la cover originale réalisée par l’artiste, ainsi que de son personnage et de la thématique centrale de l’album. En m’appuyant sur ses publications et son univers visuel, j’ai cherché à retranscrire l’essence de son projet de manière graphique.<br><br>J’ai également intégré l’idée d’une pochette objet qui fonctionne comme un miroir : pour découvrir les différents titres des faces A et B, il faut tourner la pochette. Cette mise en page reflète symboliquement le concept du miroir, mettant en avant la dualité entre le moi social et le moi intérieur de E!ght, un thème clé de l’album.<br><br>Enfin, j’ai aussi réalisé les visuels des étiquettes centrales pour les faces A et B des disques vinyles, en assurant une cohérence esthétique et conceptuelle avec le reste du design. Mon travail a ainsi visé à capturer l’univers singulier de l’artiste tout en proposant une expérience physique et interactive au spectateur.</p>
+                        <p>{{explicationeightlow}}</p>
                     </div>
                 </div>
                 <div class="projet1">
                     <div class="imagesworksposters">
-                        <img src="./../public/image/works/posters/rats.png" alt="">
+                        <img src="../docs/public/image/works/posters/rats.png" alt="">
                     </div>
                     <div class="titre">
                         <div class="infotitre">
                                 <div class="nom">
-                                    <h3>Dessin technique RATZ</h3>
+                                    <h3>{{technicaldrawing}}</h3>
                                     <div class="barre-verticaleblack"></div>
                                     <span>La Grande Tourrache</span>
                                 </div>
                         </div>
                         <div class="logiciel">
-                            <span>Logiciel : </span>
+                            <span>{{logiciel}}</span>
                             <span>Illustrator</span>
                         </div>
                     </div>
                     <div class="texteworks">
-                        <p>J'ai créé le plan technique de la voiture Ratz, en respectant ses proportions et son esthétique de dessin animé. Ce travail m'a permis d'analyser ses détails et de les traduire en un schéma précis et fidèle, à la fois ludique et technique.</p>
+                        <p>{{explicationratz}}</p>
                     </div>
                 </div>
                 <div class="projet1">
                     <div class="imagesworksposters">
-                        <img src="./../public/image/works/posters/magicball.jpg" alt="">
+                        <img src="../docs/public/image/works/posters/magicball.jpg" alt="">
                     </div>
                     <div class="titre">
                         <div class="infotitre">
                                 <div class="nom">
-                                    <h3>Dessin technique RATZ</h3>
+                                    <h3>{{technicaldrawing}}</h3>
                                     <div class="barre-verticaleblack"></div>
                                     <span>La Grande Tourrache</span>
                                 </div>
                         </div>
                         <div class="logiciel">
-                            <span>Logiciel : </span>
+                            <span>{{logiciel}}</span>
                             <span>Illustrator</span>
                         </div>
                     </div>
                     <div class="texteworks">
-                        <p>J'ai créé le plan technique de la Magic Ball, en veillant à préserver ses proportions et son esthétique de dessin animé. Ce travail m'a permis d'analyser ses détails uniques et de les traduire en un schéma précis et fidèle, alliant créativité et précision technique.</p>
+                        <p>{{explicationmagicball}}</p>
                     </div>
                 </div>
             </div>
@@ -144,21 +144,21 @@
             </div>
         </section>
         <section class="infoprojet">
-            <script src="./../public/js/zoom.js"></script>
+            <script src="../docs/public/js/zoom.js"></script>
             <div class="citationdefin">
                 <li>Credit : TibzDesign</li>
-                <p>Que cette création éveille votre inspiration. (• ◡•)</p>
+                <p>{{sitation}}</p>
             </div>
         </section>
-        <script src="./../public/js/comparaison.js"></script>
-        <script src="./../public/js/synchronisation.js"></script>
+        <script src="../docs/public/js/comparaison.js"></script>
+        <script src="../docs/public/js/synchronisation.js"></script>
         <footer class="footerprojects">
             <ul class="menu">
                 <li class="menu-elem">
                     <a href="./information.html" class="menu-icon1"> Informations </a>
                 </li>
             </ul>
-            <p class="text">@2024 | ©TibzDesign. Tous droits réservés.</p>
+            <p class="text">{{footer}}</p>
         </footer>
 </body>
 </html>

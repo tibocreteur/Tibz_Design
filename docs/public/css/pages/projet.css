@@ -314,8 +314,8 @@ blockquote {
 }
 
 .citationdefin ::selection{
-    background-color: #b8fff0;
-    color: #06b27e;
+    background-color: #ffffff00;
+    color: #000000;
 }
 
 .citationdefin li{

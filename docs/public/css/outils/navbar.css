@@ -137,7 +137,13 @@ p{
 .navbar-button-logo img {
     margin-top: 4px;
     width: 35px;
+    transition: 0.25s ease-in-out;
 }
+
+.navbar-button-logo img:hover{
+    scale: 1.1;
+}
+
 .navbar-button {
     height: 30px;
     align-items: center;
