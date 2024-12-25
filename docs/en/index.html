@@ -44,9 +44,6 @@
                 <a id="switch-lang" class="navbar-button" href="./../fr/index.html">fr</a>
             </div>
         </header>
-        <div class="logo-grand">
-            <img src="./../public/image/logo.png"  alt="logo du site">
-        </div>
     </section>
     <section class="latestprojectstitre">
         <header class="latestprojects">
@@ -62,7 +59,11 @@
                         <span id="print" class="badge">PRINT</span>
                         <span id="award" class="badge">Competition Winner 🏆</span>
                     </div>
-                    <img src="./../public/image/regatta/fond.jpg" alt="Toulon Provence Regatta 2025" class="project-image">
+                    <picture>
+                        <source srcset="./../public/image/regatta/fond.jpg" media="(min-width: 768px)">
+                        <source srcset="./../public/image/regatta/dehors.jpg" media="(max-width: 767px)">
+                        <img src="./../public/image/regatta/fond.jpg" alt="Description de l'image">
+                    </picture>
                     <div class="infoprojets">
                         <p>12 MED EVENT</p>
                         <div class="titre">

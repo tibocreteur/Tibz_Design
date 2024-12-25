@@ -112,6 +112,7 @@ a:hover{
 
 @media screen and (max-width: 768px) {
   .error {
-    display: flex; /* Visible uniquement sur mobile */
+    display: none; /* Visible uniquement sur mobile */
+    overflow: hidden;
   }
 }

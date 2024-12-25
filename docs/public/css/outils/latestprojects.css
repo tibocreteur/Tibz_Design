@@ -139,16 +139,56 @@ section.latestprojectstitre {
         flex-wrap: wrap; /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
         align-items: center;
         flex-shrink: 2;
+        gap: 2rem;
 
     }
     .projects-section img {
         width: 100%;
-        height: 150px;
-        margin-bottom: 5px;
+        object-fit: cover;
+        scale: 1.1;
 
     }
     .project-panel {
-        width: 40%; /* Mettre à 30% de la largeur du conteneur */
+        width: 100%; /* Mettre à 30% de la largeur du conteneur */
+        display: flex;
+    }
+    .petitbouton{
+        display: flex;
+        padding: 1rem;
+        position: absolute;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        gap:15px;
+        z-index: 3; /* Place la vidéo derrière le contenu */
+        scale: 1;
+        opacity: 1;
+        transition: 0.5s ease;
+        pointer-events: none; 
+    }
+    .infoprojets{
+        bottom: 15px;
+        left: 20px;
+        gap: 0px;
+    
+    }
+    .titre img{
+        width: 2rem;
+        margin: 0px;
+        padding: 0px;
+        visibility: hidden;
+    }
+    .infoprojets H1{
+        font-size: 2rem;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .infoprojets p{
+        padding: 0;
+        margin: 0;
+        font-size: 0.8rem;
+        text-transform: uppercase;
     }
 
 }

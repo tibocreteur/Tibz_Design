@@ -29,3 +29,18 @@ section.top-page {
     place-items: center;
     animation: textFadeIn 1s ease-in-out;
 }
+
+@media (max-width: 768px) {
+    section.top-page {
+        background-color: #000000;
+        background: url('../../video/tout.mp4');
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        
+    }  
+    .top-page video{
+        height: 75vh;
+        
+    }
+}
