@@ -36,11 +36,11 @@ section.top-page {
         background: url('../../video/tout.mp4');
         background-size: cover;
         background-position: center;
-        height: 75vh;
+        height: 700px;
         
     }  
     .top-page video{
-        height: 75vh;
+        height: 700px;
         
     }
 }
