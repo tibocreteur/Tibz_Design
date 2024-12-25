@@ -465,6 +465,16 @@ blockquote {
         
 
 @media (max-width: 768px) {
+
+    .entete img{
+    }
+    .entete{
+        height: 600px;
+        max-height: 600px;
+        padding: 0;
+        margin: 0;
+    }
+
     .panneauqrcode img {
         display: none;
     }
@@ -540,5 +550,10 @@ blockquote {
         width: 75%;
         text-align: center;
     }
-    
+    .infoprojet {
+        width: 100%;
+        background-color: var(--backgroundproject);
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }

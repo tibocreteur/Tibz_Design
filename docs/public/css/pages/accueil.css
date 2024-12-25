@@ -3,7 +3,6 @@ section.top-page {
     background: url('../../video/tout.mp4');
     background-size: cover;
     background-position: center;
-    height: 100vh;
     
 }
 
@@ -36,11 +35,11 @@ section.top-page {
         background: url('../../video/tout.mp4');
         background-size: cover;
         background-position: center;
-        height: 700px;
+        height: 600px;
         
     }  
     .top-page video{
-        height: 700px;
+        height: 600px;
         
     }
 }

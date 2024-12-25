@@ -200,7 +200,8 @@ section.latestprojectstitre {
         scale: 1;
         opacity: 1;
         transition: 0.5s ease;
-        pointer-events: none; 
+        pointer-events: none;
+        align-items: center;
     }
     .infoprojets{
         bottom: 15px;

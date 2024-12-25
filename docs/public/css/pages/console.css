@@ -136,22 +136,22 @@
     
     .explication video{
         width: 100%;
-        border-radius: 25px;
+        border-radius: 5px;
         height: auto;
         object-fit: cover;
     }
     .triplette {
         display: flex;
-        gap: 30px; /* Espacement entre les colonnes */
-        height: auto; /* Hauteur de la section */
+        gap: 30px; /* Espacement entre les colonnes *//* Hauteur de la section */
         width: 100%; /* Largeur pleine */
         flex-direction: column;
         flex-wrap: wrap; 
+        height: 400px;
 
     }
     .content-left {
         flex: none; /* 2/3 de l'espace disponible */
-        width: 100%;
+        width: auto;
         display: flex;
         flex-direction: column;
     }
@@ -164,6 +164,7 @@
         border-radius: 25px;
         background-color: var(--greymouvaplan);
         position: relative; /* Pour positionner le numéro */
+        height: auto;
     }
     
     .content-left video {
@@ -172,12 +173,14 @@
         height:auto; /* La vidéo prend toute la hauteur de son conteneur */
         width: 100%;
         transition: 0.4s ease-in-out;
-        scale: 0.9;
+        scale: 1;
         z-index: 100; /* Place la vidéo derrière le contenu */
         -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
         -moz-user-select: none;    /* Pour Firefox */
         -ms-user-select: none;     /* Pour Internet Explorer */
-        user-select: none;  
+        user-select: none;
+        margin: 0;
+        padding: 0;
     }
     .content-right {
         display: flex;
@@ -189,6 +192,7 @@
         flex-direction: column; /* Empiler les vidéos les unes sur les autres */
         width: 100%; /* Prendre toute la hauteur disponible */
         height: auto;
+        display: none;
     }
     
     .content-right .content-box {
@@ -207,8 +211,8 @@
         background-color: none;
         pointer-events: none;
         width: 100%; /* La vidéo prend toute la largeur de son conteneur */
-        max-height: 80vh;
-        height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
+        max-height: 500px;
+        height: 500px; /* La vidéo prend toute la hauteur de son conteneur */
         transition: 0.4s ease-in-out;
         z-index: 100; /* Place la vidéo derrière le contenu */
         scale: 1.2;
@@ -216,5 +220,14 @@
         -moz-user-select: none;    /* Pour Firefox */
         -ms-user-select: none;     /* Pour Internet Explorer */
         user-select: none; 
+
+    }
+    .partie{
+        overflow: hidden;
+        color: black;
+        padding:0px 30px;
+        margin:0;
+        width: 100%;
+        
     }
 }
