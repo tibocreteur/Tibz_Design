@@ -111,6 +111,7 @@ section.latestprojectstitre {
     opacity: 0;
     transition: 0.5s ease;
     pointer-events: none; 
+    flex-wrap: wrap; 
 }
 
 .infoprojets{
@@ -148,16 +149,15 @@ section.latestprojectstitre {
     gap: 1rem;
 }
 
-@media (min-width: 768px) {
+
+@media (max-width: 768px) {
+
     .infoprojets H1{
         font-size: 2.5rem;
         padding: 0;
         margin: 0;
         white-space: nowrap;
     }
-}
-
-@media (max-width: 768px) {
     .projects-section {
         display: flex;
         flex-wrap: wrap; /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */

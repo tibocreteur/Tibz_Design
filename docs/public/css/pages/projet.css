@@ -466,3 +466,9 @@ blockquote {
             display: none;
         }
         
+
+@media (max-width: 768px) {
+    .panneauqrcode img {
+        display: none;
+    }
+}

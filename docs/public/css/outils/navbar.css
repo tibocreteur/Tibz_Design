@@ -231,4 +231,7 @@ a:hover {
     .navbar-project h3{
         display:  none;
     }
+    .navbar-project img{
+        display:  none;
+    }
 }
