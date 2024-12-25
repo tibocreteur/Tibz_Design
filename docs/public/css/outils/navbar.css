@@ -233,4 +233,7 @@ a:hover {
     .navbar-project img{
         display:  none;
     }
+    .navbar-left{
+        gap:0;
+    }
 }

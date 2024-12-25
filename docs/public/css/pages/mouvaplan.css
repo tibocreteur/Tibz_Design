@@ -153,12 +153,12 @@
 .Ericaone H1{
     font-family: 'Erica One', sans-serif;
     color: #3B7958;
-    font-size: 50px;
+    font-size: 3rem;
 }
 .leslettresErica p{
     font-family: 'Erica One', sans-serif;
     color: #3B7958;
-    font-size: 24px;
+    font-size: 1rem;
     margin-bottom: 10px;
     line-height: 0.9; 
 
@@ -173,7 +173,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #3B7958;
-    font-size: 35px;
+    font-size: 2rem;
     color: #3B7958;
     margin-bottom: 10px;
 }
@@ -284,4 +284,89 @@
 .marckers img:hover{
     scale: 1.1;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.101);
+}
+
+@media (max-width: 768px) {
+    .explication p{
+        width: 100%;
+    }
+    .presentation-50-50{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .presentation-50-50 img{
+        width: 100%;
+    }
+    .presentionfont{
+        flex-direction: column;
+    }
+    .presentation-app2 {
+        flex-direction: column;
+    }
+    .presentation-app2 img{
+        height: 300px;
+    }
+
+    .marckers {
+        display: flex;
+        border-radius: 25px 25px 0px 0px;
+        align-items: center;
+        padding: 20px;
+        background-color: var(--greymouvaplan);
+    }
+    .marckers img{
+        width: 18%;
+
+    }
+    .figma-image-side {
+        flex: none;
+        background-color: var(--greymouvaplan);
+        background-image: none;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        width: 0px;
+    }
+    .figma-content-side {
+        width: 100%;
+        flex: none;
+        background-color:white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 0px 30px;
+    }
+    .figma-content-side p{
+        color: #000000;
+        width: 100%;
+    }
+
+    .figma-section {
+        display: flex;
+        width: 100%;
+        height: auto;
+        overflow:auto;
+        display: none;
+    }
+
+    .carte iframe {
+        height: 300px;
+    }
+    .tri-images {
+        gap: 30px;
+        padding: 0;
+        flex-direction: column;
+    }
+    .panneauqrcode {
+        border-radius: 20px;
+        width: 350px;
+        height: 350px;
+    }
+
 }
