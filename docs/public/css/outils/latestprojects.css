@@ -25,7 +25,7 @@ section.latestprojectstitre {
     justify-content: center;
     background-color: var(--backgroundaccueil);
     gap: 30px;
-    padding: 5%;
+    padding: 5% 5% 30px 5%;
     padding-top: 1vh;
 }
 
@@ -175,12 +175,13 @@ section.latestprojectstitre {
     .project-panel {
         width: 100%; /* Mettre à 30% de la largeur du conteneur */
         display: flex;
+
         
     }
 
     .project-panel1 img{
         width: 100%; /* Mettre à 30% de la largeur du conteneur */
-        height: 50vh;
+        height: 500px;
         display: flex;
     }
 
