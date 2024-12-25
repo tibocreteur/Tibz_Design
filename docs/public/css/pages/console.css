@@ -131,3 +131,90 @@
     height: auto;
     object-fit: cover;
 }
+
+@media (max-width: 768px) {
+    
+    .explication video{
+        width: 100%;
+        border-radius: 25px;
+        height: auto;
+        object-fit: cover;
+    }
+    .triplette {
+        display: flex;
+        gap: 30px; /* Espacement entre les colonnes */
+        height: auto; /* Hauteur de la section */
+        width: 100%; /* Largeur pleine */
+        flex-direction: column;
+        flex-wrap: wrap; 
+
+    }
+    .content-left {
+        flex: none; /* 2/3 de l'espace disponible */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .content-left .content-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 25px;
+        background-color: var(--greymouvaplan);
+        position: relative; /* Pour positionner le numéro */
+    }
+    
+    .content-left video {
+        background-color: none;
+        pointer-events: none;
+        height:auto; /* La vidéo prend toute la hauteur de son conteneur */
+        width: 100%;
+        transition: 0.4s ease-in-out;
+        scale: 0.9;
+        z-index: 100; /* Place la vidéo derrière le contenu */
+        -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+        -moz-user-select: none;    /* Pour Firefox */
+        -ms-user-select: none;     /* Pour Internet Explorer */
+        user-select: none;  
+    }
+    .content-right {
+        display: flex;
+        flex-direction: column;
+        flex: none; /* 1 part de l'espace disponible */
+        padding: 0px;
+        gap: 30px;
+        display: flex; /* Utilisation de flexbox pour empiler les vidéos verticalement */
+        flex-direction: column; /* Empiler les vidéos les unes sur les autres */
+        width: 100%; /* Prendre toute la hauteur disponible */
+        height: auto;
+    }
+    
+    .content-right .content-box {
+        position:relative; /* Pour placer le texte */
+        width: 100%; /* Assure que chaque vidéo prend toute la largeur */
+        padding:0px;
+        min-height: auto; /* Chaque vidéo prend la moitié de la hauteur de la section */
+        border-radius: 25px;
+        max-height: auto;
+        height:auto; /* La vidéo prend toute la hauteur de son conteneur */
+        background-color: var(--greymouvaplan);
+    }
+    
+    .content-right video {
+        position: absolute;
+        background-color: none;
+        pointer-events: none;
+        width: 100%; /* La vidéo prend toute la largeur de son conteneur */
+        max-height: 80vh;
+        height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
+        transition: 0.4s ease-in-out;
+        z-index: 100; /* Place la vidéo derrière le contenu */
+        scale: 1.2;
+        -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+        -moz-user-select: none;    /* Pour Firefox */
+        -ms-user-select: none;     /* Pour Internet Explorer */
+        user-select: none; 
+    }
+}

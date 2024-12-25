@@ -9,7 +9,6 @@
     object-fit: cover; /* Remplit l'écran sans déformer la vidéo */
     z-index: -2; /* Place la vidéo derrière le contenu */
     background-size: cover;
-    height: 100%;
     max-height: 1200px;
     -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
     -moz-user-select: none;    /* Pour Firefox */
@@ -285,11 +284,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
     font-family: "IBM Plex Mono", monospace;
-    height: 200px;
-    padding: 100px 33.33vh;
+    padding:100px 20%;
     cursor: default;
+    width: 100%;
 }
 
 /* Style du blockquote */
@@ -298,8 +296,7 @@ blockquote {
     font-style: italic;
     color: #000000;
     font-family: "IBM Plex Mono", monospace;
-    display: inline-block;
-    overflow: hidden;  /* Cache le texte qui n'est pas encore affiché */
+    width: 100%;
 }
 
 .citationdefin{
@@ -471,4 +468,77 @@ blockquote {
     .panneauqrcode img {
         display: none;
     }
+    .citation {
+        background-color: aqua;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "IBM Plex Mono", monospace;
+        padding: 100px 33.33vh;
+        cursor: default;
+        width: 100%;
+        margin: 0;
+        display: none;
+    }
+
+    blockquote {
+        font-size: 1rem;
+        font-style: italic;
+        color: #000000;
+        font-family: "IBM Plex Mono", monospace;
+        width: 100%;
+        display: none;
+    }
+
+    blockquote p{
+        font-size: 1rem;
+        font-style: italic;
+        color: #000000;
+        font-family: "IBM Plex Mono", monospace;
+        width: 100%;
+        display: none;
+    }
+
+    .explication{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        gap: 30px;
+        width: 100%;
+        justify-content: space-between; /* Sépare les éléments à gauche et à droite *//* Aligne en haut de chaque bloc */
+        position: relative;
+        flex-direction: column;
+    }
+    .explication img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .enbasbadge{
+        left: 30px;
+    }
+
+    .explication p{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .citationdefin{
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1rem;
+        gap: 2rem;
+        padding: 60px 0px 60px 0px;
+    }
+
+    .citationdefin p{
+        width: 75%;
+        text-align: center;
+    }
+    
 }
