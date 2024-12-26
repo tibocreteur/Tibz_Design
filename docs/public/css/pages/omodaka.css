@@ -339,16 +339,15 @@
     .plants2{
         width: 100%;
         padding: 20px;
+        height: 200px;
     }
     .plants img{
         width: 100%;
         scale: 1.5;
     }
     .plants2 img{
-        width: 30px;
-        height: 100px;
         rotate: 90deg;
-        scale: 9;
+        scale: 0.5;
     }
 
 }
