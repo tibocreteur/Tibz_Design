@@ -273,3 +273,32 @@ video{
     right: -108px;
     margin-top: -30px;
 }
+
+@media (max-width: 768px) {
+    .droite {
+        display: none;
+    }
+    .date{
+        display: none;
+    }
+    .logiciel{
+        display: none;
+    }
+    .titre{
+        display: none;
+    }
+    .projet1{
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .works{
+        padding: 20px;
+    }
+    .texteworks{
+        display: none;
+    }
+    .imagesworksposters img{
+        width: 100%;
+    }
+}
