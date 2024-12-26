@@ -315,17 +315,40 @@
         width: 600px;
     }
     .logoomodaka{
-        scale: 0.5;
+        scale: 0.4;
     }
     .headeromodaka {
         display: flex;
         height: 100%;
+        height: 700px;
+    }
+    .logovideo img{
+        height: 200px;
+    }
+    .logobas{
+        display: flex;
+        flex-direction: column;
+    }
+    .imagepackagingomodaka{
+        flex-direction: column;
+    }
+    .plants{
         width: 100%;
-        background-image: url('../../image/omodaka/fond.jpg');
-        align-items: center;
-        justify-content: center;
-        background-size: cover;
-    
+        padding: 20px;
+    }
+    .plants2{
+        width: 100%;
+        padding: 20px;
+    }
+    .plants img{
+        width: 100%;
+        scale: 1.5;
+    }
+    .plants2 img{
+        width: 30px;
+        height: 100px;
+        rotate: 90deg;
+        scale: 9;
     }
 
 }
