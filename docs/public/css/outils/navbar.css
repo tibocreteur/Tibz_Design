@@ -43,6 +43,7 @@ p{
     background-size: cover;
     background-position: center;
     max-height: 1200px;
+    height: 100vh;
 }
 
 .entete img {
@@ -235,5 +236,8 @@ a:hover {
     }
     .navbar-left{
         gap:0;
+    }
+    .top-page {
+        height: auto;
     }
 }
