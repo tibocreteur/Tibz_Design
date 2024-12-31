@@ -53,22 +53,16 @@
 }
 
 .button:hover {
-    border-color: rgb(0, 0, 0);
     z-index: 100;
     color: rgb(255, 255, 255);
-    background-color: #626262;
+    background-color: #999999;
 }
 
-.button:hover span{
-    scale: 1.01;
-    color: rgb(255, 255, 255);
-    z-index: 100;
-    font-size: 1.5rem;
-    letter-spacing: 0.3rem;
-}
 
 .button:hover img{
     scale: 1.1;
+    filter: none;
+    opacity: 66%;
 }
 
 @media (max-width: 768px) {
