@@ -10,7 +10,7 @@
 }
 
 ::selection {
-    background-color: #ffffff3b; /* Couleur du fond */
+    background-color: #ffffff23; /* Couleur du fond */
 }
 
 /* Pour les navigateurs WebKit (Chrome, Safari) */
@@ -27,6 +27,7 @@
     align-items: flex-start; /* Aligner les boutons à gauche */
     right: calc(42px);
 }
+
 
 /* Style des boutons */
 .copy-button {

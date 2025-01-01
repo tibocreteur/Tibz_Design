@@ -74,12 +74,23 @@
     gap: 1rem;
 }
 
-.profillogiciels img{
+.logologiciel{
     width: 6%;
-    opacity: 0.1;
 }
 
+.profillogiciels img{
+    width: 100%;
+    opacity: 0.2;
+    user-select: none; /* Empêche la sélection */
+    -webkit-user-select: none; /* Compatibilité avec Safari */
+    -moz-user-select: none; /* Compatibilité avec Firefox */
+    -ms-user-select: none; /* Compatibilité avec IE */
+    transition: 0.4s ease-in-out;
 
+}.profillogiciels img:hover{
+    opacity: 0.8;
+    scale: 1.2;
+}
 .badgesprofil{
     justify-content: flex;
     display: flex;
