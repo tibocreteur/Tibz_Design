@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Ajoute un délai de 500ms avant de commencer l'animation (ajustable)
                 setTimeout(() => {
                     typeWriter(); // Lance l'animation après le délai
-                }, 1000);
+                }, 250);
 
                 observer.unobserve(entry.target); // On arrête d'observer après l'animation
             }

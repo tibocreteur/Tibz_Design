@@ -32,7 +32,7 @@
 .button img{
     width: 100%;
     transition: 0.5s ease-in-out;
-    filter: grayscale(1)saturate(0.1) contrast(150%);
+    filter: grayscale(1) saturate(0.1) contrast(150%);
     opacity: 20%;
     pointer-events: none; /* Désactive les interactions (clic, hover, etc.) */
     user-select: none;
@@ -53,15 +53,13 @@
 }
 
 .button:hover {
-    z-index: 100;
     color: rgb(255, 255, 255);
-    background-color: #999999;
 }
 
 
 .button:hover img{
     scale: 1.1;
-    filter: none;
+    filter: grayscale(0) saturate(100%) contrast(90%);
     opacity: 66%;
 }
 
