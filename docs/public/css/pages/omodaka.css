@@ -12,11 +12,12 @@
     align-items: center;
     justify-content: center;
     background-size: cover;
+    overflow: hidden;
 
 }
 
 .headeromodaka img{
-    width: 700px;
+    width: 30px;
     animation: textFadeIn 1s ease-in-out;
 }
 

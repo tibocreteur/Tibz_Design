@@ -58,9 +58,15 @@
 
 
 .button:hover img{
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    filter: grayscale(1) saturate(0.1) contrast(150%);
+    opacity: 40%;
+    pointer-events: none; /* Désactive les interactions (clic, hover, etc.) */
+    user-select: none;
+    padding: 0;
+    margin: 0;
     scale: 1.1;
-    filter: grayscale(0) saturate(100%) contrast(90%);
-    opacity: 66%;
 }
 
 @media (max-width: 768px) {

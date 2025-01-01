@@ -1,21 +1,5 @@
-section.top-page {
-    background-color: #000000;
-    background: url('../../video/tout.mp4');
-    background-size: cover;
-    background-position: center;
-    
-}
 
 /* menu de navigation*/
-.top-page video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Remplit l'écran sans déformer la vidéo */
-    z-index: -1; /* Place la vidéo derrière le contenu */
-}
 
 /*gros logo*/
 .logo-grand img{

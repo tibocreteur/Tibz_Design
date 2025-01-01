@@ -16,6 +16,19 @@
     user-select: none;  
 }
 
+.entete video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit l'écran sans déformer la vidéo */
+    z-index: -2; /* Place la vidéo derrière le contenu */
+    background-size: cover;
+    max-height: 1200px;
+    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer */
+    user-select: none;  
+}
+
 .entete {
     width: 100%;
     height: 100%;
@@ -41,6 +54,7 @@
     background-color: var(--backgroundproject);
     padding-left:  40px;    
     padding-right:  40px;
+    overflow: hidden;
 }
 
 .infoprojet img {

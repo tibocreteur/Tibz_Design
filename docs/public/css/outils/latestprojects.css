@@ -2,6 +2,7 @@
 
 section.latestprojectstitre {
     background-color: var(--backgroundaccueil);
+    display: inline;
 }
 
 .latestprojectstitre {
@@ -9,7 +10,6 @@ section.latestprojectstitre {
     color: #ffffff;
     display: grid;
     place-items: center;
-    padding: 80px 0 60px;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -17,6 +17,8 @@ section.latestprojectstitre {
 .latestprojects h1 {
     font-size: 2.5rem;
     color: #000000;
+    padding-bottom: 80px;
+    padding-top: 80px;
 }
 
 .projects-section {
@@ -27,30 +29,27 @@ section.latestprojectstitre {
     gap: 30px;
     padding: 5% 5% 30px 5%;
     padding-top: 1vh;
+    overflow: hidden;
 }
 
 .project-panel {
     width: calc(50% - 15px); /* Mettre à 30% de la largeur du conteneur */
+    position: relative;
     overflow: hidden;
-    transition:1s ease;
-    scale: 1;
+    transition:1s ease-in-out;
     border-radius: 15px;
     display: flex;
-    justify-items: center;
-    align-items: center;
     max-height: 75vh;
     object-fit: cover;
 }
 
 .project-panel1 {
     width: 100%; /* Mettre à 30% de la largeur du conteneur */
+    position: relative;
     overflow: hidden;
-    transition:1s ease;
-    scale: 1;
+    transition:1s ease-in-out;
     border-radius: 15px;
     display: flex;
-    justify-items: center;
-    align-items: center;
     max-height: 75vh;
     object-fit: cover;
 }
