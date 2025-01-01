@@ -50,6 +50,10 @@
     letter-spacing: 0.1rem;
     margin: 0;
     padding: 0;
+    user-select: none; /* Empêche la sélection */
+    -webkit-user-select: none; /* Compatibilité avec Safari */
+    -moz-user-select: none; /* Compatibilité avec Firefox */
+    -ms-user-select: none; 
 }
 
 .button:hover {

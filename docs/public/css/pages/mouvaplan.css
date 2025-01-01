@@ -25,6 +25,7 @@
     width: 100%; /* Largeur totale de la section */
     height: 700px; /* Prend toute la hauteur de l'écran */
     overflow: hidden; /* Cache les débordements pour garder les coins arrondis */
+    background-color: #1b1b1b; /* Couleur de fond */
 }
 
 /* Partie gauche avec l'image */
@@ -217,7 +218,7 @@
 
 .marckers{
     display: flex;
-    border-radius: 25px 25px 0px 0px ;
+    border-radius: 25px;
     justify-content: space-between;
     padding: 50px;
     align-items: center;

@@ -28,10 +28,6 @@
     right: calc(42px);
 }
 
-.button-container button{
-    cursor:copy;
-}
-
 /* Style des boutons */
 .copy-button {
     font-family: "IBM Plex Mono", monospace;

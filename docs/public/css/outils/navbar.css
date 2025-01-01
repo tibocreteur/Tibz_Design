@@ -85,6 +85,10 @@ p{
     font-family: "IBM Plex Mono", monospace;
     display: flex; /* Pour aligner les éléments horizontalement */
     align-items: center; /* Pour centrer verticalement */
+    user-select: none; /* Empêche la sélection */
+  -webkit-user-select: none; /* Compatibilité avec Safari */
+  -moz-user-select: none; /* Compatibilité avec Firefox */
+  -ms-user-select: none; 
 }
 
 .navbar-project img{
@@ -96,12 +100,17 @@ p{
 .navbar-project h3{
     font-family: "IBM Plex Mono", monospace;
     font-size: 1.7rem;
+    user-select: none; /* Empêche la sélection */
+  -webkit-user-select: none; /* Compatibilité avec Safari */
+  -moz-user-select: none; /* Compatibilité avec Firefox */
+  -ms-user-select: none; 
 }
 
 .navbar-client {
     font-family: "IBM Plex Mono", monospace;
     display: flex; /* Pour aligner les éléments horizontalement */
     align-items: center; /* Pour centrer verticalement */
+    
 }
 
 .navbar-client span {
@@ -170,6 +179,10 @@ p{
     transition: transform 0.2s ease;
     text-transform: uppercase;
     white-space: nowrap;
+    user-select: none; /* Empêche la sélection */
+  -webkit-user-select: none; /* Compatibilité avec Safari */
+  -moz-user-select: none; /* Compatibilité avec Firefox */
+  -ms-user-select: none; 
 }
 
 
