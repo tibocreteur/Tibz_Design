@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./../public/css/pages/accueil.css">
     <link rel="stylesheet" href="./../public/css/outils/badge.css">
     <link rel="stylesheet" href="./../public/css/outils/profil.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     
 </head>
@@ -27,7 +28,7 @@
 <script src="./../public/js/gtag.js"></script>
 <body>
     <section class="error">
-        <img class="errorlogo" src="./../public/image/logo.png" alt="">
+        <img class="errorlogo" src="./../public/image/logo.avif" alt="">
         <span>This website is not yet available on mobile.</span>
         <span></span>
     </section>
@@ -53,7 +54,7 @@
         </header>
     </section>
     <section class="projects-section">
-        <div class="project-panel1">
+        <div data-aos="fade-up" data-aos-duration="400" class="project-panel1">
             <div class="boutonprojets" >
                 <a href="regatta.html">
                     <div class="petitbouton">
@@ -61,7 +62,7 @@
                         <span id="print" class="badge">PRINT</span>
                         <span id="award" class="badge">Competition Winner 🏆</span>
                     </div>
-                    <img src="./../public/image/regatta/fond.jpg" alt="流智" class="project-image">
+                    <img src="./../public/image/regatta/fond.avif" alt="流智" class="project-image">
                     <div class="infoprojets">
                         <p>12 MED EVENT</p>
                         <div class="titreprojet">
@@ -71,13 +72,13 @@
                 </a>
             </div>
         </div>
-        <div class="project-panel">
+        <div data-aos="fade-right" data-aos-duration="400" class="project-panel">
             <div class="boutonprojets" >
                 <a href="console.html">
                     <div class="petitbouton">
                         <span id="troisd" class="badge">3D</span>
                     </div>
-                    <img src="./../public/image/console/fond3.jpg" alt="流智" class="project-image">
+                    <img src="./../public/image/console/fond3.avif" alt="流智" class="project-image">
                     <div class="infoprojets">
                         <p>Personal work</p>
                         <H1>流智 - Liúzhì</H1>
@@ -85,13 +86,13 @@
                 </a>
             </div>
         </div>
-        <div class="project-panel">
+        <div data-aos="fade-left" data-aos-duration="400" class="project-panel">
             <div class="boutonprojets">
                 <a href="mouvaplan.html" class="transition-link">
                     <div class="petitbouton">
                         <span id="uiux" class="badge">UI/UX</span>
                     </div>
-                    <img src="./../public/image/mouvaplan/fond2.jpg" alt="Mouvaplan" class="project-image">
+                    <img src="./../public/image/mouvaplan/fond2.avif" alt="Mouvaplan" class="project-image">
                     <div class="infoprojets">
                         <p>La Grande Tourrache</p>
                         <H1>Mouvaplan</H1>
@@ -99,7 +100,7 @@
                 </a>
             </div>
         </div>
-        <div class="project-panel1">
+        <div data-aos="fade-up"  class="project-panel1">
             <div class="boutonprojets">
                 <a href="omodaka.html">
                     <div class="petitbouton">
@@ -117,7 +118,7 @@
     <section class="skills">
         <div class="button-section">
             <a id="bouton1" href="troisd.html" class="button">
-                <img src="./../public/image/console/fond.jpg" alt="">
+                <img src="./../public/image/console/fond.avif" alt="">
                 <span>3D</span>
             </a>
             <a id="bouton2" href="print.html" class="button">
@@ -146,6 +147,10 @@
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWW88BVG"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </noscript>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
 </body>
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>

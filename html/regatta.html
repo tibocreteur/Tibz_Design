@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/footer.css">
     <link rel="stylesheet" href="../docs/public/css/base.css">
     <link rel="icon" href="../docs/public/image/logo.png" type="images/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <section class="error">
@@ -44,7 +45,7 @@
             </div>
         </header>
         <section class="entete">
-            <img src="../docs/public/image/regatta/fond.jpg" alt="Une console rétro futuriste" id="scroll-image">
+            <img src="../docs/public/image/regatta/fond.avif" alt="Une console rétro futuriste" id="scroll-image">
             <script src="../docs/public/js/animation.js"></script>
         </section>
     </section>
@@ -58,7 +59,7 @@
     </section>
     <section class="infoprojet">
         <div class="explication">
-            <img src="../docs/public/image/regatta/regatta2.jpg" alt="" class="regattaaffiche">
+            <img src="../docs/public/image/regatta/regatta2.avif" alt="" class="regattaaffiche">
             <p class="texteexplicatif">{{presentationregatta}}</p>   
         </div>
     </section>
@@ -76,5 +77,9 @@
         </ul>
         <p data-key="footer" class="text">{{footer}}</p>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

@@ -7,11 +7,11 @@ function changeBackground(event) {
     
     // Change l'image de fond de la section selon l'image survolée
     if (event.target.id === "metteo") {
-        section.style.backgroundImage = "url('./../public/image/mouvaplan/ciel1.jpg')";
+        section.style.backgroundImage = "url('./../public/image/mouvaplan/ciel1.avif')";
     } else if (event.target.id === "metteo1") {
-        section.style.backgroundImage = "url('./../public/image/mouvaplan/ciel2.jpg')";
+        section.style.backgroundImage = "url('./../public/image/mouvaplan/ciel2.avif')";
     } else if (event.target.id === "metteo2") {
-        section.style.backgroundImage = "url('./../public/image/mouvaplan/ciel3.jpg')";
+        section.style.backgroundImage = "url('./../public/image/mouvaplan/ciel3.avif')";
     }
 }
 

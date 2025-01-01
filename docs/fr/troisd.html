@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./../public/css/base.css">
     <link rel="stylesheet" href="./../public/css/outils/comparaisonimagedeux.css">
     <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body>
@@ -46,7 +47,7 @@
             <div class="works">
                 <div class="projet1">
                     <div class="imgcent">
-                        <img src="./../public/image/console/fond.jpg" alt="">
+                        <img src="./../public/image/console/fond.avif" alt="">
                     </div>
                     <div class="titre">
                         <div class="infotitre">
@@ -67,29 +68,8 @@
                     <div class="date">2024</div>
                 </div>
                 <div class="projet1">
-                    <div class="image-comparison">
-                        <div class="images-container">
-                          <img class="before-image" src="./../public/image/works/drime/drime1_1.jpg" alt="" />
-                          <img class="after-image" src="./../public/image/works/drime/drime1_2.jpg" alt="" />
-                          <div class="slider-line"></div>
-                          <div class="slider-icon">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="w-6 h-6"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
-                              />
-                            </svg>
-                          </div>
-                          <input type="range" class="slider" min="0" max="100" />
-                        </div>
+                    <div class="imgcent">
+                        <img src="./../public/image/works/drime/drime1_2.jpg" alt="">
                     </div>
                     <div class="titre">
                         <div class="infotitre">
@@ -231,5 +211,9 @@
             </ul>
             <p class="text">@2024 | ©TibzDesign. Tous droits réservés.</p>
         </footer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
 </body>
 </html>

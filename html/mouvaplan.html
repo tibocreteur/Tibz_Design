@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../docs/public/css/pages/mouvaplan.css">
     <link rel="stylesheet" href="../docs/public/css/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body>
@@ -47,7 +48,7 @@
             </div>
         </header>
         <section class="entete">
-            <img src="../docs/public/image/mouvaplan/fondlong.jpg" alt="Image 1" id="scroll-image">
+            <img src="../docs/public/image/mouvaplan/fondlong.avif" alt="Image 1" id="scroll-image">
             <script src="../docs/public/js/animation.js"></script>
         </section>
     </section> 
@@ -82,10 +83,10 @@
             <p class="texteexplicatif">{{presentatioomodaka}}</p>   
         </div>
         <div class="presentation-50-50">
-            <img src="../docs/public/image/mouvaplan/vegetation1.jpg" alt="Nom du projet 1">
-            <img src="../docs/public/image/mouvaplan/vegetation2.jpg" alt="Nom du projet 1">
+            <img data-aos="fade-up" data-aos-duration="400" src="../docs/public/image/mouvaplan/vegetation1.avif" alt="Nom du projet 1">
+            <img data-aos="fade-up" data-aos-duration="400"src="../docs/public/image/mouvaplan/vegetation2.avif" alt="Nom du projet 1">
         </div>
-        <div class="palette">
+        <div data-aos="fade-up"  data-aos-duration="400" class="palette">
             <div class="color" style="background-color: #FF6341;" data-color="Rouge" data-text="#FF6341">
                 <span class="color-name">FF6341</span>
             </div>
@@ -167,7 +168,7 @@
                 <img src="../docs/public/image/mouvaplan/icon4.png" alt="icons sur la carte dans l'application">
                 <img src="../docs/public/image/mouvaplan/icon5.png" alt="icons sur la carte dans l'application">
             </div> 
-            <img src="../docs/public/image/mouvaplan/carte.jpg" alt="">
+            <img src="../docs/public/image/mouvaplan/carte.avif" alt="">
         </div>
         <div class="explication">
             <h2 class="titredelexplication">{{how}}</h2>
@@ -181,16 +182,16 @@
         </div>
     </section>
     <section class="infoprojet">
-        <div class="telmouvaplan">
-            <div class="telgroupe">
+        <div data-aos="fade-up"  data-aos-duration="400" class="telmouvaplan">
+            <div  class="telgroupe">
                 <span>1. {{mouvaplanhome}}</span>
                 <img src="../docs/public/image/mouvaplan/tel6.png" alt="">
             </div>
-            <div class="telgroupe">
+            <div  class="telgroupe">
                 <span>2. {{mouvaplanplan}}</span>
                 <img src="../docs/public/image/mouvaplan/tel4.png" alt="">
             </div>
-            <div class="telgroupe">
+            <div  class="telgroupe">
                 <span>3. {{mouvaplanstory}}</span>
                 <img src="../docs/public/image/mouvaplan/tel3.png" alt="">
             </div>
@@ -204,15 +205,15 @@
             </div>
             <div class="telgroupe">
                 <span>6. {{mouvaplanfavorisinfos}}</span>
-                <img src="../docs/public/image/mouvaplan/tel1.png" alt="">
+                <img  src="../docs/public/image/mouvaplan/tel1.png" alt="">
             </div>
         </div>
         <div class="presentation-50-50">
-            <img src="../docs/public/image/mouvaplan/telephone.png" alt="telephone sur l'application">
-            <img src="../docs/public/image/mouvaplan/montre.png" alt="montre sur l'applicatio ">
+            <img data-aos="fade-right" data-aos-duration="400" src="../docs/public/image/mouvaplan/telephone.png" alt="telephone sur l'application">
+            <img data-aos="fade-left" data-aos-duration="400" src="../docs/public/image/mouvaplan/montre.png" alt="montre sur l'applicatio ">
         </div>
         <div class="uneimagemouvaplantel">
-            <img src="../docs/public/image/mouvaplan/telephone2.png" alt="deux telephone sur l'application">
+            <img data-aos="fade-up"  data-aos-duration="400" src="../docs/public/image/mouvaplan/telephone2.png" alt="deux telephone sur l'application">
         </div> 
     </section>
     <section id="fondmeteo" class="fullscreen">
@@ -247,5 +248,9 @@
         </ul>
         <p class="text">{{footer}}</p>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

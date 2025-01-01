@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./../public/css/pages/mouvaplan.css">
     <link rel="stylesheet" href="./../public/css/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body>
@@ -47,7 +48,7 @@
             </div>
         </header>
         <section class="entete">
-            <img src="./../public/image/mouvaplan/fondlong.jpg" alt="Image 1" id="scroll-image">
+            <img src="./../public/image/mouvaplan/fondlong.avif" alt="Image 1" id="scroll-image">
             <script src="./../public/js/animation.js"></script>
         </section>
     </section> 
@@ -82,10 +83,10 @@
             <p class="texteexplicatif">Après plusieurs observations au <strong>parc naturel du Plan de la Garde</strong>, Margaux et moi avons remarqué que les emplacements des points d'observation intéressants n'étaient pas suffisamment mis en valeur pour les visiteurs. C'est pourquoi nous avons pris l'initiative de créer une application mobile pour résoudre ce problème. Le principe de base de l'application repose sur un système de carte où les utilisateurs peuvent voir des points d'intérêt : <strong>plantes</strong>, <strong>sources d'eau</strong>, <strong>faune</strong> et <strong>flore</strong>.<br><br>Les utilisateurs peuvent visiter les points d'intérêt mis en évidence par le parc, mais ils peuvent également placer leurs propres emplacements. Ensuite, une banque d'images publique est créée pour chaque point, permettant aux utilisateurs de suivre l'évolution de la nature.</p>   
         </div>
         <div class="presentation-50-50">
-            <img src="./../public/image/mouvaplan/vegetation1.jpg" alt="Nom du projet 1">
-            <img src="./../public/image/mouvaplan/vegetation2.jpg" alt="Nom du projet 1">
+            <img data-aos="fade-up" data-aos-duration="400" src="./../public/image/mouvaplan/vegetation1.avif" alt="Nom du projet 1">
+            <img data-aos="fade-up" data-aos-duration="400"src="./../public/image/mouvaplan/vegetation2.avif" alt="Nom du projet 1">
         </div>
-        <div class="palette">
+        <div data-aos="fade-up"  data-aos-duration="400" class="palette">
             <div class="color" style="background-color: #FF6341;" data-color="Rouge" data-text="#FF6341">
                 <span class="color-name">FF6341</span>
             </div>
@@ -167,7 +168,7 @@
                 <img src="./../public/image/mouvaplan/icon4.png" alt="icons sur la carte dans l'application">
                 <img src="./../public/image/mouvaplan/icon5.png" alt="icons sur la carte dans l'application">
             </div> 
-            <img src="./../public/image/mouvaplan/carte.jpg" alt="">
+            <img src="./../public/image/mouvaplan/carte.avif" alt="">
         </div>
         <div class="explication">
             <h2 class="titredelexplication">Comment ?</h2>
@@ -181,16 +182,16 @@
         </div>
     </section>
     <section class="infoprojet">
-        <div class="telmouvaplan">
-            <div class="telgroupe">
+        <div data-aos="fade-up"  data-aos-duration="400" class="telmouvaplan">
+            <div  class="telgroupe">
                 <span>1. Accueil</span>
                 <img src="./../public/image/mouvaplan/tel6.png" alt="">
             </div>
-            <div class="telgroupe">
+            <div  class="telgroupe">
                 <span>2. Carte</span>
                 <img src="./../public/image/mouvaplan/tel4.png" alt="">
             </div>
-            <div class="telgroupe">
+            <div  class="telgroupe">
                 <span>3. Story</span>
                 <img src="./../public/image/mouvaplan/tel3.png" alt="">
             </div>
@@ -204,15 +205,15 @@
             </div>
             <div class="telgroupe">
                 <span>6. Informations</span>
-                <img src="./../public/image/mouvaplan/tel1.png" alt="">
+                <img  src="./../public/image/mouvaplan/tel1.png" alt="">
             </div>
         </div>
         <div class="presentation-50-50">
-            <img src="./../public/image/mouvaplan/telephone.png" alt="telephone sur l'application">
-            <img src="./../public/image/mouvaplan/montre.png" alt="montre sur l'applicatio ">
+            <img data-aos="fade-right" data-aos-duration="400" src="./../public/image/mouvaplan/telephone.png" alt="telephone sur l'application">
+            <img data-aos="fade-left" data-aos-duration="400" src="./../public/image/mouvaplan/montre.png" alt="montre sur l'applicatio ">
         </div>
         <div class="uneimagemouvaplantel">
-            <img src="./../public/image/mouvaplan/telephone2.png" alt="deux telephone sur l'application">
+            <img data-aos="fade-up"  data-aos-duration="400" src="./../public/image/mouvaplan/telephone2.png" alt="deux telephone sur l'application">
         </div> 
     </section>
     <section id="fondmeteo" class="fullscreen">
@@ -247,5 +248,9 @@
         </ul>
         <p class="text">@2024 | ©TibzDesign. Tous droits réservés.</p>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

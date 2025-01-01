@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
-    <link rel="icon" href="../docs/public/image/logo.png" type="images/x-icon">
+    <link rel="icon" href="../docs/public/image/logo.avif" type="images/x-icon">
     <title>Omodaka</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../docs/public/css/pages/projet.css">
     <link rel="stylesheet" href="../docs/public/css/base.css">
     <link rel="stylesheet" href="../docs/public/css/outils/comparaisonimage.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
 </head>
 <body>
@@ -63,7 +64,7 @@
         </div>
     </section>
     <section class="decors">
-        <div class="wrapper">
+        <div data-aos="fade-up"  data-aos-duration="400" class="wrapper">
             <div class="decors-container">
                 <img src="../docs/public/image/omodaka/cinqterre.avif" alt="">
                 <div class="infodecors">
@@ -92,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper">
+        <div data-aos="fade-up"  data-aos-duration="400" class="wrapper">
             <div class="decors-container">
                 <img src="../docs/public/image/omodaka/decors2.jpg" alt="">
                 <div class="infodecors">
@@ -121,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper">
+        <div data-aos="fade-up"  data-aos-duration="400" class="wrapper">
             <div class="decors-container">
                 <img src="../docs/public/image/omodaka/decors3.jpg" alt="">
                 <div class="infodecors">
@@ -150,7 +151,7 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper">
+        <div data-aos="fade-up"  data-aos-duration="400" class="wrapper">
             <div class="decors-container">
                 <img src="../docs/public/image/omodaka/decors4.jpg" alt="">
                 <div class="infodecors">
@@ -189,7 +190,7 @@
         </div>
         <div class="logovideo">
             <div class="logohaut">
-                <div class="js-sync-image-container">
+                <div data-aos="fade-up"  data-aos-duration="400" class="js-sync-image-container">
                     <img class="active" src="../docs/public/image/omodaka/logos/logo3_1.png" alt="">
                     <img src="../docs/public/image/omodaka/logos/logo3_2.png" alt="">
                     <img src="../docs/public/image/omodaka/logos/logo3_3.png" alt="">
@@ -197,13 +198,13 @@
                 </div>
             </div>
             <div class="logobas">
-                <div class="js-sync-image-container">
+                <div data-aos="fade-right"  data-aos-duration="400" class="js-sync-image-container">
                     <img class="active" src="../docs/public/image/omodaka/logos/logo2_1.png" alt="">
                     <img src="../docs/public/image/omodaka/logos/logo2_2.png" alt="">
                     <img src="../docs/public/image/omodaka/logos/logo2_3.png" alt="">
                     <img src="../docs/public/image/omodaka/logos/logo2_4.png" alt="">
                 </div>
-                <div class="js-sync-image-container">
+                <div data-aos="fade-left"  data-aos-duration="400" class="js-sync-image-container">
                         <img class="active" src="../docs/public/image/omodaka/logos/logo1_1.png" alt="">
                         <img src="../docs/public/image/omodaka/logos/logo1_2.png" alt="">
                         <img src="../docs/public/image/omodaka/logos/logo1_3.png" alt="">
@@ -243,7 +244,7 @@
             <h2 class="titredelexplication">Packaging</h2>
             <p class="texteexplicatif">{{packagingomodaka}}</p>   
         </div>
-        <div class="imagepackagingomodaka">
+        <div data-aos="fade-up"  data-aos-duration="400" class="imagepackagingomodaka">
             <div class="plants">
                 <span class="content-number">1</span>
                 <div class="js-sync-image-container">
@@ -288,5 +289,9 @@
         </ul>
         <p class="text">{{footer}}</p>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
