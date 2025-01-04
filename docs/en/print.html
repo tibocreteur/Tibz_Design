@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
     <link rel="icon" href="./../public/image/logo.png" type="images/x-icon">
-    <title>PRINT</title>
+    <title>Print</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./../public/css/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
 
 </head>
 <body>
@@ -31,7 +32,7 @@
                     <img src="./../public/image/logo.png" alt="logo du site">
                 </a>
                 <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                    <h3>PRINT</h3>
+                    <h3>Print</h3>
                 </div>
             </div>
             <div class="social-contact">
@@ -39,8 +40,33 @@
                 <!-- Bouton "ME CONTACTER" -->
                 <a href="mailto:tibzdesign@gmail.com?subject=Information%20request&body=Hello,%0A%0AI'd%20like%20more%20information%20about%20your%20design%20services.%0A%0AThank%20you!" class="navbar-button">CONTACT ME</a>
                 <a id="switch-lang" class="navbar-button" href="./../fr/posters.html">fr</a>
+                <button class="iconburger" id="burger-toggle">
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                </button>
             </div>
         </header>
+
+        <div class="menu-burger-overlay" id="burger-menu">
+            <ul>
+                <h1 class="titreburger">Projects</h1>
+                <li><a href="regatta.html">Toulon Regatta 2025</a></li>
+                <li><a href="console.html">Liúzhì</a></li>
+                <li><a href="mouvaplan.html">Mouvaplan</a></li>
+                <li><a href="omodaka.html">Omadaka</a></li>
+                <div class="barredansburger"></div>
+                <h1 class="titreburger">MES COMPÉTENCES</h1>
+                <li><a href="troisd.html">3D</a></li>
+                <li><a href="print.html">Print</a></li>
+                <li><a href="cara.html">Character</a></li>
+                <li><a href="motion.html">Motion</a></li>
+                <div class="barredansburger"></div>
+                <a href="information.html">informations</a>
+            </ul>
+        </div>
+            <script src="./../public/js/burger-script.js"></script>
+
         <section class="fondworks">
             <!-- Travaux (Projets) -->
             <div class="works">
@@ -141,7 +167,7 @@
                 </div>
             </div>
             <div class="droite">
-                <div class="barreverticale"></div>
+                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="barreverticale"></div>
             </div>
         </section>
         <section class="infoprojet">

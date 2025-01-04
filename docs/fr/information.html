@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./../public/css/outils/badge.css">
     <link rel="stylesheet" href="./../public/css/outils/profil.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
 
 </head>
 <body>
@@ -37,8 +38,33 @@
                 <!-- Bouton "ME CONTACTER" -->
                 <a href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">ME CONTACTER</a>
                 <a id="switch-lang" class="navbar-button" href="./../en/information.html">en</a>
+                <button class="iconburger" id="burger-toggle">
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                </button>
             </div>
         </header>
+
+        <div class="menu-burger-overlay" id="burger-menu">
+            <ul>
+                <h1 class="titreburger">Projets</h1>
+                <li><a href="regatta.html">Toulon Regatta 2025</a></li>
+                <li><a href="console.html">Liúzhì</a></li>
+                <li><a href="mouvaplan.html">Mouvaplan</a></li>
+                <li><a href="omodaka.html">Omadaka</a></li>
+                <div class="barredansburger"></div>
+                <h1 class="titreburger">MES COMPÉTENCES</h1>
+                <li><a href="troisd.html">3D</a></li>
+                <li><a href="print.html">Print</a></li>
+                <li><a href="cara.html">Character</a></li>
+                <li><a href="motion.html">Motion</a></li>
+                <div class="barredansburger"></div>
+                <a href="information.html">informations</a>
+            </ul>
+        </div>
+            <script src="./../public/js/burger-script.js"></script>
+
         <section class="profilinformation">
             <div class="caseprofil">
                 <div class="profildroit">
@@ -91,7 +117,7 @@
                         <p>Je suis étudiant en deuxième année de design graphique basé en France. Passionné par la créativité visuelle, je travaille dans divers domaines du design en tant qu’artiste 3D, motion designer et graphiste.<br><br>Je m'intéresse particulièrement à la création d’identités visuelles et au développement de projets multimédias. Toujours en quête de nouvelles idées et d’inspiration, j’aime expérimenter différents styles graphiques et explorer l’impact du design dans la communication.<br><br>Mon objectif est de développer une esthétique unique tout en maîtrisant les techniques modernes du design.</p>
                     </div>
                 </div>
-                <div  class="mention">
+                <div class="mention">
                     <p>// Le site a été conçu & réalisé par moi-même ! 🚀</p>
                 </div>
             </div>

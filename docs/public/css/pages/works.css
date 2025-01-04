@@ -78,7 +78,7 @@ video{
 /* Projet individuel */
 .projet1 {
     position: relative;
-    z-index: 12;
+    z-index: 1;
     padding: 30px;
     gap: 20px;
     display: flex;

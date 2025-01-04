@@ -1,0 +1,91 @@
+
+
+
+  /* Menu Burger Overlay */
+  .menu-burger-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.856); /* Couleur de fond avec opacité */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%); /* Masqué hors de l'écran */
+    transition: transform 0.3s ease;
+    z-index: 9;
+    overflow: hidden;
+  }
+  
+  .menu-burger-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .titreburger{
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    transition: color 0.3s;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0rem;
+    padding: 0;
+  }
+  
+  .menu-burger-overlay li {
+    margin: 1.5rem 0;
+
+  }
+  
+  .menu-burger-overlay a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    font-family: "IBM Plex Mono", monospace;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.7rem;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .barredansburger{
+    background-color: rgb(255, 255, 255);
+    height: 0.1rem;
+    margin: 2rem 0px;
+    width: 50%;
+  }
+  
+  .menu-burger-overlay a:hover {
+    color: #ffffff;
+  }
+  
+  /* Activer le menu burger */
+  .menu-burger-overlay.active {
+    transform: translateX(0); /* Réapparaît à l'écran */
+  }
+  
+  /* Animation du bouton burger actif */
+  .iconburger.active .barreburger:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+    background-color: #ffffff;
+    opacity: 1;
+  }
+  
+  .iconburger.active .barreburger:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .iconburger.active .barreburger:nth-child(3) {
+    background-color: #ffffff;
+    transform: translateY(-10px) rotate(-45deg);
+    opacity: 1;
+  }
+  

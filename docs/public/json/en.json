@@ -9,6 +9,7 @@
         "contactsubject": "Information%20request",
         "contactbody": "Hello,%0A%0AI'd%20like%20more%20information%20about%20your%20design%20services.%0A%0AThank%20you!",
         "try":"Try",
+        "savoirfaire": "Mastery",
 
     "OMODAKA": "",
 
@@ -123,7 +124,7 @@
     "INFORMATIONS": "",
 
         "concour":"Competition Winner",
-        "graphic":"PRINT",
+        "graphic":"Print",
         "informationdeux":"// The site was Built & designed by yours truly! 🚀",
         "dataphone":"+33.7.83.78.48.72",
         "phone": "Phone: +33.7.83.78.48.72",

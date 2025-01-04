@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../docs/public/css/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
 
 </head>
 <body>
@@ -45,8 +46,33 @@
                 <!-- Bouton "ME CONTACTER" -->
                 <a href="mailto:tibzdesign@gmail.com?subject={{contactsubject}}&body={{contactbody}}" class="navbar-button">{{contactme}}</a>
                 <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/mouvaplan.html">{{otherlangues}}</a>
+                <button class="iconburger" id="burger-toggle">
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                </button>
             </div>
         </header>
+
+        <div class="menu-burger-overlay" id="burger-menu">
+            <ul>
+                <h1 class="titreburger">{{projects}}</h1>
+                <li><a href="regatta.html">Toulon Regatta 2025</a></li>
+                <li><a href="console.html">Liúzhì</a></li>
+                <li><a href="mouvaplan.html">Mouvaplan</a></li>
+                <li><a href="omodaka.html">Omadaka</a></li>
+                <div class="barredansburger"></div>
+                <h1 class="titreburger">MES COMPÉTENCES</h1>
+                <li><a href="troisd.html">3D</a></li>
+                <li><a href="print.html">{{graphic}}</a></li>
+                <li><a href="cara.html">Character</a></li>
+                <li><a href="motion.html">Motion</a></li>
+                <div class="barredansburger"></div>
+                <a href="information.html">{{about}}</a>
+            </ul>
+        </div>
+            <script src="../docs/public/js/burger-script.js"></script>
+
         <section class="entete">
             <img src="../docs/public/image/mouvaplan/fondlong.avif" alt="Image 1" id="scroll-image">
             <script src="../docs/public/js/animation.js"></script>
@@ -83,8 +109,8 @@
             <p class="texteexplicatif">{{presentatioomodaka}}</p>   
         </div>
         <div class="presentation-50-50">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom" src="../docs/public/image/mouvaplan/vegetation1.avif" alt="Nom du projet 1">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" src="../docs/public/image/mouvaplan/vegetation2.avif" alt="Nom du projet 1">
+            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom" src="../docs/public/image/mouvaplan/vegetation1.avif" alt="Nom du projet 1">
+            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom" src="../docs/public/image/mouvaplan/vegetation2.avif" alt="Nom du projet 1">
         </div>
         <div data-aos="fade-up"  data-aos-duration="400" class="palette">
             <div class="color" style="background-color: #FF6341;" data-color="Rouge" data-text="#FF6341">

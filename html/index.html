@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../docs/public/css/pages/accueil.css">
     <link rel="stylesheet" href="../docs/public/css/outils/badge.css">
     <link rel="stylesheet" href="../docs/public/css/outils/profil.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     
@@ -44,8 +45,33 @@
                 <!-- Bouton "ME CONTACTER" -->
                 <a href="mailto:tibzdesign@gmail.com?subject={{contactsubject}}&body={{contactbody}}" class="navbar-button">{{contactme}}</a>
                 <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/index.html">{{otherlangues}}</a>
+                <button class="iconburger" id="burger-toggle">
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                </button>
             </div>
         </header>
+
+        <div class="menu-burger-overlay" id="burger-menu">
+            <ul>
+                <h1 class="titreburger">{{projects}}</h1>
+                <li><a href="regatta.html">Toulon Regatta 2025<span id="new" class="badge">new</span></a></li>
+                <li><a href="console.html">Liúzhì</a></li>
+                <li><a href="mouvaplan.html">Mouvaplan</a></li>
+                <li><a href="omodaka.html">Omadaka</a></li>
+                <div class="barredansburger"></div>
+                <h1 class="titreburger">{{savoirfaire}}</h1>
+                <li><a href="troisd.html">3D</a></li>
+                <li><a href="print.html">{{graphic}}</a></li>
+                <li><a href="cara.html">Character</a></li>
+                <li><a href="motion.html">Motion</a></li>
+                <div class="barredansburger"></div>
+                <a href="information.html">{{about}}</a>
+            </ul>
+        </div>
+            <script src="../docs/public/js/burger-script.js"></script>
+
         <section class="entete">
             <video src="../docs/public/video/cool.mp4" autoplay muted playsinline loop type="video/mp4" alt="" id="scroll-video">
             <script src="../docs/public/js/animationvideo.js"></script>
@@ -66,7 +92,7 @@
                         <span id="award" class="badge">{{concour}} 🏆</span>
                     </div>
                     <img src="../docs/public/image/regatta/fond.avif" alt="流智" class="project-image">
-                    <div data-aos="fade-right" data-aos-duration="750" data-aos-anchor-placement="bottom-bottom" class="infoprojets">
+                    <div class="infoprojets">
                         <p>12 MED EVENT</p>
                         <div class="titreprojet">
                             <H1>Toulon Provence Regatta 2025</H1>
@@ -82,7 +108,7 @@
                         <span id="troisd" class="badge">3D</span>
                     </div>
                     <img src="../docs/public/image/console/fond3.avif" alt="流智" class="project-image">
-                    <div data-aos="fade-right" data-aos-duration="750" data-aos-anchor-placement="bottom-bottom" class="infoprojets">
+                    <div class="infoprojets">
                         <p>{{personalwork}}</p>
                         <H1>流智 - Liúzhì</H1>
                     </div>
@@ -96,7 +122,7 @@
                         <span id="uiux" class="badge">UI/UX</span>
                     </div>
                     <img src="../docs/public/image/mouvaplan/fond2.avif" alt="Mouvaplan" class="project-image">
-                    <div data-aos="fade-right" data-aos-duration="750" data-aos-anchor-placement="bottom-bottom" class="infoprojets">
+                    <div class="infoprojets">
                         <p>La Grande Tourrache</p>
                         <H1>Mouvaplan</H1>
                     </div>
@@ -110,7 +136,7 @@
                         <span id="da" class="badge">{{identity}}</span>
                     </div>
                     <img src="../docs/public/image/omodaka/petitfond.avif" alt="Omodaka" class="project-image">
-                    <div data-aos="fade-right" data-aos-duration="750" data-aos-anchor-placement="bottom-bottom" class="infoprojets">
+                    <div class="infoprojets">
                         <p> La Grande Tourrache</p>
                         <H1>Omodaka</H1>
                     </div>

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./../public/css/base.css">
     <link rel="icon" href="./../public/image/logo.png" type="images/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
+    
 </head>
 <body>
     <section class="error">
@@ -41,8 +43,33 @@
                 <!-- Bouton "ME CONTACTER" -->
                 <a href="mailto:tibzdesign@gmail.com?subject=Information%20request&body=Hello,%0A%0AI'd%20like%20more%20information%20about%20your%20design%20services.%0A%0AThank%20you!" class="navbar-button">CONTACT ME</a>
                 <a id="switch-lang" class="navbar-button" href="./../fr/console.html">fr</a>
+                <button class="iconburger" id="burger-toggle">
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                </button>
             </div>
         </header>
+
+        <div class="menu-burger-overlay" id="burger-menu">
+            <ul>
+                <h1 class="titreburger">Projects</h1>
+                <li><a href="regatta.html">Toulon Regatta 2025</a></li>
+                <li><a href="console.html">Liúzhì</a></li>
+                <li><a href="mouvaplan.html">Mouvaplan</a></li>
+                <li><a href="omodaka.html">Omadaka</a></li>
+                <div class="barredansburger"></div>
+                <h1 class="titreburger">MES COMPÉTENCES</h1>
+                <li><a href="troisd.html">3D</a></li>
+                <li><a href="print.html">Print</a></li>
+                <li><a href="cara.html">Character</a></li>
+                <li><a href="motion.html">Motion</a></li>
+                <div class="barredansburger"></div>
+                <a href="information.html">informations</a>
+            </ul>
+        </div>
+            <script src="./../public/js/burger-script.js"></script>
+
         <section class="entete">
             <img src="./../public/image/console/fond2.avif" alt="Une console rétro futuriste" id="scroll-image">
             <script src="./../public/js/animation.js"></script>
