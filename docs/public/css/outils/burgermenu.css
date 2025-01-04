@@ -13,9 +13,18 @@
     justify-content: center;
     align-items: center;
     transform: translateY(-100%); /* Masqué hors de l'écran */
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     z-index: 9;
     overflow: hidden;
+  }
+
+  .menu-burger-overlay a:hover{
+    scale: 1.05;
+    opacity: 1;
+  }
+  .menu-burger-overlay a{
+    transition: 0.2s ease-in-out;
+    opacity: 0.8;
   }
   
   .burgertout{
@@ -35,7 +44,6 @@
     text-decoration: none;
     color: white;
     font-size: 1px;
-    transition: color 0.3s;
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
     text-transform: uppercase;
@@ -51,8 +59,7 @@
     position: relative;
     text-decoration: none;
     color: white;
-    font-size: 2rem;
-    transition: color 0.3s;
+    font-size: 3rem;
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
     text-transform: uppercase;
@@ -68,8 +75,7 @@
     position: relative;
     text-decoration: none;
     color: white;
-    font-size: 2rem;
-    transition: color 0.3s;
+    font-size: 3rem;
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
     text-transform: uppercase;
@@ -79,6 +85,7 @@
     align-items: center;
     gap: 1rem;
     width: fit-content;
+    cursor: pointer;
   }
 
   .titreburger img{
@@ -125,7 +132,7 @@
   /* Animation du bouton burger actif */
   .iconburger.active .barreburger:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
-    background-color: #ffffff;
+    background-color: #acacac;
     opacity: 1;
   }
   
@@ -134,7 +141,7 @@
   }
   
   .iconburger.active .barreburger:nth-child(3) {
-    background-color: #ffffff;
+    background-color: #acacac;
     transform: translateY(-10px) rotate(-45deg);
     opacity: 1;
   }
@@ -183,5 +190,16 @@
     100% {
       opacity: 1;
     }
+  }
+
+  @media (max-width: 768px) {
+    .menu-burger-overlay a:hover{
+        scale: 1;
+        opacity: 1;
+      }
+      .menu-burger-overlay a{
+        opacity: 1;
+      }
+      
   }
   
