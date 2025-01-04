@@ -94,6 +94,8 @@
         height: 150px;
         background-color: rgb(181, 181, 181);
         font-size: 1.5rem;
-    
+    }
+    .button span{
+        font-size: 2rem;
     }
 }
