@@ -15,6 +15,70 @@
     margin: 0;
 }
 
+.nombrebadge{
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.639);
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+    color: white;
+    padding: 0px 8px 1px;
+    font-size: 1rem;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer */
+    user-select: none;  
+    white-space: nowrap;
+    margin: 0;
+    top: 0px;
+    right: -30px;
+}
+
+.chatbadge{
+    display: flex;
+    gap: 0.2rem;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.499);
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer */
+    user-select: none;  
+    white-space: nowrap;
+    margin: 0;
+}
+
+.point{
+    position: relative;
+    background-color: white;
+    height: 0.4rem;
+    width: 0.4rem;
+    border-radius: 50px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.point:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.point:nth-child(3) {
+    animation-delay: 1s;
+}
+
 #new{
     background-color: rgb(52, 238, 139);
     color:  rgb(31, 148, 85);
@@ -58,4 +122,13 @@
     pointer-events: none; 
     justify-items: center;
     align-items: center;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
 }

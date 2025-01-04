@@ -18,14 +18,20 @@
     overflow: hidden;
   }
   
-  .menu-burger-overlay ul {
+  .burgertout{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     list-style: none;
     padding-top: 50px;
     margin: 0;
     width: 80%;
   }
 
+
   .titreburger{
+    position: relative;
     text-decoration: none;
     color: white;
     font-size: 2.5rem;
@@ -38,6 +44,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    width: fit-content;
   }
 
   .titreburger img{
@@ -45,11 +52,14 @@
   }
   
   .menu-burger-overlay li {
-    margin: 1.5rem 0;
-
+    margin: 1.25rem 0;
+    position: relative;
+    width: fit-content;
   }
-  
+
   .menu-burger-overlay a {
+    width: auto;
+    position: relative;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
