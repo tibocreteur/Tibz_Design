@@ -3,7 +3,7 @@
 .fondworks {
     display: flex;
     width: 100%;
-    padding-top: 90px;
+    padding-top: 60px;
     padding-bottom: 90px;
     justify-content: space-between;
 }
