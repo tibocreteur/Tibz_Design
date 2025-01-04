@@ -10,12 +10,15 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.856); /* Couleur de fond avec opacité */
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
+    flex-direction: row;
     align-items: center;
     transform: translateY(-100%); /* Masqué hors de l'écran */
     transition: transform 0.5s ease;
     z-index: 9;
     overflow: hidden;
+    padding-inline: 5%;
+    padding-top: 50px;
   }
 
   .menu-burger-overlay a:hover{
@@ -33,9 +36,8 @@
     flex-direction: column;
     gap: 3rem;
     list-style: none;
-    padding-top: 50px;
     margin: 0;
-    width: 80%;
+    width: 50%;
   }
 
 
@@ -146,6 +148,37 @@
     opacity: 1;
   }
 
+  .boutonprojetsburger{
+    height: 80vh;
+  }
+  .boutonprojetsburger img{
+    height: 80vh;
+  }
+  .boutonprojetsburger a{
+    height: 80vh;
+  }
+
+  .project-panelburger {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    transition:1s ease-in-out;
+    border-radius: 15px;
+    display: flex;
+    max-height: 75vh;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.project-panelburger:hover div.petitbouton{
+    opacity: 1;
+    scale: 1;
+    top: 0;
+    left: 0;
+    padding: 15px;
+}
+
   .animated-text {
     display: inline-block;
     font-size: 24px;
@@ -200,6 +233,48 @@
       .menu-burger-overlay a{
         opacity: 1;
       }
+
+      .project-panelburger {
+        width: 40%;
+        position: relative;
+        overflow: hidden;
+        transition:1s ease-in-out;
+        border-radius: 15px;
+        display: none;
+        max-height: 75vh;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+    
+    }
+    .menu-burger-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.856); /* Couleur de fond avec opacité */
+        display: flex;
+        justify-content:center;
+        flex-direction: row;
+        align-items: center;
+        transform: translateY(-100%); /* Masqué hors de l'écran */
+        transition: transform 0.5s ease;
+        z-index: 9;
+        overflow: hidden;
+        padding-top: 50px;
+        padding-inline: 10%;
+      }
+      .burgertout{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        list-style: none;
+        margin: 0;
+        width: 100%;
+      }
+    
       
   }
   

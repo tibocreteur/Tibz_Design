@@ -260,16 +260,17 @@ a:hover {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     justify-content: space-between;
     border: none;
-    scale: 0.9;
-    transition: transform 0.4s ease-in-out;
+    scale:1;
+    transition:0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .iconburger:hover{
-    scale: 1;
+    scale: 1.05;
     
 }
 
