@@ -64,6 +64,23 @@
     width: fit-content;
   }
 
+  .titreburger a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+  }
+
   .titreburger img{
     height: 2rem;
   }
