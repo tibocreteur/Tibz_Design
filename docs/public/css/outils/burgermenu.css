@@ -22,6 +22,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 80%;
   }
 
   .titreburger{
@@ -34,6 +35,13 @@
     text-transform: uppercase;
     margin: 0rem;
     padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .titreburger img{
+    height: 2rem;
   }
   
   .menu-burger-overlay li {
@@ -47,13 +55,11 @@
     font-size: 1.5rem;
     transition: color 0.3s;
     font-family: "IBM Plex Mono", monospace;
-    border-radius: 0.4rem;
-    padding: 0.2rem 0.7rem;
+    margin: 0rem 0px -0.5rem 0px;
+    padding: 0;
     align-items: center;
     display: flex;
     gap: 1rem;
-    padding: 0;
-    margin: 0;
   }
 
   .barredansburger{
@@ -87,5 +93,51 @@
     background-color: #ffffff;
     transform: translateY(-10px) rotate(-45deg);
     opacity: 1;
+  }
+
+  .animated-text {
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .animated-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .animated-text span {
+    display: inline-block;
+    opacity: 0;
+    animation: textChange 0.3s steps(5, end) infinite;
+  }
+  
+  @keyframes textChange {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   
