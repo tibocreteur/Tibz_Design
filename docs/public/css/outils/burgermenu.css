@@ -25,9 +25,15 @@
     scale: 1.05;
     opacity: 1;
   }
+
+  .menu-burger-overlay a:hover img{
+    opacity: 1;
+  }
+
   .menu-burger-overlay a{
     transition: 0.2s ease-in-out;
-    opacity: 0.8;
+    opacity: 1;
+    color: rgb(218, 218, 218);
   }
   
   .burgertout{
@@ -44,7 +50,6 @@
   .titreburger{
     position: relative;
     text-decoration: none;
-    color: white;
     font-size: 1px;
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
@@ -60,7 +65,6 @@
   .titreburgera{
     position: relative;
     text-decoration: none;
-    color: white;
     font-size: 3rem;
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
@@ -76,7 +80,6 @@
   .titreburger a{
     position: relative;
     text-decoration: none;
-    color: white;
     font-size: 3rem;
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
@@ -92,6 +95,8 @@
 
   .titreburger img{
     height: 2rem;
+    opacity: 0.8;
+    transition:0.2s ease-in-out;
   }
   
   .menu-burger-overlay li {

@@ -65,6 +65,16 @@ p{
     z-index: -1; /* Place la vidéo derrière le contenu */
 }
 
+.entete video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit l'écran sans déformer la vidéo */
+    z-index: -1; /* Place la vidéo derrière le contenu */
+}
+
 .navbar-left {
     display: flex;
     justify-content: center;
