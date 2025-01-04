@@ -5,6 +5,11 @@ section.latestprojectstitre {
     display: inline;
 }
 
+#sectionlatestprojects {
+    scroll-margin-top: 50px; /* Décalage de 50px */
+  }
+
+
 .latestprojectstitre {
     background-color: #000000;
     color: #ffffff;
