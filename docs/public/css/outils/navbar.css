@@ -297,5 +297,8 @@ a:hover {
     .iconburger{
         display: flex;
     }
+    #contactme{
+        display: none;
+    }
 
 }
