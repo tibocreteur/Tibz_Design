@@ -10,7 +10,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.856); /* Couleur de fond avec opacité */
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     flex-direction: row;
     align-items: center;
     transform: translateY(-100%); /* Masqué hors de l'écran */
@@ -43,7 +43,6 @@
     gap: 3rem;
     list-style: none;
     margin: 0;
-    width: 50%;
   }
 
 
@@ -164,7 +163,7 @@
   }
 
   .project-panelburger {
-    width: 40%;
+    width: 45%;
     position: relative;
     overflow: hidden;
     transition:1s ease-in-out;
