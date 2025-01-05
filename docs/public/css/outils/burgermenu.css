@@ -40,9 +40,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
     list-style: none;
+    justify-content: space-between;
     margin: 0;
+    height: 75%;
   }
 
 
@@ -139,7 +140,7 @@
   /* Animation du bouton burger actif */
   .iconburger.active .barreburger:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
-    background-color: #acacac;
+    background-color: rgb(255, 255, 255);
     opacity: 1;
   }
   
@@ -148,13 +149,18 @@
   }
   
   .iconburger.active .barreburger:nth-child(3) {
-    background-color: #acacac;
     transform: translateY(-10px) rotate(-45deg);
+    background-color: rgb(255, 255, 255);
     opacity: 1;
   }
 
   .iconburger.active.iconburger{
     transform: rotate(-180deg);
+    opacity: 0.2;
+  }
+
+  .iconburger.active.iconburger:hover{
+    opacity: 0.7;
   }
 
   .boutonprojetsburger{

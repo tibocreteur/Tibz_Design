@@ -1,7 +1,6 @@
 .footerprojects {
     position: relative;
     width: 100%;
-    background: var(--gradient-black-to-white);
     min-height: 100px;
     padding: 20px 50px;
     display: flex;
@@ -70,10 +69,17 @@
     opacity: 1;
     color: rgb(0, 0, 0);
     scale: 1.05;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(178, 178, 178);
   }
   .text {
-    color: white;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size:1rem;
+  }
+  .textinfo {
+    color: rgb(255, 255, 255);
     text-align: center;
     margin-top: 15px;
     margin-bottom: 10px;

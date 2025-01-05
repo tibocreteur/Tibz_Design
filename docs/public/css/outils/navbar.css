@@ -284,12 +284,17 @@ a:hover {
     
 }
 
+.iconburger:hover .barreburger{
+    background-color: #acacac;
+}
+
 .barreburger{
     width: 100%;
     border-radius: 50px;
     height: 20%;
     background-color: #ffffff32;
     transition: 0.3s ease-in-out;
+    mix-blend-mode:overlay;
 }
 
 @media (max-width: 768px) {
