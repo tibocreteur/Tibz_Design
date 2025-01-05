@@ -67,7 +67,7 @@
   
   .menu-icon1:hover {
     opacity: 1;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     scale: 1.05;
     background-color: rgb(178, 178, 178);
   }
