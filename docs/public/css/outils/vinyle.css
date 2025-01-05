@@ -1,7 +1,19 @@
+.nemotel{
+	display: none;
+}
+
 .containeralbum{
     display: flex;
     justify-content: center; /* Centre horizontalement */
     align-items: center;    /* Centre verticalement */
+}
+
+.cerclevinyl{
+	background-color: rgb(201, 201, 201);
+	height: 1.2vh ;
+	width: 1.2vh;
+	border-radius: 4000px;
+	position: absolute;
 }
 
 
@@ -139,4 +151,20 @@
 	.vinyl {
 		transform: translateX(var(--vinyl-translate)) rotate(var(--vinyl-rotate));
 	}
+}
+
+@media (max-width: 768px) {
+	.containeralbum{
+		display: flex;
+		justify-content: center; /* Centre horizontalement */
+		align-items: center;    /* Centre verticalement */
+		display: none;
+	}
+
+	.nemotel{
+		display: flex;
+	}
+
+
+    
 }

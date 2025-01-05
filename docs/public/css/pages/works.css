@@ -207,6 +207,21 @@ video{
     max-width: 100%;
 }
 
+.nemotel{
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.nemotel img{
+    max-width: 100%;
+}
+
 .imgcent video{
     max-width: 100%;
 }

@@ -47,8 +47,18 @@
     transition: 0.3s ease-in-out;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.24);
     margin-right: 15px;
+    position: relative;
 }
 
+.copy-button span{
+    font-family: "IBM Plex Mono", monospace;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
 /* Effet de survol des boutons */
 .copy-button:hover {
     background-color: rgb(98, 98, 98);
