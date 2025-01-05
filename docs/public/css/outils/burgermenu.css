@@ -153,6 +153,10 @@
     opacity: 1;
   }
 
+  .iconburger.active.iconburger{
+    transform: rotate(-180deg);
+  }
+
   .boutonprojetsburger{
     height: 80vh;
   }
@@ -182,6 +186,16 @@
     top: 0;
     left: 0;
     padding: 15px;
+}
+
+.social{
+    display: flex;
+    flex-direction:row;
+    gap: 1rem;
+}
+.social img{
+    height: 2rem;
+    opacity: 0.7;
 }
 
   .animated-text {

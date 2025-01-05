@@ -275,7 +275,7 @@ a:hover {
     justify-content: space-between;
     border: none;
     scale:1;
-    transition:0.2s ease-in-out;
+    transition:0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -289,7 +289,7 @@ a:hover {
     border-radius: 50px;
     height: 20%;
     background-color: #ffffff32;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
