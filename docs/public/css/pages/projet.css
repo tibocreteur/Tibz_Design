@@ -321,16 +321,23 @@ blockquote {
     font-size: 1rem;
     gap: 1rem;
     padding: 60px 0px 60px 0px;
+    pointer-events: none;
 }
 
 .citationdefin span{
     color: #000000;
     font-family: "IBM Plex Mono", monospace;
+    user-select: none;
+}
+
+.citationdefin p{
+    user-select: none;
 }
 
 .eye {
     display: inline-block;
     transition: transform 0.1s ease-in-out;
+    user-select: none;
 }
 
 @keyframes blink {

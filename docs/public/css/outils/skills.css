@@ -22,8 +22,8 @@
     justify-content: center;
     align-items: center;
     width: calc(25% - 22.5px);
-    height: 150px;
-    background-color: rgb(175, 175, 175);
+    background-color: grey;
+    height: 300px;
     color: #ffffff;
     border-radius: 15px;
     cursor: pointer;
@@ -34,20 +34,24 @@
 }
 
 .button img{
-    width: 100%;
-    transition: 0.3s ease-in-out;
-    filter: grayscale(1) saturate(0.1) contrast(150%);
-    opacity: 20%;
+    height: 100%;
+    transition: 0.6s ease-in-out;
+    filter: grayscale(0%) saturate(1) contrast(100%) brightness(100%);
+    opacity: 100%;
     pointer-events: none; /* Désactive les interactions (clic, hover, etc.) */
     user-select: none;
     padding: 0;
     margin: 0;
+    scale: 1.1;
+    transform: rotateZ(0deg);
 }
 
 .button span{
+    transform: translateY(100px);
+    z-index: 3;
     width: 100%;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     position: absolute;
     transition: 0.5s ease-in-out;
@@ -60,22 +64,37 @@
     -moz-user-select: none; /* Compatibilité avec Firefox */
     -ms-user-select: none; 
 }
-
 .button:hover {
     color: rgb(255, 255, 255);
 }
 
+.button:hover .degrebouton{
+    transform: translateY(30%);
+    opacity: 100%;
+}
 
-.button:hover img{
+.degrebouton{
+    z-index: 2;
+    height: 100%;
     width: 100%;
+    position: absolute;
+    background: linear-gradient(180deg,#00000000,#00000044,#000000);
+    background-blend-mode:multiply;
+    transition: 0.8s ease;
+    bottom: 0px;
+    opacity: 80%;
+}
+.button:hover img{
     transition: 0.5s ease-in-out;
-    filter: grayscale(1) saturate(0.1) contrast(150%);
-    opacity: 40%;
+    filter: grayscale(0%) saturate(110%) contrast(100%) brightness(100%);
+    opacity: 100%;
     pointer-events: none; /* Désactive les interactions (clic, hover, etc.) */
     user-select: none;
     padding: 0;
     margin: 0;
-    scale: 1.2;
+    scale: 1.175;
+    transform: rotateZ(1deg);
+
 }
 
 @media (max-width: 768px) {
@@ -95,7 +114,20 @@
         background-color: rgb(181, 181, 181);
         font-size: 1.5rem;
     }
+
+    .button img{
+        height: auto;
+        width: 100%;
+        opacity: 70%;
+        filter: grayscale(0%) saturate(110%) contrast(100%) brightness(100%);
+
+    }
     .button span{
         font-size: 2rem;
+        transform: translateY(0px);
+    }
+    .degrebouton{
+        opacity: 40%;
+        background-color: #000000;
     }
 }

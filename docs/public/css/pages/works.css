@@ -247,37 +247,35 @@ video{
 }
 
 .lienprojets {
-    z-index: 2000;
-    color: rgb(0, 0, 0);
+    z-index: 2;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     font-family: "IBM Plex Mono", monospace;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.23);
     padding: 0px 15px;
     border-radius: 10px;
     transition: 0.2s ease;
     text-align: center; /* Pour centrer le texte du bouton */
     text-transform: uppercase;
     margin-left: 1rem;
-    border-style: solid;
-    border-color: rgb(0, 0, 0);
     transition: 0.3s ease-in-out;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    opacity: 0.5;
+    justify-items: center;
+    opacity: 1;
 }
 
 .lienprojets img{
     width: 1.3rem;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .lienprojets:hover{
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    border-color: #000000;
+    background-color: rgb(165, 165, 165);
+    color: white;
     opacity: 1;
+    scale: 1.03;
 }
 
 .date{
