@@ -20,6 +20,7 @@ video{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: grey;
 }
 
 .nom{
@@ -41,8 +42,8 @@ video{
 }
 
 .nom img{
-    height: 1.8rem;
-    margin: 0.5rem;
+    width: 1.7rem;
+    opacity: 0.4;
 }
 
 .nom span{
@@ -62,7 +63,7 @@ video{
 .barre-verticaleblack {
     width: 2px; /* Largeur de la barre */
     height: 25px; /* Hauteur de la barre */
-    background-color: #000000; /* Couleur de la barre */
+    background-color: grey; /* Couleur de la barre */
     margin-inline: 10px; /* Espacement autour de la barre */
 }
 
@@ -159,7 +160,7 @@ video{
 }
 
 .texteworks p{
-    color: black;
+    color: grey;
     padding: 0px;
     margin: 0px;
 }
@@ -269,6 +270,7 @@ video{
     width: 1.3rem;
     padding: 0px;
     margin: 0px;
+    opacity: 1;
 }
 
 .lienprojets:hover{
