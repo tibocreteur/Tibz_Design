@@ -114,9 +114,51 @@ a:hover{
   width: 10vh;
 }
 
+.basdetoppage{
+  height: 75px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 30px;
+  transition: opacity 1s ease-in-out;
+}
+.flechedubas{
+  height: 100%;
+  width: 75px;
+  animation: push-down 1s infinite alternate;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  transition: 0.2s ease-in-out;
+}
+
+.flechedubas:hover{
+  opacity: 0.7;
+
+}
+
+.flechedubasinvisible{
+  opacity: 0; /* L'élément devient complètement transparent */
+  pointer-events: none; /* Empêche l'interaction lorsque caché */
+}
+
+/* Animation push vers le bas */
+@keyframes push-down {
+  0% {
+    transform: translateY(-20px) scaleX(0.8) scaleY(0.7);
+    scale: 1;
+  }
+  100% {
+    transform: translateY(0px) scaleX(0.5) scaleY(0.7);
+    scale: 1;
+  }
+}
 @media screen and (max-width: 768px) {
   .error {
     display: none; /* Visible uniquement sur mobile */
     overflow: hidden;
   }
 }
+
