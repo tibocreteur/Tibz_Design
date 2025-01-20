@@ -22,12 +22,6 @@
     background-position: center;
 }
 
-.tri-images img:hover {
-    transform: scale(1.03); /* Agrandit l'image à 102% au survol */
-    z-index: 99;
-
-}
-
 .fullscreen {
     display: flex;
     flex-direction: column;

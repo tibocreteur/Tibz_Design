@@ -17,12 +17,13 @@
     transition: transform 0.5s ease;
     z-index: 9;
     overflow: hidden;
-    padding-inline: 5%;
-    padding-top: 50px;
+    padding-inline: 4rem;
+    padding-top: calc(4rem + 4rem - 2px);
+    padding-bottom:4rem;
   }
 
   .menu-burger-overlay a:hover{
-    scale: 1.05;
+    padding-left: 0.5rem;
     opacity: 1;
   }
 
@@ -33,6 +34,7 @@
   .menu-burger-overlay a{
     transition: 0.2s ease-in-out;
     opacity: 1;
+    font-size: 1.25rem;
     color: rgb(218, 218, 218);
   }
   
@@ -43,7 +45,7 @@
     list-style: none;
     justify-content: space-between;
     margin: 0;
-    height: 75%;
+    height: 100%;
   }
 
 
@@ -79,7 +81,7 @@
   .titreburger a{
     position: relative;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
     text-transform: uppercase;
@@ -180,10 +182,12 @@
     transition:1s ease-in-out;
     border-radius: 15px;
     display: flex;
-    max-height: 75vh;
+    height: 100%;
     object-fit: cover;
-    margin: 0;
-    padding: 0;
+}
+
+.project-panelburger img {
+  height: 100%;
 }
 
 .project-panelburger:hover div.petitbouton{
@@ -195,13 +199,41 @@
 }
 
 .social{
+    transition: 0.4s ease-in-out;
     display: flex;
     flex-direction:row;
     gap: 1rem;
+
 }
 .social img{
-    height: 2rem;
+    height: 1.5rem;
     opacity: 0.7;
+}
+
+.social a{
+  all: unset;
+  transition: 0.4s ease-in-out;
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.social a:hover{
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  all: unset;
+  opacity: 1;
+  height: 1.5rem;
+  scale: 1.1;
+}
+
+.social img:hover{
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
   .animated-text {
