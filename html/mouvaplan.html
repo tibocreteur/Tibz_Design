@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/aos.css">
     <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="../docs/public/css/outils/latestprojects.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/police.css">
 
     <link rel="preload" href="../docs/public/image/console/fond1.avif" as="image">
     <link rel="preload" href="../docs/public/image/console/fond2.avif" as="image">
@@ -60,56 +61,45 @@
             </div>
         </header>
 
-        <div class="menu-burger-overlay" id="burger-menu">
-            <div class="burgertout">
-                <div class="burgerpartis">
-                    <div class="titreburger"><a class="titreburgera" onclick="location.href='index.html#sectionlatestprojects';" >{{projects}}</a><span class="nombrebadge">4</span></div>
-                    <li><a class="petitboutonburger" href="regatta.html">Toulon Regatta 2025<span id="new" class="badgenewburger">new</span></a></li>
-                    <li><a class="petitboutonburger" href="console.html">Liúzhì</a></li>
-                    <li><a class="petitboutonburger" href="mouvaplan.html">Mouvaplan</a></li>
-                    <li><a class="petitboutonburger" href="omodaka.html">Omadaka</a></li>
-                </div>
-                <div class="burgerpartis">
-                    <div class="titreburger"><a class="titreburgera" onclick="location.href='index.html#sectionskills';">{{savoirfaire}}<img src="../docs/public/image/logo.png" alt=""></a><span class="nombrebadge">17</span></div>
-                    <li><a class="petitboutonburger" href="troisd.html">3D</a><li>
-                    <li><a class="petitboutonburger" href="print.html">{{graphic}}</a></li>
-                    <li><a class="petitboutonburger" href="cara.html">Character</a></li>
-                    <li><a class="petitboutonburger" href="motion.html">Motion</a></li>
-                </div>
-                <div class="burgerpartis">
-                    <li><a class="petitboutonburger" href="information.html">{{about}}<span class="chatbadge">
-                        <div class="point"></div>
-                        <div class="point"></div>
-                        <div class="point"></div>
-                        </span>
-                        </a>
-                    </li>         
-                    <div class="social">
-                        <a href="https://www.instagram.com/tibz_design/" target="_blank"><img src="../docs/public/image/logoinsta.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panelburger">
-                <div class="boutonprojetsburger" >
-                    <a href="regatta.html">
-                        <div class="petitbouton">
-                            <span id="new" class="badge">new</span>
-                            <span id="print" class="badge">PRINT</span>
-                            <span id="award" class="badge">{{concour}} 🏆</span>
-                        </div>
-                        <img src="../docs/public/image/regatta/fond.avif" alt="流智" class="project-image">
-                        <div class="infoprojets">
-                            <p>12 MED EVENT</p>
-                            <div class="titreprojet">
-                                <H1>Toulon Provence Regatta 2025</H1>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-            <script src="../docs/public/js/burger-script.js"></script>
+        <div id="navbar-container"></div>
 
+        <script>
+            // Charger la navbar HTML dans la page principale
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Insérer la navbar dans le conteneur
+                    document.getElementById('navbar-container').innerHTML = data;
+                    
+                    // Appeler une fonction d'initialisation du script après le chargement
+                    initNavbarScript();
+                })
+                .catch(error => console.error('Erreur de chargement de la navbar:', error));
+    
+            // Fonction pour initialiser les événements du menu burger
+            function initNavbarScript() {
+                const burgerToggle = document.getElementById("burger-toggle");
+                const burgerMenu = document.getElementById("burger-menu");
+    
+                // Fonction pour ouvrir/fermer le menu
+                function toggleMenu() {
+                    burgerToggle.classList.toggle("active");
+                    burgerMenu.classList.toggle("active");
+                }
+    
+                // Fonction pour fermer le menu
+                function closeMenu() {
+                    burgerToggle.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                }
+    
+                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
+                burgerToggle.addEventListener("click", toggleMenu);
+    
+                // Fermer le menu lorsqu'on fait défiler la page
+                window.addEventListener("scroll", closeMenu);
+            }
+        </script>
         <section class="entete">
             <img src="../docs/public/image/mouvaplan/fondlong.avif" alt="Image 1" id="scroll-image">
             <script src="../docs/public/js/animation.js"></script>

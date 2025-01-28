@@ -2,9 +2,9 @@
 .partie{
     overflow: hidden;
     color: black;
-    padding: 50px 40px 80px 40px;
-    margin: -80px 0 -50px 0;
+    padding: 60px 40px 60px 40px;
     width: 100%;
+    background-color: var(--backgroundproject);
 }
 
 .triplette {
@@ -130,8 +130,8 @@
     border-radius: 25px;
     height: auto;
     object-fit: cover;
+    background-color: var(--backgroundproject);
 }
-
 @media (max-width: 768px) {
     
     .explication video{

@@ -16,7 +16,7 @@ video{
     max-height: 80vh;
 }
 
-.titre{
+.titreworks{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -253,7 +253,7 @@ video{
     font-size: 1rem;
     font-family: "IBM Plex Mono", monospace;
     background-color: rgba(0, 0, 0, 0.23);
-    padding: 0px 15px;
+    padding: 7.5px 15px;
     border-radius: 10px;
     transition: 0.2s ease;
     text-align: center; /* Pour centrer le texte du bouton */
@@ -264,6 +264,7 @@ video{
     align-items: center;
     justify-items: center;
     opacity: 1;
+    gap: 0.5rem;
 }
 
 .lienprojets img{
@@ -308,9 +309,10 @@ video{
     .logiciel{
         display: none;
     }
-    .titre{
+    .titreworks{
         display: none;
     }
+
     .projet1{
         width: 100%;
         padding: 10px;

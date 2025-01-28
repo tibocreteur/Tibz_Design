@@ -5,25 +5,21 @@ section.latestprojectstitre {
     display: inline;
 }
 
-#sectionlatestprojects {
-    scroll-margin-top: 500px; /* Décalage de 50px */
-  }
-
-
 .latestprojectstitre {
-    background-color: #000000;
-    color: #ffffff;
+
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
     display: grid;
     place-items: center;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.latestprojects h1 {
+.latestprojectstitre h1 {
     font-size: 2.5rem;
     color: #000000;
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding: 5rem;
 }
 
 .projects-section {
@@ -32,9 +28,9 @@ section.latestprojectstitre {
     justify-content: center;
     background-color: var(--backgroundaccueil);
     gap: 30px;
-    padding: 5% 5% 30px 5%;
-    padding-top: 1vh;
+    padding: 30px 5% 30px 5%;
     overflow: hidden;
+    margin-top: 0px;
 }
 
 .project-panel {

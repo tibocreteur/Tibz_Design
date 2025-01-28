@@ -13,6 +13,8 @@
     justify-content: center;
     background-size: cover;
     overflow: hidden;
+    position: fixed;
+    z-index: -1;
 
 }
 
@@ -27,11 +29,13 @@
     justify-content: center; /* Centre les panneaux */
     height: auto;
     gap: 30px;
+    
 }
 
 .paletteomodaka > div{
     width: calc((100% - 30px) / 2); /* subtracting total gap to keep each image equally sized */
     justify-content: center;
+    
 }
 
 .explicationomodaka{
@@ -41,7 +45,7 @@
     width: 100%;
     justify-content: space-between; /* Sépare les éléments à gauche et à droite *//* Aligne en haut de chaque bloc */
     position: relative;
-
+    background-color: var(----backgroundaccueil);
 }
 
 .explicationomodaka p{
@@ -118,6 +122,7 @@
     padding-inline: 40px;
     width: 100%; /* Assure que la section occupe toute la largeur */
     padding-bottom: 30px;
+    background-color: var(--backgroundproject);
 }
 
 .wrapper {

@@ -176,7 +176,7 @@
   }
 
   .project-panelburger {
-    width: 45%;
+    width: 50%;
     position: relative;
     overflow: hidden;
     transition:1s ease-in-out;
@@ -319,7 +319,8 @@
         transition: transform 0.5s ease;
         z-index: 9;
         overflow: hidden;
-        padding-top: 50px;
+        padding-top: calc(75px + 75px);
+        padding-bottom:75px;
         padding-inline: 10%;
       }
       .burgertout{

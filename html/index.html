@@ -17,12 +17,12 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="../docs/public/css/base.css">
+        <link rel="stylesheet" href="../docs/public/css/outils/police.css">
         <link rel="stylesheet" href="../docs/public/css/outils/footer.css">
         <link rel="stylesheet" href="../docs/public/css/outils/latestprojects.css">
         <link rel="stylesheet" href="../docs/public/css/outils/navbar.css">
         <link rel="stylesheet" href="../docs/public/css/outils/color.css">
         <link rel="stylesheet" href="../docs/public/css/outils/skills.css">
-        <link rel="stylesheet" href="../docs/public/css/pages/accueil.css">
         <link rel="stylesheet" href="../docs/public/css/outils/badge.css">
         <link rel="stylesheet" href="../docs/public/css/outils/profil.css">
         <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
@@ -38,12 +38,7 @@
     </head>
 
 <body>
-    <section class="error">
-        <img class="errorlogo" src="../docs/public/image/logo.avif" alt="">
-        <span>{{erreurun}}</span>
-        <span>{{erreur}}</span>
-    </section>
-    <section class="top-page">
+    <section style="position: absolute;" class="top-page">
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
@@ -62,76 +57,78 @@
                 </button>
             </div>
         </header>
-        <div class="menu-burger-overlay" id="burger-menu">
-            <div class="burgertout">
-                <div class="burgerpartis">
-                    <div class="titreburger"><a class="titreburgera" onclick="location.href='index.html#sectionlatestprojects';" >{{projects}}</a><span class="nombrebadge">4</span></div>
-                    <li><a class="petitboutonburger" href="regatta.html">Toulon Regatta 2025<span id="new" class="badgenewburger">new</span></a></li>
-                    <li><a class="petitboutonburger" href="console.html">Liúzhì</a></li>
-                    <li><a class="petitboutonburger" href="mouvaplan.html">Mouvaplan</a></li>
-                    <li><a class="petitboutonburger" href="omodaka.html">Omadaka</a></li>
-                </div>
-                <div class="burgerpartis">
-                    <div class="titreburger"><a class="titreburgera" onclick="location.href='index.html#sectionskills';">{{savoirfaire}}<img src="../docs/public/image/logo.png" alt=""></a><span class="nombrebadge">17</span></div>
-                    <li><a class="petitboutonburger" href="troisd.html">3D</a><li>
-                    <li><a class="petitboutonburger" href="print.html">{{graphic}}</a></li>
-                    <li><a class="petitboutonburger" href="cara.html">Character</a></li>
-                    <li><a class="petitboutonburger" href="motion.html">Motion</a></li>
-                </div>
-                <div class="burgerpartis">
-                    <li><a class="petitboutonburger" href="information.html">{{about}}<span class="chatbadge">
-                        <div class="point"></div>
-                        <div class="point"></div>
-                        <div class="point"></div>
-                        </span>
-                        </a>
-                    </li>         
-                    <div class="social">
-                        <a href="https://www.instagram.com/tibz_design/" target="_blank"><img src="../docs/public/image/logoinsta.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panelburger">
-                <div class="boutonprojetsburger" >
-                    <a href="regatta.html">
-                        <div class="petitbouton">
-                            <span id="new" class="badge">new</span>
-                            <span id="print" class="badge">PRINT</span>
-                            <span id="award" class="badge">{{concour}} 🏆</span>
-                        </div>
-                        <img src="../docs/public/image/regatta/fond.avif" alt="流智" class="project-image">
-                        <div class="infoprojets">
-                            <p>12 MED EVENT</p>
-                            <div class="titreprojet">
-                                <H1>Toulon Provence Regatta 2025</H1>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-            <script src="../docs/public/js/burger-script.js"></script>
+        <div id="navbar-container"></div>
 
+        <script>
+            // Charger la navbar HTML dans la page principale
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Insérer la navbar dans le conteneur
+                    document.getElementById('navbar-container').innerHTML = data;
+                    
+                    // Appeler une fonction d'initialisation du script après le chargement
+                    initNavbarScript();
+                })
+                .catch(error => console.error('Erreur de chargement de la navbar:', error));
+    
+            // Fonction pour initialiser les événements du menu burger
+            function initNavbarScript() {
+                const burgerToggle = document.getElementById("burger-toggle");
+                const burgerMenu = document.getElementById("burger-menu");
+    
+                // Fonction pour ouvrir/fermer le menu
+                function toggleMenu() {
+                    burgerToggle.classList.toggle("active");
+                    burgerMenu.classList.toggle("active");
+                }
+    
+                // Fonction pour fermer le menu
+                function closeMenu() {
+                    burgerToggle.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                }
+    
+                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
+                burgerToggle.addEventListener("click", toggleMenu);
+    
+                // Fermer le menu lorsqu'on fait défiler la page
+                window.addEventListener("scroll", closeMenu);
+            }
+        </script>
+        </section>
         <section class="entete">
             <video src="../docs/public/video/cool.webm" autoplay muted playsinline loop type="video/mp4" alt="" id="scroll-video">
             <script src="../docs/public/js/animationvideo.js"></script>
         </section>
         <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='index.html#sectionlatestprojects';"><img src="../docs/public/image/fleche2.svg" alt=""></a>
+            <a id="scrollButton" class="flechedubas" onclick="location.href='index.html#sectionlatestprojects';"><img src="../docs/public/image/fleche2.svg" alt=""></a>
         </div>
         <script src="../docs/public/js/fleche.js"></script>
     </section>
-    <section  class="latestprojectstitre">
-        <header class="latestprojects">
+    <section id="sectionlatestprojects" class="projects-section">        
+        <header class="latestprojectstitre">
             <h1>{{projects}}</h1>
         </header>
-    </section>
-    <section id="sectionlatestprojects" class="projects-section">
+        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panel1">
+            <div class="boutonprojets" >
+                <a href="axion.html">
+                    <div class="petitbouton">
+                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="0" data-aos-anchor-placement="top-bottom"id="new" class="badge">NEW</span>
+                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="0" data-aos-anchor-placement="top-bottom"id="troisd" class="badge">3D</span>
+                    </div>
+                    <img src="../docs/public/image/works/montre/fond.avif" alt="流智" class="project-image">
+                    <div class="infoprojets">
+                        <p>{{personalwork}}</p>
+                        <H1>Axion</H1>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panel1">
             <div class="boutonprojets" >
                 <a href="regatta.html">
                     <div class="petitbouton">
-                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="0" id="new" data-aos-anchor-placement="top-bottom" class="badge">new</span>
                         <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300" id="print" data-aos-anchor-placement="top-bottom" class="badge">PRINT</span>
                         <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="600" id="award" data-aos-anchor-placement="top-bottom" class="badge">{{concour}} 🏆</span>
                     </div>
@@ -149,7 +146,7 @@
             <div class="boutonprojets" >
                 <a href="console.html">
                     <div class="petitbouton">
-                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="0" data-aos-anchor-placement="top-bottom"id="troisd" class="badge">3D</span>
+                        <span id="troisd" class="badge">3D</span>
                     </div>
                     <img src="../docs/public/image/console/fond3.avif" alt="流智" class="project-image">
                     <div class="infoprojets">
@@ -163,7 +160,7 @@
             <div class="boutonprojets">
                 <a href="mouvaplan.html" class="transition-link">
                     <div class="petitbouton">
-                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="0" data-aos-anchor-placement="top-bottom" id="uiux" class="badge">UI/UX</span>
+                        <span  id="uiux" class="badge">UI/UX</span>
                     </div>
                     <img src="../docs/public/image/mouvaplan/fond2.avif" alt="Mouvaplan" class="project-image">
                     <div class="infoprojets">
@@ -173,11 +170,11 @@
                 </a>
             </div>
         </div>
-        <div class="project-panel1">
+        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panel1">
             <div class="boutonprojets">
                 <a href="omodaka.html">
                     <div class="petitbouton">
-                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="0" data-aos-anchor-placement="top-bottom" id="da" class="badge">{{identity}}</span>
+                        <span id="da" class="badge">{{identity}}</span>
                     </div>
                     <img src="../docs/public/image/omodaka/petitfond.avif" alt="Omodaka" class="project-image">
                     <div class="infoprojets">

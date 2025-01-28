@@ -1,0 +1,35 @@
+.explicationcent{
+    width: 100%;
+    padding-bottom: 50px;
+    border-radius: 25px;
+    height: auto;
+    object-fit: cover;
+}
+
+.explicationcent ::selection{
+    background-color: var(--soulignage);
+}
+
+@media (max-width: 768px) {
+    .explicationcent{
+        padding-top: 25px;
+        width: 100%;
+        padding-bottom: 25px;
+        border-radius: 25px;
+        height: auto;
+        object-fit: cover;
+    }
+    .explication p{
+        width: 100%;
+    }
+    .presentation-50-50{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .presentation-50-50 img{
+        width: 100%;
+    }
+
+}
