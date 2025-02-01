@@ -31,11 +31,16 @@
                 <a href="index.html" class="navbar-button-logo">
                     <img src="../docs/public/image/logo.png" alt="logo du site">
                 </a>
-                <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                    <h3>Toulon Provence Regatta 2025</h3>
-                    <div class="barre-verticale"></div>
-                    <span>12 MED EVENT</span>
-                    <img data-aos="zoom-in" data-aos-delay="1000" src="../docs/public/image/medailleblanche.svg" alt="">
+                <a href="index.html" class="navbar-button">
+                    {{back}}
+                </a>
+                <div class="contentnavbar-project">
+                    <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
+                        <h3>Toulon Provence Regatta 2025</h3>
+                        <div class="barre-verticale"></div>
+                        <span>12 MED EVENT</span>
+                        <img data-aos="zoom-in" data-aos-delay="1000" src="../docs/public/image/medailleblanche.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div class="social-contact">
@@ -108,8 +113,10 @@
         <blockquote id="quote">{{citationregatta}}</blockquote>       
     </section>
     <section class="infoprojet">
-        <div class="explication">
-            <img src="../docs/public/image/regatta/regatta2.avif" alt="" class="regattaaffiche">
+        <div class="explicationregatta">
+            <div class="imageregatta" >
+                <img src="../docs/public/image/regatta/regatta2.avif" alt="" class="regattaaffiche">
+            </div>
             <p class="texteexplicatif">{{presentationregatta}}</p>   
         </div>
     </section>
@@ -122,10 +129,15 @@
     <footer class="footerprojects">
         <ul class="menu">
             <li class="menu-elem">
-                <a href="./information.html" class="menu-icon1"> Informations </a>
+                <a href="./information.html" class="menu-icon1">{{about}}</a>
+                <div class="socialfooter">
+                    <a href="https://www.instagram.com/tibz_design/" target="_blank"><img src="../docs/public/image/logoinsta.png" style="filter: invert();" alt=""></a>
+                    <a href="https://www.linkedin.com/in/tibo-creteur-15147a233/" target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"  alt=""></a>
+                    <a href="https://www.behance.net/tibzdesign" target="_blank"><img src="../docs/public/image/Logo Behance.svg" alt=""></a>
+                </div>
+                <p data-key="footer" class="text">{{footer}}</p>
             </li>
         </ul>
-        <p data-key="footer" class="text">{{footer}}</p>
     </footer>
     <script src="../docs/public/js/aos.js"></script>
     <script>

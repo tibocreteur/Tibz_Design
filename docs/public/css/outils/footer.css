@@ -45,10 +45,35 @@
     align-items: center;
     margin: 10px 0;
     flex-wrap: wrap;
+    width: fit-content;
   }
   
+  .socialfooter{
+    width: 100%;
+    display: flex;
+    height: 1.5rem;
+    align-content: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .socialfooter img{
+    display: flex;
+    height: 100%;
+    opacity: 0.5;
+    transition: 0.2s ease-out;
+  }
+  .socialfooter img:hover{
+    opacity: 1;
+  }
+
   .menu-elem {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: fit-content;
   }
   .menu-icon1 {
     color: rgb(255, 255, 255);
@@ -56,28 +81,25 @@
     display: inline-block;
     transition: 0.3s;
     font-family: "IBM Plex Mono", monospace;
-    margin-inline: 35px;
-    background-color: rgba(0, 0, 0, 0.23);
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-inline: 15px;
+    background-color: rgb(0, 0, 0);
+    padding: 7px 13px;
     border-radius: 11px;
-    opacity: 1;
+    opacity: 0.5;
     text-transform: uppercase;
+    width: fit-content;
   }
   
   .menu-icon1:hover {
     opacity: 1;
     color: rgb(255, 255, 255);
-    scale: 1.05;
-    background-color: rgb(178, 178, 178);
+    background-color: rgb(0, 0, 0);
   }
   .text {
     color: rgb(0, 0, 0);
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
     font-size:1rem;
+    margin: 0;
+    padding: 0;
   }
   .textinfo {
     color: rgb(255, 255, 255);

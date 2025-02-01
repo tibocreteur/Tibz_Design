@@ -91,7 +91,6 @@ p{
     align-items: center;
     flex-direction: row;
     gap:2px;
-    margin-left: 40px;
 }
 
 .navbar-project span{
@@ -131,6 +130,15 @@ p{
     margin: 0; /* Supprime les marges par défaut */
 }
 
+.contentnavbar-project{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 3rem;
+}
+
 .navbar {
     box-sizing: border-box;
     display: flex;
@@ -139,13 +147,29 @@ p{
     width: 100%;
     justify-content: space-between;
     background-color: #000000a3;
+    backdrop-filter: blur(10px);
     padding: 0px 20px;
     position: fixed;
-    backdrop-filter: blur(10px);
     z-index: 100000;
     color: white;
     cursor: default;
 }
+.navbar.scrolled {
+    backdrop-filter: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #ffffff00;
+    padding: 0px 20px;
+    position: fixed;
+    z-index: 100000;
+    color: white;
+    cursor: default;
+}
+
 
 .social-contact {
     display: flex;
@@ -185,7 +209,8 @@ p{
     scale: 1.1;
 }
 
-.navbar-button {
+.navbar-buttonback {
+    opacity: 1;
     height: 30px;
     align-items: center;
     display: flex;
@@ -206,6 +231,32 @@ p{
   -webkit-user-select: none; /* Compatibilité avec Safari */
   -moz-user-select: none; /* Compatibilité avec Firefox */
   -ms-user-select: none; 
+  cursor: pointer;
+}
+
+.navbar-button {
+    opacity: 1;
+    height: 30px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+    background-color: #ffffff32;
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 7px;
+    outline: none;
+    transition: background-color 0.7s ease-in-out; 
+    transition: color 0.1s ease-in-out; 
+    transition: transform 0.2s ease;
+    text-transform: uppercase;
+    white-space: nowrap;
+    user-select: none; /* Empêche la sélection */
+  -webkit-user-select: none; /* Compatibilité avec Safari */
+  -moz-user-select: none; /* Compatibilité avec Firefox */
+  -ms-user-select: none; 
+  cursor: pointer;
 }
 
 
@@ -216,6 +267,12 @@ p{
 }
 
 .navbar-button:hover {
+    transform: scale(1.05);
+    color: #ffffff;
+    background-color: #ffffff84;
+
+}
+.navbar-buttonback:hover {
     transform: scale(1.05);
     color: #ffffff;
     background-color: #ffffff84;
@@ -252,6 +309,14 @@ a:hover {
     font-family: "IBM Plex Mono", monospace;
     font-weight: bold;
     
+}
+
+.back{
+
+}
+
+.back:hover{
+    background-color: #0000006d;
 }
 
 #switch-lang{

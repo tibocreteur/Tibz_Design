@@ -10,6 +10,7 @@
         "contactbody": "Hello,%0A%0AI'd%20like%20more%20information%20about%20your%20design%20services.%0A%0AThank%20you!",
         "try":"Try",
         "savoirfaire": "Mastery",
+        "back":"back",
 
     "OMODAKA": "",
 
@@ -120,7 +121,7 @@
     "FOOTER": "",
         
         "sitation": "May this creation awaken your inspiration.",
-        "footer":"@2024 | ©TibzDesign. All rights reserved.",
+        "footer":"@2025 | ©TibzDesign. All rights reserved.",
         "about":"About me",
 
     "erreur":"",

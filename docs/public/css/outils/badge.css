@@ -41,10 +41,10 @@
     border-color: red;
     border-style: solid;
     color: white;
-    padding: 0px 8px 1px;
+    padding: 2px 11px 3px 11px;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 50px;
     font-family: "IBM Plex Mono", monospace;
     text-transform: uppercase;
     -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
@@ -54,8 +54,7 @@
     white-space: nowrap;
     margin: 0;
     top: 0px;
-    right: -30px;
-    display: none;
+    right: -35px;
 }
 
 .chatbadge{
