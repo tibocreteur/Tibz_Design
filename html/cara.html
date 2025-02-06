@@ -30,14 +30,16 @@
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                        <img src="../docs/public/image/logo.png" alt="logo du site">
+                        <img src="{{logo}}" alt="logo du site">
                     </a>
-                    <a href="index.html" class="navbar-button">
-                        {{back}}
-                    </a>
-                    <div class="contentnavbar-project">
-                        <div  data-aos="fade-right" data-aos-duration="1000"  data-aos-anchor-placement="top-bottom"class="navbar-project">
-                            <h3>CHARACTERS DESIGN</h3>
+                    <div class="nameprojet">
+                        <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
+                            {{back}}
+                        </a>
+                        <div class="contentnavbar-project">
+                            <div  data-aos="fade-right" data-aos-duration="1000"  data-aos-anchor-placement="top-bottom"class="navbar-project">
+                                <h3>CHARACTERS DESIGN</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -45,7 +47,7 @@
                     <!-- Logo Instagram cliquable -->
                     <!-- Bouton "ME CONTACTER" -->
                     <a id="contactme" href="mailto:tibzdesign@gmail.com?subject={{contactsubject}}&body={{contactbody}}" class="navbar-button">{{contactme}}</a>
-                    <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/cara.html">{{otherlangues}}</a>
+                    <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/cara.html">{{otherlangues}}</a>
                     <button class="iconburger" id="burger-toggle">
                         <div class="barreburger"></div>
                         <div class="barreburger"></div>
@@ -212,4 +214,5 @@
               AOS.init();
             </script>
     </body>
+    <script src="../docs/public/js/langue.js"></script>
 </html>

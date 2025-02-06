@@ -22,18 +22,82 @@
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Espacement de 20px entre les boutons */
+    justify-content: space-between;
     position: relative;
     align-items: flex-start; /* Aligner les boutons à gauche */
     right: calc(42px);
+    height: 50%;
+    max-width: 400px;
+    z-index: 1;
 }
+
+.boutoninfo{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    
+}
+.carteinfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 25px;
+    margin: 20px 0px 0px 20px;
+    border: 0.05px solid rgb(98, 98, 98);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.24);
+
+}
+
+
+.carteinfo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) invert();
+    transition: 0.4s ease;
+    pointer-events: none;
+}
+
+.carteinfo:hover img{
+    scale: 1.1;
+}
+
+.lieucarte{
+    display: flex;
+    flex-direction: column-reverse;
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    padding: 0px 0px 20px 30px;
+    bottom:0px;
+    left:0px;
+    pointer-events: none;
+}
+.lieucarte h1{
+        font-family: "IBM Plex Mono", monospace;
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+        word-spacing:-0.5rem;
+
+}.lieucarte h2{
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: normal;
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+}
+
 
 
 /* Style des boutons */
 .copy-button {
     font-family: "IBM Plex Mono", monospace;
-    background-color: rgba(23, 23, 23, 0.751);
-    border: 2px solid rgb(98, 98, 98);
+    background-color: rgb(0, 0, 0);
+    border: 0.05px solid rgb(98, 98, 98);
     padding: 15px;
     padding-right: 20px;
     border-top-right-radius: 25px;
@@ -53,11 +117,15 @@
 .copy-button span{
     font-family: "IBM Plex Mono", monospace;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 15px;
+    user-select: none; /* Empêche la sélection */
+    -webkit-user-select: none; /* Compatibilité avec Safari */
+    -moz-user-select: none; /* Compatibilité avec Firefox */
+    -ms-user-select: none; /* Compatibilité avec IE */
 }
 /* Effet de survol des boutons */
 .copy-button:hover {

@@ -31,17 +31,24 @@
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo.png" alt="logo du site">
+                    <img src="./../public/image/test3.png" alt="logo du site">
                 </a>
-                <a href="index.html" class="navbar-button">
-                    retour
-                </a>
+                <div class="nameprojet">
+                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html"class="navbar-button">
+                        retour
+                    </a>
+                    <div class="contentnavbar-project">
+                        <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
+                            <h3>informations</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
                 <a id="contactme" href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">ME CONTACTER</a>
-                <a id="switch-lang" class="navbar-button" href="./../en/information.html">en</a>
+                <a id="switch-lang" class="langButton" href="./../en/information.html">en</a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -90,7 +97,7 @@
             }
         </script>
         <section class="profilinformation">
-            <div class="caseprofil">
+            <div data-aos="zoom-in" data-aos-duration="500" class="caseprofil">
                 <div class="profildroit">
                     <div class="profilhaut">
                             <li id="new" class="badge">MOTION DESIGNER</li>
@@ -141,18 +148,27 @@
                         <p>Je suis étudiant en deuxième année de design graphique basé en France. Passionné par la créativité visuelle, je travaille dans divers domaines du design en tant qu’artiste 3D, motion designer et graphiste.<br><br>Je m'intéresse particulièrement à la création d’identités visuelles et au développement de projets multimédias. Toujours en quête de nouvelles idées et d’inspiration, j’aime expérimenter différents styles graphiques et explorer l’impact du design dans la communication.<br><br>Mon objectif est de développer une esthétique unique tout en maîtrisant les techniques modernes du design.</p>
                     </div>
                 </div>
-                <div class="mention">
+                <div data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" class="mention">
                     <p>// Le site a été conçu & réalisé par moi-même ! 🚀</p>
                 </div>
             </div>
             <script src="./../public/js/machine.js"></script>
             <div class="button-container">
-                <button class="copy-button" data-text="07.83.78.48.72">
-                    <span class="info1">Téléphone: 07.83.78.48.72<i class="fas fa-copy"></i></span>
-                </button>
-                <button class="copy-button" data-text="tibzdesign@gmail.com">
-                    <span class="info1">Mail: tibzdesign@gmail.com<i class="fas fa-copy"></i></span>
-                </button>
+                <div data-aos="fade-right" data-aos-duration="500" data-aos-delay="500" data-aos-anchor-placement="left-center" class="boutoninfo">
+                    <button  class="copy-button" data-text="07.83.78.48.72">
+                        <span class="info1">Téléphone: 07.83.78.48.72<i class="fas fa-copy"></i></span>
+                    </button>
+                    <button class="copy-button" data-text="tibzdesign@gmail.com">
+                        <span class="info1">Mail: tibzdesign@gmail.com<i class="fas fa-copy"></i></span>
+                    </button>
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000" class="carteinfo">
+                    <img src="./../public/image/info/carte.png" alt="">
+                    <div class="lieucarte">   
+                        <h1>FRANCE 🇫🇷</h2>
+                        <h2>Toulon</h1>   
+                    </div> 
+                </div>
             </div>
             <div class="copied-message">💾 Copié</div>
         </section>
@@ -172,4 +188,5 @@
       AOS.init();
     </script>
 </body>
+<script src="./../public/js/langue.js"></script>
 </html>

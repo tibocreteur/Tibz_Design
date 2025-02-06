@@ -31,17 +31,24 @@
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="../docs/public/image/logo.png" alt="logo du site">
+                    <img src="{{logo}}" alt="logo du site">
                 </a>
-                <a href="index.html" class="navbar-button">
-                    {{back}}
-                </a>
+                <div class="nameprojet">
+                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html"class="navbar-button">
+                        {{back}}
+                    </a>
+                    <div class="contentnavbar-project">
+                        <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
+                            <h3>{{about}}</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
                 <a id="contactme" href="mailto:tibzdesign@gmail.com?subject={{contactsubject}}&body={{contactbody}}" class="navbar-button">{{contactme}}</a>
-                <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/information.html">{{otherlangues}}</a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/information.html">{{otherlangues}}</a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -90,7 +97,7 @@
             }
         </script>
         <section class="profilinformation">
-            <div class="caseprofil">
+            <div data-aos="zoom-in" data-aos-duration="500" class="caseprofil">
                 <div class="profildroit">
                     <div class="profilhaut">
                             <li id="new" class="badge">MOTION DESIGNER</li>
@@ -141,18 +148,27 @@
                         <p>{{information}}</p>
                     </div>
                 </div>
-                <div class="mention">
+                <div data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" class="mention">
                     <p>{{informationdeux}}</p>
                 </div>
             </div>
             <script src="../docs/public/js/machine.js"></script>
             <div class="button-container">
-                <button class="copy-button" data-text="{{dataphone}}">
-                    <span class="info1">{{phone}}<i class="fas fa-copy"></i></span>
-                </button>
-                <button class="copy-button" data-text="tibzdesign@gmail.com">
-                    <span class="info1">{{mail}}<i class="fas fa-copy"></i></span>
-                </button>
+                <div data-aos="fade-right" data-aos-duration="500" data-aos-delay="500" data-aos-anchor-placement="left-center" class="boutoninfo">
+                    <button  class="copy-button" data-text="{{dataphone}}">
+                        <span class="info1">{{phone}}<i class="fas fa-copy"></i></span>
+                    </button>
+                    <button class="copy-button" data-text="tibzdesign@gmail.com">
+                        <span class="info1">{{mail}}<i class="fas fa-copy"></i></span>
+                    </button>
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000" class="carteinfo">
+                    <img src="../docs/public/image/info/carte.png" alt="">
+                    <div class="lieucarte">   
+                        <h1>FRANCE 🇫🇷</h2>
+                        <h2>Toulon</h1>   
+                    </div> 
+                </div>
             </div>
             <div class="copied-message">{{copied}}</div>
         </section>
@@ -172,4 +188,5 @@
       AOS.init();
     </script>
 </body>
+<script src="../docs/public/js/langue.js"></script>
 </html>

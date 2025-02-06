@@ -31,16 +31,18 @@
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="../docs/public/image/logo.png" alt="logo du site">
+                    <img src="{{logo}}" alt="logo du site">
                 </a>
-                <a href="index.html" class="navbar-button">
-                    {{back}}
-                </a>
-                <div class="contentnavbar-project">
-                    <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                        <h3>Axion</h3>
-                        <div class="barre-verticale"></div>
-                        <span>{{personalwork}}</span>
+                <div class="nameprojet">
+                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
+                        {{back}}
+                    </a>
+                    <div class="contentnavbar-project">
+                        <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
+                            <h3>Axion</h3>
+                            <div class="barre-verticale"></div>
+                            <span>{{personalwork}}</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,4 +149,5 @@
       AOS.init();
     </script>
 </body>
+<script src="../docs/public/js/langue.js"></script>
 </html>

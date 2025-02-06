@@ -37,29 +37,30 @@
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="../docs/public/image/logo.png" alt="logo du site">
+                    <img src="{{logo}}" alt="logo du site">
                 </a>
-                <a href="index.html" class="navbar-buttonback">
-                    {{back}}
-                </a>
-                <div class="contentnavbar-project">
-                    <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                        <h3>MouvaPlan</h3>
-                        <div class="barre-verticale"></div>
-                        <span>La Grande Tourrache</span>
-
-                    </div>  
-                    <a data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700" href="#" id="boutontry" onclick="openPanel()">
-                        <div class="navbar-button"><p >{{try}}</p><i class="fa-sharp-duotone fa-solid fa-vial"></i></div>
+                <div class="nameprojet">
+                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-buttonback">
+                        {{back}}
                     </a>
+                    <div class="contentnavbar-project">
+                        <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
+                            <h3>MouvaPlan</h3>
+                            <div class="barre-verticale"></div>
+                            <span>La Grande Tourrache</span>
 
+                        </div>  
+                        <a data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700" href="#" id="boutontry" onclick="openPanel()">
+                            <div class="navbar-button"><p >{{try}}</p><i class="fa-sharp-duotone fa-solid fa-vial"></i></div>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
                 <a id="contactme" href="mailto:tibzdesign@gmail.com?subject={{contactsubject}}&body={{contactbody}}" class="navbar-button">{{contactme}}</a>
-                <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/mouvaplan.html">{{otherlangues}}</a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/mouvaplan.html" >{{otherlangues}}</a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -297,7 +298,7 @@
     <script src="../docs/public/js/meteo.js" ></script>
     <section class=infoprojet>
         <div class="carte">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.2365897246764!2d6.012833476551184!3d43.120555886716936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9191a4655d86d%3A0x5d962357139e1021!2sParc%20naturel%20du%20Plan!5e0!3m2!1sfr!2sfr!4v1730000027618!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe style="filter: grayscale(1) brightness(0.9)  invert(1);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.2365897246764!2d6.012833476551184!3d43.120555886716936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9191a4655d86d%3A0x5d962357139e1021!2sParc%20naturel%20du%20Plan!5e0!3m2!1sfr!2sfr!4v1730000027618!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="citationdefin">
             <li>Credit : TibzDesign</li>
@@ -322,4 +323,5 @@
       AOS.init();
     </script>
 </body>
+<script src="../docs/public/js/langue.js"></script>
 </html>

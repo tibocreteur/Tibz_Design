@@ -29,17 +29,19 @@
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="../docs/public/image/logo.png" alt="logo du site">
+                    <img src="{{logo}}" alt="logo du site">
                 </a>
-                <a href="index.html" class="navbar-button">
-                    {{back}}
-                </a>
-                <div class="contentnavbar-project">
-                    <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                        <h3>Toulon Provence Regatta 2025</h3>
-                        <div class="barre-verticale"></div>
-                        <span>12 MED EVENT</span>
-                        <img data-aos="zoom-in" data-aos-delay="1000" src="../docs/public/image/medailleblanche.svg" alt="">
+                <div class="nameprojet">
+                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html"class="navbar-button">
+                        {{back}}
+                    </a>
+                    <div class="contentnavbar-project">
+                        <div data-aos="fade-right" data-aos-duration="1000"  class="navbar-project">
+                            <h3>Toulon Provence Regatta 2025</h3>
+                            <div class="barre-verticale"></div>
+                            <span>12 MED EVENT</span>
+                            <img data-aos="zoom-in" data-aos-delay="1000" src="../docs/public/image/medailleblanche.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -47,7 +49,7 @@
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
                 <a id="contactme" href="mailto:tibzdesign@gmail.com?subject={{contactsubject}}&body={{contactbody}}" class="navbar-button">{{contactme}}</a>
-                <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/regatta.html">{{otherlangues}}</a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/regatta.html">{{otherlangues}}</a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -115,7 +117,7 @@
     <section class="infoprojet">
         <div class="explicationregatta">
             <div class="imageregatta" >
-                <img src="../docs/public/image/regatta/regatta2.avif" alt="" class="regattaaffiche">
+                <img src="../docs/public/image/regatta/regattav.avif" alt="" class="regattaaffiche">
             </div>
             <p class="texteexplicatif">{{presentationregatta}}</p>   
         </div>
@@ -144,4 +146,5 @@
       AOS.init();
     </script>
 </body>
+<script src="../docs/public/js/langue.js"></script>
 </html>

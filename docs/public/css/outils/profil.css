@@ -16,6 +16,7 @@
     align-items: center;
     background-color: black;
     width: 100%;
+    padding-right: 20px;
 }
 
 .caseprofil {
@@ -24,24 +25,26 @@
     border-radius: 25px;
     display: flex;
     border-style:solid;
-    border-width: 2px;
+    border-width: 0.05px;
     border-color: rgb(98, 98, 98);
     transition: transform 0.3s ease;
     position: relative;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.24);
     z-index: 2;
     margin: 40px;
+    z-index: 2;
+    background-color: black;
 }
 
 .mention{
-    background-color: rgb(23, 23, 23);
+    background-color: rgb(0, 0, 0);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px); /* Support pour Safari */
     background-size: cover;
     border-radius: 25px;
     display: flex;
     border-style:solid;
-    border-width: 2px;
+    border-width: 0.05px;
     border-color: rgb(98, 98, 98);
     padding: 15px;
     padding-inline: 25px;
@@ -132,7 +135,7 @@
 
 .profildroit{
     width: 100%;
-    border-radius: 23px;
+    border-radius: 24.95px;
     background-color: rgba(23, 23, 23, 0.503);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px); /* Support pour Safari */
@@ -141,7 +144,6 @@
     gap: 20px;
     padding: 25px 25px 50px 25px;
 }
-
 
 @media (max-width: 768px) {
     .caseprofil {

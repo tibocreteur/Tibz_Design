@@ -1,8 +1,9 @@
 /* Conteneur principal */
 .partie{
+    height: fit-content;
     overflow: hidden;
     color: black;
-    padding: 60px 40px 60px 40px;
+    padding: 30px 40px;
     width: 100%;
     background-color: var(--backgroundproject);
 }
@@ -44,7 +45,7 @@
 }
 
 .content-left:hover video{
-    scale: 1.25;
+    scale: 1.4;
 }
 
 /* Conteneur des vidéos à droite (prend 1/3 de la largeur) */
@@ -85,7 +86,8 @@
 }
 
 .content-right :hover video{
-    scale: 1.6;
+    scale: 2;
+    z-index: 6;
     max-height: 80vh;
 }
 
@@ -99,37 +101,68 @@
     margin: 60px 0px;
 }
 
-.rueconsole{
-    background-color: black;
+.videoomodaka{
+    display: block;
+}
+
+.videorue {
+    background-color: var(--backgroundproject);
+    height: fit-content;
     width: 100%;
-    max-height: 90vh;
     display: flex;
     justify-content: center;
     align-content: center;
-    border-radius: 25px;
-    overflow: hidden; /* Empêche tout débordement */
-}
-.rueconsole video{
-    width: 100%;
-    border-radius: 25px;
-    filter: saturate(1.2);
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
+
 }
 
-.videoomodaka{
-    display: block;
+.legendeconsole{
+    padding-top: 30px;
+    gap: 0.5rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+.legendeconsole p{
+    display: flex;
+    gap: 0.5rem;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.containervideorue{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    width: fit-content;
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.containervideorue video{
+    max-width: 100%;
+    max-height: 90vh;
+    height: auto;
+    width: auto;
+    z-index: 1;
 }
 
 .videoomodaka::-webkit-media-controls {
     display: none !important; /* Cache les contrôles pour les navigateurs basés sur WebKit */
 }
 
+.explication{
+    border-radius: 0px;
+}
+
 .explication video{
     width: 50%;
-    border-radius: 25px;
+    border-radius: 0px;
     height: auto;
-    object-fit: cover;
     background-color: var(--backgroundproject);
 }
 @media (max-width: 768px) {

@@ -40,16 +40,17 @@
 <body>
     <section style="position: absolute;" class="top-page">
         <header class="navbar">
+            <div class="videnavbar"></div>
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="../docs/public/image/logo.png" alt="logo du site">
+                    <img src="{{logo}}" alt="logo du site">
                 </a>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
                 <a id="contactme" href="mailto:tibzdesign@gmail.com?subject={{contactsubject}}&body={{contactbody}}" class="navbar-button">{{contactme}}</a>
-                <a id="switch-lang" class="navbar-button" href="./../{{otherlangues}}/index.html">{{otherlangues}}</a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/index.html">{{otherlangues}}</a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -232,6 +233,6 @@
         AOS.init();
       </script>
 </body>
+<script src="../docs/public/js/langue.js"></script>
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 

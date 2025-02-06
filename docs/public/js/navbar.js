@@ -1,23 +1,33 @@
-window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar"); // Sélectionne la navbar
-    const triggerElement = document.getElementById("section"); // Élément qui déclenche le changement
-    const offset = 70; // Décalage de 50 pixels avant le déclenchement
+// ================================================================
+// 1. Gestion du scroll de la navbar (avec mise à jour immédiate)
+// ================================================================
 
-    if (triggerElement) {
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+    const socialcontact = document.querySelector(".social-contact");
+    const boutonlogo = document.querySelector(".navbar-button-logo");
+    const triggerElement = document.getElementById("section");
+    const offset = 62; // Décalage avant déclenchement
+
+    function checkNavbar() {
+        if (!triggerElement) return;
+
         const triggerPosition = triggerElement.getBoundingClientRect().top;
 
         if (triggerPosition <= offset) {
-            navbar.classList.remove("scrolled"); // Retire la classe si on remonte
+            navbar.classList.remove("scrolled");
+            socialcontact.classList.remove("scrolled");
+            boutonlogo.classList.remove("scrolled");
         } else {
-            navbar.classList.add("scrolled"); // Retire la classe si on remonte
+            navbar.classList.add("scrolled");
+            socialcontact.classList.add("scrolled");
+            boutonlogo.classList.add("scrolled");
         }
     }
 
-// Vérifie au chargement de la page
-window.addEventListener("load", checkNavbar);
+    // Vérification immédiate au chargement
+    checkNavbar();
 
-// Vérifie à chaque scroll
-window.addEventListener("scroll", checkNavbar);
-
+    // Écouteur d'événement pour mettre à jour lors du scroll
+    window.addEventListener("scroll", checkNavbar);
 });
-
