@@ -8,7 +8,7 @@
     align-items: center;
     flex-direction: column;
     font-family: "IBM Plex Mono", monospace;
-    background-color: var(--backgroundproject);
+    background-color: var(--backgroundaccueil);
   }
 
 .footer{

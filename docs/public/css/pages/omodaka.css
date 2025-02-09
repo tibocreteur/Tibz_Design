@@ -122,7 +122,7 @@
     padding-inline: 40px;
     width: 100%; /* Assure que la section occupe toute la largeur */
     padding-bottom: 30px;
-    background-color: var(--backgroundproject);
+    background-color: var(--backgroundaccueil);
 }
 
 .wrapper {

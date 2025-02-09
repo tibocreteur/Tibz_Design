@@ -87,13 +87,13 @@
 
 .section.infoprojet {
 
-    background-color: var(--backgroundproject);
+    background-color: var(--backgroundaccueil);
 
 }
 
 .infoprojet {
     width: 100%;
-    background-color: var(--backgroundproject);
+    background-color: var(--backgroundaccueil);
     padding-left:  40px;    
     padding-right:  40px;
     overflow: hidden;
@@ -337,7 +337,6 @@
 }
 
 .citation {
-    background-color: #ffffff;
     position: relative;
     display: flex;
     justify-content: center;
@@ -347,6 +346,7 @@
     padding:100px 20%;
     cursor: default;
     width: 100%;
+    background-color: var(--backgroundaccueil);
 }
 
 /* Style du blockquote */
@@ -356,6 +356,7 @@ blockquote {
     color: #000000;
     font-family: "IBM Plex Mono", monospace;
     width: 100%;
+    
 }
 
 .citationdefin{
@@ -369,6 +370,8 @@ blockquote {
     pointer-events: none;
     margin: 0;
     padding: 40px 0px 0px 10px;
+    
+    
 }
 
 .citationdefin span{
