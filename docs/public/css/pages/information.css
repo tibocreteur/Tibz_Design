@@ -7,6 +7,7 @@
     flex-direction: column;
     font-family: "IBM Plex Mono", monospace;
     position: relative;
+    background-color: black;
 }
 
 ::selection {
@@ -140,6 +141,9 @@
     .profilinformation{
         display: flex;
         flex-direction: column;
+    }
+    .carteinfo{
+        display: none;
     }
     
 }

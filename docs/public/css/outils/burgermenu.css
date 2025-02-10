@@ -336,7 +336,7 @@
         transition: transform 0.5s ease;
         z-index: 9;
         overflow: hidden;
-        padding-top: calc(75px + 75px);
+        padding-top: calc(50px + 75px);
         padding-bottom:75px;
         padding-inline: 10%;
       }
@@ -348,6 +348,8 @@
         list-style: none;
         margin: 0;
         width: 100%;
+        height: auto;
+        padding: 0;
       }
       .titreburger a{
         font-size: 2.75rem;

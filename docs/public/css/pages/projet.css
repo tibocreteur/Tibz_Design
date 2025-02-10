@@ -87,13 +87,13 @@
 
 .section.infoprojet {
 
-    background-color: var(--backgroundaccueil);
+    background-color: var(--backgroundproject);
 
 }
 
 .infoprojet {
     width: 100%;
-    background-color: var(--backgroundaccueil);
+    background-color: var(--backgroundproject);
     padding-left:  40px;    
     padding-right:  40px;
     overflow: hidden;
@@ -356,7 +356,6 @@ blockquote {
     color: #000000;
     font-family: "IBM Plex Mono", monospace;
     width: 100%;
-    
 }
 
 .citationdefin{
@@ -370,7 +369,6 @@ blockquote {
     pointer-events: none;
     margin: 0;
     padding: 40px 0px 0px 10px;
-    
     
 }
 
@@ -566,6 +564,19 @@ blockquote {
 }
 
 @media (max-width: 768px) {
+
+    .explicationregatta{
+        padding-top: 40px;
+        flex-direction: column;
+    }
+
+    .explicationregatta > div{
+        width: 100%;
+    }
+
+    .explicationregatta > p{
+        width: 100%;
+    }
 
     .entete img{
     }
