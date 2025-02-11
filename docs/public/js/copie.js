@@ -15,7 +15,7 @@ buttons.forEach(button => {
             copiedMessage.style.display = 'block';
             setTimeout(() => {
                 copiedMessage.style.display = 'none';
-            }, 900); // Le message disparaît après 1,5 seconde
+            }, 2000); // Le message disparaît après 1,5 seconde
 
             // Changer rapidement la couleur de fond du bouton en blanc
             button.style.backgroundColor = 'black';

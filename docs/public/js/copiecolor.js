@@ -16,7 +16,7 @@ colors.forEach(color => {
             // Cache le message après 900ms
             setTimeout(() => {
                 copiedMessage.style.display = 'none';
-            }, 900); // Le message disparaît après 900ms
+            }, 2000); // Le message disparaît après 900ms
 
         } catch (err) {
             console.error('Échec de la copie : ', err);

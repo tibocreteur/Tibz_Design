@@ -73,8 +73,7 @@ a:hover{
   display: flex;
   position: fixed;
   top: 120px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: calc(50% - 3rem);
   background-color: rgb(52, 238, 139);
   color:  rgb(31, 148, 85);
   padding: 5px 10px;
@@ -84,7 +83,26 @@ a:hover{
   font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   display: none; /* Caché par défaut */
-  z-index: 999999;
+  z-index: 7;
+  animation: zoom 2s ease-in-out;
+}
+
+
+@keyframes zoom {
+  0% {
+      transform: scale(0);
+  }
+  10% {
+      transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+    
+  }
+  100% {
+    transform: scale(0);
+    
+  }
 }
 
 .error{
