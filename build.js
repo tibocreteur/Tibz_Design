@@ -1,9 +1,9 @@
 const fs = require('fs');
-var path = require('path');
+const path = require('path');
 
 const translationsFolder = './docs/public/json/';
-const buildDir = './docs/'
-const htmlDir = './html/'
+const buildDir = './docs/';
+const htmlDir = './html/';
 
 const getNestedTranslation = (obj, keyPath) => {
     return keyPath.split('.').reduce((acc, part) => {
@@ -12,45 +12,78 @@ const getNestedTranslation = (obj, keyPath) => {
 };
 
 const fixPath = (template) => {
-    // const regex = new RegExp(/(\"\.\/\.\.\/)/, 'g');
-    const regex2 = new RegExp(/(\"\.\.\/docs)/, 'g');
+    const regex = new RegExp(/(\"\.\.\/docs)/, 'g');
+    return template.replace(regex, '"./..');
+};
 
-    // template = template.replace(regex, (match, key) => {
-    //     return key + '../';
-    // });
+// Vérifie si un dossier existe, sinon le crée
+const ensureDirectoryExists = (dir) => {
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+    }
+};
 
-    template = template.replace(regex2, (match, key) => {
-        return '"./..';
-    })
-
-    return template;
-}
-
+// Lecture des fichiers JSON dans le dossier des traductions
 fs.readdir(translationsFolder, (err, files) => {
-    files.forEach(file => {
-        const langIsoCode = path.basename(file, '.json')
+    if (err) {
+        console.error(`❌ Erreur de lecture du dossier JSON : ${err.message}`);
+        return;
+    }
 
-        if (!fs.existsSync(buildDir + langIsoCode)){
-            fs.mkdirSync(buildDir + langIsoCode, { recursive: true });
+    files.forEach(file => {
+        const filePath = path.join(translationsFolder, file);
+        const langIsoCode = path.basename(file, '.json');
+
+        // Vérification de l'existence et du contenu du fichier JSON
+        if (!fs.existsSync(filePath)) {
+            console.warn(`⚠️ Fichier introuvable : ${filePath}`);
+            return;
         }
 
-        const translations = JSON.parse(fs.readFileSync(translationsFolder + file, 'utf-8'));
+        let fileContent = fs.readFileSync(filePath, 'utf-8').trim();
+        if (!fileContent) {
+            console.warn(`⚠️ Fichier JSON vide : ${filePath}`);
+            return;
+        }
 
-        fs.readdir(htmlDir, (err, files) => {
-            files.forEach(file => {
-                let template = fs.readFileSync(htmlDir + file, 'utf-8');
-                const regex = new RegExp(/\{\{\s?([a-zA-Z.]+)\s?\}\}/, 'g');
+        let translations;
+        try {
+            translations = JSON.parse(fileContent);
+        } catch (error) {
+            console.error(`❌ Erreur de parsing JSON dans ${filePath} : ${error.message}`);
+            return;
+        }
+
+        // Création du dossier de sortie
+        const langOutputDir = path.join(buildDir, langIsoCode);
+        ensureDirectoryExists(langOutputDir);
+
+        // Lecture des fichiers HTML
+        fs.readdir(htmlDir, (err, htmlFiles) => {
+            if (err) {
+                console.error(`❌ Erreur de lecture du dossier HTML : ${err.message}`);
+                return;
+            }
+
+            htmlFiles.forEach(htmlFile => {
+                const htmlFilePath = path.join(htmlDir, htmlFile);
+                let template = fs.readFileSync(htmlFilePath, 'utf-8');
+
+                // Remplacement des clés de traduction
+                const regex = /\{\{\s?([a-zA-Z.]+)\s?\}\}/g;
                 template = template.replace(regex, (match, key) => {
                     const translation = getNestedTranslation(translations, key);
                     return typeof translation === 'string' ? translation : match;
                 });
 
+                // Correction des chemins
                 template = fixPath(template);
 
-                const outputPath = `${buildDir}${langIsoCode}/${file}`;
+                // Écriture du fichier généré
+                const outputPath = path.join(langOutputDir, htmlFile);
                 fs.writeFileSync(outputPath, template);
-                console.log(`Generated ${outputPath}`);
-            })
+                console.log(`✅ Fichier généré : ${outputPath}`);
+            });
         });
     });
 });
