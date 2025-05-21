@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <title>Regatta 2025</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./../public/css/pages/console.css">
     <link rel="stylesheet" href="./../public/css/pages/projet.css">
@@ -22,6 +25,7 @@
 
 
 </head>
+
 <body>
 
 
@@ -32,15 +36,16 @@
                     <img src="./../public/image/test3.png" alt="logo du site">
                 </a>
                 <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html"class="navbar-button">
+                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
                         retour
                     </a>
                     <div class="contentnavbar-project">
-                        <div data-aos="fade-right" data-aos-duration="1000"  class="navbar-project">
+                        <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
                             <h3>Toulon Provence Regatta 2025</h3>
                             <div class="barre-verticale"></div>
                             <span>12 MED EVENT</span>
-                            <img data-aos="zoom-in" data-aos-delay="1000" src="./../public/image/medailleblanche.svg" alt="">
+                            <img data-aos="zoom-in" data-aos-delay="1000" src="./../public/image/medailleblanche.svg"
+                                alt="">
                         </div>
                     </div>
                 </div>
@@ -48,7 +53,8 @@
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a id="contactme" href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">ME CONTACTER</a>
+                <a id="contactme" href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!"
+                    class="navbar-button">ME CONTACTER</a>
                 <a id="switch-lang" class="langButton" href="./../en/regatta.html">en</a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
@@ -67,42 +73,44 @@
                 .then(data => {
                     // Insérer la navbar dans le conteneur
                     document.getElementById('navbar-container').innerHTML = data;
-                    
+
                     // Appeler une fonction d'initialisation du script après le chargement
                     initNavbarScript();
                 })
                 .catch(error => console.error('Erreur de chargement de la navbar:', error));
-    
+
             // Fonction pour initialiser les événements du menu burger
             function initNavbarScript() {
                 const burgerToggle = document.getElementById("burger-toggle");
                 const burgerMenu = document.getElementById("burger-menu");
-    
+
                 // Fonction pour ouvrir/fermer le menu
                 function toggleMenu() {
                     burgerToggle.classList.toggle("active");
                     burgerMenu.classList.toggle("active");
                 }
-    
+
                 // Fonction pour fermer le menu
                 function closeMenu() {
                     burgerToggle.classList.remove("active");
                     burgerMenu.classList.remove("active");
                 }
-    
+
                 // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
                 burgerToggle.addEventListener("click", toggleMenu);
-    
+
                 // Fermer le menu lorsqu'on fait défiler la page
                 window.addEventListener("scroll", closeMenu);
             }
         </script>
         <div class="entete">
-            <img src="./../public/image/regatta/fond.avif" alt="Une console rétro futuriste" id="scroll-image"autoplay muted playsinline loop>
+            <img src="./../public/image/regatta/fond.avif" alt="Une console rétro futuriste" id="scroll-image"
+                autoplay muted playsinline loop>
             <script src="./../public/js/animation.js"></script>
         </div>
         <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='regatta.html#section';"><img src="./../public/image/fleche2.svg" alt=""></a>
+            <a class="flechedubas" onclick="location.href='regatta.html#section';"><img
+                    src="./../public/image/fleche2.svg" alt=""></a>
         </div>
         <script src="./../public/js/fleche.js"></script>
     </section>
@@ -112,14 +120,14 @@
             <span id="print" class="badge">PRINT</span>
             <span id="award" class="badge">Lauréat de concours 🏆</span>
         </div>
-        <blockquote id="quote">"Les voiles gonflées par le vent portent non seulement les marins, mais aussi les rêves de ceux qui regardent l'horizon."</blockquote>       
+        <blockquote id="quote">"Les voiles gonflées par le vent portent non seulement les marins, mais aussi les rêves de ceux qui regardent l'horizon."</blockquote>
     </section>
     <section class="infoprojet">
         <div class="explicationregatta">
-            <div class="imageregatta" >
+            <div class="imageregatta">
                 <img src="./../public/image/regatta/regattav.avif" alt="" class="regattaaffiche">
             </div>
-            <p class="texteexplicatif">Conçue à la demande de 12 MED EVENT, cette affiche pour la Regatta de Toulon 2025 <strong>a remporté le concours officiel</strong> et <strong>sera exposée dans toute la ville de Toulon et ses environs</strong>. Il s'agissait de créer une nouvelle affiche en partant <strong>de l'affiche de l'année précédente</strong>, tout en apportant une vision moderne et renouvelée.<br><br>J'ai choisi d'intégrer la couleur officielle 2025 de Pantone pour refléter une identité contemporaine et en phase avec l'année de l'événement. Elle capture à la fois <strong>l’énergie et l’élégance</strong> de cet événement emblématique. Le design met en avant <strong>le dynamisme de la course</strong> grâce à des voiliers en mouvement, tout en célébrant <strong>l’identité unique de Toulon</strong> à travers des éléments emblématiques comme le téléphérique du Mont Faron.<br><br>La composition minimaliste, combinée à une palette de couleurs maritimes, reflète <strong>le prestige de cette compétition</strong> et renforce <strong>son attractivité auprès du public</strong>.</p>   
+            <p class="texteexplicatif">remiConçue à la demande de 12 MED EVENT, cette affiche pour la Regatta de Toulon 2025 <strong>a remporté le concours officiel</strong> et <strong>sera exposée dans toute la ville de Toulon et ses environs</strong>. Il s'agissait de créer une nouvelle affiche en partant <strong>de l'affiche de l'année précédente</strong>, tout en apportant une vision moderne et renouvelée.<br><br>J'ai choisi d'intégrer la couleur officielle 2025 de Pantone pour refléter une identité contemporaine et en phase avec l'année de l'événement. Elle capture à la fois <strong>l’énergie et l’élégance</strong> de cet événement emblématique. Le design met en avant <strong>le dynamisme de la course</strong> grâce à des voiliers en mouvement, tout en célébrant <strong>l’identité unique de Toulon</strong> à travers des éléments emblématiques comme le téléphérique du Mont Faron.<br><br>La composition minimaliste, combinée à une palette de couleurs maritimes, reflète <strong>le prestige de cette compétition</strong> et renforce <strong>son attractivité auprès du public</strong>.</p>
         </div>
     </section>
     <section class="infoprojet">
@@ -127,15 +135,18 @@
             <li>Credits : TibzDesign / 12 MED EVENT</li>
             <p>Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
         </div>
-    </section >
+    </section>
     <footer class="footerprojects">
         <ul class="menu">
             <li class="menu-elem">
                 <a href="./information.html" class="menu-icon1">informations</a>
                 <div class="socialfooter">
-                    <a href="https://www.instagram.com/tibz_design/" target="_blank"><img src="./../public/image/logoinsta.png" style="filter: invert();" alt=""></a>
-                    <a href="https://www.linkedin.com/in/tibo-creteur-15147a233/" target="_blank"><img src="./../public/image/Logo LinkedIn.svg"  alt=""></a>
-                    <a href="https://www.behance.net/tibzdesign" target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
+                    <a href="https://www.instagram.com/tibz_design/" target="_blank"><img
+                            src="./../public/image/logoinsta.png" style="filter: invert();" alt=""></a>
+                    <a href="https://www.linkedin.com/in/tibo-creteur-15147a233/" target="_blank"><img
+                            src="./../public/image/Logo LinkedIn.svg" alt=""></a>
+                    <a href="https://www.behance.net/tibzdesign" target="_blank"><img
+                            src="./../public/image/Logo Behance.svg" alt=""></a>
                 </div>
                 <p data-key="footer" class="text">@2025 | ©TibzDesign. Tous droits réservés.</p>
             </li>
@@ -143,8 +154,9 @@
     </footer>
     <script src="./../public/js/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 </body>
 <script src="./../public/js/langue.js"></script>
+
 </html>
