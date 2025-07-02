@@ -1,6 +1,11 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  background: var(--backgroundaccueil);
+}
+
+body ::selection {
+  background-color: var(--soulignage);
 }
 
 @media (max-width: 768px) {
@@ -9,15 +14,19 @@ html {
   }
 }
 
-.body{
+.body {
   overflow: hidden;
+  background: var(--backgroundaccueil);
 }
 
-img{
-  -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
-  -moz-user-select: none;    /* Pour Firefox */
-  -ms-user-select: none;     /* Pour Internet Explorer */
-  user-select: none;  
+img {
+  -webkit-user-select: none;
+  /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+  -moz-user-select: none;
+  /* Pour Firefox */
+  -ms-user-select: none;
+  /* Pour Internet Explorer */
+  user-select: none;
 }
 
 * {
@@ -25,21 +34,22 @@ img{
   padding: 0;
   box-sizing: border-box;
 }
+
 /*image de fond*/
 
 h1 {
   font-size: 3rem;
   padding-top: 4rem;
-  color: #ffffff;
-  font-family: "IBM Plex Mono", monospace;
+  color: #000000;
+  font-family: var(--ibm);
   cursor: default;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.4;
-  color: #ffffff;
-  font-family: "IBM Plex Mono", monospace;
+  color: #000000;
+  font-family: var(--ibm);
   text-align: justify;
   font-size: 1rem;
   cursor: default;
@@ -47,7 +57,8 @@ p {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
+  font-family: var(--ibm);
   font-size: 1rem;
 }
 
@@ -56,10 +67,18 @@ li {
   cursor: default;
 }
 
-a:hover{
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a:hover {
   color: #d8f4ff;
 }
 
+b {
+  font-weight: bold;
+  font-family: var(--ibm);
+}
 
 .js-sync-image-container img {
   display: none;
@@ -73,16 +92,17 @@ a:hover{
   display: flex;
   position: fixed;
   top: 120px;
-  left: calc(50% - 3rem);
-  background-color: rgb(52, 238, 139);
-  color:  rgb(31, 148, 85);
+  left: calc(50% - 3.7rem);
+  background-color: var(--vertmarque);
+  color: var(--vertmarquedeux);
   padding: 5px 10px;
   font-size: 1.3rem;
   font-weight: bold;
   border-radius: 5px;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--ibm);
   font-weight: bold;
-  display: none; /* Caché par défaut */
+  display: none;
+  /* Caché par défaut */
   z-index: 7;
   animation: zoom 2s ease-in-out;
 }
@@ -90,23 +110,41 @@ a:hover{
 
 @keyframes zoom {
   0% {
-      transform: scale(0);
+    transform: scale(0);
   }
+
   10% {
-      transform: scale(1);
+    transform: scale(1);
   }
+
   90% {
     transform: scale(1);
-    
+
   }
+
   100% {
     transform: scale(0);
-    
+
   }
 }
 
-.error{
-  position:fixed;
+.touchem {
+  height: 1.4rem;
+  width: 1.4rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.3rem;
+  align-items: center;
+  font-family: var(--ibm);
+  border-width: 1px;
+  border-style: solid;
+  margin-right: -0.35rem;
+  margin-top: 0.05rem;
+  opacity: 0.3;
+}
+
+.error {
+  position: fixed;
   background-color: black;
   width: 100%;
   height: 100vh;
@@ -116,23 +154,23 @@ a:hover{
   align-items: center;
   flex-direction: column;
   color: #ffffff;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--ibm);
   gap: 30px;
   padding: 40px;
   display: none;
   overflow: hidden;
 }
 
-.error span{
-  font-family: "IBM Plex Mono", monospace;
+.error span {
+  font-family: var(--ibm);
   text-align: center;
 }
 
-.error img{
+.error img {
   width: 10vh;
 }
 
-.basdetoppage{
+.basdetoppage {
   height: 75px;
   position: absolute;
   bottom: 0px;
@@ -143,7 +181,8 @@ a:hover{
   padding-inline: 30px;
   transition: opacity 1s ease-in-out;
 }
-.flechedubas{
+
+.flechedubas {
   height: 100%;
   width: 75px;
   animation: push-down 1s infinite alternate;
@@ -153,14 +192,16 @@ a:hover{
   cursor: pointer;
 }
 
-.flechedubas:hover{
+.flechedubas:hover {
   opacity: 1;
 
 }
 
-.flechedubasinvisible{
-  opacity: 0; /* L'élément devient complètement transparent */
-  pointer-events: none; /* Empêche l'interaction lorsque caché */
+.flechedubasinvisible {
+  opacity: 0;
+  /* L'élément devient complètement transparent */
+  pointer-events: none;
+  /* Empêche l'interaction lorsque caché */
 }
 
 /* Animation push vers le bas */
@@ -170,16 +211,18 @@ a:hover{
     scale: 1;
     opacity: 0.3;
   }
+
   100% {
     transform: translateY(0px) scaleX(0.6) scaleY(0.7);
     scale: 1;
     opacity: 0.8;
   }
 }
+
 @media screen and (max-width: 768px) {
   .error {
-    display: none; /* Visible uniquement sur mobile */
+    display: none;
+    /* Visible uniquement sur mobile */
     overflow: hidden;
   }
 }
-

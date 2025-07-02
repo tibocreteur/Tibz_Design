@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
-    <link rel="icon" href="./../public/image/logo.png" type="images/x-icon">
-    <title>Print</title>
+    <link rel="icon" href="./../public/image/logo/petitlogo.png" type="images/x-icon">
+    <title>Print - altlab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./../public/css/outils/navbar.css">
     <link rel="stylesheet" href="./../public/css/outils/footer.css">
@@ -22,6 +25,7 @@
     <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
 
 </head>
+
 <body>
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
@@ -31,240 +35,253 @@
     <header class="navbar">
         <div class="navbar-left">
             <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/test3.png" alt="logo du site">
+                <img src="./../public/image/logo/logotrois.png" alt="logo du site">
+            </a>
+            <div class="nameprojet">
+                <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
+                    retour
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html"class="navbar-button">
-                        retour
-                    </a>
-                    <div class="contentnavbar-project">
-                        <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                            <h3>Print</h3>
-                        </div>
+                <div class="contentnavbar-project">
+                    <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
+                        <h3>Print</h3>
                     </div>
                 </div>
             </div>
-            <div class="social-contact">
-                <!-- Logo Instagram cliquable -->
-                <!-- Bouton "ME CONTACTER" -->
-                <a id="contactme" href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">ME CONTACTER</a>
-                <a id="switch-lang" class="langButton" href="./../en/print.html">en</a>
-                <button class="iconburger" id="burger-toggle">
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                </button>
-            </div>
-        </header>
+        </div>
+        <div class="social-contact">
+            <!-- Logo Instagram cliquable -->
+            <!-- Bouton "ME CONTACTER" -->
+            <a href="contact.html" class="navbar-button">Me contacter</a>
+            <a id="switch-lang" class="langButton" href="./../en/print.html"><img
+                    src="./../public/image/drapeau/en.png" class="drapeau" alt="">en</a>
+            <button class="iconburger" id="burger-toggle">
+                <div class="barreburger"></div>
+                <div class="barreburger"></div>
+                <div class="barreburger"></div>
+            </button>
+        </div>
+    </header>
 
-        <div id="navbar-container"></div>
+    <div id="navbar-container"></div>
 
-        <script>
-            // Charger la navbar HTML dans la page principale
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    // Insérer la navbar dans le conteneur
-                    document.getElementById('navbar-container').innerHTML = data;
-                    
-                    // Appeler une fonction d'initialisation du script après le chargement
-                    initNavbarScript();
-                })
-                .catch(error => console.error('Erreur de chargement de la navbar:', error));
-    
-            // Fonction pour initialiser les événements du menu burger
-            function initNavbarScript() {
-                const burgerToggle = document.getElementById("burger-toggle");
-                const burgerMenu = document.getElementById("burger-menu");
-    
-                // Fonction pour ouvrir/fermer le menu
-                function toggleMenu() {
-                    burgerToggle.classList.toggle("active");
-                    burgerMenu.classList.toggle("active");
-                }
-    
-                // Fonction pour fermer le menu
-                function closeMenu() {
-                    burgerToggle.classList.remove("active");
-                    burgerMenu.classList.remove("active");
-                }
-    
-                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
-                burgerToggle.addEventListener("click", toggleMenu);
-    
-                // Fermer le menu lorsqu'on fait défiler la page
-                window.addEventListener("scroll", closeMenu);
+    <script>
+        // Charger la navbar HTML dans la page principale
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                // Insérer la navbar dans le conteneur
+                document.getElementById('navbar-container').innerHTML = data;
+
+                // Appeler une fonction d'initialisation du script après le chargement
+                initNavbarScript();
+            })
+            .catch(error => console.error('Erreur de chargement de la navbar:', error));
+
+        // Fonction pour initialiser les événements du menu burger
+        function initNavbarScript() {
+            const burgerToggle = document.getElementById("burger-toggle");
+            const burgerMenu = document.getElementById("burger-menu");
+
+            // Fonction pour ouvrir/fermer le menu
+            function toggleMenu() {
+                burgerToggle.classList.toggle("active");
+                burgerMenu.classList.toggle("active");
             }
-        </script>
 
-        <section class="fondworks">
-            <!-- Travaux (Projets) -->
-            <div class="works">
-                <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imagesworksposters">
-                        <img src="./../public/image/works/posters/jumanji.avif" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                                <div class="nom">
-                                    <h3>Jumanji 1</h3>
-                                    <div class="barre-verticaleblack"></div>
-                                    <span>La grande Tourrache</span>
-                                </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span>Illustrator</span>
-                        </div>
-                    </div>
-                    <div class="date">2025</div>
+            // Fonction pour fermer le menu
+            function closeMenu() {
+                burgerToggle.classList.remove("active");
+                burgerMenu.classList.remove("active");
+            }
+
+            // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
+            burgerToggle.addEventListener("click", toggleMenu);
+
+            // Fermer le menu lorsqu'on fait défiler la page
+            window.addEventListener("scroll", closeMenu);
+        }
+    </script>
+
+    <section class="fondworks">
+        <!-- Travaux (Projets) -->
+        <div class="works">
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imagesworksposters">
+                    <img src="./../public/image/works/posters/jumanji.avif" alt="">
                 </div>
-                <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imagesworksposters">
-                        <img src="./../public/image/regatta/regattav.avif" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                                <div class="nom">
-                                    <h3>Toulon Provence Regatta 2025</h3>
-                                    <div class="barre-verticaleblack"></div>
-                                    <span>12 MED EVENT</span>
-                                    <img style="margin-left: 1rem;" src="./../public/image/medaillenoir.svg" alt="">
-                                    <a class=lienprojets href="./regatta.html">Découvrir
-                                        <img src="./../public/image/oeilb.svg" alt="">
-                                    </a>
-                                </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span>Illustrator</span>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Jumanji 1</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>La grande Tourrache</span>
                         </div>
                     </div>
-                    <div class="texteworks">
-                        <p>Conçue à la demande de 12 MED EVENT, cette affiche pour la Regatta de Toulon 2025 a remporté le concours officiel et sera exposée dans toute la ville de Toulon et ses environs. Elle capture à la fois l’énergie et l’élégance de cet événement emblématique.<br><br>Le design met en avant le dynamisme de la course grâce à des voiliers en mouvement, tout en célébrant l’identité unique de la ville à travers des éléments emblématiques comme le téléphérique du Mont Faron. La composition minimaliste, combinée à une palette de couleurs maritimes, reflète le prestige de cette compétition et renforce son attractivité auprès du public.</p>
-                    </div>
-                    <div class="date">2024</div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" id="nemo-section" class="projet1">
-                    <div class="containeralbum">
-                        <div class="album">
-                            <div class="cover">
-                                <img src="./../public/image/works/posters/nemorecto.avif" alt="Album Cover">
-                            </div>
-                            <div class="vinyl">
-                                <img class="vinyl-cover" src="./../public/image/works/posters/nemofacea.jpg">
-                                <div class="cerclevinyl"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="containeralbum">
-                        <div class="album">
-                            <div class="cover">
-                                <img src="./../public/image/works/posters/nemoverso.avif" alt="Album Cover">
-                            </div>
-                            <div class="vinyl">
-                                <img class="vinyl-cover" src="./../public/image/works/posters/nemofaceb.jpg">
-                                <div class="cerclevinyl"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nemotel">
-                        <img src="./../public/image/works/posters/nemorecto.avif" alt="">
-                        <img src="./../public/image/nemo/disquefacea.png" alt="">
-                        <img src="./../public/image/works/posters/nemoverso.avif" alt="">
-                        <img src="./../public/image/nemo/disquefaceb.png" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                                <div class="nom">
-                                    <h3>Nemo</h3>
-                                    <div class="barre-verticaleblack"></div>
-                                    <span>E!ght</span>
-                                </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span>ADOBE Photoshop</span>
-                        </div>
-                        
-                    </div>
-                    <div class="texteworks">
-                        <p>Pour l’album Nemo de E!ght, j’ai conçu le verso du vinyle en m’inspirant de la cover originale réalisée par l’artiste, ainsi que de son personnage et de la thématique centrale de l’album. En m’appuyant sur ses publications et son univers visuel, j’ai cherché à retranscrire l’essence de son projet de manière graphique.<br><br>J’ai également intégré l’idée d’une pochette objet qui fonctionne comme un miroir : pour découvrir les différents titres des faces A et B, il faut tourner la pochette. Cette mise en page reflète symboliquement le concept du miroir, mettant en avant la dualité entre le moi social et le moi intérieur de E!ght, un thème clé de l’album.<br><br>Enfin, j’ai aussi réalisé les visuels des étiquettes centrales pour les faces A et B des disques vinyles, en assurant une cohérence esthétique et conceptuelle avec le reste du design. Mon travail a ainsi visé à capturer l’univers singulier de l’artiste tout en proposant une expérience physique et interactive au spectateur.</p>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span>Illustrator</span>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imagesworksposters">
-                        <img src="./../public/image/works/posters/rats.avif" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                                <div class="nom">
-                                    <h3>Dessin technique RATZ</h3>
-                                    <div class="barre-verticaleblack"></div>
-                                    <span>La Grande Tourrache</span>
-                                </div>
+                <div class="date">2025</div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imagesworksposters">
+                    <img src="./../public/image/regatta/regattafini.avif" alt="">
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Toulon Provence Regatta 2025</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>12 MED EVENT</span>
+                            <img style="margin-left: 1rem;" src="./../public/image/medaillenoir.svg" alt="">
+                            <a class=lienprojets href="./regatta.html">Découvrir
+                                <img src="./../public/image/oeilb.svg" alt="">
+                            </a>
                         </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span>ADOBE Illustrator</span>
-                        </div>
                     </div>
-                    <div class="texteworks">
-                        <p>J'ai créé le plan technique de la voiture Ratz, en respectant ses proportions et son esthétique de dessin animé. Ce travail m'a permis d'analyser ses détails et de les traduire en un schéma précis et fidèle, à la fois ludique et technique.</p>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span>Illustrator</span>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imagesworksposters">
-                        <img src="./../public/image/works/posters/magicball.avif" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                                <div class="nom">
-                                    <h3>Dessin technique RATZ</h3>
-                                    <div class="barre-verticaleblack"></div>
-                                    <span>La Grande Tourrache</span>
-                                </div>
+                <div class="texteworks">
+                    <p>Conçue à la demande de 12 MED EVENT, cette affiche pour la Regatta de Toulon 2025 a remporté le concours officiel et a était exposée dans toute la ville de Toulon et ses environs. Elle capture à la fois l’énergie et l’élégance de cet événement emblématique.</br></br>Le design met en avant le dynamisme de la course grâce à des voiliers en mouvement, tout en célébrant l’identité unique de la ville à travers des éléments emblématiques comme le téléphérique du Mont Faron. La composition minimaliste, combinée à une palette de couleurs maritimes, reflète le prestige de cette compétition et renforce son attractivité auprès du public.</p>
+                </div>
+                <div class="date">2024</div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" id="nemo-section"
+                class="projet1">
+                <div class="containeralbum">
+                    <div class="album">
+                        <div class="cover">
+                            <img src="./../public/image/works/posters/nemorecto.avif" alt="Album Cover">
                         </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span>ADOBE Illustrator</span>
+                        <div class="vinyl">
+                            <img class="vinyl-cover" src="./../public/image/works/posters/nemofacea.jpg">
+                            <div class="cerclevinyl"></div>
                         </div>
                     </div>
-                    <div class="texteworks">
-                        <p>J'ai créé le plan technique de la Magic Ball, en veillant à préserver ses proportions et son esthétique de dessin animé. Ce travail m'a permis d'analyser ses détails uniques et de les traduire en un schéma précis et fidèle, alliant créativité et précision technique.</p>
+                </div>
+                <div class="containeralbum">
+                    <div class="album">
+                        <div class="cover">
+                            <img src="./../public/image/works/posters/nemoverso.avif" alt="Album Cover">
+                        </div>
+                        <div class="vinyl">
+                            <img class="vinyl-cover" src="./../public/image/works/posters/nemofaceb.jpg">
+                            <div class="cerclevinyl"></div>
+                        </div>
                     </div>
+                </div>
+                <div class="nemotel">
+                    <img src="./../public/image/works/posters/nemorecto.avif" alt="">
+                    <img src="./../public/image/nemo/disquefacea.png" alt="">
+                    <img src="./../public/image/works/posters/nemoverso.avif" alt="">
+                    <img src="./../public/image/nemo/disquefaceb.png" alt="">
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Nemo</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>E!ght</span>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span>ADOBE Photoshop</span>
+                    </div>
+
+                </div>
+                <div class="texteworks">
+                    <p>Pour l’album Nemo de E!ght, j’ai conçu le verso du vinyle en m’inspirant de la cover originale réalisée par l’artiste, ainsi que de son personnage et de la thématique centrale de l’album. En m’appuyant sur ses publications et son univers visuel, j’ai cherché à retranscrire l’essence de son projet de manière graphique.<br><br>J’ai également intégré l’idée d’une pochette objet qui fonctionne comme un miroir : pour découvrir les différents titres des faces A et B, il faut tourner la pochette. Cette mise en page reflète symboliquement le concept du miroir, mettant en avant la dualité entre le moi social et le moi intérieur de E!ght, un thème clé de l’album.<br><br>Enfin, j’ai aussi réalisé les visuels des étiquettes centrales pour les faces A et B des disques vinyles, en assurant une cohérence esthétique et conceptuelle avec le reste du design. Mon travail a ainsi visé à capturer l’univers singulier de l’artiste tout en proposant une expérience physique et interactive au spectateur.</p>
                 </div>
             </div>
-            <div class="droite">
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="barreverticale"></div>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imagesworksposters">
+                    <img src="./../public/image/works/posters/rats.avif" alt="">
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Dessin technique RATZ</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>La Grande Tourrache</span>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span>ADOBE Illustrator</span>
+                    </div>
+                </div>
+                <div class="texteworks">
+                    <p>J'ai créé le plan technique de la voiture Ratz, en respectant ses proportions et son esthétique de dessin animé. Ce travail m'a permis d'analyser ses détails et de les traduire en un schéma précis et fidèle, à la fois ludique et technique.</p>
+                </div>
             </div>
-        </section>
-        <section class="infoprojet">
-            <script src="./../public/js/zoom.js"></script>
-            <div class="citationdefin">
-                <li>Credit : TibzDesign</li>
-                <p>Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imagesworksposters">
+                    <img src="./../public/image/works/posters/magicball.avif" alt="">
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Dessin technique RATZ</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>La Grande Tourrache</span>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span>ADOBE Illustrator</span>
+                    </div>
+                </div>
+                <div class="texteworks">
+                    <p>J'ai créé le plan technique de la Magic Ball, en veillant à préserver ses proportions et son esthétique de dessin animé. Ce travail m'a permis d'analyser ses détails uniques et de les traduire en un schéma précis et fidèle, alliant créativité et précision technique.</p>
+                </div>
             </div>
-        </section>
-        <script src="./../public/js/comparaison.js"></script>
-        <script src="./../public/js/synchronisation.js"></script>
-        <footer class="footerprojects">
-            <ul class="menu">
-                <li class="menu-elem">
-                    <a href="./information.html" class="menu-icon1">informations</a>
+        </div>
+        <div class="droite">
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom"
+                class="barreverticale"></div>
+        </div>
+    </section>
+    <section class="infoprojet">
+        <script src="./../public/js/zoom.js"></script>
+        <div class="citationdefin">
+            <li>Credit : altlab</li>
+            <p>Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
+        </div>
+    </section>
+    <script src="./../public/js/comparaison.js"></script>
+    <script src="./../public/js/synchronisation.js"></script>
+    <footer class="footerprojects">
+        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+            data-aos-anchor-placement="top-bottom">
+            <li class="menu-elem">
+                <div class="footerlignetext">
+                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                        83200,Toulon & 59350,Lille</p>
                     <div class="socialfooter">
-                        <a href="https://www.instagram.com/tibz_design/" target="_blank"><img src="./../public/image/logoinsta.png" style="filter: invert();" alt=""></a>
-                        <a href="https://www.linkedin.com/in/tibo-creteur-15147a233/" target="_blank"><img src="./../public/image/Logo LinkedIn.svg"  alt=""></a>
-                        <a href="https://www.behance.net/tibzdesign" target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
+                        <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
+                                style="filter: invert();" alt=""></a>
+                        <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
+                                alt=""></a>
+                        <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
                     </div>
-                    <p data-key="footer" class="text">@2025 | ©TibzDesign. Tous droits réservés.</p>
-                </li>
-            </ul>
-        </footer>
-        <script src="./../public/js/aos.js"></script>
-        <script>
-          AOS.init();
-        </script>
+                    <p data-key="footer" class="textfooterd">@2025 | © altlab. Tous droits réservés.</p>
+                </div>
+            </li>
+        </ul>
+    </footer>
+    <script src="./../public/js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
 </body>
 <script src="./../public/js/langue.js"></script>
+
 </html>

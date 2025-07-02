@@ -1,240 +1,243 @@
+/* Menu Burger Overlay */
+.menu-burger-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.754);
+  /* Couleur de fond avec opacité */
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  transform: translateY(-100%);
+  /* Masqué hors de l'écran */
+  transition: transform 0.5s ease;
+  z-index: 9;
+  overflow: hidden;
+  padding-inline: 4rem;
+  padding-top: calc(4rem + 4rem - 2px);
+  padding-bottom: 4rem;
+}
+
+.pointcouleur {
+  background-color: #ffffff;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50rem;
+  padding: 0px;
+  margin: 0px;
+  scale: 0;
+  transition: 0.2s ease-out;
+}
 
 
-
-  /* Menu Burger Overlay */
-  .menu-burger-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.754); /* Couleur de fond avec opacité */
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content:space-between;
-    flex-direction: row;
-    align-items: center;
-    transform: translateY(-100%); /* Masqué hors de l'écran */
-    transition: transform 0.5s ease;
-    z-index: 9;
-    overflow: hidden;
-    padding-inline: 4rem;
-    padding-top: calc(4rem + 4rem - 2px);
-    padding-bottom:4rem;
-  }
-
-  .pointcouleur{
-    background-color: #ffffff;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50rem;
-    padding: 0px;
-    margin: 0px;
-    scale: 0;
-    transition: 0.2s ease-out;
-  }
+.burgerpartis :hover .pointcouleur {
+  border-radius: 50rem;
+  padding: 0px;
+  margin: 0px;
+  scale: 2;
+}
 
 
-  .burgerpartis :hover .pointcouleur{
-    border-radius: 50rem;
-    padding: 0px;
-    margin: 0px;
-    scale: 2;
-  }
+.pointcouleur {
+  background-color: #ffffff;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu-burger-overlay a:hover {
+  padding-left: 0.5rem;
+  opacity: 1;
+}
+
+.menu-burger-overlay a:hover img {
+  opacity: 1;
+}
+
+.menu-burger-overlay a {
+  transition: 0.2s ease-in-out;
+  opacity: 1;
+  font-size: 1.25rem;
+  color: rgb(218, 218, 218);
+}
+
+.burgertout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-between;
+  margin: 0;
+  height: 100%;
+}
 
 
-  .pointcouleur{
-    background-color: #ffffff;
-    height: 0.5rem;
-    width: 0.5rem;
-    border-radius: 50rem;
-    padding: 0px;
-    margin: 0px;
-  }
+.titreburger {
+  position: relative;
+  text-decoration: none;
+  font-size: 1px;
+  font-family: var(--ibm);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0rem;
+  padding: 0rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+}
 
-  .menu-burger-overlay a:hover{
-    padding-left: 0.5rem;
-    opacity: 1;
-  }
+.titreburger a {
+  position: relative;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-family: var(--ibm);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  cursor: pointer;
+  line-height: 2.9rem;
+}
 
-  .menu-burger-overlay a:hover img{
-    opacity: 1;
-  }
-
-  .menu-burger-overlay a{
-    transition: 0.2s ease-in-out;
-    opacity: 1;
-    font-size: 1.25rem;
-    color: rgb(218, 218, 218);
-  }
-  
-  .burgertout{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    justify-content: space-between;
-    margin: 0;
-    height: 100%;
-  }
+.titreburger img {
+  height: 2rem;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+}
 
 
-  .titreburger{
-    position: relative;
-    text-decoration: none;
-    font-size: 1px;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0rem;
-    padding: 0rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: fit-content;
-  }
+.menu-burger-overlay li {
+  margin: 1.25rem 0;
+  position: relative;
+  width: fit-content;
+}
 
-  .titreburger a{
-    position: relative;
-    text-decoration: none;
-    font-size: 2.4rem;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: fit-content;
-    cursor: pointer;
-    line-height: 2.9rem;
-  }
+.petitboutonburger {
+  width: auto;
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  font-family: var(--ibm);
+  margin: 0rem 0px -0.5rem 0px;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
 
-  .titreburger img{
-    height: 2rem;
-    opacity: 0.8;
-    transition:0.2s ease-in-out;
-  }
-  
-  
-  .menu-burger-overlay li {
-    margin: 1.25rem 0;
-    position: relative;
-    width: fit-content;
-  }
+.barredansburger {
+  background-color: rgb(255, 255, 255);
+  height: 0.1rem;
+  margin: 2rem 0px;
+  width: 50%;
+}
 
-  .petitboutonburger{
-    width: auto;
-    position: relative;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
-    transition: color 0.3s;
-    font-family: "IBM Plex Mono", monospace;
-    margin: 0rem 0px -0.5rem 0px;
-    padding: 0;
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-  }
+.menu-burger-overlay a:hover {
+  color: #ffffff;
+}
 
-  .barredansburger{
-    background-color: rgb(255, 255, 255);
-    height: 0.1rem;
-    margin: 2rem 0px;
-    width: 50%;
-  }
-  
-  .menu-burger-overlay a:hover {
-    color: #ffffff;
-  }
-  
-  /* Activer le menu burger */
-  .menu-burger-overlay.active {
-    transform: translateX(0); /* Réapparaît à l'écran */
-  }
-  
-  /* Animation du bouton burger actif */
-  .iconburger.active .barreburger:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-    background-color: rgb(255, 255, 255);
-    opacity: 1;
-  }
-  
-  .iconburger.active .barreburger:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .iconburger.active .barreburger:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-    background-color: rgb(255, 255, 255);
-    opacity: 1;
-  }
+/* Activer le menu burger */
+.menu-burger-overlay.active {
+  transform: translateX(0);
+  /* Réapparaît à l'écran */
+}
 
-  .iconburger.active.iconburger{
-    transform: rotate(-180deg);
-    opacity: 0.2;
-  }
+/* Animation du bouton burger actif */
+.iconburger.active .barreburger:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+}
 
-  .iconburger.active.iconburger:hover{
-    opacity: 0.7;
-  }
+.iconburger.active .barreburger:nth-child(2) {
+  opacity: 0;
+}
 
-  .boutonprojetsburger{
-    height: 80vh;
-  }
-  .boutonprojetsburger img{
-    height: 80vh;
-  }
-  .boutonprojetsburger a{
-    height: 80vh;
-  }
+.iconburger.active .barreburger:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+}
 
-  .project-panelburger {
-    width: 50%;
-    position: relative;
-    overflow: hidden;
-    transition:1s ease-in-out;
-    border-radius: 15px;
-    display: flex;
-    height: 100%;
-    object-fit: cover;
+.iconburger.active.iconburger {
+  transform: rotate(-180deg);
+  opacity: 0.2;
+}
+
+.iconburger.active.iconburger:hover {
+  opacity: 0.7;
+}
+
+.boutonprojetsburger {
+  height: 80vh;
+}
+
+.boutonprojetsburger img {
+  height: 80vh;
+}
+
+.boutonprojetsburger a {
+  height: 80vh;
+}
+
+.project-panelburger {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+  border-radius: var(--anglesindex);
+  display: flex;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-panelburger img {
   height: 100%;
 }
 
-.project-panelburger:hover div.petitbouton{
-    opacity: 1;
-    scale: 1;
-    top: 0;
-    left: 0;
-    padding: 15px;
+.project-panelburger:hover div.petitbouton {
+  opacity: 1;
+  scale: 1;
+  top: 0;
+  left: 0;
+  padding: 15px;
 }
 
-.texteburger{
+.texteburger {
   font-size: 24px;
   text-decoration: none;
   color: white;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--ibm);
 }
 
-.social{
-    transition: 0.4s ease-in-out;
-    display: flex;
-    flex-direction:row;
-    gap: 1.5rem;
+.social {
+  transition: 0.4s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
 
 }
-.social img{
-    height: 2rem;
-    opacity: 0.7;
-    cursor: pointer;
+
+.social img {
+  height: 2rem;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
-.social a{
+.social a {
   all: unset;
   transition: 0.4s ease-in-out;
   opacity: 1;
@@ -244,7 +247,7 @@
   cursor: pointer;
 }
 
-.social a:hover{
+.social a:hover {
   cursor: pointer;
   padding: 0;
   margin: 0;
@@ -253,110 +256,119 @@
   height: 1.5rem;
 }
 
-  .animated-text {
-    display: inline-block;
-    font-size: 24px;
-    text-decoration: none;
-    color: white;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
-    position: relative;
+.animated-text {
+  display: inline-block;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.animated-text span {
+  display: inline-block;
+  opacity: 0;
+  animation: textChange 0.3s steps(5, end) infinite;
+}
+
+@keyframes textChange {
+  0% {
+    opacity: 0;
   }
-  
-  .animated-text::after {
-    content: attr(data-text);
-    position: absolute;
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-burger-overlay a:hover {
+    scale: 1;
+    opacity: 1;
+  }
+
+  .menu-burger-overlay a {
+    opacity: 1;
+  }
+
+  .project-panelburger {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    border-radius: 15px;
+    display: none;
+    max-height: 75vh;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .menu-burger-overlay {
+    position: fixed;
     top: 0;
     left: 0;
-    color: white;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.856);
+    /* Couleur de fond avec opacité */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    transform: translateY(-100%);
+    /* Masqué hors de l'écran */
+    transition: transform 0.5s ease;
+    z-index: 9;
     overflow: hidden;
-    visibility: hidden;
+    padding-top: calc(50px + 75px);
+    padding-bottom: 75px;
+    padding-inline: 10%;
   }
 
-  .animated-text span {
-    display: inline-block;
-    opacity: 0;
-    animation: textChange 0.3s steps(5, end) infinite;
-  }
-  
-  @keyframes textChange {
-    0% {
-      opacity: 0;
-    }
-    25% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  .burgertout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
   }
 
-  @media (max-width: 768px) {
-    .menu-burger-overlay a:hover{
-        scale: 1;
-        opacity: 1;
-      }
-      .menu-burger-overlay a{
-        opacity: 1;
-      }
-
-      .project-panelburger {
-        width: 40%;
-        position: relative;
-        overflow: hidden;
-        transition:1s ease-in-out;
-        border-radius: 15px;
-        display: none;
-        max-height: 75vh;
-        object-fit: cover;
-        margin: 0;
-        padding: 0;
-    
-    }
-    .menu-burger-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.856); /* Couleur de fond avec opacité */
-        display: flex;
-        justify-content:center;
-        flex-direction: row;
-        align-items: center;
-        transform: translateY(-100%); /* Masqué hors de l'écran */
-        transition: transform 0.5s ease;
-        z-index: 9;
-        overflow: hidden;
-        padding-top: calc(50px + 75px);
-        padding-bottom:75px;
-        padding-inline: 10%;
-      }
-      .burgertout{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        list-style: none;
-        margin: 0;
-        width: 100%;
-        height: auto;
-        padding: 0;
-      }
-      .titreburger a{
-        font-size: 2.75rem;
-    }
-        
-
-    
-      
+  .titreburger a {
+    font-size: 2.75rem;
   }
-  
+
+
+
+
+}

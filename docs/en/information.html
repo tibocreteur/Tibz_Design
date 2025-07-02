@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
-    <link rel="icon" href="./../public/image/logo.png" type="images/x-icon">
-    <title>Omodaka</title>
+    <link rel="icon" href="./../public/image/logo/petitlogo.png" type="images/x-icon">
+    <title>Info - altlab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./../public/css/outils/navbar.css">
     <link rel="stylesheet" href="./../public/css/pages/information.css">
@@ -21,6 +24,7 @@
     <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
 
 </head>
+
 <body>
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
@@ -31,15 +35,15 @@
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/test3.png" alt="logo du site">
+                    <img src="./../public/image/logo/logotrois.png" alt="logo du site">
                 </a>
                 <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html"class="navbar-button">
+                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
                         back
                     </a>
                     <div class="contentnavbar-project">
-                        <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                            <h3>About me</h3>
+                        <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
+                            <h3>About</h3>
                         </div>
                     </div>
                 </div>
@@ -47,8 +51,10 @@
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a id="contactme" href="mailto:tibzdesign@gmail.com?subject=Information%20request&body=Hello,%0A%0AI'd%20like%20more%20information%20about%20your%20design%20services.%0A%0AThank%20you!" class="navbar-button">CONTACT ME</a>
-                <a id="switch-lang" class="langButton" href="./../fr/information.html">fr</a>
+                <a href="contact.html" class="navbar-button">Contact me</a>
+                <a id="switch-lang" class="langButton" href="./../fr/information.html"><img
+                        src="./../public/image/drapeau/fr.png" class="drapeau"
+                        alt="">fr</a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -66,32 +72,32 @@
                 .then(data => {
                     // Insérer la navbar dans le conteneur
                     document.getElementById('navbar-container').innerHTML = data;
-                    
+
                     // Appeler une fonction d'initialisation du script après le chargement
                     initNavbarScript();
                 })
                 .catch(error => console.error('Erreur de chargement de la navbar:', error));
-    
+
             // Fonction pour initialiser les événements du menu burger
             function initNavbarScript() {
                 const burgerToggle = document.getElementById("burger-toggle");
                 const burgerMenu = document.getElementById("burger-menu");
-    
+
                 // Fonction pour ouvrir/fermer le menu
                 function toggleMenu() {
                     burgerToggle.classList.toggle("active");
                     burgerMenu.classList.toggle("active");
                 }
-    
+
                 // Fonction pour fermer le menu
                 function closeMenu() {
                     burgerToggle.classList.remove("active");
                     burgerMenu.classList.remove("active");
                 }
-    
+
                 // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
                 burgerToggle.addEventListener("click", toggleMenu);
-    
+
                 // Fermer le menu lorsqu'on fait défiler la page
                 window.addEventListener("scroll", closeMenu);
             }
@@ -100,10 +106,10 @@
             <div data-aos="zoom-in" data-aos-duration="500" class="caseprofil">
                 <div class="profildroit">
                     <div class="profilhaut">
-                            <li id="new" class="badge">MOTION DESIGNER</li>
-                            <li  id="troisd" class="badge">3D ARTIST</li>
-                            <li  id="da" class="badge">GRAPHIC DESIGNER</li>
-                            <li  id="uiux" class="badge">DATA DESIGNER</li>
+                        <li id="new" class="badge">MOTION DESIGNER</li>
+                        <li id="troisd" class="badge">3D ARTIST</li>
+                        <li id="da" class="badge">GRAPHIC DESIGNER</li>
+                        <li id="uiux" class="badge">DATA DESIGNER</li>
                     </div>
                     <div class="profillogiciels">
                         <div data-aos="zoom-in" data-aos-duration="700" data-aos-delay="000" class="logologiciel">
@@ -144,7 +150,7 @@
                         </div>
                     </div>
                     <div class="profilbas">
-                        <h2 >Tibo CRETEUR</h2>
+                        <h2>altlab - Tibo CRETEUR</h2>
                         <p>I’m a second-year graphic design student based in France. Passionate about visual creativity,<br><br>I work across various design fields as a 3D artist, motion designer,and graphic designer.<br>I’m particularly interested in building visual identities and developing multimedia projects. Always seeking new ideas and inspiration, I enjoy experimenting with different graphic styles and exploring the impact of design in communication.<br><br>My goal is to develop a unique aesthetic while mastering modern design techniques.</p>
                     </div>
                 </div>
@@ -154,8 +160,9 @@
             </div>
             <script src="./../public/js/machine.js"></script>
             <div class="button-container">
-                <div data-aos="fade-right" data-aos-duration="500" data-aos-delay="500" data-aos-anchor-placement="left-center" class="boutoninfo">
-                    <button  class="copy-button" data-text="+33.7.83.78.48.72">
+                <div data-aos="fade-right" data-aos-duration="500" data-aos-delay="500"
+                    data-aos-anchor-placement="left-center" class="boutoninfo">
+                    <button class="copy-button" data-text="+33.7.83.78.48.72">
                         <span class="info1">Phone: +33.7.83.78.48.72<i class="fas fa-copy"></i></span>
                     </button>
                     <button class="copy-button" data-text="tibzdesign@gmail.com">
@@ -164,29 +171,34 @@
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="800" class="carteinfo">
                     <img src="./../public/image/info/carte.png" alt="">
-                    <div class="lieucarte">   
+                    <div class="lieucarte">
                         <h1>FRANCE 🇫🇷</h2>
-                        <h2>Toulon</h1>   
-                    </div> 
+                            <h2>Toulon
+                        </h1>
+                    </div>
                 </div>
             </div>
             <div class="copied-message">💾 Copied</div>
         </section>
         <script src="./../public/js/copie.js"></script>
-    <footer class="footerinformation">
-        <div class="socialfooter">
-                <a href="https://www.instagram.com/tibz_design/" target="_blank"><img src="./../public/image/logoinsta.png"  alt=""></a>
-                <a href="https://www.linkedin.com/in/tibo-creteur-15147a233/" target="_blank"><img src="./../public/image/Logo LinkedIn.svg" style="filter: invert();" alt=""></a>
-                <a href="https://www.behance.net/tibzdesign" target="_blank"><img src="./../public/image/Logo Behance.svg" style="filter: invert();" alt=""></a>
-        </div>
-        <p class="textinfo">@2025 | ©TibzDesign. All rights reserved.</p>
-            
-    </footer>
+        <footer class="footerinformation">
+            <div class="socialfooter">
+                <a href="https://www.instagram.com/tibz_design/" target="_blank"><img
+                        src="./../public/image/logoinsta.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/tibo-creteur-15147a233/" target="_blank"><img
+                        src="./../public/image/Logo LinkedIn.svg" style="filter: invert();" alt=""></a>
+                <a href="https://www.behance.net/tibzdesign" target="_blank"><img
+                        src="./../public/image/Logo Behance.svg" style="filter: invert();" alt=""></a>
+            </div>
+            <p data-key="footer" class="text">@2025 | © altlab. All rights reserved.</p>
+
+        </footer>
     </section>
     <script src="./../public/js/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 </body>
 <script src="./../public/js/langue.js"></script>
+
 </html>

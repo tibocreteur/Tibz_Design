@@ -1,4 +1,3 @@
-
 /* Fondworks : Conteneur principal */
 .fondworks {
     display: flex;
@@ -9,63 +8,67 @@
     background-color: var(--backgroundaccueil);
 }
 
-img{
+img {
     max-height: 80vh;
 }
 
-video{
+video {
     max-height: 80vh;
 }
 
-.titreworks{
+.titreworks {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: grey;
 }
 
-.nom{
+.nom {
     display: flex;
     align-items: center;
 }
 
-.nom h3::selection{
+.nom h3::selection {
     background-color: var(--soulignage);
 }
 
-.nom span::selection{
+.nom span::selection {
     background-color: var(--soulignage);
 }
 
-.nom h3{
+.nom h3 {
     font-size: 1.7rem;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--ibm);
 }
 
-.nom img{
+.nom img {
     width: 1.7rem;
     opacity: 0.4;
 }
 
-.nom span{
+.nom span {
     font-size: 1rem;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--ibm);
 }
 
-.logiciel span{
+.logiciel span {
     font-size: 1rem;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--ibm);
 }
 
-.logiciel span::selection{
+.logiciel span::selection {
     background-color: var(--soulignage);
 }
 
 .barre-verticaleblack {
-    width: 2px; /* Largeur de la barre */
-    height: 25px; /* Hauteur de la barre */
-    background-color: grey; /* Couleur de la barre */
-    margin-inline: 10px; /* Espacement autour de la barre */
+    width: 2px;
+    /* Largeur de la barre */
+    height: 25px;
+    /* Hauteur de la barre */
+    background-color: grey;
+    /* Couleur de la barre */
+    margin-inline: 10px;
+    /* Espacement autour de la barre */
 }
 
 /* Travaux : Section des projets */
@@ -87,7 +90,7 @@ video{
     flex-direction: column;
     background: var(--greymouvaplan);
     color: black;
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
     font-size: 18px;
 }
 
@@ -98,17 +101,17 @@ video{
     align-content: center;
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
-.imagesworks img{
+.imagesworks img {
     max-width: 33.33%;
     padding: 0px;
     margin: 0px;
     max-height: 80vh;
 }
 
-.burgertruc{
+.burgertruc {
     display: flex;
     flex-direction: column;
 }
@@ -120,10 +123,10 @@ video{
     align-content: center;
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
-.imagesworkspop img{
+.imagesworkspop img {
     max-width: 25%;
     padding: 0px;
     margin: 0px;
@@ -134,11 +137,11 @@ video{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-.imagesworksposters img{
+.imagesworksposters img {
     width: auto;
     padding: 0px;
     margin: 0px;
@@ -146,42 +149,47 @@ video{
     max-width: 100vh;
 }
 
-.imagesworkspop video{
+.imagesworkspop video {
     max-width: 25%;
     padding: 0px;
     margin: 0px;
     max-height: 80vh;
 }
 
-.imagesworks video{
+.imagesworks video {
     max-height: 80vh;
     max-width: 100%;
     padding: 0px;
     margin: 0px;
 }
 
-.texteworks p{
+.texteworks p {
     color: grey;
     padding: 0px;
     margin: 0px;
 }
 
-.texteworks ::selection{
+.texteworks ::selection {
     background: var(--soulignage);
 }
+
 /* Barre verticale */
 
 .droite {
-    position: relative; /* Définit le contexte de positionnement pour les enfants */
+    position: relative;
+    /* Définit le contexte de positionnement pour les enfants */
     width: 150px;
     display: flex;
     padding-left: 27px;
-    overflow: hidden; /* Masque les éléments qui dépassent */
+    overflow: hidden;
+    /* Masque les éléments qui dépassent */
 }
 
 .swinging-image {
-    position: absolute; /* Relative à .droite */
-    bottom: -10px; /* Ajuster la position pour qu'elle commence dans .droite */
+    position: absolute;
+    /* Relative à .droite */
+    bottom: -10px;
+    /* Ajuster la position pour qu'elle commence dans .droite */
     right: 10px;
     z-index: 99999;
 }
@@ -194,7 +202,7 @@ video{
     overflow: hidden;
 }
 
-.imgcent{
+.imgcent {
     position: relative;
     flex-direction: column;
     justify-content: center;
@@ -205,11 +213,11 @@ video{
     width: 100%;
 }
 
-.imgcent img{
+.imgcent img {
     max-width: 100%;
 }
 
-.nemotel{
+.nemotel {
     position: relative;
     flex-direction: column;
     justify-content: center;
@@ -220,31 +228,31 @@ video{
     width: 100%;
 }
 
-.nemotel img{
+.nemotel img {
     max-width: 100%;
 }
 
-.imgcent video{
+.imgcent video {
     max-width: 100%;
 }
 
-.imgcinq{
+.imgcinq {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 20px;
 }
 
-.imgcinq img{
+.imgcinq img {
     object-fit: contain;
     max-height: 80vh;
     max-width: calc(50% - 10px);
 }
 
-.imgvingt{
+.imgvingt {
     display: flex;
 }
 
-.imgvingt img{
+.imgvingt img {
     max-width: 20%;
 }
 
@@ -252,12 +260,13 @@ video{
     z-index: 2;
     color: rgb(255, 255, 255);
     font-size: 1rem;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--ibm);
     background-color: rgba(0, 0, 0, 0.23);
     padding: 7.5px 15px;
     border-radius: 10px;
     transition: 0.2s ease;
-    text-align: center; /* Pour centrer le texte du bouton */
+    text-align: center;
+    /* Pour centrer le texte du bouton */
     text-transform: uppercase;
     margin-left: 1rem;
     transition: 0.3s ease-in-out;
@@ -268,24 +277,24 @@ video{
     gap: 0.5rem;
 }
 
-.lienprojets img{
+.lienprojets img {
     width: 1.3rem;
     padding: 0px;
     margin: 0px;
     opacity: 1;
 }
 
-.lienprojets:hover{
+.lienprojets:hover {
     background-color: rgb(165, 165, 165);
     color: white;
     opacity: 1;
     scale: 1.03;
 }
 
-.date{
+.date {
     font-weight: bold;
     font-size: 1rem;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--ibm);
     background-color: var(--greymouvaplan);
     padding: 10px;
     padding-inline: 20px;
@@ -301,31 +310,38 @@ video{
     .fondworks {
         padding-top: 60px;
     }
+
     .droite {
         display: none;
     }
-    .date{
-        display: none;
-    }
-    .logiciel{
-        display: none;
-    }
-    .titreworks{
+
+    .date {
         display: none;
     }
 
-    .projet1{
+    .logiciel {
+        display: none;
+    }
+
+    .titreworks {
+        display: none;
+    }
+
+    .projet1 {
         width: 100%;
         padding: 10px;
         border-radius: 10px;
     }
-    .works{
+
+    .works {
         padding: 20px;
     }
-    .texteworks{
+
+    .texteworks {
         display: none;
     }
-    .imagesworksposters img{
+
+    .imagesworksposters img {
         width: 100%;
     }
 }

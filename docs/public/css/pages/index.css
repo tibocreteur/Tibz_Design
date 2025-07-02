@@ -1,0 +1,84 @@
+.partners {
+    width: 100%;
+    background-color: var(--backgroundaccueil);
+}
+
+.logopartners {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 5rem;
+}
+
+.presentationtext {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.032);
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.039);
+    border-style: solid;
+    width: calc(50% + 0rem);
+    border-radius: var(--anglesprojets);
+}
+
+.presentationphoto {
+    width: calc(50% + 0rem);
+    border-radius: var(--anglesprojets);
+}
+
+.presentationpersonne p,
+h1 {
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.presentationpersonne,
+h1 {
+    font-size: 2rem;
+    padding: 0px;
+    margin: 0px;
+}
+
+.presentationpartners {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.titrepartners {
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.presentationpartners h1 {
+    color: black;
+}
+
+.presentationpartners p {
+    color: black;
+    text-align: center;
+}
+
+.logopartners img {
+    height: 9rem;
+    opacity: 0.9;
+}

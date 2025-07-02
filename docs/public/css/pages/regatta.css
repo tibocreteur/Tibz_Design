@@ -1,0 +1,62 @@
+.galerieregatta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.imagesregatta {
+    width: calc(50% - 5rem);
+    height: 70vh;
+    position: relative;
+    -webkit-user-select: none;
+    /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;
+    /* Pour Firefox */
+    -ms-user-select: none;
+    /* Pour Internet Explorer */
+    user-select: none;
+}
+
+.imagesregatta img {
+    object-fit: cover;
+    height: 100%;
+    -webkit-user-select: none;
+    /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;
+    /* Pour Firefox */
+    -ms-user-select: none;
+    /* Pour Internet Explorer */
+    user-select: none;
+}
+
+.infoimages {
+    position: absolute;
+    z-index: 3;
+    bottom: 28px;
+    left: 28.5px;
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    user-select: none;
+
+
+}
+
+.infoimages H1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.infoimages p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: white;
+}

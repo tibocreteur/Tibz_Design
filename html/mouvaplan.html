@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{curentlangue}}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
-    <link rel="icon" href="../docs/public/image/logo.png" type="images/x-icon">
-    <title>Mouvaplan</title>
+    <link rel="icon" href="{{favicon}}" type="images/x-icon">
+    <title>Mouvaplan - {{nomboite}}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../docs/public/css/outils/navbar.css">
     <link rel="stylesheet" href="../docs/public/css/outils/footer.css">
@@ -27,6 +30,7 @@
 
 
 </head>
+
 <body>
     <section class="error">
         <img class="errorlogo" src="../docs/public/image/logo.png" alt="">
@@ -44,14 +48,17 @@
                         {{back}}
                     </a>
                     <div class="contentnavbar-project">
-                        <div  data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
+                        <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
                             <h3>MouvaPlan</h3>
                             <div class="barre-verticale"></div>
                             <span>La Grande Tourrache</span>
 
-                        </div>  
-                        <a data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700" href="#" id="boutontry" onclick="openPanel()">
-                            <div class="navbar-button"><p >{{try}}</p><i class="fa-sharp-duotone fa-solid fa-vial"></i></div>
+                        </div>
+                        <a data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700" href="#" id="boutontry"
+                            onclick="openPanel()">
+                            <div class="navbar-button">
+                                <p>{{try}}</p><i class="fa-sharp-duotone fa-solid fa-vial"></i>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -59,8 +66,10 @@
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a id="contactme" href="mailto:tibzdesign@gmail.com?subject={{contactsubject}}&body={{contactbody}}" class="navbar-button">{{contactme}}</a>
-                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/mouvaplan.html" >{{otherlangues}}</a>
+                <a href="contact.html" class="navbar-button">{{contactme}}</a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/mouvaplan.html"><img
+                        src="../docs/public/image/drapeau/{{languenavbar}}.png" class="drapeau"
+                        alt="">{{languenavbar}}</a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -78,58 +87,65 @@
                 .then(data => {
                     // Insérer la navbar dans le conteneur
                     document.getElementById('navbar-container').innerHTML = data;
-                    
+
                     // Appeler une fonction d'initialisation du script après le chargement
                     initNavbarScript();
                 })
                 .catch(error => console.error('Erreur de chargement de la navbar:', error));
-    
+
             // Fonction pour initialiser les événements du menu burger
             function initNavbarScript() {
                 const burgerToggle = document.getElementById("burger-toggle");
                 const burgerMenu = document.getElementById("burger-menu");
-    
+
                 // Fonction pour ouvrir/fermer le menu
                 function toggleMenu() {
                     burgerToggle.classList.toggle("active");
                     burgerMenu.classList.toggle("active");
                 }
-    
+
                 // Fonction pour fermer le menu
                 function closeMenu() {
                     burgerToggle.classList.remove("active");
                     burgerMenu.classList.remove("active");
                 }
-    
+
                 // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
                 burgerToggle.addEventListener("click", toggleMenu);
-    
+
                 // Fermer le menu lorsqu'on fait défiler la page
                 window.addEventListener("scroll", closeMenu);
             }
         </script>
-        <section class="entete">
-            <img src="../docs/public/image/mouvaplan/fondlong.avif" alt="Image 1" id="scroll-image">
+
+        <section class="entete" id="scroll-image">
+            <h1 class="titremouvaplan" style="display: none;">MOUVAPLAN</h1>
+            <img data-aos="zoom-in" data-aos-duration="900" class="logoomodaka"
+                src="../docs/public/image/mouvaplan/fondlong.avif" alt="Image 1" id="scroll-image">
             <script src="../docs/public/js/animation.js"></script>
         </section>
+
         <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='mouvaplan.html#sectionmouvaplan';"><img src="../docs/public/image/fleche2.svg" alt=""></a>
+            <a class="flechedubas" onclick="location.href='mouvaplan.html#sectionmouvaplan';"><img
+                    src="../docs/public/image/fleche2.svg" alt=""></a>
         </div>
         <script src="../docs/public/js/fleche.js"></script>
-    </section> 
+    </section>
     <section class="popup-container" id="popup-container">
         <!-- Overlay -->
         <div class="overlay" id="overlay" onclick="closePanel()"></div>
-        
+
         <!-- Panneau QR Code -->
         <div class="panneauqrcode" id="panel">
             <button class="close-btn" onclick="closePanel()">×</button>
             <div class="qrcode">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet?page-id=0%3A1&node-id=1-14&node-type=canvas&viewport=-1278%2C-685%2C1.47&t=up3dAEfRHYqgSdDa-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A14" alt="QR Code">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet[...]&size=1000x1000&color=000000&bgcolor=FFFFFF"
+                    style="opacity: 0.9;" alt="QR Code">
             </div>
             <div class="qrcode">
                 <p class="fleche">-></p>
-                <p><a href="https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet?page-id=0%3A1&node-id=1-14&node-type=canvas&viewport=-1278%2C-685%2C1.47&t=up3dAEfRHYqgSdDa-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A14" target="_blank">{{continueonthebrowser}}</a></p>
+                <p><a href="https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet?page-id=0%3A1&node-id=1-14&node-type=canvas&viewport=-1278%2C-685%2C1.47&t=up3dAEfRHYqgSdDa-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A14"
+                        target="_blank">{{continueonthebrowser}}</a></p>
                 <p class="fleche">&lt;-</p>
             </div>
         </div>
@@ -145,41 +161,43 @@
     <section class="infoprojet">
         <div class="explication">
             <h2 class="titredelexplication">Mouvaplan</h2>
-            <p class="texteexplicatif">{{presentatioomodaka}}</p>   
+            <p class="texteexplicatif">{{presentatioomodaka}}</p>
         </div>
         <div class="presentation-50-50">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom" src="../docs/public/image/mouvaplan/vegetation1.avif" alt="Nom du projet 1">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom" src="../docs/public/image/mouvaplan/vegetation2.avif" alt="Nom du projet 1">
+            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
+                src="../docs/public/image/mouvaplan/vegetation1.avif" alt="Nom du projet 1">
+            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                src="../docs/public/image/mouvaplan/vegetation2.avif" alt="Nom du projet 1">
         </div>
-            <div  class="palette">
-                <div class="color" style="background-color: #FF6341;" data-color="Rouge" data-text="#FF6341">
-                    <span class="color-name">FF6341</span>
-                </div>
-                <div class="color" style="background-color: #045E51;" data-color="Vert" data-text="#045E51">
-                    <span class="color-name">045E51</span>
-                </div>
-                <div class="color" style="background-color: #3B7958;" data-color="Bleu" data-text="#3B7958">
-                    <span class="color-name">3B7958</span>
-                </div>
-                <div class="color" style="background-color: #B3E3A2;" data-color="Jaune" data-text="#B3E3A2">
-                    <span class="color-name">B3E3A2</span>
-                </div>
-                <div class="color" style="background-color: #FFFCE2;" data-color="Rose" data-text="#FFFCE2">
-                    <span class="color-name">FFFCE2</span>
-                </div>
-                <div class="copied-message">{{copied}}</div>
+        <div class="palette">
+            <div class="color" style="background-color: #FF6341;" data-color="Rouge" data-text="#FF6341">
+                <span class="color-name">FF6341</span>
             </div>
-             <script src="../docs/public/js/copiecolor.js"></script>
+            <div class="color" style="background-color: #045E51;" data-color="Vert" data-text="#045E51">
+                <span class="color-name">045E51</span>
+            </div>
+            <div class="color" style="background-color: #3B7958;" data-color="Bleu" data-text="#3B7958">
+                <span class="color-name">3B7958</span>
+            </div>
+            <div class="color" style="background-color: #B3E3A2;" data-color="Jaune" data-text="#B3E3A2">
+                <span class="color-name">B3E3A2</span>
+            </div>
+            <div class="color" style="background-color: #FFFCE2;" data-color="Rose" data-text="#FFFCE2">
+                <span class="color-name">FFFCE2</span>
+            </div>
+            <div class="copied-message">{{copied}}</div>
+        </div>
+        <script src="../docs/public/js/copiecolor.js"></script>
         <div class="explication">
             <h2 data-key="colors" class="titredelexplication">{{colors}}</h2>
-            <p class="texteexplicatif">{{colorsmouvaplan}}</p>   
+            <p class="texteexplicatif">{{colorsmouvaplan}}</p>
         </div>
 
         <div class="presentionfont">
             <div class="presentationfontgauche">
                 <h2 class="titredelexplication">{{typography}}</h2>
             </div>
-            <div data-aos="fade-up"  data-aos-duration="400" class="presenationfontdroite">
+            <div data-aos="fade-up" data-aos-duration="400" class="presenationfontdroite">
                 <div class="Ericaone">
                     <H1 class="font-example">{{bigtitle}}</H1>
                     <div class="leslettresErica">
@@ -189,7 +207,7 @@
                     </div>
                     <p class="style-name">Erica One Regular 400</p>
                 </div>
-                <div  class="Interblack">
+                <div class="Interblack">
                     <H1 class="font-example">{{title}}</H1>
                     <div class="leslettresInterblack">
                         <p class="font-sample">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
@@ -211,28 +229,30 @@
         </div>
         <div class="explication">
             <h2 class="titredelexplication">Logo</h2>
-            <p class="texteexplicatif">{{logomouvaplan}}</p>   
+            <p class="texteexplicatif">{{logomouvaplan}}</p>
         </div>
         <div class="presentation-app2">
-            <div data-aos="fade-up"  data-aos-duration="400" data-aos-anchor-placement="center-bottom"   class="presentation-app2-gauche">
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                class="presentation-app2-gauche">
                 <img src="../docs/public/image/mouvaplan/logocrayon.png" alt="icon app sur un telephone">
             </div>
-            <div data-aos="fade-up"  data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"  class="presentation-app2-droite">
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
+                class="presentation-app2-droite">
                 <img src="../docs/public/image/mouvaplan/barreicon.png" alt="tracé de création de l'icon de l'app">
             </div>
         </div>
         <div class="explication">
             <h2 class="titredelexplication">{{markers}}</h2>
-            <p class="texteexplicatif">{{marckersmouvaplan}}</p>   
+            <p class="texteexplicatif">{{marckersmouvaplan}}</p>
         </div>
-        <div data-aos="fade-up"  data-aos-duration="400" class="mouvaplanicons">
+        <div data-aos="fade-up" data-aos-duration="400" class="mouvaplanicons">
             <div class="marckers">
                 <img src="../docs/public/image/mouvaplan/icon1.png" alt="icons sur la carte dans l'application">
                 <img src="../docs/public/image/mouvaplan/icon2.png" alt="icons sur la carte dans l'application">
                 <img src="../docs/public/image/mouvaplan/icon3.png" alt="icons sur la carte dans l'application">
                 <img src="../docs/public/image/mouvaplan/icon4.png" alt="icons sur la carte dans l'application">
                 <img src="../docs/public/image/mouvaplan/icon5.png" alt="icons sur la carte dans l'application">
-            </div> 
+            </div>
         </div>
         <div class="explication">
             <h2 class="titredelexplication">{{how}}</h2>
@@ -241,22 +261,29 @@
     </section>
     <script src="../docs/public/js/copiecolor.js"></script>
     <section class="figma-section">
-        <div data-aos="fade-right"  data-aos-duration="2000" data-aos-anchor-placement="top-bottom"  class="figma-image-side"></div>
+        <div data-aos="fade-right" data-aos-duration="2000" data-aos-anchor-placement="top-bottom"
+            class="figma-image-side"></div>
         <div class="figma-content-side">
             <p>{{figmamouvaplan}}</p>
+            <a href="https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet?page-id=0%3A1&node-id=1-14&node-type=canvas&viewport=-1278%2C-685%2C1.47&t=up3dAEfRHYqgSdDa-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A14"
+                target="_blank" class="bigtrybutton">
+                {{tryapp}}<i class="fa-sharp-duotone fa-solid fa-vial"></i>
+            </a>
+
+            </a>
         </div>
     </section>
     <section class="infoprojet">
-        <div data-aos="fade-up"  data-aos-duration="400" class="telmouvaplan">
-            <div  class="telgroupe">
+        <div data-aos="fade-up" data-aos-duration="400" class="telmouvaplan">
+            <div class="telgroupe">
                 <span>1. {{mouvaplanhome}}</span>
                 <img src="../docs/public/image/mouvaplan/tel6.png" alt="">
             </div>
-            <div  class="telgroupe">
+            <div class="telgroupe">
                 <span>2. {{mouvaplanplan}}</span>
                 <img src="../docs/public/image/mouvaplan/tel4.png" alt="">
             </div>
-            <div  class="telgroupe">
+            <div class="telgroupe">
                 <span>3. {{mouvaplanstory}}</span>
                 <img src="../docs/public/image/mouvaplan/tel3.png" alt="">
             </div>
@@ -270,58 +297,80 @@
             </div>
             <div class="telgroupe">
                 <span>6. {{mouvaplanfavorisinfos}}</span>
-                <img  src="../docs/public/image/mouvaplan/tel1.png" alt="">
+                <img src="../docs/public/image/mouvaplan/tel1.png" alt="">
             </div>
         </div>
         <div class="presentation-50-50">
-            <img data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="center-bottom" src="../docs/public/image/mouvaplan/telephone.png" alt="telephone sur l'application">
-            <img data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom" src="../docs/public/image/mouvaplan/montre.png" alt="montre sur l'applicatio ">
+            <img data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                src="../docs/public/image/mouvaplan/telephone.png" alt="telephone sur l'application">
+            <img data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
+                src="../docs/public/image/mouvaplan/montre.png" alt="montre sur l'applicatio ">
         </div>
         <div class="uneimagemouvaplantel">
-            <img data-aos="fade-up"  data-aos-duration="400" data-aos-anchor-placement="center-bottom" src="../docs/public/image/mouvaplan/telephone2.png" alt="deux telephone sur l'application">
-        </div> 
+            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                src="../docs/public/image/mouvaplan/telephone2.png" alt="deux telephone sur l'application">
+        </div>
     </section>
-    <section  id="fondmeteo" class="fullscreen">
+    <section id="fondmeteo" class="fullscreen">
         <div class="tri-images">
-            <div data-aos="zoom-in" data-aos-duration="700" data-aos-delay="0" data-aos-anchor-placement="top-bottom"  class="image-container" id="image1">
-                <img id="metteo" src="../docs/public/image/meteo/variant4.png" alt="carte meteo dans l'application mauvais temp">
+            <div data-aos="zoom-in" data-aos-duration="700" data-aos-delay="0" data-aos-anchor-placement="top-bottom"
+                class="image-container" id="image1">
+                <img id="metteo" src="../docs/public/image/meteo/variant4.png"
+                    alt="carte meteo dans l'application mauvais temp">
             </div>
-            <div data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200" data-aos-anchor-placement="top-bottom"  class="image-container" id="image2">
-                <img id="metteo1" src="../docs/public/image/meteo/variant5.png" alt="carte meteo dans l'application nuageux">
+            <div data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200" data-aos-anchor-placement="top-bottom"
+                class="image-container" id="image2">
+                <img id="metteo1" src="../docs/public/image/meteo/variant5.png"
+                    alt="carte meteo dans l'application nuageux">
             </div>
-            <div data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="400" data-aos-anchor-placement="top-bottom"  class="image-container" id="image3">
-                <img id="metteo2" src="../docs/public/image/meteo/variant6.png" alt="carte meteo dans l'application beau temp">
+            <div data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="400" data-aos-anchor-placement="top-bottom"
+                class="image-container" id="image3">
+                <img id="metteo2" src="../docs/public/image/meteo/variant6.png"
+                    alt="carte meteo dans l'application beau temp">
             </div>
         </div>
     </section>
-    
-    <script src="../docs/public/js/meteo.js" ></script>
+
+    <script src="../docs/public/js/meteo.js"></script>
     <section class=infoprojet>
         <div class="carte">
-            <iframe style="filter: grayscale(1) brightness(0.9)  invert(1);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.2365897246764!2d6.012833476551184!3d43.120555886716936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9191a4655d86d%3A0x5d962357139e1021!2sParc%20naturel%20du%20Plan!5e0!3m2!1sfr!2sfr!4v1730000027618!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe style="filter: grayscale(1) brightness(0.9)  invert(1);"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.2365897246764!2d6.012833476551184!3d43.120555886716936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9191a4655d86d%3A0x5d962357139e1021!2sParc%20naturel%20du%20Plan!5e0!3m2!1sfr!2sfr!4v1730000027618!5m2!1sfr!2sfr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="citationdefin">
-            <li>Credit : TibzDesign</li>
+            <li>Credit : {{nomboite}}</li>
             <p>{{sitation}} (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
         </div>
     </section>
     <footer class="footerprojects">
-        <ul class="menu">
+        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+            data-aos-anchor-placement="top-bottom">
             <li class="menu-elem">
-                <a href="./information.html" class="menu-icon1">{{about}}</a>
-                <div class="socialfooter">
-                    <a href="https://www.instagram.com/tibz_design/" target="_blank"><img src="../docs/public/image/logoinsta.png" style="filter: invert();" alt=""></a>
-                    <a href="https://www.linkedin.com/in/tibo-creteur-15147a233/" target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"  alt=""></a>
-                    <a href="https://www.behance.net/tibzdesign" target="_blank"><img src="../docs/public/image/Logo Behance.svg" alt=""></a>
+                <div class="footerlignetext">
+                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                        83200,Toulon & 59350,Lille</p>
+                    <div class="socialfooter">
+                        <a href={{insta}} target="_blank"><img src="../docs/public/image/logoinsta.png"
+                                style="filter: invert();" alt=""></a>
+                        <a href={{linkedin}} target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"
+                                alt=""></a>
+                        <a href={{behance}} target="_blank"><img src="../docs/public/image/Logo Behance.svg" alt=""></a>
+                    </div>
+                    <p data-key="footer" class="textfooterd">{{footerun}}{{nomboite}}{{footerdeux}}</p>
                 </div>
-                <p data-key="footer" class="text">{{footer}}</p>
             </li>
         </ul>
     </footer>
     <script src="../docs/public/js/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
+    </script>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 </body>
 <script src="../docs/public/js/langue.js"></script>
+
 </html>

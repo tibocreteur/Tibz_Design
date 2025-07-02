@@ -1,25 +1,31 @@
 /* Conteneur principal */
-.partie{
+.partie {
     height: fit-content;
     overflow: hidden;
     color: black;
-    padding: 30px 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-inline: var(--espacecote);
     width: 100%;
     background-color: var(--backgroundaccueil);
 }
 
 .triplette {
     display: flex;
-    gap: 30px; /* Espacement entre les colonnes */
-    height: 70vh; /* Hauteur de la section */
-    width: 100%; /* Largeur pleine */
-    
+    gap: 30px;
+    /* Espacement entre les colonnes */
+    height: 70vh;
+    /* Hauteur de la section */
+    width: 100%;
+    /* Largeur pleine */
+
 }
 
 /* Conteneur de la vidéo à gauche (prend 2/3 de la largeur) */
 .content-left {
-    flex: 2; /* 2/3 de l'espace disponible */
-    
+    flex: 2;
+    /* 2/3 de l'espace disponible */
+
 }
 
 .content-left .content-box {
@@ -27,67 +33,92 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%; /* Occupe toute la hauteur */
-    border-radius: 25px;
+    height: 100%;
+    /* Occupe toute la hauteur */
+    border-radius: var(--anglesprojets);
     background-color: var(--greymouvaplan);
-    position: relative; /* Pour positionner le numéro */
+    position: relative;
+    /* Pour positionner le numéro */
 }
 
 .content-left video {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.127));
     background-color: none;
     pointer-events: none;
-    height:100%; /* La vidéo prend toute la hauteur de son conteneur */
+    height: 100%;
+    /* La vidéo prend toute la hauteur de son conteneur */
     transition: 0.4s ease-in-out;
     scale: 0.9;
-    z-index: 5; /* Place la vidéo derrière le contenu */
-    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
-    -moz-user-select: none;    /* Pour Firefox */
-    -ms-user-select: none;     /* Pour Internet Explorer */
-    user-select: none;  
+    z-index: 5;
+    /* Place la vidéo derrière le contenu */
+    -webkit-user-select: none;
+    /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;
+    /* Pour Firefox */
+    -ms-user-select: none;
+    /* Pour Internet Explorer */
+    user-select: none;
 }
 
-.content-left:hover video{
+.content-left:hover video {
+    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.127));
     scale: 1.3;
 }
 
 /* Conteneur des vidéos à droite (prend 1/3 de la largeur) */
 .content-right {
-    flex: 1; /* 1 part de l'espace disponible */
+    flex: 1;
+    /* 1 part de l'espace disponible */
     padding: 0px;
     gap: 30px;
-    display: flex; /* Utilisation de flexbox pour empiler les vidéos verticalement */
-    flex-direction: column; /* Empiler les vidéos les unes sur les autres */
-    height: 100%; /* Prendre toute la hauteur disponible */
+    display: flex;
+    /* Utilisation de flexbox pour empiler les vidéos verticalement */
+    flex-direction: column;
+    /* Empiler les vidéos les unes sur les autres */
+    height: 100%;
+    /* Prendre toute la hauteur disponible */
 }
 
 .content-right .content-box {
-    position: relative; /* Pour placer le texte */
-    width: 100%; /* Assure que chaque vidéo prend toute la largeur */
-    padding:0px;
-    min-height: calc(100%/2 - 30px); /* Chaque vidéo prend la moitié de la hauteur de la section */
-    border-radius: 25px;
+    position: relative;
+    /* Pour placer le texte */
+    width: 100%;
+    /* Assure que chaque vidéo prend toute la largeur */
+    padding: 0px;
+    min-height: calc(100%/2 - 30px);
+    /* Chaque vidéo prend la moitié de la hauteur de la section */
+    border-radius: var(--anglesprojets);
     max-height: 80vh;
-    height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
+    height: 100%;
+    /* La vidéo prend toute la hauteur de son conteneur */
     background-color: var(--greymouvaplan);
 }
 
 .content-right video {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.127));
     position: absolute;
     background-color: none;
     pointer-events: none;
-    width: 100%; /* La vidéo prend toute la largeur de son conteneur */
+    width: 100%;
+    /* La vidéo prend toute la largeur de son conteneur */
     max-height: 80vh;
-    height: 100%; /* La vidéo prend toute la hauteur de son conteneur */
+    height: 100%;
+    /* La vidéo prend toute la hauteur de son conteneur */
     transition: 0.4s ease-in-out;
-    z-index: 5; /* Place la vidéo derrière le contenu */
+    z-index: 5;
+    /* Place la vidéo derrière le contenu */
     scale: 1.2;
-    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
-    -moz-user-select: none;    /* Pour Firefox */
-    -ms-user-select: none;     /* Pour Internet Explorer */
-    user-select: none;  
+    -webkit-user-select: none;
+    /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;
+    /* Pour Firefox */
+    -ms-user-select: none;
+    /* Pour Internet Explorer */
+    user-select: none;
 }
 
-.content-right :hover video{
+.content-right :hover video {
+    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.127));
     scale: 1.7;
     z-index: 6;
     max-height: 80vh;
@@ -95,7 +126,7 @@
 
 /* Style pour les numéros dans les vidéos */
 
-.rue{
+.rue {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -103,7 +134,7 @@
     margin: 60px 0px;
 }
 
-.videoomodaka{
+.videoomodaka {
     display: block;
 }
 
@@ -116,7 +147,7 @@
 
 }
 
-.legendeconsole{
+.legendeconsole {
     padding-top: 30px;
     gap: 0.5rem;
     color: black;
@@ -124,7 +155,8 @@
     flex-direction: column;
     font-size: 2rem;
 }
-.legendeconsole p{
+
+.legendeconsole p {
     display: flex;
     gap: 0.5rem;
     color: black;
@@ -132,19 +164,19 @@
     padding: 0px;
 }
 
-.containervideorue{
+.containervideorue {
     display: flex;
     justify-items: center;
     align-items: center;
     height: auto;
     width: fit-content;
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
     overflow: hidden;
     z-index: 1;
     margin-bottom: 30px;
 }
 
-.containervideorue video{
+.containervideorue video {
     max-width: 100%;
     max-height: 90vh;
     height: auto;
@@ -153,46 +185,55 @@
 }
 
 .videoomodaka::-webkit-media-controls {
-    display: none !important; /* Cache les contrôles pour les navigateurs basés sur WebKit */
+    display: none !important;
+    /* Cache les contrôles pour les navigateurs basés sur WebKit */
 }
 
-.explication{
+.explication {
     border-radius: 0px;
 }
 
-.explication video{
+.explication video {
     width: 50%;
-    border-radius: 0px;
+    border-radius: var(--anglesprojets);
     height: auto;
     background-color: var(--backgroundproject);
 }
+
 @media (max-width: 768px) {
-    
-    .containervideorue{
+
+    .containervideorue {
         margin-top: 30px;
     }
-    .explication video{
+
+    .explication video {
         width: 100%;
         border-radius: 5px;
         height: auto;
         object-fit: cover;
     }
+
     .triplette {
         display: flex;
-        gap: 30px; /* Espacement entre les colonnes *//* Hauteur de la section */
-        width: 100%; /* Largeur pleine */
+        gap: 30px;
+        /* Espacement entre les colonnes */
+        /* Hauteur de la section */
+        width: 100%;
+        /* Largeur pleine */
         flex-direction: column;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         height: 400px;
 
     }
+
     .content-left {
-        flex: none; /* 2/3 de l'espace disponible */
+        flex: none;
+        /* 2/3 de l'espace disponible */
         width: auto;
         display: flex;
         flex-direction: column;
     }
-    
+
     .content-left .content-box {
         display: flex;
         justify-content: center;
@@ -200,71 +241,93 @@
         width: 100%;
         border-radius: 25px;
         background-color: var(--greymouvaplan);
-        position: relative; /* Pour positionner le numéro */
+        position: relative;
+        /* Pour positionner le numéro */
         height: auto;
     }
-    
+
     .content-left video {
         background-color: none;
         pointer-events: none;
-        height:auto; /* La vidéo prend toute la hauteur de son conteneur */
+        height: auto;
+        /* La vidéo prend toute la hauteur de son conteneur */
         width: 100%;
         transition: 0.4s ease-in-out;
         scale: 1;
-        z-index: 100; /* Place la vidéo derrière le contenu */
-        -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
-        -moz-user-select: none;    /* Pour Firefox */
-        -ms-user-select: none;     /* Pour Internet Explorer */
+        z-index: 100;
+        /* Place la vidéo derrière le contenu */
+        -webkit-user-select: none;
+        /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+        -moz-user-select: none;
+        /* Pour Firefox */
+        -ms-user-select: none;
+        /* Pour Internet Explorer */
         user-select: none;
         margin: 0;
         padding: 0;
     }
+
     .content-right {
         display: flex;
         flex-direction: column;
-        flex: none; /* 1 part de l'espace disponible */
+        flex: none;
+        /* 1 part de l'espace disponible */
         padding: 0px;
         gap: 30px;
-        display: flex; /* Utilisation de flexbox pour empiler les vidéos verticalement */
-        flex-direction: column; /* Empiler les vidéos les unes sur les autres */
-        width: 100%; /* Prendre toute la hauteur disponible */
+        display: flex;
+        /* Utilisation de flexbox pour empiler les vidéos verticalement */
+        flex-direction: column;
+        /* Empiler les vidéos les unes sur les autres */
+        width: 100%;
+        /* Prendre toute la hauteur disponible */
         height: auto;
         display: none;
     }
-    
+
     .content-right .content-box {
-        position:relative; /* Pour placer le texte */
-        width: 100%; /* Assure que chaque vidéo prend toute la largeur */
-        padding:0px;
-        min-height: auto; /* Chaque vidéo prend la moitié de la hauteur de la section */
+        position: relative;
+        /* Pour placer le texte */
+        width: 100%;
+        /* Assure que chaque vidéo prend toute la largeur */
+        padding: 0px;
+        min-height: auto;
+        /* Chaque vidéo prend la moitié de la hauteur de la section */
         border-radius: 25px;
         max-height: auto;
-        height:auto; /* La vidéo prend toute la hauteur de son conteneur */
+        height: auto;
+        /* La vidéo prend toute la hauteur de son conteneur */
         background-color: var(--greymouvaplan);
     }
-    
+
     .content-right video {
         position: absolute;
         background-color: none;
         pointer-events: none;
-        width: 100%; /* La vidéo prend toute la largeur de son conteneur */
+        width: 100%;
+        /* La vidéo prend toute la largeur de son conteneur */
         max-height: 500px;
-        height: 500px; /* La vidéo prend toute la hauteur de son conteneur */
+        height: 500px;
+        /* La vidéo prend toute la hauteur de son conteneur */
         transition: 0.4s ease-in-out;
-        z-index: 5; /* Place la vidéo derrière le contenu */
+        z-index: 5;
+        /* Place la vidéo derrière le contenu */
         scale: 1.2;
-        -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
-        -moz-user-select: none;    /* Pour Firefox */
-        -ms-user-select: none;     /* Pour Internet Explorer */
-        user-select: none; 
+        -webkit-user-select: none;
+        /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+        -moz-user-select: none;
+        /* Pour Firefox */
+        -ms-user-select: none;
+        /* Pour Internet Explorer */
+        user-select: none;
 
     }
-    .partie{
+
+    .partie {
         overflow: hidden;
         color: black;
-        padding:0px 30px;
-        margin:0;
+        padding: 0px 30px;
+        margin: 0;
         width: 100%;
-        
+
     }
 }

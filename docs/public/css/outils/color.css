@@ -1,7 +1,26 @@
 :root {
-    --backgroundaccueil: #ffffff;
-    --backgroundproject: rgb(255, 255, 255);
-    --greymouvaplan: #ededed;
+
+    /* COULEURS */
+    --backgroundaccueil: #f9f9f4;
+    --backgroundproject: #f9f9f4;
+    --greymouvaplan: rgb(237, 235, 229);
     --gradient-black-to-white: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.6));
-    --soulignage:#ffd700;
+    --soulignage: #9bee68;
+    --vertmarque: #9bee68;
+    --vertmarquedeux: #1b3a1d;
+    --troisd: #e7a026;
+    --motion: #ae319e;
+    --print: #e84343;
+    --chara: rgb(67, 160, 155);
+    /* ANGLES */
+    --anglesprojets: 15px;
+    --anglesindex: 15px;
+    --anglebouton: 7px;
+
+    /* MARGE COTÉ  */
+    --espacecote: 4%;
+
+    /* police  */
+    --ibm: "IBM Plex Mono", monospace;
+
 }

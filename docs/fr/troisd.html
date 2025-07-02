@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
-    <link rel="icon" href="./../public/image/logo.png" type="images/x-icon">
-    <title>3D</title>
+    <link rel="icon" href="./../public/image/logo/petitlogo.png" type="images/x-icon">
+    <title>3D - altlab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./../public/css/outils/navbar.css">
     <link rel="stylesheet" href="./../public/css/outils/footer.css">
@@ -22,6 +25,7 @@
     <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
 
 </head>
+
 <body>
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
@@ -31,270 +35,284 @@
     <header class="navbar">
         <div class="navbar-left">
             <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/test3.png" alt="logo du site">
+                <img src="./../public/image/logo/logotrois.png" alt="logo du site">
+            </a>
+            <div class="nameprojet">
+                <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
+                    retour
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
-                        retour
-                    </a>
-                    <div class="contentnavbar-project">
-                        <div data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="navbar-project">
-                            <h3>3D</h3>
-                        </div>
+                <div class="contentnavbar-project">
+                    <div data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                        class="navbar-project">
+                        <h3>3D</h3>
                     </div>
                 </div>
             </div>
-            <div class="social-contact">
-                <!-- Logo Instagram cliquable -->
-                <!-- Bouton "ME CONTACTER" -->
-                <a id="contactme" href="mailto:tibzdesign@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!" class="navbar-button">ME CONTACTER</a>
-                <a id="switch-lang" class="langButton" href="./../en/troisd.html">en</a>
-                <button class="iconburger" id="burger-toggle">
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                </button>
-            </div>
-        </header>
+        </div>
+        <div class="social-contact">
+            <!-- Logo Instagram cliquable -->
+            <!-- Bouton "ME CONTACTER" -->
+            <a href="contact.html" class="navbar-button">Me contacter</a>
+            <a id="switch-lang" class="langButton" href="./../en/troisd.html"><img
+                    src="./../public/image/drapeau/en.png" class="drapeau" alt="">en</a>
+            <button class="iconburger" id="burger-toggle">
+                <div class="barreburger"></div>
+                <div class="barreburger"></div>
+                <div class="barreburger"></div>
+            </button>
+        </div>
+    </header>
 
-        -<div id="navbar-container"></div>
+    -<div id="navbar-container"></div>
 
-        <script>
-            // Charger la navbar HTML dans la page principale
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    // Insérer la navbar dans le conteneur
-                    document.getElementById('navbar-container').innerHTML = data;
-                    
-                    // Appeler une fonction d'initialisation du script après le chargement
-                    initNavbarScript();
-                })
-                .catch(error => console.error('Erreur de chargement de la navbar:', error));
-    
-            // Fonction pour initialiser les événements du menu burger
-            function initNavbarScript() {
-                const burgerToggle = document.getElementById("burger-toggle");
-                const burgerMenu = document.getElementById("burger-menu");
-    
-                // Fonction pour ouvrir/fermer le menu
-                function toggleMenu() {
-                    burgerToggle.classList.toggle("active");
-                    burgerMenu.classList.toggle("active");
-                }
-    
-                // Fonction pour fermer le menu
-                function closeMenu() {
-                    burgerToggle.classList.remove("active");
-                    burgerMenu.classList.remove("active");
-                }
-    
-                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
-                burgerToggle.addEventListener("click", toggleMenu);
-    
-                // Fermer le menu lorsqu'on fait défiler la page
-                window.addEventListener("scroll", closeMenu);
+    <script>
+        // Charger la navbar HTML dans la page principale
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                // Insérer la navbar dans le conteneur
+                document.getElementById('navbar-container').innerHTML = data;
+
+                // Appeler une fonction d'initialisation du script après le chargement
+                initNavbarScript();
+            })
+            .catch(error => console.error('Erreur de chargement de la navbar:', error));
+
+        // Fonction pour initialiser les événements du menu burger
+        function initNavbarScript() {
+            const burgerToggle = document.getElementById("burger-toggle");
+            const burgerMenu = document.getElementById("burger-menu");
+
+            // Fonction pour ouvrir/fermer le menu
+            function toggleMenu() {
+                burgerToggle.classList.toggle("active");
+                burgerMenu.classList.toggle("active");
             }
-        </script>
-        <section class="fondworks">
-            <!-- Travaux (Projets) -->
-            <div class="works">
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imagesworks">
-                        <video id="video1" src="./../public/video/montre.webm"muted controls autoplay playsinline loop></video>
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                            <div class="nom">
-                                <h3>Axion</h3>
-                                <div class="barre-verticaleblack"></div>
-                                <span >Travail personnel</span>
-                                <a class=lienprojets href="./axion.html">Découvrir
-                                    <img src="./../public/image/oeilb.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span> blender</span>
-                        </div>
-                    </div>
-                    <div class="date">2025</div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imgcent">
-                        <img src="./../public/image/console/fond3.avif" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                            <div class="nom">
-                                <h3>流智 - Liúzhì - flowing wisdom</h3>
-                                <div class="barre-verticaleblack"></div>
-                                <span >Travail personnel</span>
-                                <a class=lienprojets href="./console.html">Découvrir
-                                    <img src="./../public/image/oeilb.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span> blender</span>
-                        </div>
-                    </div>
-                    <div class="date">2024</div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imgcent">
-                        <img src="./../public/image/works/drime/drime1_2.avif" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                            <div class="nom">
-                                <h3>Accueil du site de DRIME</h3>
-                                <div class="barre-verticaleblack"></div>
-                                <span>Drime</span>
-                            </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span> blender</span>
-                        </div>
-                    </div>
-                    <div class="texteworks">
-                        <p>La demande de Drime était de créer le fond de la page d'accueil de leur site, en s'inspirant du style de Windows ou Office.</p>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imagesworkspop">
-                        <img src="./../public/image/works/pop/pop1.avif" alt="">
-                        <img src="./../public/image/works/pop/pop2.avif" alt="">
-                        <img src="./../public/image/works/pop/pop3.avif" alt="">
-                        <video src="./../public/video/pop/01 - pop.mp4" autoplay muted playsinline loop></video>
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                            <div class="nom">
-                                <h3>Funko POP</h3>
-                                <div class="barre-verticaleblack" ></div>
-                                <span>Travail personnel</span>
-                            </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span> blender</span>
-                        </div>
-                    </div>
-                    <div class="date">2023</div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imgcent">
-                        <img src="./../public/image/works/switch/switch.png" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                            <div class="nom">
-                                <h3>Nintendo Switch</h3>
-                                <div class="barre-verticaleblack"></div>
-                                <span >Travail personnel</span>
-                            </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span> blender</span>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imgcent">
-                        <video id="video1" src="./../public/video/vladlogo.mp4" autoplay muted playsinline loop></video>
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                            <div class="nom">
-                                <h3>Logo animation</h3>
-                                <div class="barre-verticaleblack"></div>
-                                <span>Travail personnel</span>
-                            </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span> blender</span>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imagesworks">
-                        <img src="./../public/image/works/guitare/guitar.avif" alt="">
-                        <img src="./../public/image/works/guitare/guitar3.avif" alt="">
-                        <img src="./../public/image/works/guitare/guitar2.avif" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                            <div class="nom">
-                                <h3>Guitar</h3>
-                                <div class="barre-verticaleblack"></div>
-                                <span>Travail personnel</span>
-                            </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span> blender</span>
-                        </div>
-                    </div>
-                    <div class="date" id="un">2022</div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
-                    <div class="imagesworks">
-                        <img src="./../public/image/works/ville/ville1.avif" alt="">
-                        <img src="./../public/image/works/ville/ville2.avif" alt="">
-                        <img src="./../public/image/works/ville/ville3.avif" alt="">
-                    </div>
-                    <div class="titreworks">
-                        <div class="infotitre">
-                            <div class="nom">
-                                <h3>Little Town</h3>
-                                <div class="barre-verticaleblack"></div>
-                                <span>Travail personnel</span>
-                            </div>
-                        </div>
-                        <div class="logiciel">
-                            <span>Logiciel : </span>
-                            <span> blender</span>
-                        </div>
-                    </div>
 
+            // Fonction pour fermer le menu
+            function closeMenu() {
+                burgerToggle.classList.remove("active");
+                burgerMenu.classList.remove("active");
+            }
+
+            // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
+            burgerToggle.addEventListener("click", toggleMenu);
+
+            // Fermer le menu lorsqu'on fait défiler la page
+            window.addEventListener("scroll", closeMenu);
+        }
+    </script>
+    <section class="fondworks">
+        <!-- Travaux (Projets) -->
+        <div class="works">
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imagesworks">
+                    <video id="video1" src="./../public/video/montre.webm" muted controls autoplay playsinline
+                        loop></video>
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Axion</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>Travail personnel</span>
+                            <a class=lienprojets href="./axion.html">Découvrir
+                                <img src="./../public/image/oeilb.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span> blender</span>
+                    </div>
+                </div>
+                <div class="date">2025</div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imgcent">
+                    <img src="./../public/image/console/fond3.avif" alt="">
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>流智 - Liúzhì - flowing wisdom</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>Travail personnel</span>
+                            <a class=lienprojets href="./console.html">Découvrir
+                                <img src="./../public/image/oeilb.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span> blender</span>
+                    </div>
+                </div>
+                <div class="date">2024</div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imgcent">
+                    <img src="./../public/image/works/drime/drime1_2.avif" alt="">
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Accueil du site de DRIME</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>Drime</span>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span> blender</span>
+                    </div>
+                </div>
+                <div class="texteworks">
+                    <p>La demande de Drime était de créer le fond de la page d'accueil de leur site, en s'inspirant du style de Windows ou Office.</p>
                 </div>
             </div>
-            <div class="droite">
-                <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="barreverticale"></div>
-            </div>
-        </section>
-        <section class="infoprojet">
-            <script src="./../public/js/zoom.js"></script>
-            <div class="citationdefin">
-                <li>Credit : TibzDesign</li>
-                <p>Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
-            </div>
-        </section>
-        <script src="./../public/js/comparaison.js"></script>
-        <script src="./../public/js/synchronisation.js"></script>
-        <footer class="footerprojects">
-            <ul class="menu">
-                <li class="menu-elem">
-                    <a href="./information.html" class="menu-icon1">informations</a>
-                    <div class="socialfooter">
-                        <a href="https://www.instagram.com/tibz_design/" target="_blank"><img src="./../public/image/logoinsta.png" style="filter: invert();" alt=""></a>
-                        <a href="https://www.linkedin.com/in/tibo-creteur-15147a233/" target="_blank"><img src="./../public/image/Logo LinkedIn.svg"  alt=""></a>
-                        <a href="https://www.behance.net/tibzdesign" target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imagesworkspop">
+                    <img src="./../public/image/works/pop/pop1.avif" alt="">
+                    <img src="./../public/image/works/pop/pop2.avif" alt="">
+                    <img src="./../public/image/works/pop/pop3.avif" alt="">
+                    <video src="./../public/video/pop/01 - pop.mp4" autoplay muted playsinline loop></video>
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Funko POP</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>Travail personnel</span>
+                        </div>
                     </div>
-                    <p data-key="footer" class="text">@2025 | ©TibzDesign. Tous droits réservés.</p>
-                </li>
-            </ul>
-        </footer>
-        <script src="./../public/js/aos.js"></script>
-        <script>
-          AOS.init();
-        </script>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span> blender</span>
+                    </div>
+                </div>
+                <div class="date">2023</div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imgcent">
+                    <img src="./../public/image/works/switch/switch.png" alt="">
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Nintendo Switch</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>Travail personnel</span>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span> blender</span>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imgcent">
+                    <video id="video1" src="./../public/video/vladlogo.mp4" autoplay muted playsinline loop></video>
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Logo animation</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>Travail personnel</span>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span> blender</span>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imagesworks">
+                    <img src="./../public/image/works/guitare/guitar.avif" alt="">
+                    <img src="./../public/image/works/guitare/guitar3.avif" alt="">
+                    <img src="./../public/image/works/guitare/guitar2.avif" alt="">
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Guitar</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>Travail personnel</span>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span> blender</span>
+                    </div>
+                </div>
+                <div class="date" id="un">2022</div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom" class="projet1">
+                <div class="imagesworks">
+                    <img src="./../public/image/works/ville/ville1.avif" alt="">
+                    <img src="./../public/image/works/ville/ville2.avif" alt="">
+                    <img src="./../public/image/works/ville/ville3.avif" alt="">
+                </div>
+                <div class="titreworks">
+                    <div class="infotitre">
+                        <div class="nom">
+                            <h3>Little Town</h3>
+                            <div class="barre-verticaleblack"></div>
+                            <span>Travail personnel</span>
+                        </div>
+                    </div>
+                    <div class="logiciel">
+                        <span>Logiciel : </span>
+                        <span> blender</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="droite">
+            <div data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="top-bottom"
+                class="barreverticale"></div>
+        </div>
+    </section>
+    <section class="infoprojet">
+        <script src="./../public/js/zoom.js"></script>
+        <div class="citationdefin">
+            <li>Credit : altlab</li>
+            <p>Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
+        </div>
+    </section>
+    <script src="./../public/js/comparaison.js"></script>
+    <script src="./../public/js/synchronisation.js"></script>
+    <footer class="footerprojects">
+        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+            data-aos-anchor-placement="top-bottom">
+            <li class="menu-elem">
+                <div class="footerlignetext">
+                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                        83200,Toulon & 59350,Lille</p>
+                    <div class="socialfooter">
+                        <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
+                                style="filter: invert();" alt=""></a>
+                        <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
+                                alt=""></a>
+                        <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
+                    </div>
+                    <p data-key="footer" class="textfooterd">@2025 | © altlab. Tous droits réservés.</p>
+                </div>
+            </li>
+        </ul>
+    </footer>
+    <script src="./../public/js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
 </body>
 <script src="./../public/js/langue.js"></script>
+
 </html>

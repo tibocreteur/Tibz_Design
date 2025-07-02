@@ -1,0 +1,167 @@
+section.sticker-row {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--backgroundaccueil);
+    /* Masque à gauche et à droite */
+    margin: 0rem 0rem -6rem 0rem;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    padding-inline: var(--espacecote);
+
+}
+
+.lignestickers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.zonestickers {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    position: relative;
+    height: fit-content;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sticker-container {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    perspective: 800px;
+    --shine-x: fit-content;
+    --shine-y: fit-content;
+    --shine-opacity: 0;
+}
+
+.sticker {
+    max-width: 50vh;
+    max-height: 40vh;
+    margin-inline: 2rem;
+    object-fit: contain;
+    transition: transform 0.2s ease, filter 0.3s ease;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.15));
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+.tshirt {
+    width: 50%;
+    max-height: 70vh;
+    object-fit: contain;
+    transition: transform 0.2s ease, filter 0.3s ease;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.15));
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    margin: 3rem;
+}
+
+.zonetshirt {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--greymouvaplan);
+    border-radius: var(--anglesprojets);
+    padding: 2rem;
+    margin-inline: 3rem;
+}
+
+.sticker::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    background: linear-gradient(to var(--glow-direction, top right),
+            rgba(255, 255, 255, calc(var(--shine-opacity) * 0.3)) 0%,
+            transparent 60%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 2;
+    opacity: var(--shine-opacity, 0);
+    transition: background 0.3s ease;
+}
+
+.explicationstickers {
+    display: flex;
+    justify-content: left;
+    /* centre horizontalement */
+    align-items: left;
+    text-align: left;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    gap: 1rem;
+}
+
+.explicationstickers p {
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.explicationstickers h1 {
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    font-size: 2rem;
+}
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 1;
+    opacity: var(--shine-opacity);
+    transition: opacity 0.3s ease;
+    /* si tu veux */
+}
+
+.shine::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at var(--shine-x) var(--shine-y),
+            rgba(255, 255, 255, calc(var(--shine-opacity) * 0.7)),
+            transparent 20%);
+    filter: blur(90px);
+    transition: background 0.4s ease opacity 0.3s ease;
+}
+
+.ligne {
+    border-radius: 100%;
+    height: 2px;
+    width: 100%;
+    background-color: var(--greymouvaplan);
+
+}
+
+.partiestickers {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}

@@ -2,17 +2,19 @@
 @import url('../outils/meteo.css');
 
 
-.explication{
+.explication {
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
     width: 100%;
-    justify-content: space-between; /* Sépare les éléments à gauche et à droite *//* Aligne en haut de chaque bloc */
+    justify-content: space-between;
+    /* Sépare les éléments à gauche et à droite */
+    /* Aligne en haut de chaque bloc */
     position: relative;
 
 }
 
-.explication p{
+.explication p {
     width: calc(50% - 12.5px);
     margin: 0;
     padding: 0;
@@ -22,38 +24,70 @@
 /* Style de la section principale pour diviser en deux colonnes et arrondir les coins */
 .figma-section {
     display: flex;
-    width: 100%; /* Largeur totale de la section */
-    height: 700px; /* Prend toute la hauteur de l'écran */
-    overflow: hidden; /* Cache les débordements pour garder les coins arrondis */
-    background-color: #1b1b1b; /* Couleur de fond */
+    width: 100%;
+    /* Largeur totale de la section */
+    height: 700px;
+    /* Prend toute la hauteur de l'écran */
+    overflow: hidden;
+    /* Cache les débordements pour garder les coins arrondis */
+    background-color: #1b1b1b;
+    /* Couleur de fond */
 }
 
 /* Partie gauche avec l'image */
 .figma-image-side {
-    flex: 2; /* Prend 50% de la largeur */
+    flex: 2;
+    /* Prend 50% de la largeur */
     background-color: var(--greymouvaplan);
-    background-image: url('../../image/mouvaplan/planfigma.avif'); /* Lien vers votre image */
-    background-size: cover; /* L'image couvre toute la partie */
-    background-position: center; /* Centrage de l'image */
+    background-image: url('../../image/mouvaplan/planfigma.avif');
+    /* Lien vers votre image */
+    background-size: cover;
+    /* L'image couvre toute la partie */
+    background-position: center;
+    /* Centrage de l'image */
     display: flex;
     justify-content: center;
-    align-items: center; /* Centrage vertical et horizontal du texte */
+    align-items: center;
+    /* Centrage vertical et horizontal du texte */
 }
+
+.bigtrybutton {
+    color: var(--vertmarquedeux);
+    background-color: var(--vertmarque);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    border-radius: var(--anglebouton);
+    transition: 0.1s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    gap: 0.75rem;
+
+}
+
+.bigtrybutton:hover {
+    background-color: white;
+    color: black;
+}
+
 
 /* Partie droite avec fond coloré */
 .figma-content-side {
-    flex: 1; /* Prend 50% de la largeur */
-    background-color: #1b1b1b; /* Couleur de fond */
+    flex: 1;
+    /* Prend 50% de la largeur */
+    background-color: #1b1b1b;
+    /* Couleur de fond */
     display: flex;
     flex-direction: column;
-    justify-content:end;
-    align-items: center;
+    justify-content: end;
+    align-content: center;
+    gap: 25px;
+    padding-right: var(--espacecote);
+    padding-bottom: var(--espacecote);
 }
 
-.figma-content-side p{
-    padding-right: 60px;
-    padding-bottom: 60px;
-}
 
 .figma-content-side p strong {
     font-weight: bold;
@@ -80,7 +114,8 @@
 }
 
 /* Style pour l'exemple de texte de la police */
-.font-sample, .font-sample-numbers {
+.font-sample,
+.font-sample-numbers {
     font-size: 18px;
     font-weight: 400;
     color: #333;
@@ -118,50 +153,62 @@
 }
 
 .presentionfont {
-    display: flex; /* Utilise Flexbox pour l'alignement */
-    justify-content: space-between; /* Espace entre les colonnes */ /* Prend toute la largeur */
+    display: flex;
+    /* Utilise Flexbox pour l'alignement */
+    justify-content: space-between;
+    /* Espace entre les colonnes */
+    /* Prend toute la largeur */
     gap: 20px;
 }
 
-.presentionfont p{
+.presentionfont p {
     margin-top: 0px;
 }
 
-
 .presenationfontdroite {
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
     background-color: #B3E3A2;
     padding: 20px 40px;
     min-width: 60%;
 }
 
-.presenationfontdroite h1{
+.presenationfontdroite h1 {
     padding: 0;
     margin: 0;
 }
 
 
 .font-sample {
-    font-size: 20px; /* Taille de la police d'exemple */
-    color: #FFFCE2; /* Couleur du texte */
+    font-size: 20px;
+    /* Taille de la police d'exemple */
+    color: #FFFCE2;
+    /* Couleur du texte */
 }
 
+.titremouvaplan {
+    padding: 0px;
+    font-family: 'Erica One', sans-serif;
+    color: white;
+    font-size: 9rem;
+    opacity: 1;
+}
 
-.Ericaone p{
+.Ericaone p {
     font-family: "IBM Plex Mono", monospace;
 }
 
-.Ericaone H1{
+.Ericaone H1 {
     font-family: 'Erica One', sans-serif;
     color: #3B7958;
     font-size: 3rem;
 }
-.leslettresErica p{
+
+.leslettresErica p {
     font-family: 'Erica One', sans-serif;
     color: #3B7958;
     font-size: 1.5rem;
     margin-bottom: 10px;
-    line-height: 0.9; 
+    line-height: 0.9;
 
 }
 
@@ -170,7 +217,7 @@
 }
 
 
-.Interblack H1{
+.Interblack H1 {
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #3B7958;
@@ -178,13 +225,14 @@
     color: #3B7958;
     margin-bottom: 10px;
 }
-.leslettresInterblack p{
+
+.leslettresInterblack p {
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     color: #3B7958;
     letter-spacing: -1px;
     margin-bottom: 10px;
-    line-height: 1; 
+    line-height: 1;
 
 }
 
@@ -194,54 +242,58 @@
 }
 
 
-.Inter H1{
+.Inter H1 {
     font-family: 'Inter', sans-serif;
-    font-weight:normal;
+    font-weight: normal;
     color: #3B7958;
     font-size: 25px;
     padding-bottom: 10px;
 }
-.leslettresInter p{
+
+.leslettresInter p {
     font-family: 'Inter', sans-serif;
     color: #3B7958;
     letter-spacing: -1px;
     margin-bottom: 10px;
-    line-height: 1; 
+    line-height: 1;
 
 }
 
 .style-name {
-    font-family: 'Arial', sans-serif; /* Changez 'Arial' par la police de votre choix */
-    font-size: 16px; /* Taille de la police pour le nom de style */
-    color: #000000; /* Couleur noire */
+    font-family: 'Arial', sans-serif;
+    /* Changez 'Arial' par la police de votre choix */
+    font-size: 16px;
+    /* Taille de la police pour le nom de style */
+    color: #000000;
+    /* Couleur noire */
 }
 
-.marckers{
+.marckers {
     display: flex;
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
     justify-content: space-between;
     padding: 50px;
     align-items: center;
     background-color: var(--greymouvaplan);
 }
 
-.mouvaplanicons{
+.mouvaplanicons {
     display: flex;
     flex-direction: column;
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
 }
 
-.mouvaplanicons >img{
+.mouvaplanicons>img {
     max-height: 50vh;
     object-fit: cover;
     filter: grayscale(1);
-    border-radius:  0px 0px 25px 25px;
+    border-radius: 0px 0px 25px 25px;
 }
 
-.telmouvaplan{
+.telmouvaplan {
     margin-top: 40px;
     background-color: var(--greymouvaplan);
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
     display: flex;
     padding: 50px;
     gap: 40px;
@@ -249,7 +301,7 @@
     flex-wrap: wrap;
 }
 
-.telgroupe{
+.telgroupe {
     height: auto;
     display: flex;
     flex-direction: column;
@@ -261,12 +313,12 @@
     position: relative;
 }
 
-.telgroupe img{
+.telgroupe img {
     max-height: 80vh;
     object-fit: contain;
 }
 
-.telgroupe span{
+.telgroupe span {
     transition: 0.3s ease-in-out;
     font-size: 1.2rem;
     font-weight: bold;
@@ -275,19 +327,19 @@
     color: rgba(0, 0, 0, 0.192);
 }
 
-.marckers img{
+.marckers img {
     width: calc(20% - 50px);
     scale: 1;
     transition: 0.3s ease;
     border-radius: 50%;
 }
 
-.marckers img:hover{
+.marckers img:hover {
     scale: 1.1;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.101);
 }
 
-.boutontry{
+.boutontry {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -296,25 +348,29 @@
 }
 
 @media (max-width: 768px) {
-    .explication p{
+    .explication p {
         width: 100%;
     }
-    .presentation-50-50{
+
+    .presentation-50-50 {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    .presentation-50-50 img{
+    .presentation-50-50 img {
         width: 100%;
     }
-    .presentionfont{
+
+    .presentionfont {
         flex-direction: column;
     }
+
     .presentation-app2 {
         flex-direction: column;
     }
-    .presentation-app2 img{
+
+    .presentation-app2 img {
         height: 300px;
     }
 
@@ -325,10 +381,12 @@
         padding: 20px;
         background-color: var(--greymouvaplan);
     }
-    .marckers img{
+
+    .marckers img {
         width: 18%;
 
     }
+
     .figma-image-side {
         flex: none;
         background-color: var(--greymouvaplan);
@@ -341,17 +399,19 @@
         display: none;
         width: 0px;
     }
+
     .figma-content-side {
         width: 100%;
         flex: none;
-        background-color:white;
+        background-color: white;
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: center;
         padding: 0px 30px;
     }
-    .figma-content-side p{
+
+    .figma-content-side p {
         color: #000000;
         width: 100%;
     }
@@ -360,24 +420,27 @@
         display: flex;
         width: 100%;
         height: auto;
-        overflow:auto;
+        overflow: auto;
         display: none;
     }
 
     .carte iframe {
         height: 300px;
     }
+
     .tri-images {
         gap: 30px;
         padding: 0;
         flex-direction: column;
     }
+
     .panneauqrcode {
         border-radius: 20px;
         width: 350px;
         height: 350px;
     }
-    #boutontry{
+
+    #boutontry {
         display: none;
     }
 

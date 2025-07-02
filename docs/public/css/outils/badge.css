@@ -1,4 +1,4 @@
-.badge{
+.badge {
     padding: 5px 10px;
     font-size: 1rem;
     display: inline-block;
@@ -6,35 +6,41 @@
     border-radius: 5px;
     font-family: "IBM Plex Mono", monospace;
     text-transform: uppercase;
-    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
-    -moz-user-select: none;    /* Pour Firefox */
-    -ms-user-select: none;     /* Pour Internet Explorer */
-    user-select: none;  
+    -webkit-user-select: none;
+    /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;
+    /* Pour Firefox */
+    -ms-user-select: none;
+    /* Pour Internet Explorer */
+    user-select: none;
     z-index: 50;
     white-space: nowrap;
     margin: 0;
 }
 
-.badgenewburger{
+.badgenewburger {
     scale: 0.9;
     padding: 5px 10px;
     font-size: 1rem;
     display: inline-block;
     font-weight: bold;
     border-radius: 5px;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--ibm);
     text-transform: uppercase;
-    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
-    -moz-user-select: none;    /* Pour Firefox */
-    -ms-user-select: none;     /* Pour Internet Explorer */
-    user-select: none;  
+    -webkit-user-select: none;
+    /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;
+    /* Pour Firefox */
+    -ms-user-select: none;
+    /* Pour Internet Explorer */
+    user-select: none;
     white-space: nowrap;
     margin: 0;
 }
 
 /* dans le burger menu */
 
-.nombrebadge{
+.nombrebadge {
     position: absolute;
     background-color: rgba(255, 0, 0, 0.639);
     border-width: 1px;
@@ -44,20 +50,23 @@
     padding: 2px 11px 3px 11px;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 50px;
-    font-family: "IBM Plex Mono", monospace;
+    border-radius: 10px;
+    font-family: var(--ibm);
     text-transform: uppercase;
-    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
-    -moz-user-select: none;    /* Pour Firefox */
-    -ms-user-select: none;     /* Pour Internet Explorer */
-    user-select: none;  
+    -webkit-user-select: none;
+    /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;
+    /* Pour Firefox */
+    -ms-user-select: none;
+    /* Pour Internet Explorer */
+    user-select: none;
     white-space: nowrap;
     margin: 0;
     top: 0px;
     right: -35px;
 }
 
-.chatbadge{
+.chatbadge {
     display: flex;
     gap: 0.3rem;
     justify-content: space-between;
@@ -67,17 +76,20 @@
     font-size: 1rem;
     font-weight: bold;
     border-radius: 50px;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--ibm);
     text-transform: uppercase;
-    -webkit-user-select: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
-    -moz-user-select: none;    /* Pour Firefox */
-    -ms-user-select: none;     /* Pour Internet Explorer */
-    user-select: none;  
+    -webkit-user-select: none;
+    /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
+    -moz-user-select: none;
+    /* Pour Firefox */
+    -ms-user-select: none;
+    /* Pour Internet Explorer */
+    user-select: none;
     white-space: nowrap;
     margin: 0;
 }
 
-.point{
+.point {
     position: relative;
     background-color: white;
     height: 0.4rem;
@@ -96,58 +108,62 @@
 
 /* plus dans le burger menu */
 
-#new{
-    background-color: rgb(52, 238, 139);
-    color:  rgb(31, 148, 85);
+#new {
+    background-color: var(--vertmarque);
+    color: var(--vertmarquedeux);
 }
 
-#troisd{
+#troisd {
     background-color: rgb(231, 160, 38);
-    color: rgb(138, 100, 24);
+    color: rgb(105, 70, 0);
 }
 
-#print{
+#print {
     background-color: rgb(232, 67, 67);
-    color: rgb(146, 42, 42);
+    color: rgb(103, 0, 0);
 }
 
-#uiux{
+#uiux {
     background-color: rgb(83, 122, 239);
-    color: rgb(46, 65, 160);
+    color: rgb(0, 18, 108);
 }
 
-#da{
+#da {
     background-color: rgb(231, 38, 205);
-    color: rgb(138, 24, 132);
+    color: rgb(90, 1, 86);
 }
 
-#award{
+#award {
     background-color: rgb(255, 245, 204);
     color: rgb(231, 160, 38);
 }
 
-.enbasbadge{
+.enbasbadge {
     display: flex;
     position: absolute;
     top: -1rem;
     left: 50px;
     gap: 10px;
-    z-index: 3; /* Place la vidéo derrière le contenu */
+    z-index: 3;
+    /* Place la vidéo derrière le contenu */
     scale: 1;
     opacity: 1;
     transition: 0.3s ease;
-    pointer-events: none; 
+    pointer-events: none;
     justify-items: center;
     align-items: center;
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3;
-        scale: 0.9;
+        scale: 0.8;
     }
+
     50% {
         opacity: 1;
-        scale: 1;
+        scale: 1.1;
     }
 }

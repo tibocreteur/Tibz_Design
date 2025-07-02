@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="{{curentlangue}}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="{{favicon}}" type="images/x-icon">
+    <title>Contact - {{nomboite}}</title>
+    <meta name="description"
+        content="Portfolio de TibzDesign : créations graphiques et branding. Découvrez des projets inspirés, aux styles variés, pour explorer l'univers graphique et visuel.">
+    <meta property="og:title" content="Titre de votre site">
+    <meta property="og:description"
+        content="Portfolio de TibzDesign : créations graphiques et branding. Découvrez des projets inspirés, aux styles variés, pour explorer l'univers graphique et visuel.">
+    <meta property="og:image" content="/docs/public/image/logo.png">
+    <meta property="og:url" content="https://www.tibzdesign.fr">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../docs/public/css/base.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/police.css">
+    <link rel="stylesheet" href="../docs/public/css/pages/contact.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/footer.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/latestprojects.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/navbar.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/color.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/skills.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/badge.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/profil.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/aos.css">
+    <link rel="stylesheet" href="../docs/public/css/pages/index.css">
+
+    <!-- Précharger les images -->
+    <link rel="preload" href="../docs/public/image/console/fond3.avif" as="image">
+    <link rel="preload" href="../docs/public/image/regatta/fond.avif" as="image">
+    <link rel="preload" href="../docs/public/image/mouvaplan/fond2.avif" as="image">
+    <link rel="preload" href="../docs/public/image/omodaka/petitfond.avif" as="image">
+    <link rel="preload" href="../docs/public/image/walk.png" as="image">
+    <link rel="preload" href="../docs/public/image/works/moi/perso.avif" as="image">
+</head>
+
+<body>
+    <section style="position: absolute;" class="top-page">
+        <header class="navbar">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-button-logo">
+                    <img src="{{logo}}" alt="logo du site">
+                </a>
+                <div class="nameprojet">
+                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
+                        {{back}}
+                    </a>
+                </div>
+            </div>
+            <div class="social-contact">
+                <!-- Logo Instagram cliquable -->
+                <!-- Bouton "ME CONTACTER" -->
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/contact.html"><img
+                        src="../docs/public/image/drapeau/{{languenavbar}}.png" class="drapeau"
+                        alt="">{{languenavbar}}</a>
+                <button class="iconburger" id="burger-toggle">
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                </button>
+            </div>
+        </header>
+        <script src="../docs/public/js/navbar.js"></script>
+        <div id="navbar-container"></div>
+
+        <script>
+            // Charger la navbar HTML dans la page principale
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Insérer la navbar dans le conteneur
+                    document.getElementById('navbar-container').innerHTML = data;
+
+                    // Appeler une fonction d'initialisation du script après le chargement
+                    initNavbarScript();
+                })
+                .catch(error => console.error('Erreur de chargement de la navbar:', error));
+
+            // Fonction pour initialiser les événements du menu burger
+            function initNavbarScript() {
+                const burgerToggle = document.getElementById("burger-toggle");
+                const burgerMenu = document.getElementById("burger-menu");
+
+                // Fonction pour ouvrir/fermer le menu
+                function toggleMenu() {
+                    burgerToggle.classList.toggle("active");
+                    burgerMenu.classList.toggle("active");
+                }
+
+                // Fonction pour fermer le menu
+                function closeMenu() {
+                    burgerToggle.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                }
+
+                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
+                burgerToggle.addEventListener("click", toggleMenu);
+
+                // Fermer le menu lorsqu'on fait défiler la page
+                window.addEventListener("scroll", closeMenu);
+            }
+        </script>
+    </section>
+    <section class="contactsection">
+        <div class="coordonnee" data-aos="fade-up">
+            <img class="logocontact" src="../docs/public/image/logo/logon.png" alt="logo du site">
+            <div class=presentationpersonne>
+                <h2>Tibo Creteur</h2>
+                <p>Designer Graphique & Motion Designer</p>
+                <div class="espacetexte"></div>
+                <p>{{dataphone}}</p>
+                <p>tibzdesign@gmail.com</p>
+                <div class="espacetexte"></div>
+                <p>SIRET : 93160601600018</p>
+            </div>
+        </div>
+        <div class="contact-container" data-aos="fade-up">
+            <!-- logo caché tu peu le remettre ;) -->
+            <img class="logocontact" src="../docs/public/image/logo/logon.png" style="display: none;"
+                alt="logo du site">
+            <h1 class="contact-title">{{contactme}}</h1>
+            <form action="https://formsubmit.co/tibzdesign@gmail.com" method="POST">
+                <input id="casedemig" name="{{name}}" type="text" placeholder="{{name}}" required
+                    class="contact-input" />
+                <input id="casedemid" name="{{firstname}}" type="text" placeholder="{{firstname}}" required
+                    class="contact-input" />
+                <input name="email" type="email" placeholder="Email" required class="contact-input" />
+                <input name="{{project}}" type="text" placeholder="{{project}}" class="contact-input" />
+                <textarea name="message" rows="5" placeholder="{{textcontact}}" required
+                    class="contact-textarea"></textarea>
+
+                <!-- Personnalisation du mail -->
+                <input type="hidden" name="_subject" value="Demande client !">
+                <input type="hidden" name="Source" value="Formulaire altlab">
+
+                <!-- Redirection après envoi -->
+
+                <button type="submit" class="contact-button">{{send}}<i class="fa-solid fa-paper-plane"></i></button>
+
+            </form>
+            <p class="mentioncontact">{{mentionenvoi}}</p>
+        </div>
+    </section>
+    <footer class="footerprojects" style="position: absolute; bottom: 0px;">
+        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+            data-aos-anchor-placement="top-bottom">
+            <li class="menu-elem">
+                <div class="footerlignetext">
+                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                        83200,Toulon & 59350,Lille</p>
+                    <div class="socialfooter">
+                        <a href={{insta}} target="_blank"><img src="../docs/public/image/logoinsta.png"
+                                style="filter: invert();" alt=""></a>
+                        <a href={{linkedin}} target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"
+                                alt=""></a>
+                        <a href={{behance}} target="_blank"><img src="../docs/public/image/Logo Behance.svg" alt=""></a>
+                    </div>
+                    <p data-key="footer" class="textfooterd">{{footerun}}{{nomboite}}{{footerdeux}}</p>
+                </div>
+            </li>
+        </ul>
+    </footer>
+</body>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWW88BVG" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script src="../docs/public/js/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+
+</body>
+<script src="../docs/public/js/langue.js"></script>
+
+</html>

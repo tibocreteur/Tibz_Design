@@ -18,37 +18,42 @@
 
 }
 
-.headeromodaka img{
+.headeromodaka img {
     width: 50%;
     animation: textFadeIn 1s ease-in-out;
 }
 
 .paletteomodaka {
     display: flex;
-    flex-wrap: wrap; /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
-    justify-content: center; /* Centre les panneaux */
+    flex-wrap: wrap;
+    /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
+    justify-content: center;
+    /* Centre les panneaux */
     height: auto;
     gap: 30px;
-    
+
 }
 
-.paletteomodaka > div{
-    width: calc((100% - 30px) / 2); /* subtracting total gap to keep each image equally sized */
+.paletteomodaka>div {
+    width: calc((100% - 30px) / 2);
+    /* subtracting total gap to keep each image equally sized */
     justify-content: center;
-    
+
 }
 
-.explicationomodaka{
+.explicationomodaka {
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
     width: 100%;
-    justify-content: space-between; /* Sépare les éléments à gauche et à droite *//* Aligne en haut de chaque bloc */
+    justify-content: space-between;
+    /* Sépare les éléments à gauche et à droite */
+    /* Aligne en haut de chaque bloc */
     position: relative;
     background-color: var(----backgroundaccueil);
 }
 
-.explicationomodaka p{
+.explicationomodaka p {
     width: calc(50% - 12.5px);
     margin: 0;
     padding: 0;
@@ -56,11 +61,12 @@
 
 .explicationomodaka ::selection {
     background-color: #ffb300;
-    color: rgb(255, 255, 255); /* Couleur de surlignage (jaune doré) */
+    color: rgb(255, 255, 255);
+    /* Couleur de surlignage (jaune doré) */
 }
 
-.uneimageomodaka{
-    border-radius: 30px;
+.uneimageomodaka {
+    border-radius: var(--anglesprojets);
     background-color: var(--greymouvaplan);
     height: 500px;
     display: flex;
@@ -68,95 +74,117 @@
     justify-content: center;
 }
 
-.uneimageomodaka img{
+.uneimageomodaka img {
     height: 500px;
     width: auto;
     object-fit: cover;
 }
 
-.femme img{
-    height: 250px ;
+.femme img {
+    height: 250px;
     object-fit: cover;
 }
 
-.logovideo{
+.logovideo {
     display: flex;
     flex-direction: column;
     gap: 25px;
     width: 100%;
-    
+
 }
 
-.logovideo img{
+.logovideo img {
     height: calc(50vh - 70px);
     object-fit: cover;
-    max-height:calc(50vh - 70px),
+    max-height: calc(50vh - 70px),
 }
 
 .logobas {
-    display: flex; /* Aligner les vidéos horizontalement */
+    display: flex;
+    /* Aligner les vidéos horizontalement */
     gap: 25px;
-    justify-content: space-between; /* Créer de l'espace entre les vidéos */
-    width: 100%; /* La section prend toute la largeur de son conteneur */
+    justify-content: space-between;
+    /* Créer de l'espace entre les vidéos */
+    width: 100%;
+    /* La section prend toute la largeur de son conteneur */
 
-  }
+}
 
 .logohaut {
     gap: 25px;
-    justify-content: space-between; /* Créer de l'espace entre les vidéos */
-    width: 100%; /* La section prend toute la largeur de son conteneur */
+    justify-content: space-between;
+    /* Créer de l'espace entre les vidéos */
+    width: 100%;
+    /* La section prend toute la largeur de son conteneur */
 
 }
-  
-.videodeslogos {
-    border-radius: 25px; /* Coins arrondis pour les vidéos */
-    width: calc(50% - 17.5px); /* Chaque vidéo prend 1/3 de la largeur moins 30px pour l'écart entre les vidéos et 10px de padding */
-    height: 100%; /* La hauteur des vidéos est 100% de la section */
-    object-fit: cover; /* Remplir sans distorsion */
-  }
 
-  .decors {
+.videodeslogos {
+    border-radius: 25px;
+    /* Coins arrondis pour les vidéos */
+    width: calc(50% - 17.5px);
+    /* Chaque vidéo prend 1/3 de la largeur moins 30px pour l'écart entre les vidéos et 10px de padding */
+    height: 100%;
+    /* La hauteur des vidéos est 100% de la section */
+    object-fit: cover;
+    /* Remplir sans distorsion */
+}
+
+.decors {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding-inline: 40px;
-    width: 100%; /* Assure que la section occupe toute la largeur */
+    padding-inline: var(--espacecote);
+    width: 100%;
+    /* Assure que la section occupe toute la largeur */
     padding-bottom: 30px;
     background-color: var(--backgroundaccueil);
 }
 
 .wrapper {
     display: flex;
-    justify-content: center; /* Centre le contenu dans chaque wrapper */
+    justify-content: center;
+    /* Centre le contenu dans chaque wrapper */
     width: 100%;
 }
 
 .decors-container {
     display: flex;
     align-items: center;
-    gap: 0; /* Enlève l'espace entre l'image et les informations */
-    border-radius: 25px; /* Bords arrondis pour l'ensemble du bloc image + infos */
-    overflow: hidden; /* Masque la partie de l'image ou du fond qui dépasse des bords arrondis */
-    width: 100%; /* Le conteneur occupe 100% de la largeur disponible */
-    max-width: 100%; /* Le conteneur ne dépasse pas la largeur de son parent */
+    gap: 0;
+    /* Enlève l'espace entre l'image et les informations */
+    border-radius: var(--anglesprojets);
+    /* Bords arrondis pour l'ensemble du bloc image + infos */
+    overflow: hidden;
+    /* Masque la partie de l'image ou du fond qui dépasse des bords arrondis */
+    width: 100%;
+    /* Le conteneur occupe 100% de la largeur disponible */
+    max-width: 100%;
+    /* Le conteneur ne dépasse pas la largeur de son parent */
 }
 
 .decors img {
-    width: calc(100% - 400px); /* L'image occupe 100% moins la largeur de la section d'informations (300px) */
+    width: calc(100% - 400px);
+    /* L'image occupe 100% moins la largeur de la section d'informations (300px) */
     height: 300px;
     object-fit: cover;
-    border-radius: 0; /* L'image n'a pas de bords arrondis pour que le contour global reste arrondi */
+    border-radius: 0;
+    /* L'image n'a pas de bords arrondis pour que le contour global reste arrondi */
 }
 
 .infodecors {
-    width: 400px; /* Largeur fixe de la zone d'information */
+    width: 400px;
+    /* Largeur fixe de la zone d'information */
     height: 300px;
-    background-color: var(--greymouvaplan); /* Couleur de fond pour la section */
+    background-color: var(--greymouvaplan);
+    /* Couleur de fond pour la section */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Sépare le nom du lieu et les coordonnées */
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px; /* Applique les bords arrondis uniquement à la section d'information */
+    justify-content: space-between;
+    /* Sépare le nom du lieu et les coordonnées */
+    border-top-right-radius: var(--anglesprojets);
+    border-bottom-right-radius: var(--anglesprojets);
+    /* Applique les bords arrondis uniquement à la section d'information */
 }
 
 .infodecors h2 {
@@ -167,7 +195,7 @@
     padding-left: 30px;
 }
 
-.espace{
+.espace {
     background-color: #ffb300;
     width: 0.7rem;
 }
@@ -182,7 +210,7 @@
 .petiteinfos {
     display: flex;
     align-items: center;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--ibm);
     font-size: 1rem;
     margin-top: 10px;
     color: #555;
@@ -191,38 +219,38 @@
 }
 
 
-.imagepackagingomodaka{
+.imagepackagingomodaka {
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
 
-.plants{
+.plants {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--greymouvaplan);
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
     width: 80%;
 }
 
-.plants img{
+.plants img {
     max-height: 80vh;
     padding: 30px;
 }
 
-.plants2{
+.plants2 {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--greymouvaplan);
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
     width: 20%;
 }
 
-.plants2 img{
+.plants2 img {
     max-height: 80vh;
     padding: 30px;
 }
@@ -230,45 +258,51 @@
 .sac {
     width: 60%;
     height: 500px;
-    background-color: var(--greymouvaplan); /* ou toute autre couleur de fond */
+    background-color: var(--greymouvaplan);
+    /* ou toute autre couleur de fond */
     position: relative;
     display: flex;
-    justify-content: center; /* Centre l'image horizontalement */
-    align-items: center; /* Centre l'image verticalement */
+    justify-content: center;
+    /* Centre l'image horizontalement */
+    align-items: center;
+    /* Centre l'image verticalement */
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
 }
 
-.sac img{
+.sac img {
     height: 100%;
     object-fit: cover;
 }
 
 
-.bougie{
+.bougie {
     width: 40%;
     height: 500px;
-    background-color: var(--greymouvaplan); /* ou toute autre couleur de fond */
+    background-color: var(--greymouvaplan);
+    /* ou toute autre couleur de fond */
     position: relative;
     display: flex;
-    justify-content: center; /* Centre l'image horizontalement */
-    align-items: center; /* Centre l'image verticalement */
+    justify-content: center;
+    /* Centre l'image horizontalement */
+    align-items: center;
+    /* Centre l'image verticalement */
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: var(--anglesprojets);
 }
 
-.bougie img{
+.bougie img {
     height: 110%;
     object-fit: cover;
 }
 
-.deuxpack{
+.deuxpack {
     display: flex;
     gap: 30px;
-    
+
 }
 
-.logoomodaka{
+.logoomodaka {
     scale: 1;
 }
 
@@ -280,14 +314,14 @@
     width: 100%;
     max-height: 70vh;
     overflow: hidden;
-    border-radius:25px;
+    border-radius: var(--anglesprojets);
 }
 
-.boite video{
+.boite video {
     object-fit: cover;
     width: 100%;
-    filter:contrast(1.1);
-    border-radius: 25px;
+    filter: contrast(1.1);
+    border-radius: var(--anglesprojets);
     background-color: #ffb300;
     overflow: hidden;
 }
@@ -295,7 +329,8 @@
 .zoom-section {
     position: relative;
     width: 100%;
-    height: 1000px; /* Modifie la hauteur ici (ex: 75vh pour 75% de la hauteur de la fenêtre) */
+    height: 1000px;
+    /* Modifie la hauteur ici (ex: 75vh pour 75% de la hauteur de la fenêtre) */
     overflow: hidden;
     margin-bottom: 30px;
     transform: rotate(180deg)
@@ -317,41 +352,50 @@
 
 
 @media (max-width: 768px) {
-    .headeromodaka img{
+    .headeromodaka img {
         width: 600px;
     }
-    .logoomodaka{
+
+    .logoomodaka {
         scale: 0.4;
     }
+
     .headeromodaka {
         display: flex;
         height: 100%;
         height: 700px;
     }
-    .logovideo img{
+
+    .logovideo img {
         height: 200px;
     }
-    .logobas{
+
+    .logobas {
         display: flex;
         flex-direction: column;
     }
-    .imagepackagingomodaka{
+
+    .imagepackagingomodaka {
         flex-direction: column;
     }
-    .plants{
+
+    .plants {
         width: 100%;
         padding: 20px;
     }
-    .plants2{
+
+    .plants2 {
         width: 100%;
         padding: 20px;
         height: 200px;
     }
-    .plants img{
+
+    .plants img {
         width: 100%;
         scale: 1.5;
     }
-    .plants2 img{
+
+    .plants2 img {
         rotate: 90deg;
         scale: 0.5;
     }
