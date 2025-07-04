@@ -227,6 +227,7 @@ p {
     z-index: 1000;
     color: white;
     cursor: default;
+    margin: 0px;
     transition: padding 0.2s ease-in-out;
 }
 
