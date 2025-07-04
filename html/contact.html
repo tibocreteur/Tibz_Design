@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="../docs/public/css/outils/aos.css">
     <link rel="stylesheet" href="../docs/public/css/pages/index.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/transition.css">
 
     <!-- Précharger les images -->
     <link rel="preload" href="../docs/public/image/console/fond3.avif" as="image">
@@ -45,24 +46,19 @@
 </head>
 
 <body>
+    <div id="transition-overlay" class="active"></div>
     <section style="position: absolute;" class="top-page">
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
                     <img src="{{logo}}" alt="logo du site">
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
-                        {{back}}
-                    </a>
-                </div>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/contact.html"><img
-                        src="../docs/public/image/drapeau/{{languenavbar}}.png" class="drapeau"
-                        alt="">{{languenavbar}}</a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/contact.html"><span
+                        class="{{langun}}">FR</span><span class="{{langdeux}}">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -170,6 +166,7 @@
             </li>
         </ul>
     </footer>
+    <script src="../docs/public/js/transition.js"></script>
 </body>
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWW88BVG" height="0" width="0"

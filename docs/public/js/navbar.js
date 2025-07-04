@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const socialcontact = document.querySelector(".social-contact");
     const boutonlogo = document.querySelector(".navbar-button-logo");
     const triggerElement = document.getElementById("section");
-    const offset = 62; // Décalage avant déclenchement
+    const offset = 40; // Décalage avant déclenchement
 
     function checkNavbar() {
         if (!triggerElement) return;

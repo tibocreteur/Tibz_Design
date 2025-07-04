@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="../docs/public/css/outils/latestprojects.css">
     <link rel="stylesheet" href="../docs/public/css/outils/color.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/transition.css">
 
     <link rel="preload" href="../docs/public/video/console.webm" as="video">
     <link rel="preload" href="../docs/public/video/mousqueton.webm" as="video">
@@ -30,37 +31,27 @@
 </head>
 
 <body>
+    <div id="transition-overlay" class="active"></div>
     <section class="error">
         <img class="errorlogo" src="../docs/public/image/logo.png" alt="">
         <span>{{erreurun}}</span>
         <span>{{erreurdeux}}</span>
     </section>
     <section class="top-page">
-        <header class="navbar">
-            <div class="navbar-left">
-                <a href="index.html" class="navbar-button-logo">
+        <header class="navbarproject">
+            <div class="navbar-left-project">
+                <a href="index.html" class="navbar-button-logo-project">
                     <img src="{{logo}}" alt="logo du site">
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
-                        {{back}}
-                    </a>
-                    <div class="contentnavbar-project">
-                        <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                            <h3>流智 - Liúzhì</h3>
-                            <div class="barre-verticale"></div>
-                            <span>{{personalwork}}</span>
-                        </div>
-                    </div>
-                </div>
+                <h3>流智 - Liúzhì</h3>
+                <span>{{personalwork}}</span>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button">{{contactme}}</a>
-                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/console.html"><img
-                        src="../docs/public/image/drapeau/{{languenavbar}}.png" class="drapeau"
-                        alt="">{{languenavbar}}</a>
+                <a href="contact.html" class="navbar-button underline-hoverproject"><span>{{contactme}}</span></a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/axion.html"><span
+                        class="{{langun}}">FR</span><span class="{{langdeux}}">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -113,100 +104,101 @@
             <script src="../docs/public/js/animation.js"></script>
         </section>
         <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='console.html#sectionconsole';"><img
-                    src="../docs/public/image/fleche2.svg" alt=""></a>
+            <a class="flechedubas" onclick="location.href='console.html#section';">
+                <div class="double-arrow"></div>
+            </a>
         </div>
         <script src="../docs/public/js/fleche.js"></script>
     </section>
-    <section id="sectionconsole" class="citation">
-        <div class="enbasbadge">
-            <li id="troisd" class="badge">3D</li>
-        </div>
-        <blockquote id="quote">{{citationconsole}}</blockquote>
-    </section>
-    <section class="infoprojet">
-        <div class="explication" style="padding-bottom: 0px; margin-bottom:0px ;">
-            <div class="vide"></div>
-            <p class="texteexplicatif">{{presentationconsole}}</p>
-        </div>
-    </section>
+    <section class="containproject">
+        <section id="section" class="citation">
+            <blockquote id="quote">{{citationconsole}}</blockquote>
+        </section>
+        <section class="infoprojet">
+            <div class="explication" style="padding-bottom: 0px; margin-bottom:0px ;">
+                <div class="vide"></div>
+                <p class="texteexplicatif">{{presentationconsole}}</p>
+            </div>
+        </section>
 
-    <section style="background-color: white;">
-        <div class="partie">
-            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="videorue">
-                <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-                    class="containervideorue">
-                    <video src="../docs/public/video/ruefinal.webm" controls autoplay muted playsinline loop
-                        class="videorue"></video>
-                </div>
-            </div>
-            <div data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="top-bottom" class="triplette"
-                style="z-index: 3;">
-                <div class="content-left">
-                    <div class="content-box">
-                        <span class="content-number">1</span>
-                        <video class="videoomodaka" autoplay muted playsinline loop>
-                            <source src="../docs/public/video/console.webm" type="video/webm">
-                            <source src="../docs/public/video/mousqueton.mov" type="video/quicktime">
-                        </video>
+        <section style="background-color: white;">
+            <div class="partie">
+                <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="videorue">
+                    <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                        class="containervideorue">
+                        <video src="../docs/public/video/ruefinal.webm" controls autoplay muted playsinline loop
+                            class="videorue"></video>
                     </div>
                 </div>
-                <div class="content-right">
-                    <div class="content-box">
-                        <span class="content-number">2</span>
-                        <video class="videoomodaka" autoplay muted playsinline loop>
-                            <source src="../docs/public/video/mousqueton.webm" type="video/webm">
-                            <source src="../docs/public/video/mousqueton.mov" type="video/quicktime">
-                        </video>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="top-bottom" class="triplette"
+                    style="z-index: 3;">
+                    <div class="content-left">
+                        <div class="content-box">
+                            <span class="content-number">1</span>
+                            <video class="videoomodaka" autoplay muted playsinline loop>
+                                <source src="../docs/public/video/console.webm" type="video/webm">
+                                <source src="../docs/public/video/mousqueton.mov" type="video/quicktime">
+                            </video>
+                        </div>
                     </div>
-                    <div class="content-box">
-                        <span class="content-number">3</span>
-                        <video class="videoomodaka" autoplay muted playsinline loop>
-                            <source src="../docs/public/video/portecle2.webm" type="video/webm">
-                            <source src="../docs/public/video/mousqueton.mov" type="video/quicktime">
-                        </video>
+                    <div class="content-right">
+                        <div class="content-box">
+                            <span class="content-number">2</span>
+                            <video class="videoomodaka" autoplay muted playsinline loop>
+                                <source src="../docs/public/video/mousqueton.webm" type="video/webm">
+                                <source src="../docs/public/video/mousqueton.mov" type="video/quicktime">
+                            </video>
+                        </div>
+                        <div class="content-box">
+                            <span class="content-number">3</span>
+                            <video class="videoomodaka" autoplay muted playsinline loop>
+                                <source src="../docs/public/video/portecle2.webm" type="video/webm">
+                                <source src="../docs/public/video/mousqueton.mov" type="video/quicktime">
+                            </video>
+                        </div>
                     </div>
                 </div>
+                <div style="z-index: 9;" class="legendeconsole">
+                    <p><span class="legend-number">1.</span>{{consolelegendeun}}</p>
+                    <p><span class="legend-number">2.</span>{{consolelegendedeux}}</p>
+                    <p><span class="legend-number">3.</span>{{consolelegendetrois}}</p>
+                </div>
+                <script>
+                    const video = document.querySelector('.videoconsole');
+                    video.addEventListener('canplaythrough', function () {
+                        // Ajouter les contrôles après que la vidéo est prête à être lue sans interruption
+                        video.setAttribute('controls', 'true');
+                    });
+                </script>
             </div>
-            <div style="z-index: 9;" class="legendeconsole">
-                <p><span class="legend-number">1.</span>{{consolelegendeun}}</p>
-                <p><span class="legend-number">2.</span>{{consolelegendedeux}}</p>
-                <p><span class="legend-number">3.</span>{{consolelegendetrois}}</p>
+        </section>
+        <section class="infoprojet">
+            <div class="citationdefin">
+                <li>Credit : {{nomboite}}</li>
+                <p>{{sitation}} (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
             </div>
-            <script>
-                const video = document.querySelector('.videoconsole');
-                video.addEventListener('canplaythrough', function () {
-                    // Ajouter les contrôles après que la vidéo est prête à être lue sans interruption
-                    video.setAttribute('controls', 'true');
-                });
-            </script>
-        </div>
+        </section>
+        <footer class="footerprojects">
+            <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+                data-aos-anchor-placement="top-bottom">
+                <li class="menu-elem">
+                    <div class="footerlignetext">
+                        <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                            83200,Toulon & 59350,Lille</p>
+                        <div class="socialfooter">
+                            <a href={{insta}} target="_blank"><img src="../docs/public/image/logoinsta.png"
+                                    style="filter: invert();" alt=""></a>
+                            <a href={{linkedin}} target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"
+                                    alt=""></a>
+                            <a href={{behance}} target="_blank"><img src="../docs/public/image/Logo Behance.svg"
+                                    alt=""></a>
+                        </div>
+                        <p data-key="footer" class="textfooterd">{{footerun}}{{nomboite}}{{footerdeux}}</p>
+                    </div>
+                </li>
+            </ul>
+        </footer>
     </section>
-    <section class="infoprojet">
-        <div class="citationdefin">
-            <li>Credit : {{nomboite}}</li>
-            <p>{{sitation}} (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
-        </div>
-    </section>
-    <footer class="footerprojects">
-        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
-            data-aos-anchor-placement="top-bottom">
-            <li class="menu-elem">
-                <div class="footerlignetext">
-                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
-                        83200,Toulon & 59350,Lille</p>
-                    <div class="socialfooter">
-                        <a href={{insta}} target="_blank"><img src="../docs/public/image/logoinsta.png"
-                                style="filter: invert();" alt=""></a>
-                        <a href={{linkedin}} target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"
-                                alt=""></a>
-                        <a href={{behance}} target="_blank"><img src="../docs/public/image/Logo Behance.svg" alt=""></a>
-                    </div>
-                    <p data-key="footer" class="textfooterd">{{footerun}}{{nomboite}}{{footerdeux}}</p>
-                </div>
-            </li>
-        </ul>
-    </footer>
     <script src="../docs/public/js/aos.js"></script>
     <script>
         AOS.init();
@@ -214,6 +206,7 @@
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
+    <script src="../docs/public/js/transition.js"></script>
 </body>
 <script src="../docs/public/js/langue.js"></script>
 

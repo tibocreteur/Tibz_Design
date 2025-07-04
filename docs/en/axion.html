@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
     <link rel="stylesheet" href="./../public/css/pages/axon.css">
+    <link rel="stylesheet" href="./../public/css/outils/transition.css">
 
     <link rel="preload" href="./../public/video/console.webm" as="video">
     <link rel="preload" href="./../public/video/mousqueton.webm" as="video">
@@ -31,32 +32,22 @@
 </head>
 
 <body>
+    <div id="transition-overlay" class="active"></div>
     <section class="top-page">
-        <header class="navbar">
-            <div class="navbar-left">
-                <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo/logotrois.png" alt="logo du site">
+        <header class="navbarproject">
+            <div class="navbar-left-project">
+                <a href="index.html" class="navbar-button-logo-project">
+                    <img src="./../public/image/logo/logob.png" alt="logo du site">
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
-                        back
-                    </a>
-                    <div class="contentnavbar-project">
-                        <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                            <h3>Axion</h3>
-                            <div class="barre-verticale"></div>
-                            <span>Personal work</span>
-                        </div>
-                    </div>
-                </div>
+                <h3>Axion</h3>
+                <span>Personal work</span>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button">Contact me</a>
-                <a id="switch-lang" class="langButton" href="./../fr/axion.html"><img
-                        src="./../public/image/drapeau/fr.png" class="drapeau"
-                        alt="">fr</a>
+                <a href="contact.html" class="navbar-button underline-hoverproject"><span>Contact</span></a>
+                <a id="switch-lang" class="langButton" href="./../fr/axion.html"><span
+                        class="otherlangnav">FR</span><span class="currentlangnav">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -64,8 +55,8 @@
                 </button>
             </div>
         </header>
-        <div id="navbar-container"></div>
 
+        <div id="navbar-container"></div>
         <script>
             // Charger la navbar HTML dans la page principale
             fetch('navbar.html')
@@ -109,62 +100,66 @@
                 <script src="./../public/js/animation.js"></script>
         </div>
         <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='axion.html#section';"><img
-                    src="./../public/image/fleche2.svg" alt=""></a>
+            <a class="flechedubas" onclick="location.href='axion.html#section';">
+                <div class="double-arrow"></div>
+            </a>
         </div>
         <script src="./../public/js/fleche.js"></script>
     </section>
-    <section id="section" class="citation">
-        <div class="enbasbadge">
-            <li id="troisd" class="badge">3D</li>
-            <li id="new" class="badge">new</li>
-        </div>
-        <blockquote id="quote">"The best way to predict the future is to invent it." — Alan Kay</blockquote>
-    </section>
-    <section class="infoprojet">
-        <div class="explicationcent">
-            <p class="texteexplicatif">"Axion" is a design project for a sports watch created for modern athletes, combining <strong>lightness</strong>, <strong>durability</strong>, and environmental responsibility. This model explores the fusion of <strong>sports performance</strong> and <strong>sustainability</strong>, with a functional design and a commitment to eco-responsibility.
+    <section class="containproject">
+        <section id="section" class="citation">
+            <div class="enbasbadge">
+                <li id="troisd" class="badge">3D</li>
+                <li id="new" class="badge">new</li>
+            </div>
+            <blockquote id="quote">"The best way to predict the future is to invent it." — Alan Kay</blockquote>
+        </section>
+        <section class="infoprojet">
+            <div class="explicationcent">
+                <p class="texteexplicatif">"Axion" is a design project for a sports watch created for modern athletes, combining <strong>lightness</strong>, <strong>durability</strong>, and environmental responsibility. This model explores the fusion of <strong>sports performance</strong> and <strong>sustainability</strong>, with a functional design and a commitment to eco-responsibility.
 
 Built to withstand extreme conditions of outdoor sports, "Axion" uses durable, lightweight materials to maximize performance without sacrificing resistance. Its clean and futuristic design highlights its technical side, while integrating ecological elements that make it an environmentally friendly choice.
 
 This project reflects a creative approach aiming to push the boundaries of sports design while incorporating ethical manufacturing practices, for a watch that is both <strong>robust</strong>, <strong>lightweight</strong>, and environmentally responsible.</p>
-        </div>
-        <div class="videocent">
-            <video data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-                src="./../public/video/montre.webm" autoplay muted playsinline controls loop></video>
-        </div>
-        <div class="presentation-50-50">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-                src="./../public/image/works/montre/fond.avif" alt="Nom du projet 1">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-                src="./../public/image/works/montre/image.png" alt="Nom du projet 1">
-        </div>
-    </section>
-    <section class="infoprojet">
-        <div class="citationdefin">
-            <li>Credit : altlab</li>
-            <p>May this creation awaken your inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
-        </div>
-    </section>
-    <footer class="footerprojects">
-        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
-            data-aos-anchor-placement="top-bottom">
-            <li class="menu-elem">
-                <div class="footerlignetext">
-                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
-                        83200,Toulon & 59350,Lille</p>
-                    <div class="socialfooter">
-                        <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
-                                style="filter: invert();" alt=""></a>
-                        <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
-                                alt=""></a>
-                        <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
+            </div>
+            <div class="videocent">
+                <video data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                    src="./../public/video/montre.webm" autoplay muted playsinline controls loop></video>
+            </div>
+            <div class="presentation-50-50">
+                <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                    src="./../public/image/works/montre/fond.avif" alt="Nom du projet 1">
+                <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                    src="./../public/image/works/montre/image.png" alt="Nom du projet 1">
+            </div>
+        </section>
+        <section class="infoprojet">
+            <div class="citationdefin">
+                <li>Credit : altlab</li>
+                <p>May this creation awaken your inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
+            </div>
+        </section>
+        <footer class="footerprojects">
+            <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+                data-aos-anchor-placement="top-bottom">
+                <li class="menu-elem">
+                    <div class="footerlignetext">
+                        <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                            83200,Toulon & 59350,Lille</p>
+                        <div class="socialfooter">
+                            <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
+                                    style="filter: invert();" alt=""></a>
+                            <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
+                                    alt=""></a>
+                            <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg"
+                                    alt=""></a>
+                        </div>
+                        <p data-key="footer" class="textfooterd">@2025 | © altlab. All rights reserved.</p>
                     </div>
-                    <p data-key="footer" class="textfooterd">@2025 | © altlab. All rights reserved.</p>
-                </div>
-            </li>
-        </ul>
-    </footer>
+                </li>
+            </ul>
+        </footer>
+    </section>
     <script src="./../public/js/aos.js"></script>
     <script>
         AOS.init();
@@ -172,6 +167,9 @@ This project reflects a creative approach aiming to push the boundaries of sport
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
+    <script src="./../public/js/transition.js"></script>
+
+
 </body>
 <script src="./../public/js/langue.js"></script>
 

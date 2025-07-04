@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
     <link rel="stylesheet" href="./../public/css/outils/police.css">
+    <link rel="stylesheet" href="./../public/css/outils/transition.css">
 
     <link rel="preload" href="./../public/image/console/fond1.avif" as="image">
     <link rel="preload" href="./../public/image/console/fond2.avif" as="image">
@@ -32,44 +33,33 @@
 </head>
 
 <body>
+    <div id="transition-overlay" class="active"></div>
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
         <span>Ce site n'est pas encore disponible sur mobile.</span>
         <span>Je vous invite à revenir depuis un ordinateur pour une meilleure expérience.</span>
     </section>
     <section class="top-page">
-        <header class="navbar">
-            <div class="navbar-left">
-                <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo/logotrois.png" alt="logo du site">
+        <header class="navbarproject">
+            <div class="navbar-left-project">
+                <a href="index.html" class="navbar-button-logo-project">
+                    <img src="./../public/image/logo/logob.png" alt="logo du site">
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-buttonback">
-                        retour
-                    </a>
-                    <div class="contentnavbar-project">
-                        <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                            <h3>MouvaPlan</h3>
-                            <div class="barre-verticale"></div>
-                            <span>La Grande Tourrache</span>
-
-                        </div>
-                        <a data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700" href="#" id="boutontry"
-                            onclick="openPanel()">
-                            <div class="navbar-button">
-                                <p>Essayer</p><i class="fa-sharp-duotone fa-solid fa-vial"></i>
-                            </div>
-                        </a>
+                <h3>Mouvaplan</h3>
+                <span>La Grande Tourrache</span>
+                <a data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700" href="#" id="boutontry"
+                    onclick="openPanel()">
+                    <div class="navbar-button">
+                        <p>Essayer</p><i class="fa-sharp-duotone fa-solid fa-vial"></i>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button">Me contacter</a>
-                <a id="switch-lang" class="langButton" href="./../en/mouvaplan.html"><img
-                        src="./../public/image/drapeau/en.png" class="drapeau"
-                        alt="">en</a>
+                <a href="contact.html" class="navbar-button underline-hoverproject"><span>Contact</span></a>
+                <a id="switch-lang" class="langButton" href="./../en/mouvaplan.html"><span
+                        class="currentlangnav">FR</span><span class="otherlangnav">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -77,7 +67,6 @@
                 </button>
             </div>
         </header>
-
         <div id="navbar-container"></div>
 
         <script>
@@ -126,8 +115,9 @@
         </section>
 
         <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='mouvaplan.html#sectionmouvaplan';"><img
-                    src="./../public/image/fleche2.svg" alt=""></a>
+            <a class="flechedubas" onclick="location.href='mouvaplan.html#section';">
+                <div class="double-arrow"></div>
+            </a>
         </div>
         <script src="./../public/js/fleche.js"></script>
     </section>
@@ -151,218 +141,221 @@
         </div>
         <script src="./../public/js/panelqrcode.js"></script>
     </section>
-    <section id="sectionmouvaplan" class="citation">
-        <div class="enbasbadge">
-            <li id="new" class="badge">new</li>
-            <li id="uiux" class="badge">UI/UX</li>
-        </div>
-        <blockquote id="quote">"Découvrez la vie en mouvement du parc du Plan de la Garde et suivez l'évolution de sa faune et de sa flore au rythme de la nature."</blockquote>
-    </section>
-    <section class="infoprojet">
-        <div class="explication">
-            <h2 class="titredelexplication">Mouvaplan</h2>
-            <p class="texteexplicatif">Après plusieurs observations au <strong>parc naturel du Plan de la Garde</strong>, Margaux et moi avons remarqué que les emplacements des points d'observation intéressants n'étaient pas suffisamment mis en valeur pour les visiteurs. C'est pourquoi nous avons pris l'initiative de créer une application mobile pour résoudre ce problème. Le principe de base de l'application repose sur un système de carte où les utilisateurs peuvent voir des points d'intérêt : <strong>plantes</strong>, <strong>sources d'eau</strong>, <strong>faune</strong> et <strong>flore</strong>.<br><br>Les utilisateurs peuvent visiter les points d'intérêt mis en évidence par le parc, mais ils peuvent également placer leurs propres emplacements. Ensuite, une banque d'images publique est créée pour chaque point, permettant aux utilisateurs de suivre l'évolution de la nature.</p>
-        </div>
-        <div class="presentation-50-50">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
-                src="./../public/image/mouvaplan/vegetation1.avif" alt="Nom du projet 1">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
-                src="./../public/image/mouvaplan/vegetation2.avif" alt="Nom du projet 1">
-        </div>
-        <div class="palette">
-            <div class="color" style="background-color: #FF6341;" data-color="Rouge" data-text="#FF6341">
-                <span class="color-name">FF6341</span>
+    <section class="containproject">
+        <section id="section" class="citation">
+            <div class="enbasbadge">
+                <li id="new" class="badge">new</li>
+                <li id="uiux" class="badge">UI/UX</li>
             </div>
-            <div class="color" style="background-color: #045E51;" data-color="Vert" data-text="#045E51">
-                <span class="color-name">045E51</span>
+            <blockquote id="quote">"Découvrez la vie en mouvement du parc du Plan de la Garde et suivez l'évolution de sa faune et de sa flore au rythme de la nature."</blockquote>
+        </section>
+        <section class="infoprojet">
+            <div class="explication">
+                <h2 class="titredelexplication">Mouvaplan</h2>
+                <p class="texteexplicatif">Après plusieurs observations au <strong>parc naturel du Plan de la Garde</strong>, Margaux et moi avons remarqué que les emplacements des points d'observation intéressants n'étaient pas suffisamment mis en valeur pour les visiteurs. C'est pourquoi nous avons pris l'initiative de créer une application mobile pour résoudre ce problème. Le principe de base de l'application repose sur un système de carte où les utilisateurs peuvent voir des points d'intérêt : <strong>plantes</strong>, <strong>sources d'eau</strong>, <strong>faune</strong> et <strong>flore</strong>.<br><br>Les utilisateurs peuvent visiter les points d'intérêt mis en évidence par le parc, mais ils peuvent également placer leurs propres emplacements. Ensuite, une banque d'images publique est créée pour chaque point, permettant aux utilisateurs de suivre l'évolution de la nature.</p>
             </div>
-            <div class="color" style="background-color: #3B7958;" data-color="Bleu" data-text="#3B7958">
-                <span class="color-name">3B7958</span>
+            <div class="presentation-50-50">
+                <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
+                    src="./../public/image/mouvaplan/vegetation1.avif" alt="Nom du projet 1">
+                <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                    src="./../public/image/mouvaplan/vegetation2.avif" alt="Nom du projet 1">
             </div>
-            <div class="color" style="background-color: #B3E3A2;" data-color="Jaune" data-text="#B3E3A2">
-                <span class="color-name">B3E3A2</span>
+            <div class="palette">
+                <div class="color" style="background-color: #FF6341;" data-color="Rouge" data-text="#FF6341">
+                    <span class="color-name">FF6341</span>
+                </div>
+                <div class="color" style="background-color: #045E51;" data-color="Vert" data-text="#045E51">
+                    <span class="color-name">045E51</span>
+                </div>
+                <div class="color" style="background-color: #3B7958;" data-color="Bleu" data-text="#3B7958">
+                    <span class="color-name">3B7958</span>
+                </div>
+                <div class="color" style="background-color: #B3E3A2;" data-color="Jaune" data-text="#B3E3A2">
+                    <span class="color-name">B3E3A2</span>
+                </div>
+                <div class="color" style="background-color: #FFFCE2;" data-color="Rose" data-text="#FFFCE2">
+                    <span class="color-name">FFFCE2</span>
+                </div>
+                <div class="copied-message">💾 Copié</div>
             </div>
-            <div class="color" style="background-color: #FFFCE2;" data-color="Rose" data-text="#FFFCE2">
-                <span class="color-name">FFFCE2</span>
+            <script src="./../public/js/copiecolor.js"></script>
+            <div class="explication">
+                <h2 data-key="colors" class="titredelexplication">Couleurs</h2>
+                <p class="texteexplicatif">Les différentes nuances de <strong>vert</strong> évoquent directement la nature, symbolisant la fraîcheur et la vitalité. Elles créent une atmosphère apaisante qui encourage l'exploration et la connexion avec l'environnement. Nous avons ajouté une teinte <strong>beige</strong> pour apporter de la chaleur et de l'accueil, équilibrant ainsi le vert dominant. Cela crée un espace visuellement agréable et invitant pour l'utilisateur.<br><br>Enfin, l'<strong>orange</strong> a été intégré pour introduire une touche dynamique. Cette couleur vive capte l'attention et ajoute une énergie sportive, encourageant l'exploration et les activités en extérieur. Ensemble, ces couleurs établissent une expérience visuelle harmonieuse et engageante, parfaitement adaptée à notre thème.</p>
             </div>
-            <div class="copied-message">💾 Copié</div>
-        </div>
+
+            <div class="presentionfont">
+                <div class="presentationfontgauche">
+                    <h2 class="titredelexplication">Typographie</h2>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="400" class="presenationfontdroite">
+                    <div class="Ericaone">
+                        <H1 class="font-example">GROS TITRE</H1>
+                        <div class="leslettresErica">
+                            <p class="font-sample">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                            <p class="font-sample">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+                            <p class="font-sample">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                        <p class="style-name">Erica One Regular 400</p>
+                    </div>
+                    <div class="Interblack">
+                        <H1 class="font-example">Titre</H1>
+                        <div class="leslettresInterblack">
+                            <p class="font-sample">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                            <p class="font-sample">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+                            <p class="font-sample">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                        <p class="style-name">Trial Black 900</p>
+                    </div>
+                    <div class="Inter">
+                        <H1 class="font-example">texte</H1>
+                        <div class="leslettresInter">
+                            <p class="font-sample">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                            <p class="font-sample">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+                            <p class="font-sample">0 1 2 3 4 5 6 7 8 9</p>
+                        </div>
+                        <p class="style-name">Trial Regular 400</p>
+                    </div>
+                </div>
+            </div>
+            <div class="explication">
+                <h2 class="titredelexplication">Logo</h2>
+                <p class="texteexplicatif">Le logo combine une icône de <strong>localisation</strong> et un <strong>héron</strong> pour symboliser l'équilibre entre la technologie et la nature. L'icône représente la fonction de suivi, tandis que le héron reflète la faune du parc et l'atmosphère paisible. Cette fusion met en avant l'idée de guider les utilisateurs tout en restant connectés à l'environnement naturel.</p>
+            </div>
+            <div class="presentation-app2">
+                <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                    class="presentation-app2-gauche">
+                    <img src="./../public/image/mouvaplan/logocrayon.png" alt="icon app sur un telephone">
+                </div>
+                <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
+                    class="presentation-app2-droite">
+                    <img src="./../public/image/mouvaplan/barreicon.png" alt="tracé de création de l'icon de l'app">
+                </div>
+            </div>
+            <div class="explication">
+                <h2 class="titredelexplication">Marqueurs</h2>
+                <p class="texteexplicatif">Nous devions créer des marqueurs clairs qui inspirent le mouvement. C'est pourquoi nous avons choisi de nous inspirer de la silhouette d'une <strong>goutte d'eau</strong>.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" class="mouvaplanicons">
+                <div class="marckers">
+                    <img src="./../public/image/mouvaplan/icon1.png" alt="icons sur la carte dans l'application">
+                    <img src="./../public/image/mouvaplan/icon2.png" alt="icons sur la carte dans l'application">
+                    <img src="./../public/image/mouvaplan/icon3.png" alt="icons sur la carte dans l'application">
+                    <img src="./../public/image/mouvaplan/icon4.png" alt="icons sur la carte dans l'application">
+                    <img src="./../public/image/mouvaplan/icon5.png" alt="icons sur la carte dans l'application">
+                </div>
+            </div>
+            <div class="explication">
+                <h2 class="titredelexplication">Comment ?</h2>
+                <p class="texteexplicatif">En réfléchissant au moyen approprié pour impliquer tous les publics dans le processus de création, le choix de créer une application mobile est devenu évident. Nous avons donc décidé de développer une application en utilisant le logiciel <strong>Figma</strong>.</p>
+            </div>
+        </section>
         <script src="./../public/js/copiecolor.js"></script>
-        <div class="explication">
-            <h2 data-key="colors" class="titredelexplication">Couleurs</h2>
-            <p class="texteexplicatif">Les différentes nuances de <strong>vert</strong> évoquent directement la nature, symbolisant la fraîcheur et la vitalité. Elles créent une atmosphère apaisante qui encourage l'exploration et la connexion avec l'environnement. Nous avons ajouté une teinte <strong>beige</strong> pour apporter de la chaleur et de l'accueil, équilibrant ainsi le vert dominant. Cela crée un espace visuellement agréable et invitant pour l'utilisateur.<br><br>Enfin, l'<strong>orange</strong> a été intégré pour introduire une touche dynamique. Cette couleur vive capte l'attention et ajoute une énergie sportive, encourageant l'exploration et les activités en extérieur. Ensemble, ces couleurs établissent une expérience visuelle harmonieuse et engageante, parfaitement adaptée à notre thème.</p>
-        </div>
+        <section class="figma-section">
+            <div data-aos="fade-right" data-aos-duration="2000" data-aos-anchor-placement="top-bottom"
+                class="figma-image-side"></div>
+            <div class="figma-content-side">
+                <p>Pour la création de Mouvaplan, j'ai choisi <strong>Figma</strong> car c'était le moyen le plus simple et le plus rapide de donner vie à mes designs. L'outil m'a permis de prototyper facilement mes idées et d'avoir une vision claire de l'interface. De plus, sa flexibilité et sa facilité d'utilisation m'ont permis de me concentrer sur la créativité plutôt que sur les aspects techniques.</p>
+                <a href="https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet?page-id=0%3A1&node-id=1-14&node-type=canvas&viewport=-1278%2C-685%2C1.47&t=up3dAEfRHYqgSdDa-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A14"
+                    target="_blank" class="bigtrybutton">
+                    Essayer l'application<i class="fa-sharp-duotone fa-solid fa-vial"></i>
+                </a>
 
-        <div class="presentionfont">
-            <div class="presentationfontgauche">
-                <h2 class="titredelexplication">Typographie</h2>
+                </a>
             </div>
-            <div data-aos="fade-up" data-aos-duration="400" class="presenationfontdroite">
-                <div class="Ericaone">
-                    <H1 class="font-example">GROS TITRE</H1>
-                    <div class="leslettresErica">
-                        <p class="font-sample">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
-                        <p class="font-sample">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
-                        <p class="font-sample">0 1 2 3 4 5 6 7 8 9</p>
-                    </div>
-                    <p class="style-name">Erica One Regular 400</p>
+        </section>
+        <section class="infoprojet">
+            <div data-aos="fade-up" data-aos-duration="400" class="telmouvaplan">
+                <div class="telgroupe">
+                    <span>1. Accueil</span>
+                    <img src="./../public/image/mouvaplan/tel6.png" alt="">
                 </div>
-                <div class="Interblack">
-                    <H1 class="font-example">Titre</H1>
-                    <div class="leslettresInterblack">
-                        <p class="font-sample">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
-                        <p class="font-sample">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
-                        <p class="font-sample">0 1 2 3 4 5 6 7 8 9</p>
-                    </div>
-                    <p class="style-name">Trial Black 900</p>
+                <div class="telgroupe">
+                    <span>2. Carte</span>
+                    <img src="./../public/image/mouvaplan/tel4.png" alt="">
                 </div>
-                <div class="Inter">
-                    <H1 class="font-example">texte</H1>
-                    <div class="leslettresInter">
-                        <p class="font-sample">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
-                        <p class="font-sample">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
-                        <p class="font-sample">0 1 2 3 4 5 6 7 8 9</p>
-                    </div>
-                    <p class="style-name">Trial Regular 400</p>
+                <div class="telgroupe">
+                    <span>3. Story</span>
+                    <img src="./../public/image/mouvaplan/tel3.png" alt="">
+                </div>
+                <div class="telgroupe">
+                    <span>4. Connexion</span>
+                    <img src="./../public/image/mouvaplan/tel2.png" alt="">
+                </div>
+                <div class="telgroupe">
+                    <span>5. Favoris</span>
+                    <img src="./../public/image/mouvaplan/tel5.png" alt="">
+                </div>
+                <div class="telgroupe">
+                    <span>6. Informations</span>
+                    <img src="./../public/image/mouvaplan/tel1.png" alt="">
                 </div>
             </div>
-        </div>
-        <div class="explication">
-            <h2 class="titredelexplication">Logo</h2>
-            <p class="texteexplicatif">Le logo combine une icône de <strong>localisation</strong> et un <strong>héron</strong> pour symboliser l'équilibre entre la technologie et la nature. L'icône représente la fonction de suivi, tandis que le héron reflète la faune du parc et l'atmosphère paisible. Cette fusion met en avant l'idée de guider les utilisateurs tout en restant connectés à l'environnement naturel.</p>
-        </div>
-        <div class="presentation-app2">
-            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
-                class="presentation-app2-gauche">
-                <img src="./../public/image/mouvaplan/logocrayon.png" alt="icon app sur un telephone">
+            <div class="presentation-50-50">
+                <img data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                    src="./../public/image/mouvaplan/telephone.png" alt="telephone sur l'application">
+                <img data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
+                    src="./../public/image/mouvaplan/montre.png" alt="montre sur l'applicatio ">
             </div>
-            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
-                class="presentation-app2-droite">
-                <img src="./../public/image/mouvaplan/barreicon.png" alt="tracé de création de l'icon de l'app">
+            <div class="uneimagemouvaplantel">
+                <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                    src="./../public/image/mouvaplan/telephone2.png" alt="deux telephone sur l'application">
             </div>
-        </div>
-        <div class="explication">
-            <h2 class="titredelexplication">Marqueurs</h2>
-            <p class="texteexplicatif">Nous devions créer des marqueurs clairs qui inspirent le mouvement. C'est pourquoi nous avons choisi de nous inspirer de la silhouette d'une <strong>goutte d'eau</strong>.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="400" class="mouvaplanicons">
-            <div class="marckers">
-                <img src="./../public/image/mouvaplan/icon1.png" alt="icons sur la carte dans l'application">
-                <img src="./../public/image/mouvaplan/icon2.png" alt="icons sur la carte dans l'application">
-                <img src="./../public/image/mouvaplan/icon3.png" alt="icons sur la carte dans l'application">
-                <img src="./../public/image/mouvaplan/icon4.png" alt="icons sur la carte dans l'application">
-                <img src="./../public/image/mouvaplan/icon5.png" alt="icons sur la carte dans l'application">
+        </section>
+        <section id="fondmeteo" class="fullscreen">
+            <div class="tri-images">
+                <div data-aos="zoom-in" data-aos-duration="700" data-aos-delay="0"
+                    data-aos-anchor-placement="top-bottom" class="image-container" id="image1">
+                    <img id="metteo" src="./../public/image/meteo/variant4.png"
+                        alt="carte meteo dans l'application mauvais temp">
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200"
+                    data-aos-anchor-placement="top-bottom" class="image-container" id="image2">
+                    <img id="metteo1" src="./../public/image/meteo/variant5.png"
+                        alt="carte meteo dans l'application nuageux">
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="400"
+                    data-aos-anchor-placement="top-bottom" class="image-container" id="image3">
+                    <img id="metteo2" src="./../public/image/meteo/variant6.png"
+                        alt="carte meteo dans l'application beau temp">
+                </div>
             </div>
-        </div>
-        <div class="explication">
-            <h2 class="titredelexplication">Comment ?</h2>
-            <p class="texteexplicatif">En réfléchissant au moyen approprié pour impliquer tous les publics dans le processus de création, le choix de créer une application mobile est devenu évident. Nous avons donc décidé de développer une application en utilisant le logiciel <strong>Figma</strong>.</p>
-        </div>
-    </section>
-    <script src="./../public/js/copiecolor.js"></script>
-    <section class="figma-section">
-        <div data-aos="fade-right" data-aos-duration="2000" data-aos-anchor-placement="top-bottom"
-            class="figma-image-side"></div>
-        <div class="figma-content-side">
-            <p>Pour la création de Mouvaplan, j'ai choisi <strong>Figma</strong> car c'était le moyen le plus simple et le plus rapide de donner vie à mes designs. L'outil m'a permis de prototyper facilement mes idées et d'avoir une vision claire de l'interface. De plus, sa flexibilité et sa facilité d'utilisation m'ont permis de me concentrer sur la créativité plutôt que sur les aspects techniques.</p>
-            <a href="https://www.figma.com/proto/2Hi4Hk60SrK5ELBUVZbYpe/micro-projet?page-id=0%3A1&node-id=1-14&node-type=canvas&viewport=-1278%2C-685%2C1.47&t=up3dAEfRHYqgSdDa-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A14"
-                target="_blank" class="bigtrybutton">
-                Essayer l'application<i class="fa-sharp-duotone fa-solid fa-vial"></i>
-            </a>
+        </section>
 
-            </a>
-        </div>
-    </section>
-    <section class="infoprojet">
-        <div data-aos="fade-up" data-aos-duration="400" class="telmouvaplan">
-            <div class="telgroupe">
-                <span>1. Accueil</span>
-                <img src="./../public/image/mouvaplan/tel6.png" alt="">
+        <script src="./../public/js/meteo.js"></script>
+        <section class=infoprojet>
+            <div class="carte">
+                <iframe style="filter: grayscale(1) brightness(0.9)  invert(1);"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.2365897246764!2d6.012833476551184!3d43.120555886716936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9191a4655d86d%3A0x5d962357139e1021!2sParc%20naturel%20du%20Plan!5e0!3m2!1sfr!2sfr!4v1730000027618!5m2!1sfr!2sfr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="telgroupe">
-                <span>2. Carte</span>
-                <img src="./../public/image/mouvaplan/tel4.png" alt="">
+            <div class="citationdefin">
+                <li>Credit : altlab</li>
+                <p>Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
             </div>
-            <div class="telgroupe">
-                <span>3. Story</span>
-                <img src="./../public/image/mouvaplan/tel3.png" alt="">
-            </div>
-            <div class="telgroupe">
-                <span>4. Connexion</span>
-                <img src="./../public/image/mouvaplan/tel2.png" alt="">
-            </div>
-            <div class="telgroupe">
-                <span>5. Favoris</span>
-                <img src="./../public/image/mouvaplan/tel5.png" alt="">
-            </div>
-            <div class="telgroupe">
-                <span>6. Informations</span>
-                <img src="./../public/image/mouvaplan/tel1.png" alt="">
-            </div>
-        </div>
-        <div class="presentation-50-50">
-            <img data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
-                src="./../public/image/mouvaplan/telephone.png" alt="telephone sur l'application">
-            <img data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
-                src="./../public/image/mouvaplan/montre.png" alt="montre sur l'applicatio ">
-        </div>
-        <div class="uneimagemouvaplantel">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
-                src="./../public/image/mouvaplan/telephone2.png" alt="deux telephone sur l'application">
-        </div>
-    </section>
-    <section id="fondmeteo" class="fullscreen">
-        <div class="tri-images">
-            <div data-aos="zoom-in" data-aos-duration="700" data-aos-delay="0" data-aos-anchor-placement="top-bottom"
-                class="image-container" id="image1">
-                <img id="metteo" src="./../public/image/meteo/variant4.png"
-                    alt="carte meteo dans l'application mauvais temp">
-            </div>
-            <div data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200" data-aos-anchor-placement="top-bottom"
-                class="image-container" id="image2">
-                <img id="metteo1" src="./../public/image/meteo/variant5.png"
-                    alt="carte meteo dans l'application nuageux">
-            </div>
-            <div data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="400" data-aos-anchor-placement="top-bottom"
-                class="image-container" id="image3">
-                <img id="metteo2" src="./../public/image/meteo/variant6.png"
-                    alt="carte meteo dans l'application beau temp">
-            </div>
-        </div>
-    </section>
-
-    <script src="./../public/js/meteo.js"></script>
-    <section class=infoprojet>
-        <div class="carte">
-            <iframe style="filter: grayscale(1) brightness(0.9)  invert(1);"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.2365897246764!2d6.012833476551184!3d43.120555886716936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9191a4655d86d%3A0x5d962357139e1021!2sParc%20naturel%20du%20Plan!5e0!3m2!1sfr!2sfr!4v1730000027618!5m2!1sfr!2sfr"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="citationdefin">
-            <li>Credit : altlab</li>
-            <p>Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
-        </div>
-    </section>
-    <footer class="footerprojects">
-        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
-            data-aos-anchor-placement="top-bottom">
-            <li class="menu-elem">
-                <div class="footerlignetext">
-                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
-                        83200,Toulon & 59350,Lille</p>
-                    <div class="socialfooter">
-                        <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
-                                style="filter: invert();" alt=""></a>
-                        <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
-                                alt=""></a>
-                        <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
+        </section>
+        <footer class="footerprojects">
+            <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+                data-aos-anchor-placement="top-bottom">
+                <li class="menu-elem">
+                    <div class="footerlignetext">
+                        <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                            83200,Toulon & 59350,Lille</p>
+                        <div class="socialfooter">
+                            <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
+                                    style="filter: invert();" alt=""></a>
+                            <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
+                                    alt=""></a>
+                            <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg"
+                                    alt=""></a>
+                        </div>
+                        <p data-key="footer" class="textfooterd">@2025 | © altlab. Tous droits réservés.</p>
                     </div>
-                    <p data-key="footer" class="textfooterd">@2025 | © altlab. Tous droits réservés.</p>
-                </div>
-            </li>
-        </ul>
-    </footer>
+                </li>
+            </ul>
+        </footer>
+    </section>
     <script src="./../public/js/aos.js"></script>
     <script>
         AOS.init();
@@ -370,6 +363,7 @@
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
+    <script src="./../public/js/transition.js"></script>
 </body>
 <script src="./../public/js/langue.js"></script>
 

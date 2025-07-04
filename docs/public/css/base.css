@@ -182,9 +182,42 @@ b {
   transition: opacity 1s ease-in-out;
 }
 
-.flechedubas {
+.double-arrow {
+  rotate: 180deg;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.double-arrow::before,
+.double-arrow::after {
+  border-radius: 50px;
+  margin: -0.25px;
+  content: '';
+  position: absolute;
+  width: 2px;
   height: 100%;
-  width: 75px;
+  background: white;
+  transform-origin: top center;
+}
+
+.double-arrow::before {
+  transform: rotate(45deg);
+  left: 50%;
+  top: 0;
+}
+
+.double-arrow::after {
+  transform: rotate(-45deg);
+  right: 50%;
+  top: 0;
+}
+
+.flechedubas {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
   animation: push-down 1s infinite alternate;
   opacity: 0.4;
   mix-blend-mode: screen;
@@ -207,15 +240,15 @@ b {
 /* Animation push vers le bas */
 @keyframes push-down {
   0% {
-    transform: translateY(-20px) scaleX(0.8) scaleY(0.7);
+    transform: translateY(-10px);
     scale: 1;
-    opacity: 0.3;
+    opacity: 0.6;
   }
 
   100% {
-    transform: translateY(0px) scaleX(0.6) scaleY(0.7);
+    transform: translateY(0px);
     scale: 1;
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 

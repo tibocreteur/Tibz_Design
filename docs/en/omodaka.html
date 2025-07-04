@@ -22,49 +22,41 @@
     <link rel="stylesheet" href="./../public/css/outils/aos.css">
     <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
+    <link rel="stylesheet" href="./../public/css/outils/transition.css">
 
 </head>
 
 <body>
+    <div id="transition-overlay" class="active"></div>
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
         <span>This website is not yet available on mobile.</span>
         <span>I invite you to return from a computer for a better experience.</span>
     </section>
     <section class="top-page">
-        <header class="navbar">
-            <div class="navbar-left">
-                <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo/logotrois.png" alt="logo du site">
+
+        <header class="navbarproject">
+            <div class="navbar-left-project">
+                <a href="index.html" class="navbar-button-logo-project">
+                    <img src="./../public/image/logo/logob.png" alt="logo du site">
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
-                        back
-                    </a>
-                    <div class="contentnavbar-project">
-                        <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                            <h3>OMODAKA - オモダカ</h3>
-                            <div class="barre-verticale"></div>
-                            <span>La Grande Tourrache</span>
-                        </div>
-                    </div>
-                </div>
+                <h3>OMODAKA - オモダカ</h3>
+                <span>La Grande Tourrache</span>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button">Contact me</a>
-                <a id="switch-lang" class="langButton" href="./../fr/omodaka.html"><img
-                        src="./../public/image/drapeau/fr.png" class="drapeau"
-                        alt="">fr</a>
+                <a href="contact.html" class="navbar-button underline-hoverproject"><span>Contact</span></a>
+                <a id="switch-lang" class="langButton" href="./../fr/omodaka.html"><span
+                        class="otherlangnav">FR</span><span class="currentlangnav">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
                 </button>
-                <script src="./../public/js/ancre.js"></script>
             </div>
         </header>
+
 
         <div id="navbar-container"></div>
 
@@ -111,272 +103,282 @@
             <script src="./../public/js/animation.js"></script>
         </section>
         <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='omodaka.html#sectionomodaka';"><img
-                    src="./../public/image/fleche2.svg" alt=""></a>
+            <a class="flechedubas" onclick="location.href='omodaka.html#section';">
+                <div class="double-arrow"></div>
+            </a>
         </div>
         <script src="./../public/js/fleche.js"></script>
     </section>
-    <section id="sectionomodaka" class="citation">
-        <div class="enbasbadge">
-            <li id="da" class="badge">VISUAL IDENTITY</li>
-        </div>
-        <blockquote id="quote">"Le voyage de mille lieues commence par un pas." — Lao Tseu</blockquote>
-    </section>
-    <section class="infoprojet">
-        <div class="explication">
-            <h2 class="titredelexplication">Omodaka</h2>
-            <p class="texteexplicatif"><strong>Omodaka</strong> is a project I created to bring <strong>serenity</strong> and <strong>tranquility</strong> to those seeking refuge from the chaos of everyday life. My approach is based on the belief that <strong>calmness</strong> is essential to <strong>mental and emotional well-being</strong>.<br><br>The word <strong>Omodaka</strong> comes from <strong>Japanese (オモダカ)</strong>, where it refers to <strong>a water plant</strong> known as 'arrowhead' (Sagittaria trifolia in Latin). This plant, often found in <strong>peaceful environments</strong> like ponds and rivers, symbolizes <strong>tranquility</strong> and the <strong>purity of nature</strong>. The <strong>Omodaka</strong> project <strong>draws inspiration from landscapes around the world</strong>, capturing the essence of different places through unique fragrances.<br><br>Each scent reflects the atmosphere and emotions evoked by these regions, offering <strong>an immersive sensory experience</strong>. At <strong>Omodaka</strong>, each fragrance is created to take you on <strong>a calming and sensory journey</strong>, allowing you to reconnect with yourself and nature through the scent of these inspiring landscapes.</p>
-        </div>
-    </section>
-    <section class="decors">
-        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="wrapper">
-            <div class="decors-container">
-                <img src="./../public/image/omodaka/cinqterre.avif" alt="">
-                <div class="infodecors">
-                    <h2>Cinque Terre</h2>
-                    <span class="petiteinfos">
-                        <p>444.1075° N, 9.7361° E</p>
-                        <div class="espace"></div>
-                        <p> - Italia</p>
-                    </span>
-                    <div class="palette2">
-                        <div class="color" style="background-color: #DEE9C2" data-color="Rouge" data-text="#DEE9C2">
-                            <span class="color-name2">DEE9C2</span>
-                        </div>
-                        <div class="color" style="background-color: #8AAEED" data-color="Rouge" data-text="#8AAEED">
-                            <span class="color-name2">8AAEED</span>
-                        </div>
-                        <div class="color" style="background-color: #727F8A;" data-color="Vert" data-text="#727F8A">
-                            <span class="color-name2">727F8A</span>
-                        </div>
-                        <div class="color" style="background-color: #CCC2B4;" data-color="Bleu" data-text="#CCC2B4">
-                            <span class="color-name2">CCC2B4</span>
-                        </div>
-                        <div class="color" style="background-color: #C996A4;" data-color="Jaune" data-text="#C996A4">
-                            <span class="color-name2">C996A4</span>
-                        </div>
-                        <div class="color" style="background-color: #FFBC21;" data-color="Rose" data-text="#FFBC21">
-                            <span class="color-name2">FFBC21</span>
+    <section class="containproject">
+        <section id="section" class="citation">
+            <blockquote id="quote">"Le voyage de mille lieues commence par un pas." — Lao Tseu</blockquote>
+        </section>
+        <section class="infoprojet">
+            <div class="explication">
+                <h2 class="titredelexplication">Omodaka</h2>
+                <p class="texteexplicatif"><strong>Omodaka</strong> is a project I created to bring <strong>serenity</strong> and <strong>tranquility</strong> to those seeking refuge from the chaos of everyday life. My approach is based on the belief that <strong>calmness</strong> is essential to <strong>mental and emotional well-being</strong>.<br><br>The word <strong>Omodaka</strong> comes from <strong>Japanese (オモダカ)</strong>, where it refers to <strong>a water plant</strong> known as 'arrowhead' (Sagittaria trifolia in Latin). This plant, often found in <strong>peaceful environments</strong> like ponds and rivers, symbolizes <strong>tranquility</strong> and the <strong>purity of nature</strong>. The <strong>Omodaka</strong> project <strong>draws inspiration from landscapes around the world</strong>, capturing the essence of different places through unique fragrances.<br><br>Each scent reflects the atmosphere and emotions evoked by these regions, offering <strong>an immersive sensory experience</strong>. At <strong>Omodaka</strong>, each fragrance is created to take you on <strong>a calming and sensory journey</strong>, allowing you to reconnect with yourself and nature through the scent of these inspiring landscapes.</p>
+            </div>
+        </section>
+        <section class="decors">
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="wrapper">
+                <div class="decors-container">
+                    <img src="./../public/image/omodaka/cinqterre.avif" alt="">
+                    <div class="infodecors">
+                        <h2>Cinque Terre</h2>
+                        <span class="petiteinfos">
+                            <p>444.1075° N, 9.7361° E</p>
+                            <div class="espace"></div>
+                            <p> - Italia</p>
+                        </span>
+                        <div class="palette2">
+                            <div class="color" style="background-color: #DEE9C2" data-color="Rouge" data-text="#DEE9C2">
+                                <span class="color-name2">DEE9C2</span>
+                            </div>
+                            <div class="color" style="background-color: #8AAEED" data-color="Rouge" data-text="#8AAEED">
+                                <span class="color-name2">8AAEED</span>
+                            </div>
+                            <div class="color" style="background-color: #727F8A;" data-color="Vert" data-text="#727F8A">
+                                <span class="color-name2">727F8A</span>
+                            </div>
+                            <div class="color" style="background-color: #CCC2B4;" data-color="Bleu" data-text="#CCC2B4">
+                                <span class="color-name2">CCC2B4</span>
+                            </div>
+                            <div class="color" style="background-color: #C996A4;" data-color="Jaune"
+                                data-text="#C996A4">
+                                <span class="color-name2">C996A4</span>
+                            </div>
+                            <div class="color" style="background-color: #FFBC21;" data-color="Rose" data-text="#FFBC21">
+                                <span class="color-name2">FFBC21</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="wrapper">
-            <div class="decors-container">
-                <img src="./../public/image/omodaka/decors2.avif" alt="">
-                <div class="infodecors">
-                    <h2>Provence</h2>
-                    <span class="petiteinfos">
-                        <p>43.2965° N, 5.3698° E</p>
-                        <div class="espace"></div>
-                        <p>- France</p>
-                    </span>
-                    <div class="palette2">
-                        <div class="color" style="background-color: #AB8892" data-color="Rouge" data-text="#AB8892">
-                            <span class="color-name2">AB8892</span>
-                        </div>
-                        <div class="color" style="background-color: #E9D8C1;" data-color="Vert" data-text="#E9D8C1">
-                            <span class="color-name2">E9D8C1</span>
-                        </div>
-                        <div class="color" style="background-color: #FFBE66;" data-color="Bleu" data-text="#FFBE66">
-                            <span class="color-name2">FFBE66</span>
-                        </div>
-                        <div class="color" style="background-color: #E6BB94;" data-color="Jaune" data-text="#E6BB94">
-                            <span class="color-name2">E6BB94</span>
-                        </div>
-                        <div class="color" style="background-color: #BA8D80;" data-color="Rose" data-text="#BA8D80">
-                            <span class="color-name2">BA8D80</span>
-                        </div>
-                        <div class="color" style="background-color: #BBA19D;" data-color="Rose" data-text="#BBA19D">
-                            <span class="color-name2">BBA19D</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="wrapper">
-            <div class="decors-container">
-                <img src="./../public/image/omodaka/decors3.avif" alt="">
-                <div class="infodecors">
-                    <h2>Cambodia</h2>
-                    <span class="petiteinfos">
-                        <p>11.5564° N, 104.9282° E</p>
-                    </span>
-                    <div class="palette2">
-                        <div class="color" style="background-color: #FFE698" data-color="Rouge" data-text="#FFE698">
-                            <span class="color-name2">FFE698</span>
-                        </div>
-                        <div class="color" style="background-color: #8F787A;" data-color="Vert" data-text="#8F787A">
-                            <span class="color-name2">8F787A</span>
-                        </div>
-                        <div class="color" style="background-color: #C3A7A5;" data-color="Bleu" data-text="#C3A7A5">
-                            <span class="color-name2">C3A7A5</span>
-                        </div>
-                        <div class="color" style="background-color: #E6BB94;" data-color="Jaune" data-text="#E6BB94">
-                            <span class="color-name2">E6BB94</span>
-                        </div>
-                        <div class="color" style="background-color: #EC8A5E;" data-color="Rose" data-text="#EC8A5E">
-                            <span class="color-name2">EC8A5E</span>
-                        </div>
-                        <div class="color" style="background-color: #FFBC21;" data-color="Rose" data-text="#FFBC21">
-                            <span class="color-name2">FFBC21</span>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="wrapper">
+                <div class="decors-container">
+                    <img src="./../public/image/omodaka/decors2.avif" alt="">
+                    <div class="infodecors">
+                        <h2>Provence</h2>
+                        <span class="petiteinfos">
+                            <p>43.2965° N, 5.3698° E</p>
+                            <div class="espace"></div>
+                            <p>- France</p>
+                        </span>
+                        <div class="palette2">
+                            <div class="color" style="background-color: #AB8892" data-color="Rouge" data-text="#AB8892">
+                                <span class="color-name2">AB8892</span>
+                            </div>
+                            <div class="color" style="background-color: #E9D8C1;" data-color="Vert" data-text="#E9D8C1">
+                                <span class="color-name2">E9D8C1</span>
+                            </div>
+                            <div class="color" style="background-color: #FFBE66;" data-color="Bleu" data-text="#FFBE66">
+                                <span class="color-name2">FFBE66</span>
+                            </div>
+                            <div class="color" style="background-color: #E6BB94;" data-color="Jaune"
+                                data-text="#E6BB94">
+                                <span class="color-name2">E6BB94</span>
+                            </div>
+                            <div class="color" style="background-color: #BA8D80;" data-color="Rose" data-text="#BA8D80">
+                                <span class="color-name2">BA8D80</span>
+                            </div>
+                            <div class="color" style="background-color: #BBA19D;" data-color="Rose" data-text="#BBA19D">
+                                <span class="color-name2">BBA19D</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="wrapper">
-            <div class="decors-container">
-                <img src="./../public/image/omodaka/decors4.avif" alt="">
-                <div class="infodecors">
-                    <h2>The Lofoten Islands</h2>
-                    <span class="petiteinfos">
-                        <p>68.2180° N, 13.6367° E</p>
-                        <div class="espace"></div>
-                        <p>- Norway</p>
-                    </span>
-                    <div class="palette2">
-                        <div class="color" style="background-color: #7597A1" data-color="Rouge" data-text="#7597A1">
-                            <span class="color-name2">7597A1</span>
-                        </div>
-                        <div class="color" style="background-color: #DEDAD2;" data-color="Vert" data-text="#DEDAD2">
-                            <span class="color-name2">DEDAD2</span>
-                        </div>
-                        <div class="color" style="background-color: #FFBC21;" data-color="Bleu" data-text="#FFBC21">
-                            <span class="color-name2">FFBC21</span>
-                        </div>
-                        <div class="color" style="background-color: #CCC2B4;" data-color="Jaune" data-text="#CCC2B4">
-                            <span class="color-name2">CCC2B4</span>
-                        </div>
-                        <div class="color" style="background-color: #9C9698;" data-color="Rose" data-text="#9C9698;">
-                            <span class="color-name2">9C9698</span>
-                        </div>
-                        <div class="color" style="background-color: #AAA6A8;" data-color="Rose" data-text="#AAA6A8;">
-                            <span class="color-name2">AAA6A8</span>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="wrapper">
+                <div class="decors-container">
+                    <img src="./../public/image/omodaka/decors3.avif" alt="">
+                    <div class="infodecors">
+                        <h2>Cambodia</h2>
+                        <span class="petiteinfos">
+                            <p>11.5564° N, 104.9282° E</p>
+                        </span>
+                        <div class="palette2">
+                            <div class="color" style="background-color: #FFE698" data-color="Rouge" data-text="#FFE698">
+                                <span class="color-name2">FFE698</span>
+                            </div>
+                            <div class="color" style="background-color: #8F787A;" data-color="Vert" data-text="#8F787A">
+                                <span class="color-name2">8F787A</span>
+                            </div>
+                            <div class="color" style="background-color: #C3A7A5;" data-color="Bleu" data-text="#C3A7A5">
+                                <span class="color-name2">C3A7A5</span>
+                            </div>
+                            <div class="color" style="background-color: #E6BB94;" data-color="Jaune"
+                                data-text="#E6BB94">
+                                <span class="color-name2">E6BB94</span>
+                            </div>
+                            <div class="color" style="background-color: #EC8A5E;" data-color="Rose" data-text="#EC8A5E">
+                                <span class="color-name2">EC8A5E</span>
+                            </div>
+                            <div class="color" style="background-color: #FFBC21;" data-color="Rose" data-text="#FFBC21">
+                                <span class="color-name2">FFBC21</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="copied-message">💾 Copied</div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="wrapper">
+                <div class="decors-container">
+                    <img src="./../public/image/omodaka/decors4.avif" alt="">
+                    <div class="infodecors">
+                        <h2>The Lofoten Islands</h2>
+                        <span class="petiteinfos">
+                            <p>68.2180° N, 13.6367° E</p>
+                            <div class="espace"></div>
+                            <p>- Norway</p>
+                        </span>
+                        <div class="palette2">
+                            <div class="color" style="background-color: #7597A1" data-color="Rouge" data-text="#7597A1">
+                                <span class="color-name2">7597A1</span>
+                            </div>
+                            <div class="color" style="background-color: #DEDAD2;" data-color="Vert" data-text="#DEDAD2">
+                                <span class="color-name2">DEDAD2</span>
+                            </div>
+                            <div class="color" style="background-color: #FFBC21;" data-color="Bleu" data-text="#FFBC21">
+                                <span class="color-name2">FFBC21</span>
+                            </div>
+                            <div class="color" style="background-color: #CCC2B4;" data-color="Jaune"
+                                data-text="#CCC2B4">
+                                <span class="color-name2">CCC2B4</span>
+                            </div>
+                            <div class="color" style="background-color: #9C9698;" data-color="Rose"
+                                data-text="#9C9698;">
+                                <span class="color-name2">9C9698</span>
+                            </div>
+                            <div class="color" style="background-color: #AAA6A8;" data-color="Rose"
+                                data-text="#AAA6A8;">
+                                <span class="color-name2">AAA6A8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copied-message">💾 Copied</div>
+        </section>
+        <script src="./../public/js/copiecolor.js"></script>
+        <section class="infoprojet">
+            <div class="explication">
+                <h2 class="titredelexplication">Colors</h2>
+                <p class="texteexplicatif">The concept behind each <strong>Omodaka</strong> fragrance comes from observing the <strong>natural colors of the chosen locations</strong>. Each region inspires not only a scent but also specific shades that <strong>capture its essence</strong>. For example, <strong>Provence</strong> evokes lavender and golden tones, while the <strong>Lofoten Islands</strong>, with their snowy landscapes, inspire icy blues and pure whites. This approach allows each fragrance to reflect <strong>the atmosphere of the place</strong>, offering <strong>a visual and olfactory sensory journey</strong>.</p>
+            </div>
+            <div class="logovideo">
+                <div class="logohaut">
+                    <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                        class="js-sync-image-container">
+                        <img class="active" src="./../public/image/omodaka/logos/logo3_1.avif" alt="">
+                        <img src="./../public/image/omodaka/logos/logo3_2.avif" alt="">
+                        <img src="./../public/image/omodaka/logos/logo3_3.avif" alt="">
+                        <img src="./../public/image/omodaka/logos/logo3_4.avif" alt="">
+                    </div>
+                </div>
+                <div class="logobas">
+                    <div data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                        class="js-sync-image-container">
+                        <img class="active" src="./../public/image/omodaka/logos/logo2_1.avif" alt="">
+                        <img src="./../public/image/omodaka/logos/logo2_2.avif" alt="">
+                        <img src="./../public/image/omodaka/logos/logo2_3.avif" alt="">
+                        <img src="./../public/image/omodaka/logos/logo2_4.avif" alt="">
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                        class="js-sync-image-container">
+                        <img class="active" src="./../public/image/omodaka/logos/logo1_1.avif" alt="">
+                        <img src="./../public/image/omodaka/logos/logo1_2.avif" alt="">
+                        <img src="./../public/image/omodaka/logos/logo1_3.avif" alt="">
+                        <img src="./../public/image/omodaka/logos/logo1_4.avif" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="explication">
+                <h2 class="titredelexplication">Logo</h2>
+                <p data-key="logoomodaka" class="texteexplicatif">The letter "O" is deformed to resemble a circle, symbolizing <strong>a perfume bottle</strong> or <strong>a container</strong>. In one of the variations, this "O" is positioned under a rectangle, representing a rim, from which sticks emerge, similar to those used for diffusing scents. This detail directly references the sensory experience and the art of perfuming spaces. The typography remains minimalist and elegant, creating a balance between modernity and refinement, while symbolizing the calming atmosphere and harmony the products bring to the home.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                class="image-comparison">
+                <div class="images-container">
+                    <img class="before-image" src="./../public/image/omodaka/deuxlogoblanc.png" alt="" />
+                    <img class="after-image" src="./../public/image/omodaka/deuxlogonoir.png" alt="" />
+                    <div class="slider-line"></div>
+                    <div class="slider-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+                    </div>
+                    <input type="range" class="slider" min="0" max="100" />
+                </div>
+            </div>
+            <div class="explication">
+                <h2 class="titredelexplication">Packaging</h2>
+                <p class="texteexplicatif">The packaging of <strong>Omodaka</strong> was designed to evoke serenity and elegance, in harmony with the essence of the brand. I chose a cubic shape for the box, symbolizing <strong>simplicity and balance</strong>, values deeply rooted in <strong>Japanese</strong> culture. This minimalist design is inspired by traditional <strong>Japanese</strong> elements, which highlight the beauty of <strong>simplicity</strong> and <strong>the harmony of shapes</strong>.<br><br>A band around the box adds a touch of sophistication while creating a sense of protection, reflecting the idea of <strong>refuge and calm</strong> that we wish to offer our users. The map of the location on the box pays tribute to the inspiring landscapes that guided the creation of each fragrance, allowing users to embark on a <strong>sensory journey</strong>. This map enhances immersion and the concept of <strong>escape to places filled with tranquility</strong>.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                class="imagepackagingomodaka">
+                <div class="plants">
+                    <span class="content-number">1</span>
+                    <div class="js-sync-image-container">
+                        <img class="active" src="./../public/image/omodaka/packaging/boite1.png" alt="">
+                        <img src="./../public/image/omodaka/packaging/boite2.png" alt="">
+                        <img src="./../public/image/omodaka/packaging/boite3.png" alt="">
+                        <img src="./../public/image/omodaka/packaging/boite4.png" alt="">
+                    </div>
+                </div>
+                <div class="plants2">
+                    <span class="content-number">2</span>
+                    <div class="js-sync-image-container">
+                        <img class="active" src="./../public/image/omodaka/packaging/bande1.png" alt="">
+                        <img src="./../public/image/omodaka/packaging/bande2.png" alt="">
+                        <img src="./../public/image/omodaka/packaging/bande3.png" alt="">
+                        <img src="./../public/image/omodaka/packaging/bande4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="legend">
+                <p><span class="legend-number">1.</span><span class="legend-number">Main Box – The primary structure containing the product.</span>
+                </p>
+                <p><span class="legend-number">2.</span><span
+                        class="legend-number">Perimeter Band – The band surrounding the box.</span>
+                </p>
+            </div>
+            <div class="boite">
+                <video style="filter: brightness(0.9);" data-aos="fade-up" data-aos-duration="400"
+                    data-aos-anchor-placement="top-bottom" src="./../public/video/omodakaciel.webm" autoplay muted
+                    playsinline loop></video>
+            </div>
+        </section>
+        <section class="infoprojet">
+            <script src="./../public/js/zoom.js"></script>
+            <div class="citationdefin">
+                <li>Credit : altlab</li>
+                <p>May this creation awaken your inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
+            </div>
+        </section>
+        <script src="./../public/js/comparaison.js"></script>
+        <script src="./../public/js/synchronisation.js"></script>
+        <footer class="footerprojects">
+            <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+                data-aos-anchor-placement="top-bottom">
+                <li class="menu-elem">
+                    <div class="footerlignetext">
+                        <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                            83200,Toulon & 59350,Lille</p>
+                        <div class="socialfooter">
+                            <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
+                                    style="filter: invert();" alt=""></a>
+                            <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
+                                    alt=""></a>
+                            <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg"
+                                    alt=""></a>
+                        </div>
+                        <p data-key="footer" class="textfooterd">@2025 | © altlab. All rights reserved.</p>
+                    </div>
+                </li>
+            </ul>
+        </footer>
     </section>
-    <script src="./../public/js/copiecolor.js"></script>
-    <section class="infoprojet">
-        <div class="explication">
-            <h2 class="titredelexplication">Colors</h2>
-            <p class="texteexplicatif">The concept behind each <strong>Omodaka</strong> fragrance comes from observing the <strong>natural colors of the chosen locations</strong>. Each region inspires not only a scent but also specific shades that <strong>capture its essence</strong>. For example, <strong>Provence</strong> evokes lavender and golden tones, while the <strong>Lofoten Islands</strong>, with their snowy landscapes, inspire icy blues and pure whites. This approach allows each fragrance to reflect <strong>the atmosphere of the place</strong>, offering <strong>a visual and olfactory sensory journey</strong>.</p>
-        </div>
-        <div class="logovideo">
-            <div class="logohaut">
-                <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-                    class="js-sync-image-container">
-                    <img class="active" src="./../public/image/omodaka/logos/logo3_1.avif" alt="">
-                    <img src="./../public/image/omodaka/logos/logo3_2.avif" alt="">
-                    <img src="./../public/image/omodaka/logos/logo3_3.avif" alt="">
-                    <img src="./../public/image/omodaka/logos/logo3_4.avif" alt="">
-                </div>
-            </div>
-            <div class="logobas">
-                <div data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
-                    class="js-sync-image-container">
-                    <img class="active" src="./../public/image/omodaka/logos/logo2_1.avif" alt="">
-                    <img src="./../public/image/omodaka/logos/logo2_2.avif" alt="">
-                    <img src="./../public/image/omodaka/logos/logo2_3.avif" alt="">
-                    <img src="./../public/image/omodaka/logos/logo2_4.avif" alt="">
-                </div>
-                <div data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
-                    class="js-sync-image-container">
-                    <img class="active" src="./../public/image/omodaka/logos/logo1_1.avif" alt="">
-                    <img src="./../public/image/omodaka/logos/logo1_2.avif" alt="">
-                    <img src="./../public/image/omodaka/logos/logo1_3.avif" alt="">
-                    <img src="./../public/image/omodaka/logos/logo1_4.avif" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="explication">
-            <h2 class="titredelexplication">Logo</h2>
-            <p data-key="logoomodaka" class="texteexplicatif">The letter "O" is deformed to resemble a circle, symbolizing <strong>a perfume bottle</strong> or <strong>a container</strong>. In one of the variations, this "O" is positioned under a rectangle, representing a rim, from which sticks emerge, similar to those used for diffusing scents. This detail directly references the sensory experience and the art of perfuming spaces. The typography remains minimalist and elegant, creating a balance between modernity and refinement, while symbolizing the calming atmosphere and harmony the products bring to the home.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="image-comparison">
-            <div class="images-container">
-                <img class="before-image" src="./../public/image/omodaka/deuxlogoblanc.png" alt="" />
-                <img class="after-image" src="./../public/image/omodaka/deuxlogonoir.png" alt="" />
-                <div class="slider-line"></div>
-                <div class="slider-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
-                    </svg>
-                </div>
-                <input type="range" class="slider" min="0" max="100" />
-            </div>
-        </div>
-        <div class="explication">
-            <h2 class="titredelexplication">Packaging</h2>
-            <p class="texteexplicatif">The packaging of <strong>Omodaka</strong> was designed to evoke serenity and elegance, in harmony with the essence of the brand. I chose a cubic shape for the box, symbolizing <strong>simplicity and balance</strong>, values deeply rooted in <strong>Japanese</strong> culture. This minimalist design is inspired by traditional <strong>Japanese</strong> elements, which highlight the beauty of <strong>simplicity</strong> and <strong>the harmony of shapes</strong>.<br><br>A band around the box adds a touch of sophistication while creating a sense of protection, reflecting the idea of <strong>refuge and calm</strong> that we wish to offer our users. The map of the location on the box pays tribute to the inspiring landscapes that guided the creation of each fragrance, allowing users to embark on a <strong>sensory journey</strong>. This map enhances immersion and the concept of <strong>escape to places filled with tranquility</strong>.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-            class="imagepackagingomodaka">
-            <div class="plants">
-                <span class="content-number">1</span>
-                <div class="js-sync-image-container">
-                    <img class="active" src="./../public/image/omodaka/packaging/boite1.png" alt="">
-                    <img src="./../public/image/omodaka/packaging/boite2.png" alt="">
-                    <img src="./../public/image/omodaka/packaging/boite3.png" alt="">
-                    <img src="./../public/image/omodaka/packaging/boite4.png" alt="">
-                </div>
-            </div>
-            <div class="plants2">
-                <span class="content-number">2</span>
-                <div class="js-sync-image-container">
-                    <img class="active" src="./../public/image/omodaka/packaging/bande1.png" alt="">
-                    <img src="./../public/image/omodaka/packaging/bande2.png" alt="">
-                    <img src="./../public/image/omodaka/packaging/bande3.png" alt="">
-                    <img src="./../public/image/omodaka/packaging/bande4.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="legend">
-            <p><span class="legend-number">1.</span><span class="legend-number">Main Box – The primary structure containing the product.</span></p>
-            <p><span class="legend-number">2.</span><span class="legend-number">Perimeter Band – The band surrounding the box.</span>
-            </p>
-        </div>
-        <div class="boite">
-            <video style="filter: brightness(0.9);" data-aos="fade-up" data-aos-duration="400"
-                data-aos-anchor-placement="top-bottom" src="./../public/video/omodakaciel.webm" autoplay muted
-                playsinline loop></video>
-        </div>
-    </section>
-    <section class="infoprojet">
-        <script src="./../public/js/zoom.js"></script>
-        <div class="citationdefin">
-            <li>Credit : altlab</li>
-            <p>May this creation awaken your inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
-        </div>
-    </section>
-    <script src="./../public/js/comparaison.js"></script>
-    <script src="./../public/js/synchronisation.js"></script>
-    <footer class="footerprojects">
-        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
-            data-aos-anchor-placement="top-bottom">
-            <li class="menu-elem">
-                <div class="footerlignetext">
-                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
-                        83200,Toulon & 59350,Lille</p>
-                    <div class="socialfooter">
-                        <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
-                                style="filter: invert();" alt=""></a>
-                        <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
-                                alt=""></a>
-                        <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
-                    </div>
-                    <p data-key="footer" class="textfooterd">@2025 | © altlab. All rights reserved.</p>
-                </div>
-            </li>
-        </ul>
-    </footer>
     <script src="./../public/js/aos.js"></script>
     <script>
         AOS.init();
@@ -384,6 +386,7 @@
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
+    <script src="./../public/js/transition.js"></script>
 </body>
 <script src="./../public/js/langue.js"></script>
 

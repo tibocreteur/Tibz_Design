@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="../docs/public/css/outils/latestprojects.css">
     <link rel="stylesheet" href="../docs/public/css/pages/syride.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/transition.css">
 
     <link rel="preload" href="../docs/public/video/console.webm" as="video">
     <link rel="preload" href="../docs/public/video/mousqueton.webm" as="video">
@@ -31,32 +32,22 @@
 </head>
 
 <body>
+    <div id="transition-overlay" class="active"></div>
     <section class="top-page">
-        <header class="navbar">
-            <div class="navbar-left">
-                <a href="index.html" class="navbar-button-logo">
+        <header class="navbarproject">
+            <div class="navbar-left-project">
+                <a href="index.html" class="navbar-button-logo-project">
                     <img src="{{logo}}" alt="logo du site">
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
-                        {{back}}
-                    </a>
-                    <div class="contentnavbar-project">
-                        <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                            <h3>Syride x {{nomboite}}</h3>
-                            <div class="barre-verticale"></div>
-                            <span>Syride</span>
-                        </div>
-                    </div>
-                </div>
+                <h3>Syride x {{nomboite}}</h3>
+                <span>Syride</span>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button">{{contactme}}</a>
-                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/syride.html"><img
-                        src="../docs/public/image/drapeau/{{languenavbar}}.png" class="drapeau"
-                        alt="">{{languenavbar}}</a>
+                <a href="contact.html" class="navbar-button underline-hoverproject"><span>{{contactme}}</span></a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/syride.html"><span
+                        class="{{langun}}">FR</span><span class="{{langdeux}}">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -64,8 +55,8 @@
                 </button>
             </div>
         </header>
-        <div id="navbar-container"></div>
 
+        <div id="navbar-container"></div>
         <script>
             // Charger la navbar HTML dans la page principale
             fetch('navbar.html')
@@ -104,164 +95,172 @@
             }
         </script>
         <div class="entete">
-            <img src="../docs/public/image/syride/Syride.avif" alt=" Une console rétro futuriste" id="scroll-image"
+            <img src="../docs/public/image/syride/Syride.avif" alt="Une console rétro futuriste" id="scroll-image"
                 autoplay muted playsinline loop>
             <script src="../docs/public/js/animation.js"></script>
         </div>
-        <div data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300" class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='axion.html#section';"><img
-                    src="../docs/public/image/fleche2.svg" alt=""></a>
+        <div class="basdetoppage">
+            <a class="flechedubas" onclick="location.href='syride.html#section';">
+                <div class="double-arrow"></div>
+            </a>
         </div>
         <script src="../docs/public/js/fleche.js"></script>
     </section>
-    <section id="section" class="citation">
-        <div class="enbasbadge">
-            <li id="new" class="badge">new</li>
-            <li id="print" class="badge">print</li>
-        </div>
-        <blockquote id="quote">{{citationsyride}}</blockquote>
-    </section>
-    <section class="infoprojet">
-        <div class="presentation-50-50">
-            <img data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
-                src="../docs/public/image/syride/ddc.jpg" alt="telephone sur l'application">
-            <img data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
-                src="../docs/public/image/syride/sysnav.webp" alt="montre sur l'applicatio ">
-        </div>
-        <div class="uneimagemouvaplantel">
-            <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
-                src="../docs/public/image/syride/parapentevrai.webp" alt="deux telephone sur l'application">
-        </div>
-    </section>
-
-    <section class="sticker-row">
-        <!-- Sticker 1 -->
-        <div class="lignestickers" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom">
-
-            <div class="explicationstickers">
-                <h1>Sticker 1</h1>
-                <p>
-                    Ce sticker a été conçu en illustration vectorielle. J’ai d’abord construit une composition centrée
-                    sur
-                    un contraste fort entre masses et lignes pour renforcer l’impact visuel. Le parapente, élément
-                    principal, est positionné au premier plan pour guider le regard, avec une orientation dynamique vers
-                    la
-                    Dent de Crolles, intégrée comme détail topographique reconnaissable. Les nuages et les rayons ont
-                    été
-                    dessinés pour structurer l’arrière-plan sans surcharger la scène. La palette monochrome
-                    (déclinaisons de
-                    rouge) permet une impression cohérente et impactante, tout en simplifiant les contraintes de
-                    production
-                    (découpe vinyle, impression sur support). Le logo "syride" est intégré en bas de composition, en
-                    contraste clair, pour garantir sa lisibilité sans nuire à l’équilibre global.</p>
+    <section class="containproject">
+        <section id="section" class="citation">
+            <blockquote id="quote">{{citationsyride}}</blockquote>
+        </section>
+        <section class="infoprojet">
+            <div class="presentation-50-50">
+                <img data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                    src="../docs/public/image/syride/ddc.jpg" alt="telephone sur l'application">
+                <img data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="bottom-bottom"
+                    src="../docs/public/image/syride/sysnav.webp" alt="montre sur l'applicatio ">
             </div>
-
-            <div class="zonestickers">
-                <div class="sticker-container">
-                    <img src="../docs/public/image/syride/matrix.png" alt="Sticker 1" class="sticker">
-                    <div class="shine"></div>
-                </div>
+            <div class="uneimagemouvaplantel">
+                <img data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="center-bottom"
+                    src="../docs/public/image/syride/parapentevrai.webp" alt="deux telephone sur l'application">
             </div>
-        </div>
-
-        <div class="partiestickers" data-aos="fade-up" data-aos-duration="400"
-            data-aos-anchor-placement="center-bottom">
-            <div class="ligne"></div>
-            <!-- Sticker 2 -->
-            <div class="lignestickers">
-                <div class="zonestickers">
-                    <div class="sticker-container">
-                        <img src="../docs/public/image/syride/matrixdeux.png" alt="Sticker 2" class="sticker">
-                        <div class="shine"></div>
-                    </div>
-                </div>
+        </section>
+        <section class="sticker-row">
+            <!-- Sticker 1 -->
+            <div class="lignestickers" data-aos="fade-up" data-aos-duration="400"
+                data-aos-anchor-placement="center-bottom">
 
                 <div class="explicationstickers">
-                    <h1>Sticker 2</h1>
-                    <p>Ce sticker repose sur un détournement graphique de l’esthétique « code » type Matrix. L’ensemble
-                        a
-                        été réalisé en composition bitmap, avec une grille de caractères verts sur fond noir pour
-                        évoquer un
-                        terminal informatique. Le portrait central est généré à partir d’un motif typographique formant
-                        une
-                        silhouette en négatif, lisible par contraste. Le logo "syride", en haut à gauche, reprend les
-                        codes
-                        d’une interface système (icône, couleur néon, barre de statut) pour accentuer la référence
-                        visuelle.
-                        Ce traitement propose une interprétation décalée de l’univers du vol, en s’appuyant sur le
-                        vocabulaire graphique du code et du hacking.</p>
+                    <h1>Sticker 1</h1>
+                    <p>
+                        Ce sticker a été conçu en illustration vectorielle. J’ai d’abord construit une composition
+                        centrée
+                        sur
+                        un contraste fort entre masses et lignes pour renforcer l’impact visuel. Le parapente, élément
+                        principal, est positionné au premier plan pour guider le regard, avec une orientation dynamique
+                        vers
+                        la
+                        Dent de Crolles, intégrée comme détail topographique reconnaissable. Les nuages et les rayons
+                        ont
+                        été
+                        dessinés pour structurer l’arrière-plan sans surcharger la scène. La palette monochrome
+                        (déclinaisons de
+                        rouge) permet une impression cohérente et impactante, tout en simplifiant les contraintes de
+                        production
+                        (découpe vinyle, impression sur support). Le logo "syride" est intégré en bas de composition, en
+                        contraste clair, pour garantir sa lisibilité sans nuire à l’équilibre global.</p>
                 </div>
-            </div>
-        </div>
 
-        <div class="partiestickers" data-aos="fade-up" data-aos-duration="400"
-            data-aos-anchor-placement="center-bottom">
-            <div class="ligne"></div>
-            <!-- Sticker 3 -->
-            <div class="lignestickers">
-
-                <div class="explicationstickers">
-                    <h1>Sticker 3</h1>
-                    <p>Ce visuel est basé sur les données topographiques et les traces GPS fournies par les outils
-                        Syride.
-                        J’ai repris ces éléments pour en faire une illustration vectorielle en style filaire, proche
-                        d’une
-                        visualisation 3D ou d’un maillage numérique. Le parapente est placé au centre, en lien direct
-                        avec
-                        les courbes de terrain générées, pour évoquer à la fois la technicité et la précision des
-                        instruments. Le rendu monochrome renforce l’aspect technique et schématique, tout en assurant
-                        une
-                        bonne lisibilité à l’impression.</p>
-                </div>
                 <div class="zonestickers">
                     <div class="sticker-container">
-                        <img src="../docs/public/image/syride/vol.png" style="max-height: 35vh;" alt="Sticker 3"
-                            class="sticker">
+                        <img src="../docs/public/image/syride/matrix.png" alt="Sticker 1" class="sticker">
                         <div class="shine"></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="partiestickers" data-aos="fade-up" data-aos-duration="400"
-            data-aos-anchor-placement="center-bottom">
-            <div class="ligne"></div>
-            <!-- Sticker 3 -->
-            <div class="lignestickers">
-                <div class="zonetshirt">
-                    <img src="../docs/public/image/syride/tshirtun.png" alt="Sticker 3" class="tshirt">
-                    <img src="../docs/public/image/syride/tshirtdeux.png" alt="Sticker 3" class="tshirt">
+
+            <div class="partiestickers" data-aos="fade-up" data-aos-duration="400"
+                data-aos-anchor-placement="center-bottom">
+                <div class="ligne"></div>
+                <!-- Sticker 2 -->
+                <div class="lignestickers">
+                    <div class="zonestickers">
+                        <div class="sticker-container">
+                            <img src="../docs/public/image/syride/matrixdeux.png" alt="Sticker 2" class="sticker">
+                            <div class="shine"></div>
+                        </div>
+                    </div>
+
+                    <div class="explicationstickers">
+                        <h1>Sticker 2</h1>
+                        <p>Ce sticker repose sur un détournement graphique de l’esthétique « code » type Matrix.
+                            L’ensemble
+                            a
+                            été réalisé en composition bitmap, avec une grille de caractères verts sur fond noir pour
+                            évoquer un
+                            terminal informatique. Le portrait central est généré à partir d’un motif typographique
+                            formant
+                            une
+                            silhouette en négatif, lisible par contraste. Le logo "syride", en haut à gauche, reprend
+                            les
+                            codes
+                            d’une interface système (icône, couleur néon, barre de statut) pour accentuer la référence
+                            visuelle.
+                            Ce traitement propose une interprétation décalée de l’univers du vol, en s’appuyant sur le
+                            vocabulaire graphique du code et du hacking.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
 
+            <div class="partiestickers" data-aos="fade-up" data-aos-duration="400"
+                data-aos-anchor-placement="center-bottom">
+                <div class="ligne"></div>
+                <!-- Sticker 3 -->
+                <div class="lignestickers">
 
-    </section>
-    <section class="infoprojet">
-        <div class="citationdefin">
-            <li>Credit : {{nomboite}}</li>
-            <p>{{sitation}} (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
-        </div>
-    </section>
-    <footer class="footerprojects">
-        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
-            data-aos-anchor-placement="top-bottom">
-            <li class="menu-elem">
-                <div class="footerlignetext">
-                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
-                        83200,Toulon & 59350,Lille</p>
-                    <div class="socialfooter">
-                        <a href={{insta}} target="_blank"><img src="../docs/public/image/logoinsta.png"
-                                style="filter: invert();" alt=""></a>
-                        <a href={{linkedin}} target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"
-                                alt=""></a>
-                        <a href={{behance}} target="_blank"><img src="../docs/public/image/Logo Behance.svg" alt=""></a>
+                    <div class="explicationstickers">
+                        <h1>Sticker 3</h1>
+                        <p>Ce visuel est basé sur les données topographiques et les traces GPS fournies par les outils
+                            Syride.
+                            J’ai repris ces éléments pour en faire une illustration vectorielle en style filaire, proche
+                            d’une
+                            visualisation 3D ou d’un maillage numérique. Le parapente est placé au centre, en lien
+                            direct
+                            avec
+                            les courbes de terrain générées, pour évoquer à la fois la technicité et la précision des
+                            instruments. Le rendu monochrome renforce l’aspect technique et schématique, tout en
+                            assurant
+                            une
+                            bonne lisibilité à l’impression.</p>
                     </div>
-                    <p data-key="footer" class="textfooterd">{{footerun}}{{nomboite}}{{footerdeux}}</p>
+                    <div class="zonestickers">
+                        <div class="sticker-container">
+                            <img src="../docs/public/image/syride/vol.png" style="max-height: 35vh;" alt="Sticker 3"
+                                class="sticker">
+                            <div class="shine"></div>
+                        </div>
+                    </div>
                 </div>
-            </li>
-        </ul>
-    </footer>
+            </div>
+            <div class="partiestickers" data-aos="fade-up" data-aos-duration="400"
+                data-aos-anchor-placement="center-bottom">
+                <div class="ligne"></div>
+                <!-- Sticker 3 -->
+                <div class="lignestickers">
+                    <div class="zonetshirt">
+                        <img src="../docs/public/image/syride/tshirtun.png" alt="Sticker 3" class="tshirt">
+                        <img src="../docs/public/image/syride/tshirtdeux.png" alt="Sticker 3" class="tshirt">
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+        </section>
+        <section class="infoprojet">
+            <div class="citationdefin">
+                <li>Credit : {{nomboite}}</li>
+                <p>{{sitation}} (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
+            </div>
+        </section>
+        <footer class="footerprojects">
+            <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+                data-aos-anchor-placement="top-bottom">
+                <li class="menu-elem">
+                    <div class="footerlignetext">
+                        <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                            83200,Toulon & 59350,Lille</p>
+                        <div class="socialfooter">
+                            <a href={{insta}} target="_blank"><img src="../docs/public/image/logoinsta.png"
+                                    style="filter: invert();" alt=""></a>
+                            <a href={{linkedin}} target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"
+                                    alt=""></a>
+                            <a href={{behance}} target="_blank"><img src="../docs/public/image/Logo Behance.svg"
+                                    alt=""></a>
+                        </div>
+                        <p data-key="footer" class="textfooterd">{{footerun}}{{nomboite}}{{footerdeux}}</p>
+                    </div>
+                </li>
+            </ul>
+        </footer>
+    </section>
     <script src="../docs/public/js/aos.js"></script>
     <script>
         AOS.init();
@@ -330,7 +329,7 @@
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
-
+    <script src="../docs/public/js/transition.js"></script>
 
 
 

@@ -4,7 +4,7 @@
     "curentlangue": "en",
     "NAVBAR": "",
     "langue": "ENG",
-    "contactme": "Contact me",
+    "contactme": "Contact",
     "contactsubject": "Information%20request",
     "contactbody": "Hello,%0A%0AI'd%20like%20more%20information%20about%20your%20design%20services.%0A%0AThank%20you!",
     "try": "Try",
@@ -103,7 +103,7 @@
     "graphic": "Print",
     "informationdeux": "// The site was Built & designed by yours truly! 🚀",
     "dataphone": "+33.7.83.78.48.72",
-    "logo": "../docs/public/image/logo/logotrois.png",
+    "logo": "../docs/public/image/logo/logob.png",
     "phone": "Phone: +33.7.83.78.48.72",
     "mail": "Email: tibzdesign@gmail.com",
     "information": "I’m a second-year graphic design student based in France. Passionate about visual creativity,<br><br>I work across various design fields as a 3D artist, motion designer,and graphic designer.<br>I’m particularly interested in building visual identities and developing multimedia projects. Always seeking new ideas and inspiration, I enjoy experimenting with different graphic styles and exploring the impact of design in communication.<br><br>My goal is to develop a unique aesthetic while mastering modern design techniques.",
@@ -119,5 +119,9 @@
     "mentionenvoi": "By submitting this form, I agree that my data may be used as part of this contact request.",
     "insta": "https://www.instagram.com/altlab.design/",
     "linkedin": "https://www.linkedin.com/in/tibo-creteur-15147a233/",
-    "behance": "https://www.behance.net/tibzdesign"
+    "behance": "https://www.behance.net/tibzdesign",
+    "langdeux": "currentlangnav",
+    "langun": "otherlangnav",
+    "langdeuxindex": "currentlangnavindex",
+    "langunindex": "otherlangnavindex"
 }

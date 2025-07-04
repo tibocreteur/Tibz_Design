@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="./../public/css/outils/aos.css">
     <link rel="stylesheet" href="./../public/css/pages/index.css">
+    <link rel="stylesheet" href="./../public/css/outils/transition.css">
 
     <!-- Précharger les images -->
     <link rel="preload" href="./../public/image/console/fond3.avif" as="image">
@@ -45,24 +46,19 @@
 </head>
 
 <body>
+    <div id="transition-overlay" class="active"></div>
     <section style="position: absolute;" class="top-page">
         <header class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo/logotrois.png" alt="logo du site">
+                    <img src="./../public/image/logo/logob.png" alt="logo du site">
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
-                        retour
-                    </a>
-                </div>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a id="switch-lang" class="langButton" href="./../en/contact.html"><img
-                        src="./../public/image/drapeau/en.png" class="drapeau"
-                        alt="">en</a>
+                <a id="switch-lang" class="langButton" href="./../en/contact.html"><span
+                        class="currentlangnav">FR</span><span class="otherlangnav">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -128,7 +124,7 @@
             <!-- logo caché tu peu le remettre ;) -->
             <img class="logocontact" src="./../public/image/logo/logon.png" style="display: none;"
                 alt="logo du site">
-            <h1 class="contact-title">Me contacter</h1>
+            <h1 class="contact-title">Contact</h1>
             <form action="https://formsubmit.co/tibzdesign@gmail.com" method="POST">
                 <input id="casedemig" name="Nom" type="text" placeholder="Nom" required
                     class="contact-input" />
@@ -170,6 +166,7 @@
             </li>
         </ul>
     </footer>
+    <script src="./../public/js/transition.js"></script>
 </body>
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWW88BVG" height="0" width="0"

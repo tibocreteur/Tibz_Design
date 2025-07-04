@@ -22,39 +22,31 @@
     <link rel="stylesheet" href="./../public/css/outils/aos.css">
     <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
+    <link rel="stylesheet" href="./../public/css/outils/transition.css">
 
 
 </head>
 
 <body>
+    <div id="transition-overlay" class="active"></div>
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
         <span>Ce site n'est pas encore disponible sur mobile.</span>
         <span>Je vous invite à revenir depuis un ordinateur pour une meilleure expérience.</span>
     </section>
     <header class="navbar">
+        <div class="videnavbar"></div>
         <div class="navbar-left">
             <a href="index.html" class="navbar-button-logo">
-                <img src="./../public/image/logo/logotrois.png" alt="logo du site">
+                <img src="./../public/image/logo/logob.png" alt="logo du site">
             </a>
-            <div class="nameprojet">
-                <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
-                    retour
-                </a>
-                <div class="contentnavbar-project">
-                    <div data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-                        class="navbar-project">
-                        <h3>MOTION</h3>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="social-contact">
             <!-- Logo Instagram cliquable -->
             <!-- Bouton "ME CONTACTER" -->
-            <a href="contact.html" class="navbar-button">Me contacter</a>
-            <a id="switch-lang" class="langButton" href="./../en/motion.html"><img
-                    src="./../public/image/drapeau/en.png" class="drapeau" alt="">en</a>
+            <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
+            <a id="switch-lang" class="langButton" href="./../en/motion.html"><span
+                    class="currentlangnavindex">FR</span><span class="otherlangnavindex">EN</span></a>
             <button class="iconburger" id="burger-toggle">
                 <div class="barreburger"></div>
                 <div class="barreburger"></div>
@@ -223,6 +215,7 @@
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
+    <script src="./../public/js/transition.js"></script>
 </body>
 <script src="./../public/js/langue.js"></script>
 

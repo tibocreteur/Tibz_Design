@@ -26,9 +26,8 @@ section.latestprojectstitre {
 .projects-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     background-color: var(--backgroundaccueil);
-    gap: 30px;
+    gap: var(--gapimage);
     padding-top: 30px;
     padding-bottom: 30px;
     padding-inline: var(--espacecote);
@@ -36,8 +35,21 @@ section.latestprojectstitre {
     margin-top: 0px;
 }
 
-.project-panel {
-    width: calc(50% - 15px);
+.cinquantecolum {
+    width: calc(66.66% - (var(--gapimage) / 2));
+    display: flex;
+    flex-direction: column;
+    gap: var(--gapimage);
+}
+
+.containtrois {
+    gap: var(--gapimage);
+    display: flex;
+    flex-direction: row;
+}
+
+.project-paneldeux {
+    width: 100%;
     /* Mettre à 30% de la largeur du conteneur */
     position: relative;
     overflow: hidden;
@@ -45,9 +57,44 @@ section.latestprojectstitre {
     border-radius: var(--anglesindex);
     display: flex;
     max-height: 75vh;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.project-panel {
+    width: calc(50% - (var(--gapimage) / 2));
+    /* Mettre à 30% de la largeur du conteneur */
+    position: relative;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    border-radius: var(--anglesindex);
+    display: flex;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.project-panel3 {
+    width: calc(33.33% - (var(--gapimage) / 2));
+    /* Mettre à 30% de la largeur du conteneur */
+    position: relative;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    border-radius: var(--anglesindex);
+    display: flex;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-height: 100vh;
 }
 
 .project-panel a {
+    object-fit: cover;
+}
+
+.project-paneldeux a {
+    object-fit: cover;
+}
+
+.project-panel3 a {
     object-fit: cover;
 }
 
@@ -95,6 +142,22 @@ section.latestprojectstitre {
 }
 
 .project-panel:hover div.petitbouton {
+    opacity: 1;
+    scale: 1;
+    top: 0;
+    left: 0;
+    padding: 15px;
+}
+
+.project-paneldeux:hover div.petitbouton {
+    opacity: 1;
+    scale: 1;
+    top: 0;
+    left: 0;
+    padding: 15px;
+}
+
+.project-panel3:hover div.petitbouton {
     opacity: 1;
     scale: 1;
     top: 0;

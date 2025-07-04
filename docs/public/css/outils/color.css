@@ -12,15 +12,24 @@
     --motion: #ae319e;
     --print: #e84343;
     --chara: rgb(67, 160, 155);
+    --colorbuttonnavold: #ffffff32;
+    --colorbuttonnav: rgba(0, 0, 0, 0);
+    --colorbuttonnavindex: rgb(0, 0, 0);
+    --textbuttonnav: #ffffff;
+
     /* ANGLES */
     --anglesprojets: 15px;
     --anglesindex: 15px;
     --anglebouton: 7px;
 
     /* MARGE COTÉ  */
-    --espacecote: 4%;
+    --espacecote: 40px;
+    --gapimage: 20px;
 
     /* police  */
     --ibm: "IBM Plex Mono", monospace;
+
+    /* taille  */
+    --scalelogonav: 35px;
 
 }

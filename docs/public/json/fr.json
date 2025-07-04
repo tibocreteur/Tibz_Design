@@ -4,7 +4,7 @@
     "curentlangue": "fr",
     "NAVBAR": "",
     "langue": "FR",
-    "contactme": "Me contacter",
+    "contactme": "Contact",
     "contactsubject": "Demande%20d'information",
     "contactbody": "Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20services%20de%20design.%0A%0AMerci%20!",
     "try": "Essayer",
@@ -101,7 +101,7 @@
     "INFORMATIONS": "",
     "concour": "Lauréat de concours",
     "graphic": "Print",
-    "logo": "../docs/public/image/logo/logotrois.png",
+    "logo": "../docs/public/image/logo/logob.png",
     "informationdeux": "// Le site a été conçu & réalisé par moi-même ! 🚀",
     "dataphone": "07.83.78.48.72",
     "phone": "Téléphone: 07.83.78.48.72",
@@ -119,5 +119,9 @@
     "mentionenvoi": "En envoyant ce formulaire, j’accepte que mes données soient utilisées dans le cadre de cette prise de contact.",
     "insta": "https://www.instagram.com/altlab.design/",
     "linkedin": "https://www.linkedin.com/in/tibo-creteur-15147a233/",
-    "behance": "https://www.behance.net/tibzdesign"
+    "behance": "https://www.behance.net/tibzdesign",
+    "langun": "currentlangnav",
+    "langdeux": "otherlangnav",
+    "langunindex": "currentlangnavindex",
+    "langdeuxindex": "otherlangnavindex"
 }

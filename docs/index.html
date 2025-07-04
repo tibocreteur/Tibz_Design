@@ -15,9 +15,45 @@
   <meta property="og:image" content="/docs/public/image/logo.png">
   <meta property="og:url" content="https://www.tibzdesign.fr">
   <meta property="og:type" content="website">
+
+  <style>
+    html,
+    body {
+      background-color: #000;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: sans-serif;
+    }
+  </style>
+
+
+  <script>
+    // Script de redirection selon la langue du navigateur
+    document.addEventListener("DOMContentLoaded", function () {
+      const userLang = navigator.language || navigator.userLanguage;
+
+      // Vérifie si on est déjà sur une version traduite
+      const path = window.location.pathname;
+      if (!path.startsWith("/fr") && !path.startsWith("/en")) {
+        if (userLang.startsWith("fr")) {
+          window.location.replace("/fr");
+        } else {
+          window.location.replace("/en");
+        }
+      }
+    });
+  </script>
 </head>
 
-<body>
+<body style="background-color: black;">
   <script type="text/javascript">
     document.location.href = '/fr/';
   </script>

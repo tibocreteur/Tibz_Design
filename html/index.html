@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="../docs/public/css/outils/aos.css">
     <link rel="stylesheet" href="../docs/public/css/pages/index.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/transition.css">
 
     <!-- Précharger les images -->
     <link rel="preload" href="../docs/public/image/console/fond3.avif" as="image">
@@ -44,6 +45,7 @@
 </head>
 
 <body>
+    <div id="transition-overlay" class="active"></div>
     <section style="position: absolute;" class="top-page">
         <header class="navbar">
             <div class="videnavbar"></div>
@@ -55,10 +57,9 @@
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button">{{contactme}}</a>
-                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/index.html"><img
-                        src="../docs/public/image/drapeau/{{languenavbar}}.png" class="drapeau"
-                        alt="">{{languenavbar}}</a>
+                <a href="contact.html" class="navbar-button underline-hover"><span>{{contactme}}</span></a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/index.html"><span
+                        class="{{langunindex}}">FR</span><span class="{{langdeuxindex}}">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -113,8 +114,9 @@
             <script src="../docs/public/js/animationvideo.js"></script>
     </section>
     <div class="basdetoppage">
-        <a id="scrollButton" class="flechedubas" onclick="location.href='index.html#section';"><img
-                src="../docs/public/image/fleche2.svg" alt=""></a>
+        <a class="flechedubas" onclick="location.href='index.html#section';">
+            <div class="double-arrow"></div>
+        </a>
     </div>
     <script src="../docs/public/js/fleche.js"></script>
     </section>
@@ -122,56 +124,63 @@
         <header class="latestprojectstitre">
             <h1>{{projects}}</h1>
         </header>
-        <div data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panel">
-            <div class="boutonprojets">
-                <a href="syride.html">
-                    <div class="petitbouton">
-                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300"
-                            data-aos-anchor-placement="top-bottom" id="new" class="badge">NEW</span>
-                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="600"
-                            data-aos-anchor-placement="top-bottom" id="print" class="badge">print</span>
+        <div class="containtrois">
+            <div class="cinquantecolum">
+                <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                    class="project-paneldeux">
+                    <div class="boutonprojets">
+                        <a href="syride.html">
+                            <div class="petitbouton">
+                                <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300"
+                                    data-aos-anchor-placement="top-bottom" id="new" class="badge">NEW</span>
+                                <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="600"
+                                    data-aos-anchor-placement="top-bottom" id="print" class="badge">print</span>
+                            </div>
+                            <img src="../docs/public/image/syride/Syride.avif" alt="流智" class="project-image">
+                            <div class="infoprojets">
+                                <p>Syride</p>
+                                <H1>Syride x {{nomboite}}</H1>
+                            </div>
+                        </a>
                     </div>
-                    <img src="../docs/public/image/syride/Syride.avif" alt="流智" class="project-image">
-                    <div class="infoprojets">
-                        <p>Syride</p>
-                        <H1>Syride x {{nomboite}}</H1>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                    class="project-paneldeux">
+                    <div class="boutonprojets">
+                        <a href="axion.html">
+                            <div class="petitbouton">
+                                <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="0"
+                                    data-aos-anchor-placement="top-bottom" id="troisd" class="badge">3D</span>
+                            </div>
+                            <img src="../docs/public/image/works/montre/fond.avif" alt="流智" class="project-image">
+                            <div class="infoprojets">
+                                <p>{{personalwork}}</p>
+                                <H1>Axion</H1>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panel">
-            <div class="boutonprojets">
-                <a href="axion.html">
-                    <div class="petitbouton">
-                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="0"
-                            data-aos-anchor-placement="top-bottom" id="troisd" class="badge">3D</span>
-                    </div>
-                    <img src="../docs/public/image/works/montre/fond.avif" alt="流智" class="project-image">
-                    <div class="infoprojets">
-                        <p>{{personalwork}}</p>
-                        <H1>Axion</H1>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panel1">
-            <div class="boutonprojets">
-                <a href="regatta.html">
-                    <div class="petitbouton">
-                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300" id="new"
-                            data-aos-anchor-placement="top-bottom" class="badge">{{concour}}</span>
-                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="600" id="print"
-                            data-aos-anchor-placement="top-bottom" class="badge">PRINT</span>
+            <div data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
+                class="project-panel">
+                <div class="boutonprojets">
+                    <a href="regatta.html">
+                        <div class="petitbouton">
+                            <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300" id="new"
+                                data-aos-anchor-placement="top-bottom" class="badge">{{concour}}</span>
+                            <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="600" id="print"
+                                data-aos-anchor-placement="top-bottom" class="badge">PRINT</span>
 
-                    </div>
-                    <img src="../docs/public/image/regatta/fond.jpg" alt="流智" class="project-image">
-                    <div class="infoprojets">
-                        <p>12 MED EVENT</p>
-                        <div class="titreprojet">
-                            <H1>Toulon Provence Regatta 2025</H1>
                         </div>
-                    </div>
-                </a>
+                        <img src="../docs/public/image/regatta/fond.jpg" alt="流智" class="project-image">
+                        <div class="infoprojets">
+                            <p>12 MED EVENT</p>
+                            <div class="titreprojet">
+                                <H1>Toulon Provence<br>Regatta 2025</H1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         <div data-aos="fade-right" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panel">
@@ -471,7 +480,7 @@
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
-
+    <script src="../docs/public/js/transition.js"></script>
 </body>
 <script src="../docs/public/js/langue.js"></script>
 

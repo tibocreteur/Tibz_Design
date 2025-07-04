@@ -56,6 +56,15 @@
 
 }
 
+.containproject {
+    overflow: hidden;
+    position: relative;
+    /* ou absolute, etc. */
+    background-color: #B3E3A2;
+    height: fit-content;
+    z-index: 100000000;
+}
+
 .regattaaffiche {
     all: unset;
     height: 80vh;

@@ -23,41 +23,28 @@
     <link rel="stylesheet" href="../docs/public/css/outils/aos.css">
     <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="../docs/public/css/outils/latestprojects.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/transition.css">
 
 
 </head>
 
 <body>
-
-
+    <div id="transition-overlay" class="active"></div>
     <section class="top-page">
-        <header class="navbar">
-            <div class="navbar-left">
-                <a href="index.html" class="navbar-button-logo">
+        <header class="navbarproject">
+            <div class="navbar-left-project">
+                <a href="index.html" class="navbar-button-logo-project">
                     <img src="{{logo}}" alt="logo du site">
                 </a>
-                <div class="nameprojet">
-                    <a data-aos="zoom-in" data-aos-duration="500" href="index.html" class="navbar-button">
-                        {{back}}
-                    </a>
-                    <div class="contentnavbar-project">
-                        <div data-aos="fade-right" data-aos-duration="1000" class="navbar-project">
-                            <h3>Toulon Provence Regatta 2025</h3>
-                            <div class="barre-verticale"></div>
-                            <span>12 MED EVENT</span>
-                            <img data-aos="zoom-in" data-aos-delay="1000" src="../docs/public/image/medailleblanche.svg"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
+                <h3>Toulon Provence Regatta 2025</h3>
+                <span>12 MED EVENT</span>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button">{{contactme}}</a>
-                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/regatta.html"><img
-                        src="../docs/public/image/drapeau/{{languenavbar}}.png" class="drapeau"
-                        alt="">{{languenavbar}}</a>
+                <a href="contact.html" class="navbar-button underline-hoverproject"><span>{{contactme}}</span></a>
+                <a id="switch-lang" class="langButton" href="./../{{otherlangues}}/regatta.html"><span
+                        class="{{langun}}">FR</span><span class="{{langdeux}}">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -65,8 +52,6 @@
                 </button>
             </div>
         </header>
-
-        <div id="navbar-container"></div>
 
         <script>
             // Charger la navbar HTML dans la page principale
@@ -111,83 +96,82 @@
             <script src="../docs/public/js/animation.js"></script>
         </div>
         <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='regatta.html#section';"><img
-                    src="../docs/public/image/fleche2.svg" alt=""></a>
+            <a class="flechedubas" onclick="location.href='regatta.html#section';">
+                <div class="double-arrow"></div>
+            </a>
         </div>
         <script src="../docs/public/js/fleche.js"></script>
     </section>
-    <section id="section" class="citation">
-        <div class="enbasbadge">
-            <span id="new" class="badge">{{concour}}</span>
-            <span id="print" class="badge">PRINT</span>
+    <section class="containproject">
+        <section id="section" class="citation">
+            <blockquote id="quote">{{citationregatta}}</blockquote>
+        </section>
+        <section class="infoprojet">
+            <div class="explicationregatta" style="padding-bottom: 5vh;">
+                <div class="imageregatta">
+                    <img src="../docs/public/image/regatta/regattafini.avif" alt="" class="regattaaffiche">
+                </div>
+                <p class="texteexplicatif">{{presentationregatta}}</p>
+            </div>
 
-        </div>
-        <blockquote id="quote">{{citationregatta}}</blockquote>
-    </section>
-    <section class="infoprojet">
-        <div class="explicationregatta" style="padding-bottom: 5vh;">
-            <div class="imageregatta">
-                <img src="../docs/public/image/regatta/regattafini.avif" alt="" class="regattaaffiche">
-            </div>
-            <p class="texteexplicatif">{{presentationregatta}}</p>
-        </div>
-
-        <div class="galerieregatta">
-            <div class="imagesregatta">
-                <img src="../docs/public/image/regatta/bus.JPG" alt="telephone sur l'application">
-                <div class="infoimages">
-                    <h1>Toulon</h1>
-                    <p>Plage du mourillon</p>
-                </div>
-            </div>
-            <div class="imagesregatta">
-                <img src="../docs/public/image/regatta/palais.JPG" alt="montre sur l'applicatio ">
-                <div class="infoimages">
-                    <h1>Toulon</h1>
-                    <p>Palais des sports</p>
-                </div>
-            </div>
-            <div class="imagesregatta">
-                <img src="../docs/public/image/regatta/busquatre.jpg" alt="telephone sur l'application">
-                <div class="infoimages">
-                    <h1>Toulon</h1>
-                    <p>Place de la liberté</p>
-                </div>
-            </div>
-            <div class="imagesregatta">
-                <img src="../docs/public/image/regatta/bustrois.JPG" alt="montre sur l'application ">
-                <div class="infoimages">
-                    <h1>Hyères</h1>
-                    <p>Arret de bus</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="infoprojet">
-        <div class="citationdefin">
-            <li>Credits : {{nomboite}} / 12 MED EVENT</li>
-            <p>{{sitation}} (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
-        </div>
-    </section>
-    <footer class="footerprojects">
-        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
-            data-aos-anchor-placement="top-bottom">
-            <li class="menu-elem">
-                <div class="footerlignetext">
-                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
-                        83200,Toulon & 59350,Lille</p>
-                    <div class="socialfooter">
-                        <a href={{insta}} target="_blank"><img src="../docs/public/image/logoinsta.png"
-                                style="filter: invert();" alt=""></a>
-                        <a href={{linkedin}} target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"
-                                alt=""></a>
-                        <a href={{behance}} target="_blank"><img src="../docs/public/image/Logo Behance.svg" alt=""></a>
+            <div class="galerieregatta">
+                <div class="imagesregatta">
+                    <img src="../docs/public/image/regatta/bus.JPG" alt="telephone sur l'application">
+                    <div class="infoimages">
+                        <h1>Toulon</h1>
+                        <p>Plage du mourillon</p>
                     </div>
-                    <p data-key="footer" class="textfooterd">{{footerun}}{{nomboite}}{{footerdeux}}</p>
                 </div>
-            </li>
-        </ul>
-    </footer>
+                <div class="imagesregatta">
+                    <img src="../docs/public/image/regatta/palais.JPG" alt="montre sur l'applicatio ">
+                    <div class="infoimages">
+                        <h1>Toulon</h1>
+                        <p>Palais des sports</p>
+                    </div>
+                </div>
+                <div class="imagesregatta">
+                    <img src="../docs/public/image/regatta/busquatre.jpg" alt="telephone sur l'application">
+                    <div class="infoimages">
+                        <h1>Toulon</h1>
+                        <p>Place de la liberté</p>
+                    </div>
+                </div>
+                <div class="imagesregatta">
+                    <img src="../docs/public/image/regatta/bustrois.JPG" alt="montre sur l'application ">
+                    <div class="infoimages">
+                        <h1>Hyères</h1>
+                        <p>Arret de bus</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="infoprojet">
+            <div class="citationdefin">
+                <li>Credits : {{nomboite}} / 12 MED EVENT</li>
+                <p>{{sitation}} (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
+            </div>
+        </section>
+        <footer class="footerprojects">
+            <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+                data-aos-anchor-placement="top-bottom">
+                <li class="menu-elem">
+                    <div class="footerlignetext">
+                        <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                            83200,Toulon & 59350,Lille</p>
+                        <div class="socialfooter">
+                            <a href={{insta}} target="_blank"><img src="../docs/public/image/logoinsta.png"
+                                    style="filter: invert();" alt=""></a>
+                            <a href={{linkedin}} target="_blank"><img src="../docs/public/image/Logo LinkedIn.svg"
+                                    alt=""></a>
+                            <a href={{behance}} target="_blank"><img src="../docs/public/image/Logo Behance.svg"
+                                    alt=""></a>
+                        </div>
+                        <p data-key="footer" class="textfooterd">{{footerun}}{{nomboite}}{{footerdeux}}</p>
+                    </div>
+                </li>
+            </ul>
+        </footer>
+    </section>
     <script src="../docs/public/js/aos.js"></script>
     <script>
         AOS.init();
@@ -195,6 +179,7 @@
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
+    <script src="../docs/public/js/transition.js"></script>
 </body>
 <script src="../docs/public/js/langue.js"></script>
 
