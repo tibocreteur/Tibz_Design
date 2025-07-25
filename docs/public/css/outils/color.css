@@ -25,6 +25,8 @@
     /* MARGE COTÉ  */
     --espacecote: 40px;
     --gapimage: 20px;
+    --espacecoteexplication: 15%;
+    --espacetopexplication: 5%;
 
     /* police  */
     --ibm: "IBM Plex Mono", monospace;

@@ -88,7 +88,7 @@
 .logovideo {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: var(--gapimage);
     width: 100%;
 
 }
@@ -102,7 +102,7 @@
 .logobas {
     display: flex;
     /* Aligner les vidéos horizontalement */
-    gap: 25px;
+    gap: var(--gapimage);
     justify-content: space-between;
     /* Créer de l'espace entre les vidéos */
     width: 100%;
@@ -133,7 +133,7 @@
 .decors {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--gapimage);
     padding-inline: var(--espacecote);
     width: 100%;
     /* Assure que la section occupe toute la largeur */
@@ -222,7 +222,7 @@
 .imagepackagingomodaka {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: var(--gapimage);
 }
 
 .plants {

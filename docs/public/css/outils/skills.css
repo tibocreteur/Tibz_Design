@@ -109,14 +109,14 @@
     flex-wrap: wrap;
     display: flex;
     width: 100%;
-    gap: 2rem;
+    gap: var(--gapimage);
     justify-content: center;
 
 }
 
 .containerskills {
     border-radius: var(--anglesindex);
-    width: calc(25% - 1.5rem);
+    width: calc(25% - 15px);
     display: flex;
     flex-direction: column;
     position: relative;
