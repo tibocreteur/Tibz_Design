@@ -542,11 +542,8 @@
         height: 100%;
         opacity: 40%;
     }
-}
 
-@media (max-width: 768px) {
-
-    .skillssection {
+        .skillssection {
         padding-top: 2rem;
         flex-wrap: wrap;
         flex-direction: column;
@@ -564,5 +561,5 @@
     position: relative;
     user-select: none;
 }
-
 }
+

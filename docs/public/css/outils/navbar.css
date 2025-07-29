@@ -330,3 +330,62 @@ p {
     color: #000000;
 
 }
+
+.iconburger {
+    z-index: 1000000000000000000000000000000000000000000000;
+    position: relative;
+    display: flex;
+    background-color: #ff000000;
+    height: 20px;
+    width: 30px;
+    z-index: 80000000;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+    border: none;
+    scale: 1;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+        transform: translateY(calc(0.1rem));
+}
+
+.iconburger:hover {
+    scale: 1.05;
+
+}
+
+.iconburger:hover .barreburger {
+    background-color: #000000;
+}
+
+.barreburger {
+    width: 100%;
+    border-radius: 50px;
+    height: 1px;
+    background-color: black;
+    transition: 0.3s ease-in-out;
+    mix-blend-mode: overlay;
+}
+
+@media (max-width: 768px) {
+    .iconburger {
+        width: 25px;
+        height: 20px;
+    }
+
+    .barreburger {
+        height: 2px;
+    }
+    .navbar-button {
+        display: none;
+    }
+    .iconburger {
+        transform: translateY(calc(-0.1rem));
+}
+
+.langButton {
+    display: none;
+}
+
+}

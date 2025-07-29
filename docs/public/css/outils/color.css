@@ -38,7 +38,8 @@
 
 @media (max-width: 768px) {
     :root {
-    --espacecote: 40px;
+    --espacecote: 20px;
+    --scalelogonav: 20px;
 
     }
 }
