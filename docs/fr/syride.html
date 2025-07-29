@@ -32,68 +32,28 @@
 </head>
 
 <body>
-    <div id="transition-overlay" class="active"></div>
-    <section class="top-page">
-        <header class="navbarproject">
-            <div class="navbar-left-project">
-                <a href="index.html" class="navbar-button-logo-project">
+    <header class="navbar" id="navbar">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-button-logo">
                     <img src="./../public/image/logo/logob.png" alt="logo du site">
                 </a>
-                <h3>Syride x altlab</h3>
-                <span>Syride</span>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button underline-hoverproject"><span>Contact</span></a>
+                <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
                 <a id="switch-lang" class="langButton" href="./../en/syride.html"><span
-                        class="currentlangnav">FR</span><span class="otherlangnav">EN</span></a>
-                <button class="iconburger" id="burger-toggle">
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                </button>
+                        class="currentlangnavindex">FR</span><span class="otherlangnavindex">EN</span></a>
             </div>
-        </header>
+  </header>
+    <div id="transition-overlay" class="active"></div>
+    <section class="error">
+        <img class="errorlogo" src="./../public/image/logo.png" alt="">
+        <span>Ce site n'est pas encore disponible sur mobile.</span>
+        <span>Je vous invite à revenir depuis un ordinateur pour une meilleure expérience.</span>
+    </section>
+    <section class="top-page">
 
-        <div id="navbar-container"></div>
-        <script>
-            // Charger la navbar HTML dans la page principale
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    // Insérer la navbar dans le conteneur
-                    document.getElementById('navbar-container').innerHTML = data;
-
-                    // Appeler une fonction d'initialisation du script après le chargement
-                    initNavbarScript();
-                })
-                .catch(error => console.error('Erreur de chargement de la navbar:', error));
-
-            // Fonction pour initialiser les événements du menu burger
-            function initNavbarScript() {
-                const burgerToggle = document.getElementById("burger-toggle");
-                const burgerMenu = document.getElementById("burger-menu");
-
-                // Fonction pour ouvrir/fermer le menu
-                function toggleMenu() {
-                    burgerToggle.classList.toggle("active");
-                    burgerMenu.classList.toggle("active");
-                }
-
-                // Fonction pour fermer le menu
-                function closeMenu() {
-                    burgerToggle.classList.remove("active");
-                    burgerMenu.classList.remove("active");
-                }
-
-                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
-                burgerToggle.addEventListener("click", toggleMenu);
-
-                // Fermer le menu lorsqu'on fait défiler la page
-                window.addEventListener("scroll", closeMenu);
-            }
-        </script>
         <div class="entete">
             <img src="./../public/image/syride/Syride.avif" alt="Une console rétro futuriste" id="scroll-image"
                 autoplay muted playsinline loop>
@@ -333,7 +293,21 @@
 
 
 
+        <script>
+        let prevScrollPos = window.pageYOffset;
 
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            
+            if (prevScrollPos < currentScrollPos) {
+                document.getElementById("navbar").classList.add("navbar-hidden");
+            } else {
+                document.getElementById("navbar").classList.remove("navbar-hidden");
+            }
+            
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
 </body>
 
 </html>

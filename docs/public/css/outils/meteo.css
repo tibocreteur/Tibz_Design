@@ -5,7 +5,7 @@
     display: flex;
     gap: 2%;
     justify-content: center;
-    padding: 10vh;
+        padding-inline: var(--espacecote);
 }
 
 .tri-images img {

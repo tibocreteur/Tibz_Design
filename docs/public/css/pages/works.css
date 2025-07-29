@@ -4,8 +4,9 @@
     width: 100%;
     padding-top: 90px;
     padding-bottom: 90px;
+    padding-inline: 50px;
     justify-content: space-between;
-    background-color: var(--backgroundaccueil);
+    padding-inline: var(--espacecote);
 }
 
 img {
@@ -77,7 +78,6 @@ video {
     display: flex;
     flex-direction: column;
     gap: var(--gapimage);
-    padding-left: 30px;
 }
 
 /* Projet individuel */
@@ -307,6 +307,7 @@ video {
 }
 
 @media (max-width: 768px) {
+
     .fondworks {
         padding-top: 60px;
     }
@@ -329,13 +330,11 @@ video {
 
     .projet1 {
         width: 100%;
-        padding: 10px;
-        border-radius: 10px;
+        padding: 1px;
+        border-radius: 0px;
+        background: none;
     }
 
-    .works {
-        padding: 20px;
-    }
 
     .texteworks {
         display: none;
@@ -344,4 +343,11 @@ video {
     .imagesworksposters img {
         width: 100%;
     }
+}
+
+@media (min-width: 1080px) {
+
+.fondworks {
+    padding-inline: var(--espacecotesup1080p);
+}
 }

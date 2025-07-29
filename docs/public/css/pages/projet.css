@@ -11,7 +11,6 @@
     z-index: -2;
     /* Place la vidéo derrière le contenu */
     background-size: cover;
-    max-height: 1200px;
     -webkit-user-select: none;
     /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
     -moz-user-select: none;

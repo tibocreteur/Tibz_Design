@@ -3,17 +3,6 @@
     background-color: var(--backgroundaccueil);
 }
 
-.logopartners {
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    padding-bottom: 5rem;
-}
 
 .presentationtext {
     display: flex;
@@ -54,8 +43,23 @@ h1 {
     flex-direction: column;
     justify-content: center;
     justify-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.logopartners {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    width: 100%;
+
+    justify-content: center;
+    justify-items: center;
     align-items: center;
     align-content: center;
+    padding-bottom: 5rem;
 }
 
 .titrepartners {
@@ -79,6 +83,6 @@ h1 {
 }
 
 .logopartners img {
-    height: 9rem;
+    width: 9rem;
     opacity: 0.9;
 }

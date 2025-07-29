@@ -45,10 +45,11 @@
 </head>
 
 <body>
+
     <div id="transition-overlay" class="active"></div>
     <section style="position: absolute;" class="top-page">
-        <header class="navbar">
-            <div class="videnavbar"></div>
+        <!-- Navbar -->
+  <header class="navbar" id="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
                     <img src="./../public/image/logo/logob.png" alt="logo du site">
@@ -60,53 +61,9 @@
                 <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
                 <a id="switch-lang" class="langButton" href="./../fr/index.html"><span
                         class="otherlangnavindex">FR</span><span class="currentlangnavindex">EN</span></a>
-                <button class="iconburger" id="burger-toggle">
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                </button>
             </div>
-        </header>
-        <script src="./../public/js/navbar.js"></script>
-        <div id="navbar-container"></div>
+  </header>
 
-        <script>
-            // Charger la navbar HTML dans la page principale
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    // Insérer la navbar dans le conteneur
-                    document.getElementById('navbar-container').innerHTML = data;
-
-                    // Appeler une fonction d'initialisation du script après le chargement
-                    initNavbarScript();
-                })
-                .catch(error => console.error('Erreur de chargement de la navbar:', error));
-
-            // Fonction pour initialiser les événements du menu burger
-            function initNavbarScript() {
-                const burgerToggle = document.getElementById("burger-toggle");
-                const burgerMenu = document.getElementById("burger-menu");
-
-                // Fonction pour ouvrir/fermer le menu
-                function toggleMenu() {
-                    burgerToggle.classList.toggle("active");
-                    burgerMenu.classList.toggle("active");
-                }
-
-                // Fonction pour fermer le menu
-                function closeMenu() {
-                    burgerToggle.classList.remove("active");
-                    burgerMenu.classList.remove("active");
-                }
-
-                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
-                burgerToggle.addEventListener("click", toggleMenu);
-
-                // Fermer le menu lorsqu'on fait défiler la page
-                window.addEventListener("scroll", closeMenu);
-            }
-        </script>
     </section>
     <section class="entete">
         <video src="./../public/video/cool.webm" autoplay muted playsinline loop type="video/mp4" alt=""
@@ -162,7 +119,7 @@
                 </div>
             </div>
             <div data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-                class="project-panel">
+                class="project-panel" style="min-height: 500px">
                 <div class="boutonprojets">
                     <a href="regatta.html">
                         <div class="petitbouton">
@@ -438,6 +395,7 @@
             </li>
         </ul>
     </footer>
+    
     <script>
         document.addEventListener("keydown", function (event) {
             const key = event.key.toLowerCase();
@@ -477,10 +435,29 @@
     <script>
         AOS.init();
     </script>
-    <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-    </script>
     <script src="./../public/js/transition.js"></script>
+<script>
+    let prevScrollPos = window.pageYOffset;
+
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        if (currentScrollPos === 0) {
+            // Cacher la navbar tout en haut
+            navbar.classList.add("navbar-hidden");
+        } else if (prevScrollPos < currentScrollPos) {
+            // Scroll vers le bas -> cacher
+            navbar.classList.add("navbar-hidden");
+        } else {
+            // Scroll vers le haut -> montrer
+            navbar.classList.remove("navbar-hidden");
+        }
+
+        prevScrollPos = currentScrollPos;
+    };
+</script>
+
 </body>
 <script src="./../public/js/langue.js"></script>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -59,8 +59,8 @@
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
                 <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
-                <a id="switch-lang" class="langButton" href="./../en/index.html"><span
-                        class="currentlangnavindex">FR</span><span class="otherlangnavindex">EN</span></a>
+                <a id="switch-lang" class="langButton" href="./../fr/index.html"><span
+                        class="otherlangnavindex">FR</span><span class="currentlangnavindex">EN</span></a>
             </div>
   </header>
 
@@ -79,7 +79,7 @@
     </section>
     <section id="section" class="projects-section">
         <header class="latestprojectstitre">
-            <h1>Projets</h1>
+            <h1>Projects</h1>
         </header>
         <div class="containtrois">
             <div class="cinquantecolum">
@@ -111,7 +111,7 @@
                             </div>
                             <img src="./../public/image/works/montre/fond.avif" alt="流智" class="project-image">
                             <div class="infoprojets">
-                                <p>Travail personnel</p>
+                                <p>Personal work</p>
                                 <H1>Axion</H1>
                             </div>
                         </a>
@@ -119,12 +119,12 @@
                 </div>
             </div>
             <div data-aos="fade-left" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-                class="project-panel" style="min-height: 500px">
+                class="project-panel">
                 <div class="boutonprojets">
                     <a href="regatta.html">
                         <div class="petitbouton">
                             <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300" id="new"
-                                data-aos-anchor-placement="top-bottom" class="badge">Lauréat de concours</span>
+                                data-aos-anchor-placement="top-bottom" class="badge">Competition Winner</span>
                             <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="600" id="print"
                                 data-aos-anchor-placement="top-bottom" class="badge">PRINT</span>
 
@@ -148,7 +148,7 @@
                     </div>
                     <img src="./../public/image/console/fond3.avif" alt="流智" class="project-image">
                     <div class="infoprojets">
-                        <p>Travail personnel</p>
+                        <p>Personal work</p>
                         <H1>流智 - Liúzhì</H1>
                     </div>
                 </a>
@@ -173,7 +173,7 @@
             <div class="boutonprojets">
                 <a href="omodaka.html">
                     <div class="petitbouton">
-                        <span id="da" class="badge">IDENTITÉ VISUELLE</span>
+                        <span id="da" class="badge">VISUAL IDENTITY</span>
                     </div>
                     <img src="./../public/image/omodaka/petitfond.avif" alt="Omodaka" class="project-image">
                     <div class="infoprojets">
@@ -340,8 +340,8 @@
     <section class="partners">
         <div class="presentationpartners">
             <header class="latestprojectstitre" style="padding-bottom: 1rem;">
-                <h1 style="display: none;">Notre réseau</h1>
-                <p>Des entreprises, institutions et marques m’ont déjà confié leurs projets.<br>Voici quelques-unes de ces collaborations.</p>
+                <h1 style="display: none;">Our network</h1>
+                <p>Companies, institutions, and brands have already entrusted me with their projects.<br>Here are some of those collaborations.</p>
             </header>
             <div class="logopartners">
                 <img src="./../public/image/logo/parteners/drime.png" alt="">
@@ -390,7 +390,7 @@
                                 alt=""></a>
                         <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
                     </div>
-                    <p data-key="footer" class="textfooterd">@2025 | © altlab. Tous droits réservés.</p>
+                    <p data-key="footer" class="textfooterd">@2025 | © altlab. All rights reserved.</p>
                 </div>
             </li>
         </ul>
@@ -435,29 +435,25 @@
     <script>
         AOS.init();
     </script>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
     <script src="./../public/js/transition.js"></script>
-<script>
-    let prevScrollPos = window.pageYOffset;
+        <script>
+        let prevScrollPos = window.pageYOffset;
 
-    window.onscroll = function () {
-        let currentScrollPos = window.pageYOffset;
-        const navbar = document.getElementById("navbar");
-
-        if (currentScrollPos === 0) {
-            // Cacher la navbar tout en haut
-            navbar.classList.add("navbar-hidden");
-        } else if (prevScrollPos < currentScrollPos) {
-            // Scroll vers le bas -> cacher
-            navbar.classList.add("navbar-hidden");
-        } else {
-            // Scroll vers le haut -> montrer
-            navbar.classList.remove("navbar-hidden");
-        }
-
-        prevScrollPos = currentScrollPos;
-    };
-</script>
-
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            
+            if (prevScrollPos < currentScrollPos) {
+                document.getElementById("navbar").classList.add("navbar-hidden");
+            } else {
+                document.getElementById("navbar").classList.remove("navbar-hidden");
+            }
+            
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
 </body>
 <script src="./../public/js/langue.js"></script>
 

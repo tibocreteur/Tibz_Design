@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="">
+    <link rel="icon" href="./../public/image/logo/petitlogo.png" type="images/x-icon">
+    <title>altlab</title>
+    <meta name="description"
+        content="Portfolio de TibzDesign : créations graphiques et branding. Découvrez des projets inspirés, aux styles variés, pour explorer l'univers graphique et visuel.">
+    <meta property="og:title" content="Titre de votre site">
+    <meta property="og:description"
+        content="Portfolio de TibzDesign : créations graphiques et branding. Découvrez des projets inspirés, aux styles variés, pour explorer l'univers graphique et visuel.">
+    <meta property="og:image" content="/docs/public/image/logo.png">
+    <meta property="og:url" content="https://www.tibzdesign.fr">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./../public/css/base.css">
+    <link rel="stylesheet" href="./../public/css/outils/police.css">
+    <link rel="stylesheet" href="./../public/css/outils/footer.css">
+    <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
+    <link rel="stylesheet" href="./../public/css/outils/color.css">
+    <link rel="stylesheet" href="./../public/css/outils/skills.css">
+    <link rel="stylesheet" href="./../public/css/outils/badge.css">
+    <link rel="stylesheet" href="./../public/css/outils/profil.css">
+    <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
+    <link rel="stylesheet" href="./../public/css/outils/aos.css">
+    <link rel="stylesheet" href="./../public/css/pages/index.css">
+    <link rel="stylesheet" href="./../public/css/outils/transition.css">
+
+    <!-- Précharger les images -->
+    <link rel="preload" href="./../public/image/console/fond3.avif" as="image">
+    <link rel="preload" href="./../public/image/regatta/fond.avif" as="image">
+    <link rel="preload" href="./../public/image/mouvaplan/fond2.avif" as="image">
+    <link rel="preload" href="./../public/image/omodaka/petitfond.avif" as="image">
+    <link rel="preload" href="./../public/image/walk.png" as="image">
+    <link rel="preload" href="./../public/image/works/moi/perso.avif" as="image">
+  <style>
+    /* ----- BASE STYLES ----- */
+    body {
+        height: 80000000px;
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* ----- NAVBAR ----- */
+    .navbar {
+        display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 0rem 0rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+        .navbar img{
+          max-height: 50px;
+          margin: 0.5rem;
+    }
+
+    .navbar.hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    .navbar .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #0077ff;
+    }
+
+    /* ----- CONTENT ----- */
+    main {
+      padding: 120px 2rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+            <div class="videnavbar"></div>
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-button-logo">
+                    <img src="./../public/image/logo/logob.png" alt="logo du site">
+                </a>
+            </div>
+            <div class="social-contact">
+                <!-- Logo Instagram cliquable -->
+                <!-- Bouton "ME CONTACTER" -->
+                <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
+                <a id="switch-lang" class="langButton" href="./../fr/index.html"><span
+                        class="otherlangnavindex">FR</span><span class="currentlangnavindex">EN</span></a>
+                <button class="iconburger" id="burger-toggle">
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                </button>
+            </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <!-- Long contenu pour scroller -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a suscipit ligula. Vestibulum at risus non arcu posuere luctus. (copie x100)</p>
+    <p>Continue à scroller vers le bas pour cacher la navbar, et remonte pour la faire revenir.</p>
+    <p>Encore plus de contenu... blabla...</p>
+    <!-- Ajoute plus de paragraphes ici si tu veux tester le scroll -->
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    const navbar = document.getElementById("navbar");
+    let lastScroll = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        // Scroll vers le bas
+        navbar.classList.add("hidden");
+      } else {
+        // Scroll vers le haut
+        navbar.classList.remove("hidden");
+      }
+
+      lastScroll = currentScroll;
+    });
+  </script>
+
+</body>
+</html>

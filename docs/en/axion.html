@@ -32,68 +32,27 @@
 </head>
 
 <body>
-    <div id="transition-overlay" class="active"></div>
-    <section class="top-page">
-        <header class="navbarproject">
-            <div class="navbar-left-project">
-                <a href="index.html" class="navbar-button-logo-project">
+    <header class="navbar" id="navbar">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-button-logo">
                     <img src="./../public/image/logo/logob.png" alt="logo du site">
                 </a>
-                <h3>Axion</h3>
-                <span>Personal work</span>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button underline-hoverproject"><span>Contact</span></a>
+                <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
                 <a id="switch-lang" class="langButton" href="./../fr/axion.html"><span
-                        class="otherlangnav">FR</span><span class="currentlangnav">EN</span></a>
-                <button class="iconburger" id="burger-toggle">
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                </button>
+                        class="otherlangnavindex">FR</span><span class="currentlangnavindex">EN</span></a>
             </div>
-        </header>
-
-        <div id="navbar-container"></div>
-        <script>
-            // Charger la navbar HTML dans la page principale
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    // Insérer la navbar dans le conteneur
-                    document.getElementById('navbar-container').innerHTML = data;
-
-                    // Appeler une fonction d'initialisation du script après le chargement
-                    initNavbarScript();
-                })
-                .catch(error => console.error('Erreur de chargement de la navbar:', error));
-
-            // Fonction pour initialiser les événements du menu burger
-            function initNavbarScript() {
-                const burgerToggle = document.getElementById("burger-toggle");
-                const burgerMenu = document.getElementById("burger-menu");
-
-                // Fonction pour ouvrir/fermer le menu
-                function toggleMenu() {
-                    burgerToggle.classList.toggle("active");
-                    burgerMenu.classList.toggle("active");
-                }
-
-                // Fonction pour fermer le menu
-                function closeMenu() {
-                    burgerToggle.classList.remove("active");
-                    burgerMenu.classList.remove("active");
-                }
-
-                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
-                burgerToggle.addEventListener("click", toggleMenu);
-
-                // Fermer le menu lorsqu'on fait défiler la page
-                window.addEventListener("scroll", closeMenu);
-            }
-        </script>
+  </header>
+    <div id="transition-overlay" class="active"></div>
+    <section class="error">
+        <img class="errorlogo" src="./../public/image/logo.png" alt="">
+        <span>This website is not yet available on mobile.</span>
+        <span>I invite you to return from a computer for a better experience.</span>
+    </section>
+    <section class="top-page">
         <div class="entete">
             <video src="./../public/video/montre.webm" alt="Une console rétro futuriste" id="scroll-image" autoplay
                 muted playsinline loop>

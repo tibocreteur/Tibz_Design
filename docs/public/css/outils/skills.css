@@ -543,3 +543,26 @@
         opacity: 40%;
     }
 }
+
+@media (max-width: 768px) {
+
+    .skillssection {
+        padding-top: 2rem;
+        flex-wrap: wrap;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        gap: var(--gapimage);
+        justify-content: center;
+
+    }
+    .containerskills {
+    border-radius: var(--anglesindex);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    user-select: none;
+}
+
+}

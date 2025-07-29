@@ -165,3 +165,10 @@ section.sticker-row {
     flex-direction: column;
     gap: 4rem;
 }
+
+@media (min-width: 1080px) {
+
+section.sticker-row {
+        padding-inline: var(--espacecotesup1080p);
+    }
+}

@@ -139,3 +139,38 @@
 .textfooterd {
   justify-content: end;
 }
+
+
+
+@media (max-width: 768px) {
+
+.footerprojects {
+  position: relative;
+  width: 100%;
+  padding-inline: var(--espacecote);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--ibm);
+  height: fit-content;
+  overflow: hidden;
+  background-color: var(--backgroundaccueil);
+}
+
+.footerlignetext {
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.textfooterg {
+  justify-content: center;
+}
+
+.textfooterd {
+  justify-content: center;
+}
+
+}

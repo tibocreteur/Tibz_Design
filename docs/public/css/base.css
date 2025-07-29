@@ -187,6 +187,7 @@ b {
   width: 30px;
   height: 30px;
   position: relative;
+
 }
 
 .double-arrow::before,
@@ -199,12 +200,14 @@ b {
   height: 100%;
   background: white;
   transform-origin: top center;
+  
 }
 
 .double-arrow::before {
   transform: rotate(45deg);
   left: 50%;
   top: 0;
+  
 }
 
 .double-arrow::after {
@@ -242,7 +245,7 @@ b {
   0% {
     transform: translateY(-10px);
     scale: 1;
-    opacity: 0.6;
+    opacity: 1;
   }
 
   100% {
