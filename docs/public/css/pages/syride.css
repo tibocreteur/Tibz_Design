@@ -48,8 +48,8 @@ section.sticker-row {
 }
 
 .sticker {
-    max-width: 50vh;
-    max-height: 40vh;
+    max-width: 40vh;
+    max-height: 30vh;
     margin-inline: 2rem;
     object-fit: contain;
     transition: transform 0.2s ease, filter 0.3s ease;
@@ -164,11 +164,4 @@ section.sticker-row {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-}
-
-@media (min-width: 1080px) {
-
-section.sticker-row {
-        padding-inline: var(--espacecotesup1080p);
-    }
 }
