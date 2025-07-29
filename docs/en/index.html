@@ -485,17 +485,21 @@
     let prevScrollPos = window.pageYOffset;
 
     window.onscroll = function () {
-        let currentScrollPos = window.pageYOffset;
         const navbar = document.getElementById("navbar");
 
+        // Ne rien faire si écran petit (mobile)
+        if (window.innerWidth < 768) {
+            navbar.classList.remove("navbar-hidden");
+            return;
+        }
+
+        let currentScrollPos = window.pageYOffset;
+
         if (currentScrollPos === 0) {
-            // Cacher la navbar tout en haut
             navbar.classList.add("navbar-hidden");
         } else if (prevScrollPos < currentScrollPos) {
-            // Scroll vers le bas -> cacher
             navbar.classList.add("navbar-hidden");
         } else {
-            // Scroll vers le haut -> montrer
             navbar.classList.remove("navbar-hidden");
         }
 
