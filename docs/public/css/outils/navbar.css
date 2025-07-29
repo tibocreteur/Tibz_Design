@@ -334,7 +334,7 @@ p {
 .iconburger {
     z-index: 1000000000000000000000000000000000000000000000;
     position: relative;
-    display: flex;
+    display: none;
     background-color: #ff000000;
     height: 20px;
     width: 30px;
@@ -372,13 +372,11 @@ p {
     .iconburger {
         width: 25px;
         height: 20px;
+        display: flex;
     }
 
     .barreburger {
         height: 2px;
-    }
-    .navbar-button {
-        display: none;
     }
     .iconburger {
         transform: translateY(calc(-0.1rem));

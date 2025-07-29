@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
     <link rel="icon" href="./../public/image/logo/petitlogo.png" type="images/x-icon">
-    <title>Contact - altlab</title>
+    <title>Contact - tibz deisgn</title>
     <meta name="description"
         content="Portfolio de TibzDesign : créations graphiques et branding. Découvrez des projets inspirés, aux styles variés, pour explorer l'univers graphique et visuel.">
     <meta property="og:title" content="Titre de votre site">
@@ -55,6 +55,7 @@
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
+                <a style="visibility: hidden;" href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
                 <a id="switch-lang" class="langButton" href="./../fr/contact.html"><span
                         class="otherlangnavindex">FR</span><span class="currentlangnavindex">EN</span></a>
             </div>
@@ -85,12 +86,12 @@
                 alt="logo du site">
             <h1 class="contact-title">Contact</h1>
             <form action="https://formsubmit.co/tibzdesign@gmail.com" method="POST">
-                <input id="casedemig" name="Name" type="text" placeholder="Name" required
+                <input id="casedemig" name="Name" type="Name" placeholder="Name" required
                     class="contact-input" />
-                <input id="casedemid" name="First Name" type="text" placeholder="First Name" required
+                <input id="casedemid" name="First Name" type="firstname" placeholder="First Name" required
                     class="contact-input" />
-                <input name="email" type="email" placeholder="Email" required class="contact-input" />
-                <input name="Project" type="text" placeholder="Project" class="contact-input" />
+                <input name="email" type="email" placeholder="Email" required class="contact-input" autocomplete="family-name"/>
+                <input name="Project" type="text" placeholder="Project" class="contact-input" autocomplete="given-name" />
                 <textarea name="message" rows="5" placeholder="Tell me about your idea..." required
                     class="contact-textarea"></textarea>
 
@@ -120,7 +121,7 @@
                                 alt=""></a>
                         <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
                     </div>
-                    <p data-key="footer" class="textfooterd">@2025 | © altlab. All rights reserved.</p>
+                    <p data-key="footer" class="textfooterd">@2025 | © tibz deisgn. All rights reserved.</p>
                 </div>
             </li>
         </ul>

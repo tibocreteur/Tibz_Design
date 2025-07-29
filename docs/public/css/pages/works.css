@@ -348,6 +348,6 @@ video {
 @media (min-width: 1080px) {
 
 .fondworks {
-    padding-inline: var(--espacecotesup1080p);
+    padding-inline: var(--espacecote);
 }
 }

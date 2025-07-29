@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
     <link rel="icon" href="./../public/image/logo/petitlogo.png" type="images/x-icon">
-    <title>Syride X altlab - altlab</title>
+    <title>Syride X tibz design - tibz design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -44,8 +44,53 @@
                 <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
                 <a id="switch-lang" class="langButton" href="./../en/syride.html"><span
                         class="currentlangnavindex">FR</span><span class="otherlangnavindex">EN</span></a>
+            <button class="iconburger" id="burger-toggle">
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                </button>
             </div>
   </header>
+          <script src="./../public/js/navbar.js"></script>
+        <div id="navbar-container"></div>
+
+        <script>
+            // Charger la navbar HTML dans la page principale
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Insérer la navbar dans le conteneur
+                    document.getElementById('navbar-container').innerHTML = data;
+
+                    // Appeler une fonction d'initialisation du script après le chargement
+                    initNavbarScript();
+                })
+                .catch(error => console.error('Erreur de chargement de la navbar:', error));
+
+            // Fonction pour initialiser les événements du menu burger
+            function initNavbarScript() {
+                const burgerToggle = document.getElementById("burger-toggle");
+                const burgerMenu = document.getElementById("burger-menu");
+
+                // Fonction pour ouvrir/fermer le menu
+                function toggleMenu() {
+                    burgerToggle.classList.toggle("active");
+                    burgerMenu.classList.toggle("active");
+                }
+
+                // Fonction pour fermer le menu
+                function closeMenu() {
+                    burgerToggle.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                }
+
+                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
+                burgerToggle.addEventListener("click", toggleMenu);
+
+                // Fermer le menu lorsqu'on fait défiler la page
+                window.addEventListener("scroll", closeMenu);
+            }
+        </script>
     <div id="transition-overlay" class="active"></div>
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
@@ -196,7 +241,7 @@
         </section>
         <section class="infoprojet">
             <div class="citationdefin">
-                <li>Credit : altlab</li>
+                <li>Credit : tibz design</li>
                 <p>Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)</p>
             </div>
         </section>
@@ -215,7 +260,7 @@
                             <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg"
                                     alt=""></a>
                         </div>
-                        <p data-key="footer" class="textfooterd">@2025 | © altlab. Tous droits réservés.</p>
+                        <p data-key="footer" class="textfooterd">@2025 | © tibz design. Tous droits réservés.</p>
                     </div>
                 </li>
             </ul>
