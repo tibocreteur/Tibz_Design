@@ -1,0 +1,78 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(-600px); /* Commence à img2 */
+  }
+  100% {
+    transform: translateX(calc(-600px * 4)); /* Fait défiler exactement 3 images */
+  }
+}
+
+.slider {
+  height: fit-content;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: var(--backgroundaccueil);
+    padding-top: 4rem;
+}
+
+.slider::before,
+.slider::after {
+ 
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+}
+
+.slider .slide-track {
+  display: flex;
+  width: calc((600px+(var(--gapimage) / 2)) * 8); /* 7 images * 2 pour la boucle */
+  animation: scroll 40s linear infinite;
+}
+
+.slider .slide {
+  padding-inline: calc(var(--gapimage) / 2);
+  position: relative;
+}
+
+.slide img {
+  width: 600px;
+  height: 800px;
+  object-fit: cover;
+  border-radius: var(--anglesprojets);
+}
+
+@media screen and (max-width: 768px) {
+.slide img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--anglesprojets);
+}
+.slider .slide-track {
+  display: flex;
+  width: calc((300px+(var(--gapimage) / 2)) * 8); /* 7 images * 2 pour la boucle */
+  animation: scroll 40s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(-300px); /* Commence à img2 */
+  }
+  100% {
+    transform: translateX(calc(-300px * 4)); /* Fait défiler exactement 3 images */
+  }
+}
+}

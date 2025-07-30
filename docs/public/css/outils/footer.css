@@ -159,18 +159,24 @@
   }
 
   .footerlignetext {
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 5rem;
   }
 
   .textfooterg {
     justify-content: center;
+    padding: 0px;
+    margin: 0px;
   }
 
   .textfooterd {
     justify-content: center;
+        padding: 0px;
+            margin: 0px;
   }
 
 }

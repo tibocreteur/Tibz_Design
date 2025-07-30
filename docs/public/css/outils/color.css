@@ -25,7 +25,7 @@
     /* MARGE COTÉ  */
     --espacecote: 40px;
     --gapimage: 20px;
-    --espacecoteexplication: 15%;
+    --espacecoteexplication: 5%;
     --espacetopexplication: 5%;
 
     /* police  */
@@ -46,7 +46,7 @@
 
 @media (min-width: 2000px) {
     :root {
-        --espacecote: 15%;
+        --espacecote: 17.5%;
 
     }
 }

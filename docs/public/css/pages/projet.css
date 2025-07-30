@@ -281,11 +281,12 @@
 .uneimagemouvaplantel {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .uneimagemouvaplantel img {
     background-color: var(--greymouvaplan);
-    height: 500px;
+    height: 600px;
     object-fit: cover;
 }
 
@@ -413,7 +414,7 @@ blockquote {
     gap: 1rem;
     pointer-events: none;
     margin: 0;
-    padding: 40px 0px 0px 10px;
+    padding:8rem 0px 8rem 0px;
 
 }
 
@@ -641,11 +642,13 @@ blockquote {
         width: 100%;
     }
 
-    .entete img {}
+    .entete img {
+        height: 100%;
+    }
 
     .entete {
-        height: 600px;
-        max-height: 600px;
+        height: 100vh;
+        max-height: 100vh;
         padding: 0;
         margin: 0;
     }

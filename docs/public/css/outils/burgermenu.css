@@ -262,6 +262,7 @@
   margin: 0;
   height: 1.5rem;
   cursor: pointer;
+  color: rgb(0, 0, 0);
 }
 
 .social a:hover {
@@ -271,6 +272,7 @@
   all: unset;
   opacity: 1;
   height: 1.5rem;
+  color: rgb(0, 0, 0);
 }
 
 .animated-text {
