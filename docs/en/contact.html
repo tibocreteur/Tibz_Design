@@ -57,12 +57,20 @@
         <div class="social-contact">
             <!-- Logo Instagram cliquable -->
             <!-- Bouton "ME CONTACTER" -->
-            <a style="visibility: hidden;" href="contact.html"
-                class="navbar-button underline-hover"><span>Contact</span></a>
-            <a id="switch-lang" class="langButton" href="./../fr/contact.html"><span
+            <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
+            <a id="switch-lang" class="langButton" href="./../fr/index.html"><span
                     class="otherlangnavindex">FR</span><span class="currentlangnavindex">EN</span></a>
+            <button class="iconburger" id="burger-toggle">
+                <div class="barreburger"></div>
+                <div class="barreburger"></div>
+                <div class="barreburger"></div>
+            </button>
         </div>
     </header>
+    <script src="./../public/js/navbar.js"></script>
+    <script src="./../public/js/burgermenu.js"></script>
+    <div id="navbar-container"></div>
+
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
         <span>This website is not yet available on mobile.</span>

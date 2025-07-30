@@ -173,10 +173,10 @@
     }
 
     .coordonnee {
+        display: none;
         z-index: 3;
         height: 100%;
         width: 100%;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 3rem;
@@ -273,21 +273,6 @@
         background-color: var(--vertmarque);
         color: var(--vertmarquedeux);
     }
-}
-
-.contactsection {
-    background: var(--backgroundaccueil);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    gap: 5rem;
-    padding-inline: calc(var(--espacecote) * 3);
-    overflow: hidden;
 }
 
 @media (min-width: 2000px) {
