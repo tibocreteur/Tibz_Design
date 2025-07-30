@@ -1,0 +1,66 @@
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Slider styling */
+.slider {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-bottom: 10rem;
+    padding-top: 0rem;
+    cursor: default;
+    padding-inline: var(--espacecote);
+}
+
+.slider::before,
+.slider::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    height: 100px;
+    pointer-events: none;
+}
+
+.slider::after {
+    right: 0;
+    height: 50%;
+    top: 0;
+    transform: rotateZ(180deg);
+    background: linear-gradient(to right, rgb(249, 249, 244), rgba(249, 249, 244, 0));
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+    height: 50%;
+    background: linear-gradient(to left, rgba(249, 249, 244, 0), rgb(249, 249, 244));
+}
+
+.slide-track {
+    display: flex;
+    width: calc((250px * 12));
+    animation: scroll 30s linear infinite;
+}
+
+.slide {
+    width: 250px;
+    filter: saturate(0);
+    opacity: 0.5;
+    display: flex;
+}
+
+.slide img {
+    padding-inline: 3rem;
+}
+
+.slide a {}

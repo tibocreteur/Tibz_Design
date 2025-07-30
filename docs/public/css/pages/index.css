@@ -37,6 +37,7 @@ h1 {
 }
 
 .presentationpartners {
+    padding-top: 5rem;
     width: 100%;
     gap: 1rem;
     display: flex;

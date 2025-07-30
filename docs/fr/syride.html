@@ -33,64 +33,65 @@
 
 <body>
     <header class="navbar" id="navbar">
-            <div class="navbar-left">
-                <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo/logob.png" alt="logo du site">
-                </a>
-            </div>
-            <div class="social-contact">
-                <!-- Logo Instagram cliquable -->
-                <!-- Bouton "ME CONTACTER" -->
-                <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
-                <a id="switch-lang" class="langButton" href="./../en/syride.html"><span
-                        class="currentlangnavindex">FR</span><span class="otherlangnavindex">EN</span></a>
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-button-logo">
+                <img src="./../public/image/logo/logob.png" alt="logo du site">
+            </a>
+        </div>
+        <div class="social-contact">
+            <!-- Logo Instagram cliquable -->
+            <!-- Bouton "ME CONTACTER" -->
+            <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
+            <a id="switch-lang" class="langButton" href="./../en/syride.html"><span
+                    class="currentlangnavindex">FR</span><span class="otherlangnavindex">EN</span></a>
             <button class="iconburger" id="burger-toggle">
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                    <div class="barreburger"></div>
-                </button>
-            </div>
-  </header>
-          <script src="./../public/js/navbar.js"></script>
-        <div id="navbar-container"></div>
+                <div class="barreburger"></div>
+                <div class="barreburger"></div>
+                <div class="barreburger"></div>
+            </button>
+        </div>
+    </header>
+    <script src="./../public/js/navbar.js"></script>
+    <div id="navbar-container"></div>
 
-        <script>
-            // Charger la navbar HTML dans la page principale
-            fetch('navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    // Insérer la navbar dans le conteneur
-                    document.getElementById('navbar-container').innerHTML = data;
+    <script>
+        // Charger la navbar HTML dans la page principale
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                // Insérer la navbar dans le conteneur
+                document.getElementById('navbar-container').innerHTML = data;
 
-                    // Appeler une fonction d'initialisation du script après le chargement
-                    initNavbarScript();
-                })
-                .catch(error => console.error('Erreur de chargement de la navbar:', error));
+                // Appeler une fonction d'initialisation du script après le chargement
+                initNavbarScript();
+            })
+            .catch(error => console.error('Erreur de chargement de la navbar:', error));
 
-            // Fonction pour initialiser les événements du menu burger
-            function initNavbarScript() {
-                const burgerToggle = document.getElementById("burger-toggle");
-                const burgerMenu = document.getElementById("burger-menu");
+        // Fonction pour initialiser les événements du menu burger
+        function initNavbarScript() {
+            const burgerToggle = document.getElementById("burger-toggle");
+            const burgerMenu = document.getElementById("burger-menu");
 
-                // Fonction pour ouvrir/fermer le menu
-                function toggleMenu() {
-                    burgerToggle.classList.toggle("active");
-                    burgerMenu.classList.toggle("active");
-                }
-
-                // Fonction pour fermer le menu
-                function closeMenu() {
-                    burgerToggle.classList.remove("active");
-                    burgerMenu.classList.remove("active");
-                }
-
-                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
-                burgerToggle.addEventListener("click", toggleMenu);
-
-                // Fermer le menu lorsqu'on fait défiler la page
-                window.addEventListener("scroll", closeMenu);
+            // Fonction pour ouvrir/fermer le menu
+            function toggleMenu() {
+                burgerToggle.classList.toggle("active");
+                burgerMenu.classList.toggle("active");
             }
-        </script>
+
+            // Fonction pour fermer le menu
+            function closeMenu() {
+                burgerToggle.classList.remove("active");
+                burgerMenu.classList.remove("active");
+            }
+
+            // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
+            burgerToggle.addEventListener("click", toggleMenu);
+
+            // Fermer le menu lorsqu'on fait défiler la page
+            window.addEventListener("scroll", closeMenu);
+        }
+    </script>
+
     <div id="transition-overlay" class="active"></div>
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
@@ -117,7 +118,7 @@
         </section>
         <section class="infoprojet">
             <div class="explication">
-                <h2 class="titredelexplication">Syride x tibz design</h2>
+                <h2 class="titredelexplication">Syride<br>x<br>tibz design</h2>
                 <p class="texteexplicatif">J’ai eu l’opportunité de collaborer avec Syride, entreprise française reconnue dans le monde du parapente et du vol libre, sur un projet de création graphique autour de leur univers. Cette collaboration portait sur le design d’une série de T-shirts et de stickers destinés à leur communauté de pilotes.<br><br>L’enjeu était clair : traduire visuellement l’essence du vol libre — ce mélange unique de précision technique, d’exploration aérienne et de liberté pure. Pour cela, j’ai plongé dans l’univers de Syride : ses instruments de vol, ses données GPS, ses courbes de vol, ses repères visuels et surtout, la passion qui anime ses utilisateurs.<br><br>Chaque visuel a été pensé pour parler aux initiés tout en étant esthétiquement percutant, que ce soit au sol ou dans les airs. Lignes épurées, symboles liés au vol, références subtiles à la navigation ou aux sensations de glisse dans le ciel : j’ai mêlé style graphique et codes techniques pour créer des designs portables, durables et identifiables.<br><br></p>
             </div>
             <div class="presentation-50-50">
@@ -342,21 +343,32 @@
 
 
 
-        <script>
+    <script>
         let prevScrollPos = window.pageYOffset;
 
-        window.onscroll = function() {
-            let currentScrollPos = window.pageYOffset;
-            
-            if (prevScrollPos < currentScrollPos) {
-                document.getElementById("navbar").classList.add("navbar-hidden");
-            } else {
-                document.getElementById("navbar").classList.remove("navbar-hidden");
+        window.onscroll = function () {
+            const navbar = document.getElementById("navbar");
+
+            // Ne rien faire si écran petit (mobile)
+            if (window.innerWidth < 768) {
+                navbar.classList.remove("navbar-hidden");
+                return;
             }
-            
+
+            let currentScrollPos = window.pageYOffset;
+
+            if (currentScrollPos === 0) {
+                navbar.classList.add("navbar-hidden");
+            } else if (prevScrollPos < currentScrollPos) {
+                navbar.classList.add("navbar-hidden");
+            } else {
+                navbar.classList.remove("navbar-hidden");
+            }
+
             prevScrollPos = currentScrollPos;
         };
     </script>
+
 </body>
 
 </html>

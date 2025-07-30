@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./../public/css/outils/aos.css">
     <link rel="stylesheet" href="./../public/css/pages/index.css">
     <link rel="stylesheet" href="./../public/css/outils/transition.css">
+    <link rel="stylesheet" href="./../public/css/outils/carousel.css">
 
     <!-- Précharger les images -->
     <link rel="preload" href="./../public/image/console/fond3.avif" as="image">
@@ -46,10 +47,12 @@
 
 <body>
 
-    <div id="transition-overlay" class="active"></div>
+    <div id="transition-overlay" class="active">
+        <img src="./../public/image/logo/logob.png" alt="Chargement..." id="loading-logo">
+    </div>
     <section style="position: absolute;" class="top-page">
         <!-- Navbar -->
-  <header class="navbar" id="navbar">
+        <header class="navbar" id="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
                     <img src="./../public/image/logo/logob.png" alt="logo du site">
@@ -67,8 +70,8 @@
                     <div class="barreburger"></div>
                 </button>
             </div>
-  </header>
-          <script src="./../public/js/navbar.js"></script>
+        </header>
+        <script src="./../public/js/navbar.js"></script>
         <div id="navbar-container"></div>
 
         <script>
@@ -388,14 +391,51 @@
                 <h1 style="display: none;">Our network</h1>
                 <p>Companies, institutions, and brands have already entrusted me with their projects.<br>Here are some of those collaborations.</p>
             </header>
-            <div class="logopartners">
-                <img src="./../public/image/logo/parteners/drime.png" alt="">
-                <img src="./../public/image/logo/parteners/catho.png" alt="">
-                <img src="./../public/image/logo/parteners/toulon.png" alt="">
-                <img src="./../public/image/logo/parteners/syride.png" alt="">
+            <div class="slider">
+                <div class="slide-track"></a>
+                    <div class="slide"><a href="https://drime.cloud/fr/" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/drime.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://www.univ-catholille.fr" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/catho.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://toulonprovenceregatta.fr/" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/toulon.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://syride.com" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/syride.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://www.hoyez.fr/#hoyez" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/hoyez.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://www.myo-solutions.com" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/myo.png" width="250" alt="" /></a>
+                    </div>
+                    <!-- duplication pour effet infini -->
+                    <div class="slide"><a href="https://drime.cloud/fr/" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/drime.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://www.univ-catholille.fr" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/catho.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://toulonprovenceregatta.fr/" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/toulon.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://syride.com" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/syride.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://www.hoyez.fr/#hoyez" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/hoyez.png" width="250" alt="" /></a>
+                    </div>
+                    <div class="slide"><a href="https://www.myo-solutions.com" target="_blank" rel="noopener"><img
+                                src="./../public/image/logo/parteners/myo.png" width="250" alt="" /></a>
+                    </div>
+                </div>
             </div>
         </div>
+
     </section>
+
 
     <section style="display: none;" id="sectionskills" class="skills">
         <div class="button-section">
@@ -440,7 +480,7 @@
             </li>
         </ul>
     </footer>
-    
+
     <script>
         document.addEventListener("keydown", function (event) {
             const key = event.key.toLowerCase();
@@ -481,31 +521,31 @@
         AOS.init();
     </script>
     <script src="./../public/js/transition.js"></script>
-<script>
-    let prevScrollPos = window.pageYOffset;
+    <script>
+        let prevScrollPos = window.pageYOffset;
 
-    window.onscroll = function () {
-        const navbar = document.getElementById("navbar");
+        window.onscroll = function () {
+            const navbar = document.getElementById("navbar");
 
-        // Ne rien faire si écran petit (mobile)
-        if (window.innerWidth < 768) {
-            navbar.classList.remove("navbar-hidden");
-            return;
-        }
+            // Ne rien faire si écran petit (mobile)
+            if (window.innerWidth < 768) {
+                navbar.classList.remove("navbar-hidden");
+                return;
+            }
 
-        let currentScrollPos = window.pageYOffset;
+            let currentScrollPos = window.pageYOffset;
 
-        if (currentScrollPos === 0) {
-            navbar.classList.add("navbar-hidden");
-        } else if (prevScrollPos < currentScrollPos) {
-            navbar.classList.add("navbar-hidden");
-        } else {
-            navbar.classList.remove("navbar-hidden");
-        }
+            if (currentScrollPos === 0) {
+                navbar.classList.add("navbar-hidden");
+            } else if (prevScrollPos < currentScrollPos) {
+                navbar.classList.add("navbar-hidden");
+            } else {
+                navbar.classList.remove("navbar-hidden");
+            }
 
-        prevScrollPos = currentScrollPos;
-    };
-</script>
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
 
 </body>
 <script src="./../public/js/langue.js"></script>

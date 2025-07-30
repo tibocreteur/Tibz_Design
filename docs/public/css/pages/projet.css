@@ -121,6 +121,7 @@
     width: 100%;
     background-color: var(--backgroundaccueil);
     padding-inline: var(--espacecote);
+
     overflow: hidden;
 }
 

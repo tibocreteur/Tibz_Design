@@ -38,15 +38,15 @@
 
 @media (max-width: 768px) {
     :root {
-    --espacecote: 20px;
-    --scalelogonav: 20px;
+        --espacecote: 20px;
+        --scalelogonav: 20px;
 
     }
 }
 
 @media (min-width: 2000px) {
     :root {
-    --espacecote: 15%;
+        --espacecote: 15%;
 
     }
 }
