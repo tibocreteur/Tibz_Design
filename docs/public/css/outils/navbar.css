@@ -1,32 +1,6 @@
 @import url('police.css');
 @import url('color.css');
 
-html {
-    font-size: 16px;
-}
-
-@media (max-width: 768px) {
-    html {
-        font-size: 13px;
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Jacquarda Bastarda 9", serif;
-
-}
-
-
-p {
-    text-align: justify;
-    font-family: var(--ibm);
-    line-height: 1.5;
-    font-size: 1rem;
-}
-
 .surligne {
     font-family: var(--ibm);
     max-width: 100%;
@@ -108,7 +82,7 @@ p {
     z-index: 100000000000000000000000000000000000000000000000000000000000000000;
 
     /* Animation pour montrer/cacher */
-    transition: transform 0.5s ease;
+    transition: transform 0.7s ease;
 }
 
 .social-contact {
