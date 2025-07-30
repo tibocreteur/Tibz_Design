@@ -48,14 +48,13 @@
 <body>
 
     <div id="transition-overlay" class="active">
-        <img src="./../public/image/logo/logob.png" alt="Chargement..." id="loading-logo">
     </div>
     <section style="position: absolute;" class="top-page">
         <!-- Navbar -->
         <header class="navbar" id="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo/logob.png" alt="logo du site">
+                    <img src="./../public/image/logo/logotest.png" alt="logo du site">
                 </a>
             </div>
             <div class="social-contact">
@@ -121,6 +120,7 @@
     <div class="basdetoppage">
         <a class="flechedubas" onclick="location.href='index.html#section';">
             <div class="double-arrow"></div>
+            <div class="double-arrow2"></div>
         </a>
     </div>
     <script src="./../public/js/fleche.js"></script>
@@ -521,31 +521,7 @@
         AOS.init();
     </script>
     <script src="./../public/js/transition.js"></script>
-    <script>
-        let prevScrollPos = window.pageYOffset;
-
-        window.onscroll = function () {
-            const navbar = document.getElementById("navbar");
-
-            // Ne rien faire si écran petit (mobile)
-            if (window.innerWidth < 768) {
-                navbar.classList.remove("navbar-hidden");
-                return;
-            }
-
-            let currentScrollPos = window.pageYOffset;
-
-            if (currentScrollPos === 0) {
-                navbar.classList.add("navbar-hidden");
-            } else if (prevScrollPos < currentScrollPos) {
-                navbar.classList.add("navbar-hidden");
-            } else {
-                navbar.classList.remove("navbar-hidden");
-            }
-
-            prevScrollPos = currentScrollPos;
-        };
-    </script>
+    <script src="./../public/js/animationnavbar.js"></script>
 
 </body>
 <script src="./../public/js/langue.js"></script>

@@ -178,7 +178,7 @@ video {
 .droite {
     position: relative;
     /* Définit le contexte de positionnement pour les enfants */
-    width: 150px;
+    width: 120px;
     display: flex;
     padding-left: 27px;
     overflow: hidden;
@@ -347,7 +347,7 @@ video {
 
 @media (min-width: 1080px) {
 
-.fondworks {
-    padding-inline: var(--espacecote);
-}
+    .fondworks {
+        padding-inline: var(--espacecote);
+    }
 }

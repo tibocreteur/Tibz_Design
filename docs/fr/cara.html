@@ -31,20 +31,65 @@
     <div id="transition-overlay" class="active"></div>
     <section style="position: absolute;" class="top-page">
         <!-- Navbar -->
-  <header class="navbar" id="navbar">
+        <header class="navbar" id="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo/logob.png" alt="logo du site">
+                    <img src="./../public/image/logo/logotest.png" alt="logo du site">
                 </a>
             </div>
             <div class="social-contact">
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
                 <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
-                <a id="switch-lang" class="langButton" href="./../en/cara.html"><span
+                <a id="switch-lang" class="langButton" href="./../en/index.html"><span
                         class="currentlangnavindex">FR</span><span class="otherlangnavindex">EN</span></a>
+                <button class="iconburger" id="burger-toggle">
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                    <div class="barreburger"></div>
+                </button>
             </div>
-  </header>
+        </header>
+        <script src="./../public/js/navbar.js"></script>
+        <div id="navbar-container"></div>
+
+        <script>
+            // Charger la navbar HTML dans la page principale
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Insérer la navbar dans le conteneur
+                    document.getElementById('navbar-container').innerHTML = data;
+
+                    // Appeler une fonction d'initialisation du script après le chargement
+                    initNavbarScript();
+                })
+                .catch(error => console.error('Erreur de chargement de la navbar:', error));
+
+            // Fonction pour initialiser les événements du menu burger
+            function initNavbarScript() {
+                const burgerToggle = document.getElementById("burger-toggle");
+                const burgerMenu = document.getElementById("burger-menu");
+
+                // Fonction pour ouvrir/fermer le menu
+                function toggleMenu() {
+                    burgerToggle.classList.toggle("active");
+                    burgerMenu.classList.toggle("active");
+                }
+
+                // Fonction pour fermer le menu
+                function closeMenu() {
+                    burgerToggle.classList.remove("active");
+                    burgerMenu.classList.remove("active");
+                }
+
+                // Ouvrir/fermer le menu lorsqu'on clique sur le bouton
+                burgerToggle.addEventListener("click", toggleMenu);
+
+                // Fermer le menu lorsqu'on fait défiler la page
+                window.addEventListener("scroll", closeMenu);
+            }
+        </script>
 
     </section>
     <section class="fondworks">
@@ -199,21 +244,7 @@
         document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
     <script src="./../public/js/transition.js"></script>
-        <script>
-        let prevScrollPos = window.pageYOffset;
-
-        window.onscroll = function() {
-            let currentScrollPos = window.pageYOffset;
-            
-            if (prevScrollPos < currentScrollPos) {
-                document.getElementById("navbar").classList.add("navbar-hidden");
-            } else {
-                document.getElementById("navbar").classList.remove("navbar-hidden");
-            }
-            
-            prevScrollPos = currentScrollPos;
-        };
-    </script>
+    <script src="./../public/js/animationnavbar.js"></script>
 </body>
 <script src="./../public/js/langue.js"></script>
 

@@ -87,14 +87,16 @@ p {
     z-index: -1;
     /* Place la vidéo derrière le contenu */
 }
+
 /* ===== NAVBAR ===== */
 #navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-      font-family: var(--ibm);
-  background-color:var(--backgroundaccueil);      /* Tu peux changer la couleur ici */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: var(--ibm);
+    background-color: var(--backgroundaccueil);
+    /* Tu peux changer la couleur ici */
     display: flex;
     align-items: center;
     width: 100%;
@@ -102,11 +104,11 @@ p {
     padding-inline: var(--espacecote);
     padding-top: 15px;
     padding-bottom: 15px;
-  align-items: center;
-  z-index: 100000000000000000000000000000000;
+    align-items: center;
+    z-index: 100000000000000000000000000000000000000000000000000000000000000000;
 
-  /* Animation pour montrer/cacher */
-  transition: transform 0.5s ease;
+    /* Animation pour montrer/cacher */
+    transition: transform 0.5s ease;
 }
 
 .social-contact {
@@ -128,7 +130,7 @@ p {
     transform: translateY(calc(0.2rem));
 }
 
-#navbar img{
+#navbar img {
     height: var(--scalelogonav);
     padding: 0px;
     margin: 0px;
@@ -163,33 +165,33 @@ p {
 
 /* Cacher la navbar quand on scroll vers le bas */
 #navbar.navbar-hidden {
-  transform: translateY(calc(-100% - 1rem));
-  pointer-events: none;
+    transform: translateY(calc(-100% - 1rem));
+    pointer-events: none;
 }
 
 
 
 /* Navigation */
 #navbar nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
 }
 
 #navbar nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .underline-hover {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    
+
     opacity: 1;
     padding: 0px;
     border-radius: 0px;
@@ -222,7 +224,7 @@ p {
 
 .underline-hover::after {
     content: "";
-        color: var(--colorbuttonnavindex);
+    color: var(--colorbuttonnavindex);
     position: absolute;
     bottom: calc(1rem - 10px);
     left: 0;
@@ -347,7 +349,7 @@ p {
     scale: 1;
     transition: 0.3s ease-in-out;
     cursor: pointer;
-        transform: translateY(calc(0.1rem));
+    transform: translateY(calc(0.1rem));
 }
 
 .iconburger:hover {
@@ -378,12 +380,16 @@ p {
     .barreburger {
         height: 2px;
     }
+
     .iconburger {
         transform: translateY(calc(-0.1rem));
-}
+    }
 
-.langButton {
-    display: none;
-}
+    .langButton {
+        display: none;
+    }
 
+    .navbar-button {
+        display: none;
+    }
 }

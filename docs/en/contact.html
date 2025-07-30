@@ -46,87 +46,93 @@
 </head>
 
 <body>
+    <div id="transition-overlay" class="active">
+    </div>
     <header class="navbar" id="navbar">
-            <div class="navbar-left">
-                <a href="index.html" class="navbar-button-logo">
-                    <img src="./../public/image/logo/logob.png" alt="logo du site">
-                </a>
-            </div>
-            <div class="social-contact">
-                <!-- Logo Instagram cliquable -->
-                <!-- Bouton "ME CONTACTER" -->
-                <a style="visibility: hidden;" href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
-                <a id="switch-lang" class="langButton" href="./../fr/contact.html"><span
-                        class="otherlangnavindex">FR</span><span class="currentlangnavindex">EN</span></a>
-            </div>
-  </header>
-    <div id="transition-overlay" class="active"></div>
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-button-logo">
+                <img src="./../public/image/logo/logob.png" alt="logo du site">
+            </a>
+        </div>
+        <div class="social-contact">
+            <!-- Logo Instagram cliquable -->
+            <!-- Bouton "ME CONTACTER" -->
+            <a style="visibility: hidden;" href="contact.html"
+                class="navbar-button underline-hover"><span>Contact</span></a>
+            <a id="switch-lang" class="langButton" href="./../fr/contact.html"><span
+                    class="otherlangnavindex">FR</span><span class="currentlangnavindex">EN</span></a>
+        </div>
+    </header>
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
         <span>This website is not yet available on mobile.</span>
         <span>I invite you to return from a computer for a better experience.</span>
     </section>
     <section class="top-page">
-    <section class="contactsection">
-        <div class="coordonnee" data-aos="fade-up">
-            <img class="logocontact" src="./../public/image/logo/logon.png" alt="logo du site">
-            <div class=presentationpersonne>
-                <h2>Tibo Creteur</h2>
-                <p>Designer Graphique & Motion Designer</p>
-                <div class="espacetexte"></div>
-                <p>+33.7.83.78.48.72</p>
-                <p>tibzdesign@gmail.com</p>
-                <div class="espacetexte"></div>
-                <p>SIRET : 93160601600018</p>
-            </div>
-        </div>
-        <div class="contact-container" data-aos="fade-up">
-            <!-- logo caché tu peu le remettre ;) -->
-            <img class="logocontact" src="./../public/image/logo/logon.png" style="display: none;"
-                alt="logo du site">
-            <h1 class="contact-title">Contact</h1>
-            <form action="https://formsubmit.co/tibzdesign@gmail.com" method="POST">
-                <input id="casedemig" name="Name" type="Name" placeholder="Name" required
-                    class="contact-input" />
-                <input id="casedemid" name="First Name" type="firstname" placeholder="First Name" required
-                    class="contact-input" />
-                <input name="email" type="email" placeholder="Email" required class="contact-input" autocomplete="family-name"/>
-                <input name="Project" type="text" placeholder="Project" class="contact-input" autocomplete="given-name" />
-                <textarea name="message" rows="5" placeholder="Tell me about your idea..." required
-                    class="contact-textarea"></textarea>
-
-                <!-- Personnalisation du mail -->
-                <input type="hidden" name="_subject" value="Demande client !">
-                <input type="hidden" name="Source" value="Formulaire altlab">
-
-                <!-- Redirection après envoi -->
-
-                <button type="submit" class="contact-button">Send<i class="fa-solid fa-paper-plane"></i></button>
-
-            </form>
-            <p class="mentioncontact">By submitting this form, I agree that my data may be used as part of this contact request.</p>
-        </div>
-    </section>
-    <footer class="footerprojects" style="position: absolute; bottom: 0px;">
-        <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
-            data-aos-anchor-placement="top-bottom">
-            <li class="menu-elem">
-                <div class="footerlignetext">
-                    <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
-                        83200,Toulon & 59350,Lille</p>
-                    <div class="socialfooter">
-                        <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
-                                style="filter: invert();" alt=""></a>
-                        <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
-                                alt=""></a>
-                        <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg" alt=""></a>
-                    </div>
-                    <p data-key="footer" class="textfooterd">@2025 | © tibz deisgn. All rights reserved.</p>
+        <section class="contactsection">
+            <div class="coordonnee" data-aos="fade-up">
+                <img class="logocontact" src="./../public/image/logo/logon.png" alt="logo du site">
+                <div class=presentationpersonne>
+                    <h2>Tibo Creteur</h2>
+                    <p>Designer Graphique & Motion Designer</p>
+                    <div class="espacetexte"></div>
+                    <p>+33.7.83.78.48.72</p>
+                    <p>tibzdesign@gmail.com</p>
+                    <div class="espacetexte"></div>
+                    <p>SIRET : 93160601600018</p>
                 </div>
-            </li>
-        </ul>
-    </footer>
-    <script src="./../public/js/transition.js"></script>
+            </div>
+            <div class="contact-container" data-aos="fade-up">
+                <!-- logo caché tu peu le remettre ;) -->
+                <img class="logocontact" src="./../public/image/logo/logon.png" style="display: none;"
+                    alt="logo du site">
+                <h1 class="contact-title">Contact</h1>
+                <form action="https://formsubmit.co/tibzdesign@gmail.com" method="POST">
+                    <input id="casedemig" name="Name" type="Name" placeholder="Name" required
+                        class="contact-input" />
+                    <input id="casedemid" name="First Name" type="firstname" placeholder="First Name" required
+                        class="contact-input" />
+                    <input name="email" type="email" placeholder="Email" required class="contact-input"
+                        autocomplete="family-name" />
+                    <input name="Project" type="text" placeholder="Project" class="contact-input"
+                        autocomplete="given-name" />
+                    <textarea name="message" rows="5" placeholder="Tell me about your idea..." required
+                        class="contact-textarea"></textarea>
+
+                    <!-- Personnalisation du mail -->
+                    <input type="hidden" name="_subject" value="Demande client !">
+                    <input type="hidden" name="Source" value="Formulaire tibz deisgn">
+
+                    <!-- Redirection après envoi -->
+
+                    <button type="submit" class="contact-button">Send<i
+                            class="fa-solid fa-paper-plane"></i></button>
+
+                </form>
+                <p class="mentioncontact">By submitting this form, I agree that my data may be used as part of this contact request.</p>
+            </div>
+        </section>
+        <footer class="footerprojects" style="position: absolute; bottom: 0px;">
+            <ul class="menu" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"
+                data-aos-anchor-placement="top-bottom">
+                <li class="menu-elem">
+                    <div class="footerlignetext">
+                        <p data-key="footer" class="textfooterg"><i class="fa-solid fa-location-dot"></i> <b>FRANCE</b>
+                            83200,Toulon & 59350,Lille</p>
+                        <div class="socialfooter">
+                            <a href=https://www.instagram.com/altlab.design/ target="_blank"><img src="./../public/image/logoinsta.png"
+                                    style="filter: invert();" alt=""></a>
+                            <a href=https://www.linkedin.com/in/tibo-creteur-15147a233/ target="_blank"><img src="./../public/image/Logo LinkedIn.svg"
+                                    alt=""></a>
+                            <a href=https://www.behance.net/tibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg"
+                                    alt=""></a>
+                        </div>
+                        <p data-key="footer" class="textfooterd">@2025 | © tibz deisgn. All rights reserved.</p>
+                    </div>
+                </li>
+            </ul>
+        </footer>
+        <script src="./../public/js/transition.js"></script>
 </body>
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWW88BVG" height="0" width="0"
@@ -139,21 +145,21 @@
 <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
 </script>
-        <script>
-        let prevScrollPos = window.pageYOffset;
+<script>
+    let prevScrollPos = window.pageYOffset;
 
-        window.onscroll = function() {
-            let currentScrollPos = window.pageYOffset;
-            
-            if (prevScrollPos < currentScrollPos) {
-                document.getElementById("navbar").classList.add("navbar-hidden");
-            } else {
-                document.getElementById("navbar").classList.remove("navbar-hidden");
-            }
-            
-            prevScrollPos = currentScrollPos;
-        };
-    </script>
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+
+        if (prevScrollPos < currentScrollPos) {
+            document.getElementById("navbar").classList.add("navbar-hidden");
+        } else {
+            document.getElementById("navbar").classList.remove("navbar-hidden");
+        }
+
+        prevScrollPos = currentScrollPos;
+    };
+</script>
 </body>
 <script src="./../public/js/langue.js"></script>
 

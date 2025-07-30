@@ -24,32 +24,11 @@ document.querySelectorAll('a[href]').forEach(link => {
 
     link.addEventListener('click', function (e) {
         e.preventDefault();
-
         const overlay = document.getElementById('transition-overlay');
-        const logo = document.getElementById('loading-logo');
-
-        // Supprime la classe fade-out pour démarrer le fade-in
         overlay.classList.remove('fade-out');
 
-        // Affiche le logo (au cas où il aurait été masqué)
-        if (logo) {
-            logo.style.opacity = "1";
-        }
-
-        // Si la transition est trop longue (ex : +2s), on affiche un logo alternatif ou modifie le logo
-        setTimeout(() => {
-            if (!overlay.classList.contains('fade-out')) {
-                // Par exemple : changer l'image du logo ou lui ajouter une animation
-                if (logo) {
-                    logo.src = "logo-alternatif.png"; // <- à adapter
-                    // logo.classList.add("spinner"); // <- si tu veux ajouter une animation CSS
-                }
-            }
-        }, 2000);
-
-        // Attend 400 ms avant de naviguer vers la page
         setTimeout(() => {
             window.location.href = this.href;
-        }, 400);
+        }, 600);
     });
 });

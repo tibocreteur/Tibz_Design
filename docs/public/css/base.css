@@ -184,15 +184,14 @@ b {
 
 .double-arrow {
   rotate: 180deg;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   position: relative;
 
 }
 
 .double-arrow::before,
 .double-arrow::after {
-  border-radius: 50px;
   margin: -0.25px;
   content: '';
   position: absolute;
@@ -200,17 +199,56 @@ b {
   height: 100%;
   background: white;
   transform-origin: top center;
-  
+
 }
 
 .double-arrow::before {
   transform: rotate(45deg);
   left: 50%;
   top: 0;
-  
+
 }
 
 .double-arrow::after {
+  transform: rotate(-45deg);
+  right: 50%;
+  top: 0;
+}
+
+
+
+
+
+.double-arrow2 {
+  rotate: 180deg;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  transform: translateY(-3px);
+
+}
+
+.double-arrow2::before,
+.double-arrow2::after {
+  margin: -0.25px;
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
+  /* noir opaque */
+  transform-origin: top center;
+
+}
+
+.double-arrow2::before {
+  transform: rotate(45deg);
+  left: 50%;
+  top: 0;
+
+}
+
+.double-arrow2::after {
   transform: rotate(-45deg);
   right: 50%;
   top: 0;
@@ -222,15 +260,9 @@ b {
   height: 100%;
   width: fit-content;
   animation: push-down 1s infinite alternate;
-  opacity: 0.4;
-  mix-blend-mode: screen;
   transition: 0.2s ease-in-out;
   cursor: pointer;
-}
-
-.flechedubas:hover {
   opacity: 1;
-
 }
 
 .flechedubasinvisible {
@@ -245,13 +277,11 @@ b {
   0% {
     transform: translateY(-10px);
     scale: 1;
-    opacity: 1;
   }
 
   100% {
     transform: translateY(0px);
     scale: 1;
-    opacity: 1;
   }
 }
 
