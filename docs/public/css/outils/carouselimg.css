@@ -1,9 +1,12 @@
 @keyframes scroll {
   0% {
-    transform: translateX(-600px); /* Commence à img2 */
+    transform: translateX(-400px);
+    /* Commence à img2 */
   }
+
   100% {
-    transform: translateX(calc(-600px * 4)); /* Fait défiler exactement 3 images */
+    transform: translateX(calc(-400px * 4));
+    /* Fait défiler exactement 3 images */
   }
 }
 
@@ -14,12 +17,12 @@
   position: relative;
   width: 100%;
   background-color: var(--backgroundaccueil);
-    padding-top: 4rem;
+  padding-top: 4rem;
 }
 
 .slider::before,
 .slider::after {
- 
+
   content: "";
   height: 100%;
   position: absolute;
@@ -39,7 +42,8 @@
 
 .slider .slide-track {
   display: flex;
-  width: calc((600px+(var(--gapimage) / 2)) * 8); /* 7 images * 2 pour la boucle */
+  width: calc((400px+(var(--gapimage) / 2)) * 8);
+  /* 7 images * 2 pour la boucle */
   animation: scroll 40s linear infinite;
 }
 
@@ -49,30 +53,64 @@
 }
 
 .slide img {
-  width: 600px;
-  height: 800px;
+  width: 400px;
+  height: 500px;
   object-fit: cover;
   border-radius: var(--anglesprojets);
 }
 
 @media screen and (max-width: 768px) {
-.slide img {
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: var(--anglesprojets);
-}
-.slider .slide-track {
-  display: flex;
-  width: calc((300px+(var(--gapimage) / 2)) * 8); /* 7 images * 2 pour la boucle */
-  animation: scroll 40s linear infinite;
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(-300px); /* Commence à img2 */
+  .slide img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--anglesprojets);
   }
-  100% {
-    transform: translateX(calc(-300px * 4)); /* Fait défiler exactement 3 images */
+
+  .slider .slide-track {
+    display: flex;
+    width: calc((300px+(var(--gapimage) / 2)) * 8);
+    /* 7 images * 2 pour la boucle */
+    animation: scroll 40s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(-300px);
+      /* Commence à img2 */
+    }
+
+    100% {
+      transform: translateX(calc(-300px * 4));
+      /* Fait défiler exactement 3 images */
+    }
   }
 }
+
+@media screen and (min-width: 2000) {
+  .slide img {
+    width: 600px;
+    height: 800px;
+    object-fit: cover;
+    border-radius: var(--anglesprojets);
+  }
+
+  .slider .slide-track {
+    display: flex;
+    width: calc((600px+(var(--gapimage) / 2)) * 8);
+    /* 7 images * 2 pour la boucle */
+    animation: scroll 40s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(-600px);
+      /* Commence à img2 */
+    }
+
+    100% {
+      transform: translateX(calc(-600px * 4));
+      /* Fait défiler exactement 3 images */
+    }
+  }
 }

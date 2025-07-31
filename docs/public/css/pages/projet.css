@@ -59,7 +59,7 @@
     overflow: hidden;
     position: relative;
     /* ou absolute, etc. */
-    background-color: #B3E3A2;
+    background-color: var(--backgroundaccueil);
     height: fit-content;
     z-index: 100000000;
 }
@@ -414,7 +414,7 @@ blockquote {
     gap: 1rem;
     pointer-events: none;
     margin: 0;
-    padding:8rem 0px 8rem 0px;
+    padding: 8rem 0px 8rem 0px;
 
 }
 
@@ -658,7 +658,6 @@ blockquote {
     }
 
     .citation {
-        background-color: aqua;
         position: relative;
         display: flex;
         justify-content: center;
