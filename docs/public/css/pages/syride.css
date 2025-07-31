@@ -241,6 +241,7 @@ section.sticker-row {
         gap: 1rem;
         padding: 0rem;
         height: fit-content;
+        max-width: 100%;
     }
 
     .presentationtshirts {
