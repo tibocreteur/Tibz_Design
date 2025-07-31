@@ -60,7 +60,7 @@ section.sticker-row {
 }
 
 .tshirt {
-    z-index:3;
+    z-index: 3;
     max-height: 40vh;
     max-width: 40vh;
     object-fit: contain;
@@ -74,12 +74,12 @@ section.sticker-row {
 }
 
 .presentationtshirts {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 8rem;
+    gap: 3rem;
 }
 
 .zonetshirt {
@@ -87,6 +87,7 @@ section.sticker-row {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    align-items: center;
     justify-content: center;
     width: 100%;
     background-color: var(--greymouvaplan);
@@ -100,9 +101,10 @@ section.sticker-row {
     gap: 1rem;
     padding: 4rem;
     height: fit-content;
+    max-width: 40%;
 }
 
-.zonedescriptiontshirt h1{
+.zonedescriptiontshirt h1 {
     padding: 0px;
     margin: 0px;
 }
@@ -193,64 +195,75 @@ section.sticker-row {
 
 @media (min-width: 2000px) {
 
-.sticker {
-    max-width: 40vh;
-    max-height: 35vh;
+    .sticker {
+        max-width: 40vh;
+        max-height: 35vh;
 
-}
+    }
+
+    .presentationtshirts {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 8rem;
+    }
 }
 
 @media (max-width: 720px) {
     .zonetshirt {
 
-    flex-direction: column;
+        flex-direction: column;
 
-}
-.tshirt {
-    scale: 1;
-}
+    }
 
-.zonetshirt {
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    width: 100%;
-    background-color: var(--greymouvaplan);
-    border-radius: var(--anglesprojets);
-    padding: 4rem;
+    .tshirt {
+        scale: 1;
+    }
 
-}
+    .zonetshirt {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--greymouvaplan);
+        border-radius: var(--anglesprojets);
+        padding: 4rem;
 
-.zonedescriptiontshirt {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0rem;
-    height: fit-content;
-}
+    }
 
-.presentationtshirts {
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: var(--gapimage);
-}
-.lignestickers {
-    padding-inline: var(--espacecote);
-    flex-direction: column;
+    .zonedescriptiontshirt {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0rem;
+        height: fit-content;
+    }
 
-}
+    .presentationtshirts {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: var(--gapimage);
+    }
 
-.explicationstickers {
-    width: 100%;
-}
+    .lignestickers {
+        padding-inline: var(--espacecote);
+        flex-direction: column;
 
-.sticker {
-    max-width: 35vh;
-    max-height: 30vh;
-}
+    }
+
+    .explicationstickers {
+        width: 100%;
+    }
+
+    .sticker {
+        max-width: 35vh;
+        max-height: 30vh;
+    }
 }
