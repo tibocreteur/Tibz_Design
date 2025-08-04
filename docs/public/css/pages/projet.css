@@ -81,7 +81,6 @@
     z-index: -2;
     /* Place la vidéo derrière le contenu */
     background-size: cover;
-    max-height: 1200px;
     -webkit-user-select: none;
     /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
     -moz-user-select: none;
@@ -286,7 +285,7 @@
 
 .uneimagemouvaplantel img {
     background-color: var(--greymouvaplan);
-    height: 600px;
+    height: 800px;
     object-fit: cover;
 }
 
@@ -625,6 +624,23 @@ blockquote {
 .videocent video {
     border-radius: var(--anglesprojets);
     width: 100%;
+}
+
+.nameproject {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: white;
+    padding-left: var(--espacecote);
+    padding-top: 4vh;
+     user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     
+}
+.nameproject h1,
+.nameproject p {
+    color: white;
 }
 
 @media (max-width: 768px) {
