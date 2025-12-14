@@ -4,6 +4,18 @@ html {
   background: var(--backgroundaccueil);
 }
 
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
 body ::selection {
   background-color: var(--soulignage);
 }
@@ -44,16 +56,26 @@ h1 {
   color: #000000;
   font-family: var(--ibm);
   cursor: default;
+  letter-spacing: -0.02em;
 }
 
 p {
   font-size: 1rem;
-  line-height: 1.4;
+  lang: fr;
+  letter-spacing: -0.02em;
+  line-height: 1.7;
+    word-spacing: 0.05em;
   color: #000000;
   font-family: var(--ibm);
   text-align: justify;
   font-size: 1rem;
   cursor: default;
+  font-weight: 400;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphenate-limit-chars: 6 3 2;
 }
 
 a {

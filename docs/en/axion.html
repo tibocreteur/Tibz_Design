@@ -24,11 +24,20 @@
     <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
     <link rel="stylesheet" href="./../public/css/pages/axon.css">
     <link rel="stylesheet" href="./../public/css/outils/transition.css">
+        <link rel="stylesheet" href="./../public/css/pages/headerproject.css">
+
 
     <link rel="preload" href="./../public/video/console.webm" as="video">
     <link rel="preload" href="./../public/video/mousqueton.webm" as="video">
     <link rel="preload" href="./../public/video/portecle2.webm" as="video">
-
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWRPCHMJER"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GWRPCHMJER');
+    </script>
 </head>
 
 <body>
@@ -61,37 +70,47 @@
         <span>This website is not yet available on mobile.</span>
         <span>I invite you to return from a computer for a better experience.</span>
     </section>
-    <section class="top-page">
 
-                        <div class="nameproject"><h1>Axion</h1><p>Personal work</p></div>
-
-        <div class="entete">
-            <video src="./../public/video/montre.webm" alt="Une console rétro futuriste" id="scroll-image" autoplay
-                muted playsinline loop>
-                <script src="./../public/js/animation.js"></script>
-        </div>
-        <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='axion.html#section';">
-                <div class="double-arrow"></div>
-                <div class="double-arrow2"></div>
-            </a>
-        </div>
-        <script src="./../public/js/fleche.js"></script>
-    </section>
-    <section class="containproject">
-        <div id="section" class="citation">
-            <blockquote id="quote">"The future is already here" — William Gibson</blockquote>
-        </div>
-        <div class="infoprojet">
-            <div class="explication">
-                <h2 class="titredelexplication">Axion</h2>
-                <p class="texteexplicatif">"Axion" is a design project for a sports watch created for modern athletes, combining <strong>lightness</strong>, <strong>durability</strong>, and environmental responsibility. This model explores the fusion of <strong>sports performance</strong> and <strong>sustainability</strong>, with a functional design and a commitment to eco-responsibility.
+<section class="top-pagedeux">
+        <div class="project-header">
+            <div class="project-header-content">
+                <div class="project-header-left">
+                    <h1>Axion</h1>
+                    <p>"Axion" is a design project for a sports watch created for modern athletes, combining <strong>lightness</strong>, <strong>durability</strong>, and environmental responsibility. This model explores the fusion of <strong>sports performance</strong> and <strong>sustainability</strong>, with a functional design and a commitment to eco-responsibility.
 
 Built to withstand extreme conditions of outdoor sports, "Axion" uses durable, lightweight materials to maximize performance without sacrificing resistance. Its clean and futuristic design highlights its technical side, while integrating ecological elements that make it an environmentally friendly choice.
 
 This project reflects a creative approach aiming to push the boundaries of sports design while incorporating ethical manufacturing practices, for a watch that is both <strong>robust</strong>, <strong>lightweight</strong>, and environmentally responsible.</p>
+                </div>
+                <div class="project-header-right">
+                    <div class="project-info-item">
+                        <span class="project-info-label">CLIENT</span>
+                        <span class="project-info-value">-</span>
+                    </div>
+                    <div class="project-info-item">
+                        <span class="project-info-label">Year</span>
+                        <span class="project-info-value" style="text-decoration: underline var(--soulignage) 2px; text-underline-offset: 5px;">2025</span>
+                    </div>
+                    <div class="project-info-item">
+                        <span class="project-info-label">Category</span>
+                        <span class="project-info-value">3D</span>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="project-image-container">
+            <div class="project-video-wrapper">
+                <iframe 
+                    src="https://player.vimeo.com/video/1146336847?badge=0&autopause=0&autoplay=1&muted=1&loop=1&background=1&title=0&byline=0&portrait=0" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    title="Syride Project">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section class="containproject">
         <section class="infoprojet">
             <div class="videocent">
                 <video data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"

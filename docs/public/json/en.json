@@ -136,5 +136,8 @@
     "langdeux": "currentlangnav",
     "langun": "otherlangnav",
     "langdeuxindex": "currentlangnavindex",
-    "langunindex": "otherlangnavindex"
+    "langunindex": "otherlangnavindex",
+    "year": "Year",
+    "category": "Category"
+
 }

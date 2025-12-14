@@ -25,8 +25,16 @@
     <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="../docs/public/css/outils/latestprojects.css">
     <link rel="stylesheet" href="../docs/public/css/outils/transition.css">
+            <link rel="stylesheet" href="../docs/public/css/pages/headerproject.css">
 
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWRPCHMJER"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GWRPCHMJER');
+    </script>
 </head>
 
 <body>
@@ -60,36 +68,43 @@
         <span>{{erreurun}}</span>
         <span>{{erreurdeux}}</span>
     </section>
-    <section class="top-page">
-
-                <div class="nameproject"><h1>Toulon Provence<br>Regatta 2025</h1><p>12 MED EVENT</p></div>
 
 
-        <div class="entete">
-            <img src="../docs/public/image/regatta/fond.jpg" alt="Une console rétro futuriste" id="scroll-image"
-                autoplay muted playsinline loop>
-            <script src="../docs/public/js/animation.js"></script>
+
+        <section class="top-pagedeux">
+        <div class="project-header">
+            <div class="project-header-content">
+                <div class="project-header-left">
+                    <h1>Toulon Provence Regatta 2025</h1>
+                    <p>{{presentationregatta}}</p>
+                </div>
+                <div class="project-header-right">
+                    <div class="project-info-item">
+                        <span class="project-info-label">CLIENT</span>
+                        <span class="project-info-value">12 MED EVENT</span>
+                    </div>
+                    <div class="project-info-item">
+                        <span class="project-info-label">{{year}}</span>
+                        <span class="project-info-value" style="text-decoration: underline var(--soulignage) 2px; text-underline-offset: 5px;">2025</span>
+                    </div>
+                    <div class="project-info-item">
+                        <span class="project-info-label">{{category}}</span>
+                        <span class="project-info-value">Print</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="basdetoppage">
-            <a class="flechedubas" onclick="location.href='regatta.html#section';">
-                <div class="double-arrow"></div>
-                <div class="double-arrow2"></div>
-            </a>
+        <div class="project-image-container">
+
+                    <img src="../docs/public/image/regatta/regattafini.avif" alt="" class="regattaaffiche">
         </div>
-        <script src="../docs/public/js/fleche.js"></script>
     </section>
+
     <section class="containproject">
         <section id="section" class="citation">
             <blockquote id="quote">{{citationregatta}}</blockquote>
         </section>
-        <section class="infoprojet">
-            <div class="explicationregatta" style="padding-bottom: 5vh;">
-                <div class="imageregatta">
-                    <img src="../docs/public/image/regatta/regattafini.avif" alt="" class="regattaaffiche">
-                </div>
-                <p class="texteexplicatif">{{presentationregatta}}</p>
-            </div>
-        </section class="sliderimg">
+
         <div class="slider">
             <div class="slide-track">
                 <div class="slide">

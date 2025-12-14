@@ -3,7 +3,7 @@
     /* COULEURS */
     --backgroundaccueil: #f9f9f4;
     --backgroundproject: #f9f9f4;
-    --greymouvaplan: rgb(237, 235, 229);
+    --greymouvaplan:#ebebe6;
     --gradient-black-to-white: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.6));
     --soulignage: #9bee68;
     --vertmarque: #9bee68;
@@ -16,15 +16,17 @@
     --colorbuttonnav: rgba(0, 0, 0, 0);
     --colorbuttonnavindex: rgb(0, 0, 0);
     --textbuttonnav: #ffffff;
+    --fondlastproject: #000000;
+    --typo-blanche: #f9f9f4;
 
     /* ANGLES */
     --anglesprojets: 15px;
-    --anglesindex: 15px;
+    --anglesindex: 10px;
     --anglebouton: 7px;
 
     /* MARGE COTÉ  */
     --espacecote: 40px;
-    --gapimage: 20px;
+    --gapimage: 15px;
     --espacecoteexplication: 5%;
     --espacetopexplication: 5%;
 

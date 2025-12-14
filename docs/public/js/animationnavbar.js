@@ -10,10 +10,7 @@ window.onscroll = function () {
     }
 
     let currentScrollPos = window.pageYOffset;
-
-    if (currentScrollPos === 0) {
-        navbar.classList.add("navbar-hidden");
-    } else if (prevScrollPos < currentScrollPos) {
+    if (prevScrollPos < currentScrollPos) {
         navbar.classList.add("navbar-hidden");
     } else {
         navbar.classList.remove("navbar-hidden");

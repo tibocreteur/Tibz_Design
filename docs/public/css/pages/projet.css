@@ -643,6 +643,26 @@ blockquote {
     color: white;
 }
 
+.presentation30{
+    display: flex;
+    flex-direction: row;
+    gap: var(--gapimage);
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.presentation30 img{
+    width: calc(100% / 3 - (var(--gapimage) * 2 / 3));
+}
+
+.uneimagedrime{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: var(--gapimage);
+}
+
 @media (max-width: 768px) {
 
     .explicationregatta {
