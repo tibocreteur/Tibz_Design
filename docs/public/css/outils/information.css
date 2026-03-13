@@ -1,0 +1,437 @@
+  /* ── SECTION WRAPPER ── */
+  .tibz-info__section {
+      display: block !important;
+      width: 100% !important;
+      padding: 6rem 0vw 0px !important;
+      margin: 0 !important;
+      color: #111010 !important;
+      font-family: 'Space Mono', monospace !important;
+      font-size: 16px !important;
+      font-style: normal !important;
+      position: relative !important;
+      overflow: hidden !important;
+      border: none !important;
+  }
+
+  .tibz-info__dispo-dot {
+      animation: tibz-info__blink 2s ease-in-out infinite !important;
+  }
+
+  /* ── LABEL TAG ── */
+  .tibz-info__section .tibz-info__tag {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      font-family: 'Space Mono', monospace !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      line-height: 1 !important;
+      letter-spacing: 0.20em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      color: rgb(17, 16, 16) !important;
+      background: none !important;
+      margin: 0 0 1rem 0 !important;
+      padding: 0px var(--espacecote) !important;
+      border: none !important;
+      list-style: none !important;
+      color: var(--typo-blanche);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+  }
+
+  .tibz-info__section .tibz-info__tag::before {
+      content: '' !important;
+      display: block !important;
+      flex-shrink: 0 !important;
+      width: 32px !important;
+      height: 1px !important;
+      background-color: var(--vertmarque) !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+  }
+
+  /* ── HERO ROW ── */
+  .tibz-info__section .tibz-info__hero {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: flex-end !important;
+      flex-wrap: wrap !important;
+      gap: 40px !important;
+      padding: 0 0 60px 0 !important;
+      margin: 0 !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom: 1px solid rgba(17, 16, 16, 0.10) !important;
+      background: none !important;
+  }
+
+  .tibz-info__section .tibz-info__hero-title {
+      display: block !important;
+      flex: 1 1 400px !important;
+      font-family: 'DM Serif Display', Georgia, serif !important;
+      font-size: clamp(3.2rem, 6vw, 6.5rem) !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      line-height: 1.02 !important;
+      letter-spacing: -0.02em !important;
+      text-transform: none !important;
+      color: #111010 !important;
+      background: none !important;
+      margin: 0 !important;
+      padding: 0 0 0 var(--espacecote) !important;
+      border: none !important;
+      top: 0;
+  }
+
+  .tibz-info__section .tibz-info__hero-title em {
+      font-family: 'DM Serif Display', Georgia, serif !important;
+      font-style: italic !important;
+      font-weight: bold !important;
+      color: var(--vertmarque) !important;
+      background: none !important;
+  }
+
+  .tibz-info__section .tibz-info__hero-title ::selection {
+      color: black;
+  }
+
+  .tibz-info__section .tibz-info__hero-desc {
+      display: block !important;
+      flex: 0 1 40% !important;
+      font-style: normal !important;
+      letter-spacing: 0 !important;
+      color: rgb(17, 16, 16) !important;
+      background: none !important;
+      margin: 0 !important;
+      padding: 0 var(--espacecote)0 0 !important;
+      border: none !important;
+      text-transform: none !important;
+  }
+
+  .tibz-info__section .tibz-info__hero-desc strong {
+      font-weight: bold !important;
+      font-style: italic !important;
+      color: #111010 !important;
+      background: none !important;
+  }
+
+  /* ── STATS ── */
+  .tibz-info__section .tibz-info__stats {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom: 1px solid rgba(17, 16, 16, 0.10) !important;
+      background: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
+  }
+
+  @media (max-width: 600px) {
+      .tibz-info__section .tibz-info__stats {
+          grid-template-columns: 1fr 1fr !important;
+      }
+
+      .tibz-info__section .tibz-info__stat:last-child {
+          grid-column: 1 / -1 !important;
+          border-right: none !important;
+          border-top: 1px solid rgba(17, 16, 16, 0.10) !important;
+      }
+  }
+
+  .tibz-info__section .tibz-info__stat {
+      display: block !important;
+      padding: 48px 32px 48px var(--espacecote) !important;
+      margin: 0 !important;
+      border-top: none !important;
+      border-bottom: none !important;
+      border-left: none !important;
+      border-right: 1px solid rgba(17, 16, 16, 0.10) !important;
+      background: var(--backgroundaccueil) !important;
+      opacity: 0 !important;
+      transform: translateY(16px) !important;
+      transition: opacity 0.5s ease, transform 0.5s ease !important;
+  }
+
+  .tibz-info__section .tibz-info__stat:last-child {
+      border-right: none !important;
+      padding-right: 0 !important;
+  }
+
+  .tibz-info__section .tibz-info__stat.visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+  }
+
+  .tibz-info__section .tibz-info__stat-num {
+      display: block !important;
+      font-family: 'DM Serif Display', Georgia, serif !important;
+      font-size: clamp(3rem, 5vw, 5rem) !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      line-height: 1 !important;
+      letter-spacing: -0.02em !important;
+      text-transform: none !important;
+      color: #111010 !important;
+      background: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+  }
+
+  .tibz-info__section .tibz-info__stat-num sup {
+      font-family: var(--ibm) !important;
+      font-size: 0.28em !important;
+      font-weight: 200 !important;
+      font-style: normal !important;
+      line-height: 1 !important;
+      color: black !important;
+      background: none !important;
+      vertical-align: super !important;
+      margin-left: 4px !important;
+  }
+
+  .tibz-info__section .tibz-info__stat-label {
+      display: block !important;
+      font-family: 'Space Mono', monospace !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      line-height: 1 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      color: rgba(17, 16, 16, 0.42) !important;
+      background: none !important;
+      margin: 10px 0 0 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+  }
+
+  /* ── BOTTOM ROW ── */
+  .tibz-info__section .tibz-info__bottom {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 32px !important;
+      padding: 52px var(--espacecote) 0 var(--espacecote) !important;
+      margin: 0 !important;
+      background: none !important;
+      border: none !important;
+  }
+
+  .tibz-info__section .tibz-info__skills {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 8px !important;
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: none !important;
+      border: none !important;
+  }
+
+  .tibz-info__section .tibz-info__skill {
+      display: inline-block !important;
+      font-family: 'Space Mono', monospace !important;
+      font-size: 0.58rem !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      line-height: 1 !important;
+      letter-spacing: 0.12em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      color: #111010 !important;
+      background-color: transparent !important;
+      border: 1px solid rgba(17, 16, 16, 0.15) !important;
+      padding: 9px 16px !important;
+      margin: 0 !important;
+      cursor: default !important;
+      transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease !important;
+  }
+
+  .tibz-info__section .tibz-info__skill:hover {
+      background-color: var(--vertmarque) !important;
+      color: #111010 !important;
+      border-color: var(--vertmarque) !important;
+  }
+
+  .tibz-info__section .tibz-info__right {
+      display: flex !important;
+      width: 100%;
+      align-items: center;
+      gap: 3rem !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: none !important;
+      border: none !important;
+  }
+
+  .tibz-info__section .tibz-info__dispo {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      font-family: 'Space Mono', monospace !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      line-height: 1 !important;
+      letter-spacing: 0.12em !important;
+      text-transform: uppercase !important;
+      color: rgba(17, 16, 16, 0.42) !important;
+      background: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      color: var(--typo-blanche);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+  }
+
+  .tibz-info__section .tibz-info__dispo-dot {
+      display: block !important;
+      flex-shrink: 0 !important;
+      width: 8px !important;
+      height: 8px !important;
+      min-width: 8px !important;
+      border-radius: 50% !important;
+      background-color: var(--vertmarque) !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+  }
+
+  .tibz-info__dispo-dot {
+      animation: tibz-info__blink 2s ease-in-out infinite !important;
+  }
+
+  @keyframes tibz-info__blink {
+      0% {
+          box-shadow: 0 0 0 0 rgba(200, 255, 0, 0.842);
+      }
+
+      70% {
+          box-shadow: 0 0 0 10px rgba(200, 255, 0, 0);
+      }
+
+      100% {
+          box-shadow: 0 0 0 0 rgba(200, 255, 0, 0);
+      }
+  }
+
+  .tibz-info__dispo-dot {
+      animation: tibz-info__blink 2s ease-in-out infinite !important;
+  }
+
+  .tibz-info__section .tibz-info__img {
+      width: 400px;
+      position: absolute;
+      z-index: -1;
+      right: 3rem;
+  }
+
+  .tibz-info__section .tibz-info__cta {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      font-family: var(--ibm);
+      font-style: normal !important;
+      line-height: 1 !important;
+      letter-spacing: 0.07em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      color: #111010 !important;
+      background-color: var(--vertmarque) !important;
+      padding: 18px 28px !important;
+      margin: 0 !important;
+      border: none !important;
+      cursor: pointer !important;
+      color: var(--typo-blanche);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      transition: background-color 0.20s ease, color 0.20s ease, transform 0.20s ease !important;
+  }
+
+  .tibz-info__section .tibz-info__cta:hover {
+      background-color: #111010 !important;
+      color: #f5f2ee !important;
+  }
+
+  .tibz-info__section .tibz-info__cta::after {
+      content: '→' !important;
+      display: inline-block !important;
+      font-size: 1.1em !important;
+      line-height: 1 !important;
+  }
+
+  /* ── MARQUEE ── */
+  .tibz-info__section .tibz-info__marquee {
+      display: block !important;
+      border-top: 1px solid rgba(17, 16, 16, 0.10) !important;
+      border-bottom: 1px solid rgba(17, 16, 16, 0.10) !important;
+      border-left: none !important;
+      border-right: none !important;
+      overflow: hidden !important;
+      padding: 20px 0 !important;
+      margin: 50px 0 0 0 !important;
+      background: var(--backgroundaccueil) !important;
+
+  }
+
+  .tibz-info__section .tibz-info__marquee-track {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      animation: tibz-info__slide 22s linear infinite !important;
+      background: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+  }
+
+  .tibz-info__section .tibz-info__marquee-track:hover {
+      animation-play-state: paused !important;
+  }
+
+  @keyframes tibz-info__slide {
+      from {
+          transform: translateX(0);
+      }
+
+      to {
+          transform: translateX(-50%);
+      }
+  }
+
+  .tibz-info__section .tibz-info__marquee-item {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 44px !important;
+      font-family: 'DM Serif Display', Georgia, serif !important;
+      font-size: clamp(1.4rem, 2.2vw, 2rem) !important;
+      font-weight: 400 !important;
+      font-style: italic !important;
+      line-height: 1 !important;
+      letter-spacing: 0 !important;
+      text-transform: none !important;
+      color: rgba(17, 16, 16, 0.35) !important;
+      background: none !important;
+      padding: 0 0 0 44px !important;
+      margin: 0 !important;
+      border: none !important;
+      user-select: none !important;
+      white-space: nowrap !important;
+  }
+
+  .tibz-info__section .tibz-info__marquee-item::after {
+      content: '·' !important;
+      display: inline-block !important;
+      font-style: normal !important;
+      font-size: 1.4em !important;
+      line-height: 1 !important;
+  }

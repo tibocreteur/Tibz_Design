@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/transition.css">
     <link rel="stylesheet" href="../docs/public/css/outils/carousel.css">
     <link rel="stylesheet" href="../docs/public/css/outils/faq.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/information.css">
 
 
     <!-- Précharger les images -->
@@ -49,21 +50,21 @@
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWRPCHMJER"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GWRPCHMJER');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GWRPCHMJER');
     </script>
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/@ashthornton/asscroll@2.0.8/dist/asscroll.min.js"></script>
 <script>
-const asscroll = new ASScroll();
+    const asscroll = new ASScroll();
 </script>
 
 <body>
 
-    <div  id="transition-overlay" class="active">
+    <div id="transition-overlay" class="active">
     </div>
     <section style="position: absolute;" class="top-page">
         <!-- Navbar -->
@@ -104,29 +105,123 @@ const asscroll = new ASScroll();
     </div>
     <script src="../docs/public/js/fleche.js"></script>
     </section>
-    <section id="section" class="projects-section">
+
+    <section id="section" class="tibz-info__section">
+
+        <p class="tibz-info__tag">À propos</p>
+
+        <div class="tibz-info__hero">
+            <h2 class="tibz-info__hero-title">
+                Studio créatif<br>
+                <em>Motion</em> & design.
+            </h2>
+            <p class="tibz-info__hero-desc">
+                <strong>Motion design, data design, 3D.</strong> Trois disciplines au service d'une seule chose : des
+                visuels qui font leur effet. <strong>Diplômé et basé en France</strong>, je collabore avec des clients
+                qui veulent du travail <strong>sérieux, bien pensé et livré dans les temps</strong>. Je suis à l'aise
+                autant sur un <strong>motion graphique percutant</strong> que sur une <strong>data viz complexe</strong>
+                ou un <strong>projet print</strong>. Si vous cherchez quelqu'un qui <strong>s'implique vraiment</strong>
+                — vous êtes au bon endroit.
+            </p>
+        </div>
+
+        <div class="tibz-info__stats">
+            <div class="tibz-info__stat">
+                <p class="tibz-info__stat-num">4<sup>ans</sup></p>
+                <p class="tibz-info__stat-label">D'expérience</p>
+            </div>
+            <div class="tibz-info__stat">
+                <p class="tibz-info__stat-num">30<sup>+</sup></p>
+                <p class="tibz-info__stat-label">Projets livrés</p>
+            </div>
+            <div class="tibz-info__stat">
+                <p class="tibz-info__stat-num">12<sup>+</sup></p>
+                <p class="tibz-info__stat-label">Clients & partenaires</p>
+            </div>
+        </div>
+
+        <div class="tibz-info__bottom">
+            <div class="tibz-info__right">
+                <a class="tibz-info__cta" href="contact.html">Démarrer un projet</a>
+                <div class="tibz-info__dispo">
+                    <span class="tibz-info__dispo-dot"></span>
+                    Disponible — missions freelance 2026
+                </div>
+            </div>
+        </div>
+
+        <div class="tibz-info__marquee">
+            <div class="tibz-info__marquee-track">
+                <span class="tibz-info__marquee-item">Motion Design</span>
+                <span class="tibz-info__marquee-item">3D & Visualisation</span>
+                <span class="tibz-info__marquee-item">Direction artistique</span>
+                <span class="tibz-info__marquee-item">Identité de marque</span>
+                <span class="tibz-info__marquee-item">Characters & Animation</span>
+                <span class="tibz-info__marquee-item">Print & Édition</span>
+                <span class="tibz-info__marquee-item">Motion Design</span>
+                <span class="tibz-info__marquee-item">3D & Visualisation</span>
+                <span class="tibz-info__marquee-item">Direction artistique</span>
+                <span class="tibz-info__marquee-item">Identité de marque</span>
+                <span class="tibz-info__marquee-item">Characters & Animation</span>
+                <span class="tibz-info__marquee-item">Print & Édition</span>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        (function () {
+            const stats = document.querySelectorAll('.tibz-info__section .tibz-info__stat');
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry, i) {
+                    if (entry.isIntersecting) {
+                        setTimeout(function () {
+                            entry.target.classList.add('visible');
+                        }, i * 130);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            stats.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
+
+    <script>
+        // Stagger reveal on scroll
+        const rows = document.querySelectorAll('.stat-row');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e, i) => {
+                if (e.isIntersecting) {
+                    setTimeout(() => e.target.classList.add('visible'), i * 120);
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        rows.forEach(r => io.observe(r));
+    </script>
+
+    <section class="projects-section">
         <header class="latestprojectstitre">
             <h1>{{projects}}</h1>
         </header>
-        <div  data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom"
-            class="project-panel1">
+        <div data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom" class="project-panel1">
             <div class="boutonprojets">
                 <a href="syride.html">
                     <div class="petitbouton">
-                                <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300"
-                                    data-aos-anchor-placement="top-bottom" id="new" class="badge">NEW</span>
-                                <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="600"
-                                    data-aos-anchor-placement="top-bottom" id="print" class="badge">print</span>
-                            </div>
+                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="300"
+                            data-aos-anchor-placement="top-bottom" id="new" class="badge">NEW</span>
+                        <span data-aos="zoom-in" data-aos-duration="400" data-aos-delay="600"
+                            data-aos-anchor-placement="top-bottom" id="print" class="badge">print</span>
                     </div>
-                    <img src="../docs/public/image/syride/jenaimar-2.avif" alt="Omodaka" class="project-image">
-                    <div class="infoprojets">
-                        <H1>Syride x {{nomboite}}</H1>
-                        <p>Syride</p>
-                        
-                    </div>
-                </a>
             </div>
+            <img src="../docs/public/image/syride/jenaimar-2.avif" alt="Omodaka" class="project-image">
+            <div class="infoprojets">
+                <H1>Syride x {{nomboite}}</H1>
+                <p>Syride</p>
+
+            </div>
+            </a>
+        </div>
         </div>
         <div class="containtrois">
             <div class="cinquantecolum">
@@ -135,13 +230,13 @@ const asscroll = new ASScroll();
                     <div class="boutonprojets">
                         <a href="console.html">
                             <div class="petitbouton">
-                               <span id="troisd" class="badge">3D</span>
+                                <span id="troisd" class="badge">3D</span>
                             </div>
                             <img src="../docs/public/image/console/fond3.avif" alt="流智" class="project-image">
                             <div class="infoprojets">
                                 <H1>流智 - Liúzhì</H1>
                                 <p>{{personalwork}}</p>
-                                
+
                             </div>
                         </a>
                     </div>
@@ -158,7 +253,7 @@ const asscroll = new ASScroll();
                             <div class="infoprojets">
                                 <H1>Axion</H1>
                                 <p>{{personalwork}}</p>
-                                
+
                             </div>
                         </a>
                     </div>
@@ -181,7 +276,7 @@ const asscroll = new ASScroll();
                                 <H1>Toulon Provence<br>Regatta 2025</H1>
                             </div>
                             <p>12 MED EVENT</p>
-                            
+
                         </div>
                     </a>
                 </div>
@@ -197,7 +292,7 @@ const asscroll = new ASScroll();
                     <div class="infoprojets">
                         <H1>Omodaka</H1>
                         <p>La Grande Tourrache</p>
-                        
+
                     </div>
                 </a>
             </div>
@@ -221,7 +316,7 @@ const asscroll = new ASScroll();
     </section>
 
 
-    
+
     <section class="menuskills">
         <header class="latestprojectstitre" style="padding-bottom: 1rem;padding-top: 0px;margin: 0px;">
             <h1>{{skills}}</h1>
@@ -447,10 +542,10 @@ const asscroll = new ASScroll();
     <div class="faq-container">
 
         <header class="latestprojectstitre" style="padding-bottom: 1rem;">
-                <h1>FAQ</h1>
-            </header>
+            <h1>FAQ</h1>
+        </header>
 
-        <div class="faq-list" >
+        <div class="faq-list">
             <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
                 <div class="faq-question">
                     <h3>Quels types de projets préfères-tu réaliser ?</h3>
@@ -458,56 +553,70 @@ const asscroll = new ASScroll();
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                    Je travaille surtout sur des projets de motion design, de 3D et de création visuelle. J’aime particulièrement les projets avec une direction artistique forte ou une identité animée.                </div>
-            </div></div>
+                        Je travaille surtout sur des projets de motion design, de 3D et de création visuelle. J’aime
+                        particulièrement les projets avec une direction artistique forte ou une identité animée. </div>
+                </div>
+            </div>
 
-             <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
+            <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
                 <div class="faq-question">
                     <h3>Comment gères-tu les deadlines serrées ?</h3>
                     <div class="faq-icon"></div>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                Je planifie chaque étape dès le début. Ça me permet d’anticiper, d’être efficace et de livrer dans les temps, même sur des projets urgents.</div>
-            </div></div>
+                        Je planifie chaque étape dès le début. Ça me permet d’anticiper, d’être efficace et de livrer
+                        dans les temps, même sur des projets urgents.</div>
+                </div>
+            </div>
 
-                        <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
+            <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
                 <div class="faq-question">
                     <h3>Es-tu à l’aise pour travailler avec un directeur créatif ou en équipe ?</h3>
                     <div class="faq-icon"></div>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                Oui, totalement. Je m’adapte facilement aux workflows existants et je sais aussi proposer des directions visuelles quand c’est nécessaire.</div>
-            </div></div>
+                        Oui, totalement. Je m’adapte facilement aux workflows existants et je sais aussi proposer des
+                        directions visuelles quand c’est nécessaire.</div>
+                </div>
+            </div>
 
-                        <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
+            <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
                 <div class="faq-question">
                     <h3>Quel type de studio ou d’entreprise espères-tu rejoindre ?</h3>
                     <div class="faq-icon"></div>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                Je suis ouvert à tout type de structure : studios créatifs, startups, entreprises ou indépendants. Ce qui m’importe, c’est de travailler avec des personnes qui valorisent la créativité et la qualité visuelle.</div>
-            </div></div>
+                        Je suis ouvert à tout type de structure : studios créatifs, startups, entreprises ou
+                        indépendants. Ce qui m’importe, c’est de travailler avec des personnes qui valorisent la
+                        créativité et la qualité visuelle.</div>
+                </div>
+            </div>
 
-                        <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
+            <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
                 <div class="faq-question">
                     <h3>Comment restes-tu inspiré ?</h3>
                     <div class="faq-icon"></div>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                Je fais une veille constante : design, cinéma, jeux vidéo, 3D, tech, et mes propres expérimentations. Ça me permet de proposer des idées actuelles et adaptées à chaque projet.</div>
-            </div></div>
+                        Je fais une veille constante : design, cinéma, jeux vidéo, 3D, tech, et mes propres
+                        expérimentations. Ça me permet de proposer des idées actuelles et adaptées à chaque projet.
+                    </div>
+                </div>
+            </div>
 
-                        <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
+            <div class="faq-item" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
                 <div class="faq-question">
                     <h3>Peux-tu adapter ton style pour qu’il s’accorde à une marque ou un projet ?</h3>
                     <div class="faq-icon"></div>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content"> Oui. Je m’adapte à l’univers de chaque marque tout en apportant ma touche créative. Minimaliste, futuriste, illustratif ou photoréaliste, je peux ajuster mon style en fonction du brief.</div>
+                    <div class="faq-answer-content"> Oui. Je m’adapte à l’univers de chaque marque tout en apportant ma
+                        touche créative. Minimaliste, futuriste, illustratif ou photoréaliste, je peux ajuster mon style
+                        en fonction du brief.</div>
                 </div>
             </div>
         </div>
@@ -518,15 +627,15 @@ const asscroll = new ASScroll();
 
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
-            
+
             question.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-                
+
                 // Fermer tous les items
                 faqItems.forEach(otherItem => {
                     otherItem.classList.remove('active');
                 });
-                
+
                 // Ouvrir l'item cliqué s'il n'était pas déjà ouvert
                 if (!isActive) {
                     item.classList.add('active');
