@@ -128,7 +128,7 @@
       border-bottom: 1px solid rgba(17, 16, 16, 0.10) !important;
       background: none !important;
       margin: 0 !important;
-      padding: 0 !important;
+      padding-inline: var(--espacecote) !important;
       list-style: none !important;
   }
 
@@ -202,7 +202,7 @@
       font-weight: 400 !important;
       font-style: normal !important;
       line-height: 1 !important;
-      letter-spacing: 0.1em !important;
+      letter-spacing: 0.05em !important;
       text-transform: uppercase !important;
       color: rgba(17, 16, 16, 0.42) !important;
       background: none !important;
@@ -243,8 +243,6 @@
       font-size: 0.58rem !important;
       font-weight: 400 !important;
       font-style: normal !important;
-      line-height: 1 !important;
-      letter-spacing: 0.12em !important;
       text-transform: uppercase !important;
       text-decoration: none !important;
       color: #111010 !important;
@@ -281,7 +279,7 @@
       font-weight: 400 !important;
       font-style: normal !important;
       line-height: 1 !important;
-      letter-spacing: 0.12em !important;
+      letter-spacing: 0.05em !important;
       text-transform: uppercase !important;
       color: rgba(17, 16, 16, 0.42) !important;
       background: none !important;
@@ -342,7 +340,7 @@
       font-family: var(--ibm);
       font-style: normal !important;
       line-height: 1 !important;
-      letter-spacing: 0.07em !important;
+      letter-spacing: 0.05em !important;
       text-transform: uppercase !important;
       text-decoration: none !important;
       color: #111010 !important;
@@ -354,6 +352,7 @@
       color: var(--typo-blanche);
       font-size: 0.8rem;
       text-transform: uppercase;
+    border-radius: var(--anglesindex);
       transition: background-color 0.20s ease, color 0.20s ease, transform 0.20s ease !important;
   }
 
@@ -378,7 +377,7 @@
       border-right: none !important;
       overflow: hidden !important;
       padding: 20px 0 !important;
-      margin: 50px 0 0 0 !important;
+      margin: 50px 0 30px 0 !important;
       background: var(--backgroundaccueil) !important;
 
   }

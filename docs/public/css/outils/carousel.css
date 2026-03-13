@@ -54,7 +54,7 @@
 .slide {
     width: 250px;
     filter: saturate(0);
-    opacity: 0.5;
+    opacity: 0.3;
     display: flex;
 }
 
