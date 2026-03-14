@@ -2,7 +2,7 @@
   .tibz-info__section {
       display: block !important;
       width: 100% !important;
-      padding: 6rem 0vw 0px !important;
+      padding: 9rem 0vw 9rem !important;
       margin: 0 !important;
       color: #111010 !important;
       font-family: 'Space Mono', monospace !important;
@@ -87,7 +87,7 @@
   }
 
   .tibz-info__section .tibz-info__hero-title em {
-      font-family: 'DM Serif Display', Georgia, serif !important;
+      font-family: var(--ibm) !important;
       font-style: italic !important;
       font-weight: bold !important;
       color: var(--vertmarque) !important;
@@ -170,12 +170,12 @@
 
   .tibz-info__section .tibz-info__stat-num {
       display: block !important;
-      font-family: 'DM Serif Display', Georgia, serif !important;
+      font-family: var(--ibm) !important;
       font-size: clamp(3rem, 5vw, 5rem) !important;
       font-weight: 400 !important;
       font-style: normal !important;
       line-height: 1 !important;
-      letter-spacing: -0.02em !important;
+      letter-spacing: -0.05em !important;
       text-transform: none !important;
       color: #111010 !important;
       background: none !important;
@@ -186,27 +186,29 @@
 
   .tibz-info__section .tibz-info__stat-num sup {
       font-family: var(--ibm) !important;
-      font-size: 0.28em !important;
-      font-weight: 200 !important;
+      color: var(--typo-blanche);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase;
       font-style: normal !important;
       line-height: 1 !important;
       color: black !important;
       background: none !important;
       vertical-align: super !important;
-      margin-left: 4px !important;
+      margin-left: 0.5rem !important;
+
   }
 
   .tibz-info__section .tibz-info__stat-label {
       display: block !important;
-      font-family: 'Space Mono', monospace !important;
-      font-weight: 400 !important;
+      font-family: var(--ibm) !important;
       font-style: normal !important;
       line-height: 1 !important;
       letter-spacing: 0.05em !important;
       text-transform: uppercase !important;
       color: rgba(17, 16, 16, 0.42) !important;
       background: none !important;
-      margin: 10px 0 0 0 !important;
+      margin: 0.1rem 0 0 0 !important;
       padding: 0 !important;
       border: none !important;
       font-size: 0.8rem;
@@ -220,7 +222,7 @@
       align-items: center !important;
       flex-wrap: wrap !important;
       gap: 32px !important;
-      padding: 52px var(--espacecote) 0 var(--espacecote) !important;
+      padding: 0px var(--espacecote) 0 var(--espacecote) !important;
       margin: 0 !important;
       background: none !important;
       border: none !important;
@@ -239,7 +241,7 @@
 
   .tibz-info__section .tibz-info__skill {
       display: inline-block !important;
-      font-family: 'Space Mono', monospace !important;
+      font-family: var(--ibm) !important;
       font-size: 0.58rem !important;
       font-weight: 400 !important;
       font-style: normal !important;
@@ -281,7 +283,7 @@
       line-height: 1 !important;
       letter-spacing: 0.05em !important;
       text-transform: uppercase !important;
-      color: rgba(17, 16, 16, 0.42) !important;
+      color: rgb(17, 16, 16) !important;
       background: none !important;
       margin: 0 !important;
       padding: 0 !important;
@@ -357,8 +359,8 @@
   }
 
   .tibz-info__section .tibz-info__cta:hover {
-      background-color: #111010 !important;
-      color: #f5f2ee !important;
+      background-color: #000000 !important;
+      color: #ffffff !important;
   }
 
   .tibz-info__section .tibz-info__cta::after {
@@ -371,13 +373,13 @@
   /* ── MARQUEE ── */
   .tibz-info__section .tibz-info__marquee {
       display: block !important;
-      border-top: 1px solid rgba(17, 16, 16, 0.10) !important;
+      border-top: 0px solid rgba(17, 16, 16, 0.10) !important;
       border-bottom: 1px solid rgba(17, 16, 16, 0.10) !important;
       border-left: none !important;
       border-right: none !important;
       overflow: hidden !important;
       padding: 20px 0 !important;
-      margin: 50px 0 30px 0 !important;
+      margin: 0px 0 30px 0 !important;
       background: var(--backgroundaccueil) !important;
 
   }
