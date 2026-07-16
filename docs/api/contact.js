@@ -250,8 +250,8 @@ function consoleGifHtml(lang, viewSiteLabel) {
 
 const AUTOREPLY_COPY = {
   fr: {
-    subject: 'Votre message a bien été envoyé',
-    heading: (firstname) => `Merci${firstname ? `, ${firstname}` : ''} !`,
+    subject: 'Votre message a bien été envoyé ✅',
+    heading: (firstname) => `Merci${firstname ? `, ${firstname}` : ''} ! 🙌`,
     body: 'Votre message a bien été envoyé, je vous répondrai rapidement.',
     preheader: (firstname) => `Merci${firstname ? ` ${firstname}` : ''}, votre message est bien parti. Je vous réponds rapidement.`,
     recapTitle: 'Récapitulatif de votre demande',
@@ -260,8 +260,8 @@ const AUTOREPLY_COPY = {
     viewSite: 'Voir mon site',
   },
   en: {
-    subject: 'Your message has been sent',
-    heading: (firstname) => `Thank you${firstname ? `, ${firstname}` : ''}!`,
+    subject: 'Your message has been sent ✅',
+    heading: (firstname) => `Thank you${firstname ? `, ${firstname}` : ''}! 🙌`,
     body: "Your message has been sent, I'll get back to you shortly.",
     preheader: (firstname) => `Thanks${firstname ? ` ${firstname}` : ''}, your message is on its way. I'll get back to you shortly.`,
     recapTitle: 'Summary of your request',
