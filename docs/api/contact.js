@@ -28,13 +28,13 @@ const CONSOLE_LABEL = 'Console';
 
 const NTFY_TOPIC = 'tibzdesign-contact-k7m3qx91';
 
-function sendNtfyNotification({ lastname, firstname, email, project, message }) {
-  const preview = `${email}${project ? ' — ' + project : ''}\n${message}`.slice(0, 300);
+function sendNtfyNotification({ lastname, firstname, email, message }) {
+  const preview = `${lastname} ${firstname}\n${email}\n${message}`.trim().slice(0, 300);
   const payload = JSON.stringify({
     topic: NTFY_TOPIC,
-    title: `Nouvelle demande — ${firstname} ${lastname}`.trim(),
+    title: '📩 Nouvelle demande',
     message: preview,
-    tags: ['envelope'],
+    icon: LOGO_URL,
     priority: 4,
     click: `mailto:${email}`,
   });
