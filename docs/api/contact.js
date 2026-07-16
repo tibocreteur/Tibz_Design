@@ -1,13 +1,27 @@
 const { Resend } = require('resend');
+const fs = require('fs');
+const path = require('path');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const LOGO_URL = 'https://www.tibzdesign.fr/public/image/logo/logotestt.png';
+function getLogoUrl() {
+  try {
+    const jsonPath = path.join(__dirname, '../public/json/fr.json');
+    const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+    const clean = String(data.logo || '').replace(/^(\.\.\/)*docs\//, '');
+    return `https://www.tibzdesign.fr/${clean}`;
+  } catch (err) {
+    console.error('Failed to read logo from fr.json, using fallback:', err);
+    return 'https://www.tibzdesign.fr/public/image/logo/logotestt.png';
+  }
+}
+
+const LOGO_URL = getLogoUrl();
 const PHONE_DISPLAY = '+33 7 83 78 48 72';
 const PHONE_HREF = 'tel:+33783784872';
 const CONTACT_EMAIL = 'contact@tibzdesign.fr';
 
-const CONSOLE_GIF_URL = 'https://www.tibzdesign.fr/public/video/console.gif';
+const CONSOLE_GIF_URL = 'https://www.tibzdesign.fr/public/video/console_1-email.gif';
 const CONSOLE_SLUG = 'console';
 const CONSOLE_LABEL = 'Console';
 
@@ -18,6 +32,12 @@ function readBody(req) {
     req.on('end', () => resolve(data));
     req.on('error', reject);
   });
+}
+
+function detectSenderLang(req) {
+  const header = req.headers['accept-language'] || '';
+  const primary = header.split(',')[0].trim().toLowerCase();
+  return primary.startsWith('fr') ? 'fr' : 'en';
 }
 
 function escapeHtml(str) {
@@ -142,18 +162,18 @@ function fieldRow(label, value) {
 </td></tr>`;
 }
 
-function consoleGifHtml(lang, viewProjectLabel) {
-  const projectUrl = `https://www.tibzdesign.fr/${lang}/${CONSOLE_SLUG}`;
+function consoleGifHtml(lang, viewSiteLabel) {
+  const siteUrl = `https://www.tibzdesign.fr/${lang}/`;
   return `
 <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0px">
 <tbody>
 <tr align="center"><td style="padding:0;Margin:0">
-<a target="_blank" href="${projectUrl}" style="text-decoration:none">
+<a target="_blank" href="${siteUrl}" style="text-decoration:none">
 <img src="${CONSOLE_GIF_URL}" alt="${CONSOLE_LABEL}" width="540" class="adapt-img" style="display:block;width:100%;max-width:540px;height:auto;border:0;outline:none;text-decoration:none;margin:0;border-radius:12px 12px 0 0">
 </a>
 </td></tr>
 <tr align="center"><td style="padding:0;Margin:0;background-color:#000000;border-radius:0 0 12px 12px">
-<a target="_blank" href="${projectUrl}" style="display:block;padding:10px 0;text-decoration:none;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:13px;color:#ffffff">${viewProjectLabel} →</a>
+<a target="_blank" href="${siteUrl}" style="display:block;padding:10px 0;text-decoration:none;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:13px;color:#ffffff">${viewSiteLabel} →</a>
 </td></tr>
 </tbody>
 </table>`;
@@ -167,7 +187,7 @@ const AUTOREPLY_COPY = {
     recapTitle: 'Récapitulatif de votre demande',
     project: 'Projet',
     message: 'Message',
-    viewProject: 'Voir le projet',
+    viewSite: 'Voir mon site',
   },
   en: {
     subject: 'Your message has been sent — Tibz Design',
@@ -176,7 +196,7 @@ const AUTOREPLY_COPY = {
     recapTitle: 'Summary of your request',
     project: 'Project',
     message: 'Message',
-    viewProject: 'View project',
+    viewSite: 'View my website',
   },
 };
 
@@ -213,7 +233,7 @@ ${fieldRow(copy.message, escapeHtml(message).replace(/\n/g, '<br>'))}
 <tbody><tr><td align="center" style="padding:0;Margin:0">
 <table cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
 <tbody><tr><td align="left" style="padding:0 20px 20px;Margin:0">
-${consoleGifHtml(lang, copy.viewProject)}
+${consoleGifHtml(lang, copy.viewSite)}
 </td></tr></tbody>
 </table>
 </td></tr></tbody>
@@ -235,7 +255,8 @@ module.exports = async function handler(req, res) {
   const email = params.get('email') || '';
   const project = params.get('project') || '';
   const message = params.get('message') || '';
-  const lang = params.get('_lang') === 'en' ? 'en' : 'fr';
+  const pageLang = params.get('_lang') === 'en' ? 'en' : 'fr';
+  const emailLang = detectSenderLang(req);
 
   if (!email || !message) {
     res.status(400).send('Missing required fields');
@@ -263,13 +284,13 @@ module.exports = async function handler(req, res) {
       from: process.env.RESEND_FROM,
       to: email,
       replyTo: process.env.RESEND_FROM,
-      subject: AUTOREPLY_COPY[lang].subject,
-      html: autoReplyHtml(fields, lang),
+      subject: AUTOREPLY_COPY[emailLang].subject,
+      html: autoReplyHtml(fields, emailLang),
     });
   } catch (err) {
     console.error('Resend auto-reply failed:', err);
   }
 
-  res.writeHead(303, { Location: `/${lang}/contact?sent=true` });
+  res.writeHead(303, { Location: `/${pageLang}/contact?sent=true` });
   res.end();
 };
