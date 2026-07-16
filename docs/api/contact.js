@@ -114,10 +114,10 @@ a.es-button, button.es-button { text-decoration: none !important; }
 a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
 [data-ogsc] body, [data-ogsc] .es-wrapper, [data-ogsb] body, [data-ogsb] .es-wrapper { background-color: #F6F6F6 !important; }
 [data-ogsc] .es-header-body, [data-ogsc] .es-content-body, [data-ogsc] .es-footer-body,
-[data-ogsb] .es-header-body, [data-ogsb] .es-content-body, [data-ogsb] .es-footer-body { background-color: #F9F9F4 !important; }
+[data-ogsb] .es-header-body, [data-ogsb] .es-content-body, [data-ogsb] .es-footer-body { background-color: #FFFFFF !important; }
 @media (prefers-color-scheme: dark) {
   body, .es-wrapper { background-color: #F6F6F6 !important; }
-  .es-header-body, .es-content-body, .es-footer-body { background-color: #F9F9F4 !important; }
+  .es-header-body, .es-content-body, .es-footer-body { background-color: #FFFFFF !important; }
 }
 @media only screen and (max-width:600px) {
   .es-content, .es-header, .es-footer { width: 100% !important; }
@@ -137,7 +137,7 @@ ${preheader ? `<div style="display:none;font-size:1px;line-height:1px;max-height
 
 <table cellspacing="0" cellpadding="0" align="center" class="es-header" role="none" style="border-spacing:0px;width:100%;background-color:transparent">
 <tbody><tr><td align="center" style="padding:0;Margin:0">
-<table bgcolor="#F9F9F4" align="center" cellpadding="0" cellspacing="0" class="es-header-body" role="none" style="border-spacing:0px;background-color:#F9F9F4;width:580px">
+<table bgcolor="#FFFFFF" align="center" cellpadding="0" cellspacing="0" class="es-header-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
 <tbody><tr><td align="left" style="padding:25px;Margin:0">
 <!--[if mso]><table style="width:530px" cellpadding="0" cellspacing="0"><tr><td style="width:255px" valign="top"><![endif]-->
 <table cellpadding="0" cellspacing="0" align="left" role="none" style="border-spacing:0px;float:left">
@@ -162,7 +162,7 @@ ${bodyTablesHtml}
 
 <table cellspacing="0" cellpadding="0" align="center" class="es-footer" role="none" style="border-spacing:0px;width:100%;background-color:transparent">
 <tbody><tr><td align="center" style="padding:0;Margin:0">
-<table cellspacing="0" cellpadding="0" bgcolor="#F9F9F4" align="center" class="es-footer-body" role="none" style="border-spacing:0px;background-color:#F9F9F4;width:580px">
+<table cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" align="center" class="es-footer-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
 <tbody><tr><td align="left" style="Margin:0;padding:20px 20px 25px">
 <table width="100%" cellpadding="0" cellspacing="0" role="none" style="border-spacing:0px">
 <tbody><tr><td align="center" style="padding:10px 0;Margin:0">
@@ -191,7 +191,7 @@ function contentTable(innerHtml) {
   return `
 <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="border-spacing:0px;width:100%">
 <tbody><tr><td align="center" style="padding:0;Margin:0">
-<table cellspacing="0" cellpadding="0" bgcolor="#F9F9F4" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#F9F9F4;width:580px">
+<table cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
 <tbody><tr><td align="left" style="padding:20px 20px 0;Margin:0">
 <table width="100%" cellspacing="0" cellpadding="0" role="none" style="border-spacing:0px">
 <tbody><tr><td align="left" style="padding:0;Margin:0;width:540px">
@@ -286,7 +286,7 @@ ${fieldRow(copy.message, escapeHtml(message).replace(/\n/g, '<br>'))}
   const showcase = `
 <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="border-spacing:0px;width:100%">
 <tbody><tr><td align="center" style="padding:0;Margin:0">
-<table cellspacing="0" cellpadding="0" bgcolor="#F9F9F4" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#F9F9F4;width:580px">
+<table cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
 <tbody><tr><td align="left" style="padding:0 20px 20px;Margin:0">
 ${consoleGifHtml(lang, copy.viewSite)}
 </td></tr></tbody>
