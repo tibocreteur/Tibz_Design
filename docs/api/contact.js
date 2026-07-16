@@ -99,6 +99,8 @@ function emailDocument(bodyTablesHtml, extraCss) {
 <meta name="x-apple-disable-message-reformatting">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="telephone=no" name="format-detection">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
 <title>Tibz Design</title>
 <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
 <!--[if gte mso 9]><noscript><xml><o:OfficeDocumentSettings><o:AllowPNG></o:AllowPNG><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
@@ -106,9 +108,17 @@ function emailDocument(bodyTablesHtml, extraCss) {
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
 <!--<![endif]-->
 <style type="text/css">
+:root { color-scheme: light only; supported-color-schemes: light only; }
 #outlook a { padding: 0; }
 a.es-button, button.es-button { text-decoration: none !important; }
 a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+[data-ogsc] body, [data-ogsc] .es-wrapper, [data-ogsb] body, [data-ogsb] .es-wrapper { background-color: #F6F6F6 !important; }
+[data-ogsc] .es-header-body, [data-ogsc] .es-content-body, [data-ogsc] .es-footer-body,
+[data-ogsb] .es-header-body, [data-ogsb] .es-content-body, [data-ogsb] .es-footer-body { background-color: #FFFFFF !important; }
+@media (prefers-color-scheme: dark) {
+  body, .es-wrapper { background-color: #F6F6F6 !important; }
+  .es-header-body, .es-content-body, .es-footer-body { background-color: #FFFFFF !important; }
+}
 @media only screen and (max-width:600px) {
   .es-content, .es-header, .es-footer { width: 100% !important; }
   .adapt-img { width: 100% !important; height: auto !important; }
@@ -118,8 +128,8 @@ ${extraCss || ''}
 </style>
 </head>
 <body style="width:100%;height:100%;font-family:arial,'helvetica neue',helvetica,sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
-<div dir="ltr" lang="fr" style="background-color:#F6F6F6">
-<table width="100%" cellspacing="0" cellpadding="0" role="none" style="border-spacing:0px;padding:0;Margin:0;width:100%">
+<div dir="ltr" lang="fr" class="es-wrapper" style="background-color:#F6F6F6">
+<table width="100%" cellspacing="0" cellpadding="0" role="none" class="es-wrapper" style="border-spacing:0px;padding:0;Margin:0;width:100%">
 <tbody>
 <tr>
 <td valign="top" style="padding:0;Margin:0">
