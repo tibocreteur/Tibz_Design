@@ -1,6 +1,7 @@
 const { Resend } = require('resend');
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -27,19 +28,41 @@ const CONSOLE_LABEL = 'Console';
 
 const NTFY_TOPIC = 'tibzdesign-contact-k7m3qx91';
 
-async function sendNtfyNotification({ lastname, firstname, email, project, message }) {
+function sendNtfyNotification({ lastname, firstname, email, project, message }) {
   const preview = `${email}${project ? ' — ' + project : ''}\n${message}`.slice(0, 300);
-  await fetch('https://ntfy.sh/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      topic: NTFY_TOPIC,
-      title: `Nouvelle demande — ${firstname} ${lastname}`.trim(),
-      message: preview,
-      tags: ['envelope'],
-      priority: 4,
-      click: `mailto:${email}`,
-    }),
+  const payload = JSON.stringify({
+    topic: NTFY_TOPIC,
+    title: `Nouvelle demande — ${firstname} ${lastname}`.trim(),
+    message: preview,
+    tags: ['envelope'],
+    priority: 4,
+    click: `mailto:${email}`,
+  });
+
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      'https://ntfy.sh/',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Content-Length': Buffer.byteLength(payload),
+        },
+      },
+      (res) => {
+        res.on('data', () => {});
+        res.on('end', () => {
+          if (res.statusCode >= 200 && res.statusCode < 300) {
+            resolve();
+          } else {
+            reject(new Error(`ntfy responded with status ${res.statusCode}`));
+          }
+        });
+      }
+    );
+    req.on('error', reject);
+    req.write(payload);
+    req.end();
   });
 }
 
