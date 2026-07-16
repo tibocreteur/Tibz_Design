@@ -81,6 +81,23 @@ function detectSenderLang(req) {
   return primary.startsWith('fr') ? 'fr' : 'en';
 }
 
+function detectCountry(req) {
+  const code = (req.headers['x-vercel-ip-country'] || '').toUpperCase();
+  if (!/^[A-Z]{2}$/.test(code)) return 'Inconnu';
+  const flag = String.fromCodePoint(...[...code].map((c) => 127397 + c.charCodeAt(0)));
+  return `${flag} ${code}`;
+}
+
+function detectOS(req) {
+  const ua = req.headers['user-agent'] || '';
+  if (/windows/i.test(ua)) return 'Windows';
+  if (/iphone|ipad|ipod/i.test(ua)) return 'iOS';
+  if (/macintosh|mac os x/i.test(ua)) return 'macOS';
+  if (/android/i.test(ua)) return 'Android';
+  if (/linux/i.test(ua)) return 'Linux';
+  return 'Inconnu';
+}
+
 function escapeHtml(str) {
   return String(str || '')
     .replace(/&/g, '&amp;')
@@ -254,7 +271,7 @@ const AUTOREPLY_COPY = {
   },
 };
 
-function notificationHtml({ lastname, firstname, email, project, message }) {
+function notificationHtml({ lastname, firstname, email, project, message, country, os }) {
   const inner = `
 <h2 style="Margin:0 0 20px;font-family:lato,'helvetica neue',helvetica,arial,sans-serif;font-size:26px;line-height:32px;font-weight:normal;color:#333333">Nouvelle demande via tibzdesign.fr</h2>
 <table width="100%" cellspacing="0" cellpadding="0" role="none" style="border-spacing:0px">
@@ -264,6 +281,8 @@ ${fieldRow('Prénom', escapeHtml(firstname))}
 ${fieldRow('Email', `<a href="mailto:${escapeHtml(email)}" style="color:#1b3a1d;text-decoration:underline">${escapeHtml(email)}</a>`)}
 ${fieldRow('Projet', escapeHtml(project))}
 ${fieldRow('Message', escapeHtml(message).replace(/\n/g, '<br>'))}
+${fieldRow('Pays', escapeHtml(country))}
+${fieldRow('Système', escapeHtml(os))}
 </tbody>
 </table>`;
   const preheader = `${firstname} ${lastname}: ${message}`.trim().slice(0, 130);
@@ -318,7 +337,15 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const fields = { lastname, firstname, email, project, message };
+  const fields = {
+    lastname,
+    firstname,
+    email,
+    project,
+    message,
+    country: detectCountry(req),
+    os: detectOS(req),
+  };
 
   try {
     await resend.emails.send({
