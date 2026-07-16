@@ -90,7 +90,7 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-function emailDocument(bodyTablesHtml, extraCss) {
+function emailDocument(bodyTablesHtml, extraCss, preheader) {
   return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="fr">
 <head>
@@ -128,6 +128,7 @@ ${extraCss || ''}
 </style>
 </head>
 <body style="width:100%;height:100%;font-family:arial,'helvetica neue',helvetica,sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
+${preheader ? `<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${escapeHtml(preheader)}${'&zwnj;&nbsp;'.repeat(40)}</div>` : ''}
 <div dir="ltr" lang="fr" class="es-wrapper" style="background-color:#F6F6F6">
 <table width="100%" cellspacing="0" cellpadding="0" role="none" class="es-wrapper" style="border-spacing:0px;padding:0;Margin:0;width:100%">
 <tbody>
@@ -235,6 +236,7 @@ const AUTOREPLY_COPY = {
     subject: 'Votre message a bien été envoyé — Tibz Design',
     heading: (firstname) => `Merci${firstname ? `, ${firstname}` : ''} !`,
     body: 'Votre message a bien été envoyé, je vous répondrai rapidement.',
+    preheader: (firstname) => `Merci${firstname ? ` ${firstname}` : ''}, votre message est bien parti — je vous réponds rapidement.`,
     recapTitle: 'Récapitulatif de votre demande',
     project: 'Projet',
     message: 'Message',
@@ -244,6 +246,7 @@ const AUTOREPLY_COPY = {
     subject: 'Your message has been sent — Tibz Design',
     heading: (firstname) => `Thank you${firstname ? `, ${firstname}` : ''}!`,
     body: "Your message has been sent, I'll get back to you shortly.",
+    preheader: (firstname) => `Thanks${firstname ? ` ${firstname}` : ''}, your message is on its way — I'll get back to you shortly.`,
     recapTitle: 'Summary of your request',
     project: 'Project',
     message: 'Message',
@@ -263,7 +266,8 @@ ${fieldRow('Projet', escapeHtml(project))}
 ${fieldRow('Message', escapeHtml(message).replace(/\n/g, '<br>'))}
 </tbody>
 </table>`;
-  return emailDocument(contentTable(inner));
+  const preheader = `${firstname} ${lastname} — ${message}`.trim().slice(0, 130);
+  return emailDocument(contentTable(inner), null, preheader);
 }
 
 function autoReplyHtml({ firstname, project, message }, lang) {
@@ -289,7 +293,7 @@ ${consoleGifHtml(lang, copy.viewSite)}
 </table>
 </td></tr></tbody>
 </table>`;
-  return emailDocument(contentTable(inner) + showcase);
+  return emailDocument(contentTable(inner) + showcase, null, copy.preheader(escapeHtml(firstname)));
 }
 
 module.exports = async function handler(req, res) {
