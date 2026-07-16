@@ -13,6 +13,34 @@ const SHOWCASE_PROJECTS = [
   { slug: 'axion', label: 'Axion', img: '%2Fpublic%2Fimage%2Faxion%2Fgrand.jpg' },
 ];
 
+const CAROUSEL_CSS = `
+u + .body img ~ div div { display:none; }
+u + .body img ~ div #htmlfallback, u + .body img ~ div #fallback { display:block!important; }
+.es-desk-hidden { display:none; float:left; overflow:hidden; width:0; max-height:0; line-height:0; mso-hide:all; }
+input.fallback_ctrl:checked~.container { display: block !important; }
+input.fallback_ctrl:checked~#fallback { display: none !important; }
+[owa] .container { display: none !important; }
+[class~="x_container"] { display: none !important; }
+[id~="x_fallback"] { display: block !important; }
+.carousel-previous-container label { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLBAMAAADKYGfZAAAAG1BMVEUAAAD////////////////////////////////rTT7CAAAACHRSTlMAn7+Az2AQcIgjE1sAAABrSURBVEjH7dEhDoAwEETRQRBsJZoTcIpqJLJXKamYY3OAIn5CwHS/bl66u4pGaCkirVmgya0QzM4EsxvCXBHmFFhgP2DX1nV02GN7h4Fnp19q8G9wUrQ3foXggvuYq0JcEuGqSGsSaVY0QjfDiZ+hLMomvgAAAABJRU5ErkJggg==');}
+.carousel-next-container label { background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLBAMAAADKYGfZAAAAG1BMVEUAAAD////////////////////////////////rTT7CAAAACHRSTlMAn7+Az2AQcIgjE1sAAABsSURBVEjH7dEhDoAwEETRbgLoldWcgiMgCWcg4Rx1c2xIkFR8UTDd0T+vaTbFetiJqml1kh0qCJMAN0iEMwlxObjgvub2+TVVuEX1OcsKy7S11Jz9tNUZcmCB/YDZg5FHHWSGsJtzlI0p1sMuR3WfoQZCdoQAAAAASUVORK5CYII=');}
+.carousel-previous-container label, .carousel-next-container label { display: block; height: 100%; width: 100%; background-position: 50% 50%; background-repeat: no-repeat; background-size: 18px 18px; cursor: pointer; }
+.carousel-next, .carousel-previous { display: none !important; }
+.carousel-previous-container, .carousel-next-container { position: absolute; transform: translateY(-50%); display: none; }
+.carousel-content { width: 100%; text-align: center; position: relative; caption-side: top; display: table-caption; table-layout: fixed; }
+.carousel-image, .es-fallback-slide { overflow: hidden; }
+.carousel-previous-container { left: 16px; }
+.carousel-next-container { right: 16px; }
+.carousel-5699-input:checked+div .carousel-image,.carousel-5699-input:checked+*+div .carousel-image,.carousel-5699-input:checked+*+*+div .carousel-image { display: none !important; }
+.carousel-5699-input-3:checked+div .carousel-image-3,.carousel-5699-input-2:checked+*+div .carousel-image-2,.carousel-5699-input-1:checked+*+*+div .carousel-image-1 { display: block !important; }
+.carousel-5699-input-3:checked+div .carousel-next-1,.carousel-5699-input-3:checked+div .carousel-previous-2,.carousel-5699-input-2:checked+*+div .carousel-next-3,.carousel-5699-input-2:checked+*+div .carousel-previous-1,.carousel-5699-input-1:checked+*+*+div .carousel-next-2,.carousel-5699-input-1:checked+*+*+div .carousel-previous-3 { display: block !important; }
+.carousel-5699-content .carousel-previous-container label, .carousel-5699-content .carousel-next-container label { border-radius: 0px; background-color: #0000007F; }
+.carousel-5699-content .carousel-previous-container, .carousel-5699-content .carousel-next-container { height: 34px; width: 34px; top: 50%; }
+.carousel-5699-content .carousel-image, .fallback-5699 .es-fallback-slide { border-radius: 12px; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) { .carousel-previous-container, .carousel-next-container { display: block; } }
+@media only screen and (max-width: 600px) { .carousel-image img { width: 100% !important; } body[data-outlook-cycle] #fallback { display: block !important; } body[data-outlook-cycle] .container { display: none !important; } }
+`;
+
 function readBody(req) {
   return new Promise((resolve, reject) => {
     let data = '';
@@ -31,7 +59,7 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-function emailDocument(bodyTablesHtml) {
+function emailDocument(bodyTablesHtml, extraCss) {
   return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="fr">
 <head>
@@ -53,8 +81,8 @@ a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !im
 @media only screen and (max-width:600px) {
   .es-content, .es-header, .es-footer { width: 100% !important; }
   .adapt-img { width: 100% !important; height: auto !important; }
-  .es-thumb { width: 30% !important; }
 }
+${extraCss || ''}
 </style>
 </head>
 <body style="width:100%;height:100%;font-family:arial,'helvetica neue',helvetica,sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
@@ -143,19 +171,53 @@ function fieldRow(label, value) {
 </td></tr>`;
 }
 
-function showcaseRow(lang) {
-  const cells = SHOWCASE_PROJECTS.map((p) => `
-<td align="center" class="es-thumb" style="padding:0 6px;Margin:0;width:33%">
-<a target="_blank" href="https://www.tibzdesign.fr/${lang}/${p.slug}" style="text-decoration:none">
-<img src="https://www.tibzdesign.fr/_vercel/image?url=${p.img}&w=400&q=75" width="172" alt="${p.label}" class="adapt-img" style="display:block;width:100%;max-width:172px;height:auto;border:0;outline:none;text-decoration:none;margin:0 0 8px;border-radius:8px">
-<span style="font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:12px;color:#333333">${p.label}</span>
+function carouselHtml(lang) {
+  const imgUrl = (p) => `https://www.tibzdesign.fr/_vercel/image?url=${p.img}&w=640&q=80`;
+  const projectUrl = (p) => `https://www.tibzdesign.fr/${lang}/${p.slug}`;
+  const first = SHOWCASE_PROJECTS[0];
+
+  const slides = SHOWCASE_PROJECTS.map((p, i) => `
+<div class="carousel-image carousel-image-${i + 1}">
+<a target="_blank" href="${projectUrl(p)}" style="text-decoration:none">
+<img src="${imgUrl(p)}" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none;margin:0;width:540px;max-width:100%;height:auto" width="540" border="0" alt="${p.label}">
 </a>
-</td>`).join('');
+</div>`).join('');
+
+  const prevNext = (n) => SHOWCASE_PROJECTS.map((_, i) => `<label for="carousel-5699-input-${i + 1}" class="carousel-${n} carousel-${n}-${i + 1}"></label>`).join('');
 
   return `
-<table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="border-spacing:0px;margin-top:8px">
-<tbody><tr>${cells}</tr></tbody>
-</table>`;
+<div id="htmlfallback" class="es-visible-simple-html-only">
+<!--[if !mso]><!--><input type="checkbox" id="fallback_ctrl" class="fallback_ctrl" style="display:none !important;mso-hide:all" checked><!--<![endif]-->
+<div id="fallback" class="fallback fallback-5699">
+<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0px">
+<tbody><tr align="center"><td style="padding:0 0 5px;Margin:0">
+<a href="${projectUrl(first)}" style="text-decoration:underline;color:#1376C8;font-size:14px">
+<img src="${imgUrl(first)}" alt="${first.label}" width="540" class="adapt-img es-fallback-slide" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none;margin:0">
+</a>
+</td></tr></tbody>
+</table>
+</div>
+<!--[if !mso]><!-->
+<div class="container" style="display:none;mso-hide:all">
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0px;vertical-align:top" width="100%">
+<tbody><tr><td align="center" style="padding:0;Margin:0">
+<input class="carousel-5699-input carousel-5699-input-1" type="radio" name="carousel-5699-input" id="carousel-5699-input-1" style="display:none" checked>
+<input class="carousel-5699-input carousel-5699-input-2" type="radio" name="carousel-5699-input" id="carousel-5699-input-2" style="display:none">
+<input class="carousel-5699-input carousel-5699-input-3" type="radio" name="carousel-5699-input" id="carousel-5699-input-3" style="display:none">
+<div style="display:table;width:100%;table-layout:fixed;font-size:0px">
+<table class="carousel-content carousel-5699-content" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="border-spacing:0px">
+<tbody><tr><td style="padding:0 0 5px;Margin:0">
+<div class="carousel-previous-container">${prevNext('previous')}</div>
+<div>${slides}</div>
+<div class="carousel-next-container">${prevNext('next')}</div>
+</td></tr></tbody>
+</table>
+</div>
+</td></tr></tbody>
+</table>
+</div>
+<!--<![endif]-->
+</div>`;
 }
 
 const AUTOREPLY_COPY = {
@@ -207,9 +269,18 @@ ${fieldRow(copy.message, escapeHtml(message).replace(/\n/g, '<br>'))}
 </tbody>
 </table>
 <p style="Margin:8px 0 0;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:13px;color:#999999">${copy.showcase}</p>
-${showcaseRow(lang)}
 `;
-  return emailDocument(contentTable(inner));
+  const carousel = `
+<table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="border-spacing:0px;width:100%">
+<tbody><tr><td align="center" style="padding:0;Margin:0">
+<table cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
+<tbody><tr><td align="left" style="padding:0 20px 20px;Margin:0">
+${carouselHtml(lang)}
+</td></tr></tbody>
+</table>
+</td></tr></tbody>
+</table>`;
+  return emailDocument(contentTable(inner) + carousel, CAROUSEL_CSS);
 }
 
 module.exports = async function handler(req, res) {
