@@ -114,10 +114,10 @@ a.es-button, button.es-button { text-decoration: none !important; }
 a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
 [data-ogsc] body, [data-ogsc] .es-wrapper, [data-ogsb] body, [data-ogsb] .es-wrapper { background-color: #F6F6F6 !important; }
 [data-ogsc] .es-header-body, [data-ogsc] .es-content-body, [data-ogsc] .es-footer-body,
-[data-ogsb] .es-header-body, [data-ogsb] .es-content-body, [data-ogsb] .es-footer-body { background-color: #FFFFFF !important; }
+[data-ogsb] .es-header-body, [data-ogsb] .es-content-body, [data-ogsb] .es-footer-body { background-color: #FFFFFE !important; }
 @media (prefers-color-scheme: dark) {
   body, .es-wrapper { background-color: #F6F6F6 !important; }
-  .es-header-body, .es-content-body, .es-footer-body { background-color: #FFFFFF !important; }
+  .es-header-body, .es-content-body, .es-footer-body { background-color: #FFFFFE !important; }
 }
 @media only screen and (max-width:600px) {
   .es-content, .es-header, .es-footer { width: 100% !important; }
@@ -136,7 +136,7 @@ ${extraCss || ''}
 
 <table cellspacing="0" cellpadding="0" align="center" class="es-header" role="none" style="border-spacing:0px;width:100%;background-color:transparent">
 <tbody><tr><td align="center" style="padding:0;Margin:0">
-<table bgcolor="#ffffff" align="center" cellpadding="0" cellspacing="0" class="es-header-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
+<table bgcolor="#FFFFFE" align="center" cellpadding="0" cellspacing="0" class="es-header-body" role="none" style="border-spacing:0px;background-color:#FFFFFE;width:580px">
 <tbody><tr><td align="left" style="padding:25px;Margin:0">
 <!--[if mso]><table style="width:530px" cellpadding="0" cellspacing="0"><tr><td style="width:255px" valign="top"><![endif]-->
 <table cellpadding="0" cellspacing="0" align="left" role="none" style="border-spacing:0px;float:left">
@@ -147,8 +147,8 @@ ${extraCss || ''}
 <!--[if mso]></td><td style="width:20px"></td><td style="width:255px" valign="top"><![endif]-->
 <table cellpadding="0" cellspacing="0" align="right" role="none" style="border-spacing:0px;float:right">
 <tbody><tr><td align="right" style="padding:0;Margin:0;width:255px">
-<p style="Margin:0;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:18px;font-size:15px;color:#000000"><a target="_blank" href="${PHONE_HREF}" style="text-decoration:none;color:#000000;font-size:15px">${PHONE_DISPLAY}</a></p>
-<p style="Margin:0;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:18px;font-size:15px;color:#000000"><a target="_blank" href="mailto:${CONTACT_EMAIL}" style="text-decoration:none;color:#000000;font-size:15px">${CONTACT_EMAIL.toUpperCase()}</a></p>
+<p style="Margin:0;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:18px;font-size:15px;color:#000001"><a target="_blank" href="${PHONE_HREF}" style="text-decoration:none;color:#000001;font-size:15px">${PHONE_DISPLAY}</a></p>
+<p style="Margin:0;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:18px;font-size:15px;color:#000001"><a target="_blank" href="mailto:${CONTACT_EMAIL}" style="text-decoration:none;color:#000001;font-size:15px">${CONTACT_EMAIL.toUpperCase()}</a></p>
 </td></tr></tbody>
 </table>
 <!--[if mso]></td></tr></table><![endif]-->
@@ -161,7 +161,7 @@ ${bodyTablesHtml}
 
 <table cellspacing="0" cellpadding="0" align="center" class="es-footer" role="none" style="border-spacing:0px;width:100%;background-color:transparent">
 <tbody><tr><td align="center" style="padding:0;Margin:0">
-<table cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" class="es-footer-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
+<table cellspacing="0" cellpadding="0" bgcolor="#FFFFFE" align="center" class="es-footer-body" role="none" style="border-spacing:0px;background-color:#FFFFFE;width:580px">
 <tbody><tr><td align="left" style="Margin:0;padding:20px 20px 25px">
 <table width="100%" cellpadding="0" cellspacing="0" role="none" style="border-spacing:0px">
 <tbody><tr><td align="center" style="padding:10px 0;Margin:0">
@@ -190,7 +190,7 @@ function contentTable(innerHtml) {
   return `
 <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="border-spacing:0px;width:100%">
 <tbody><tr><td align="center" style="padding:0;Margin:0">
-<table cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
+<table cellspacing="0" cellpadding="0" bgcolor="#FFFFFE" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFE;width:580px">
 <tbody><tr><td align="left" style="padding:20px 20px 0;Margin:0">
 <table width="100%" cellspacing="0" cellpadding="0" role="none" style="border-spacing:0px">
 <tbody><tr><td align="left" style="padding:0;Margin:0;width:540px">
@@ -223,8 +223,8 @@ function consoleGifHtml(lang, viewSiteLabel) {
 <img src="${CONSOLE_GIF_URL}" alt="${CONSOLE_LABEL}" width="540" class="adapt-img" style="display:block;width:100%;max-width:540px;height:auto;border:0;outline:none;text-decoration:none;margin:0;border-radius:12px 12px 0 0">
 </a>
 </td></tr>
-<tr align="center"><td style="padding:0;Margin:0;background-color:#000000;border-radius:0 0 12px 12px">
-<a target="_blank" href="${siteUrl}" style="display:block;padding:10px 0;text-decoration:none;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:13px;color:#ffffff">${viewSiteLabel} →</a>
+<tr align="center"><td style="padding:0;Margin:0;background-color:#000001;border-radius:0 0 12px 12px">
+<a target="_blank" href="${siteUrl}" style="display:block;padding:10px 0;text-decoration:none;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:13px;color:#FFFFFE">${viewSiteLabel} →</a>
 </td></tr>
 </tbody>
 </table>`;
@@ -282,7 +282,7 @@ ${fieldRow(copy.message, escapeHtml(message).replace(/\n/g, '<br>'))}
   const showcase = `
 <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="border-spacing:0px;width:100%">
 <tbody><tr><td align="center" style="padding:0;Margin:0">
-<table cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
+<table cellspacing="0" cellpadding="0" bgcolor="#FFFFFE" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFE;width:580px">
 <tbody><tr><td align="left" style="padding:0 20px 20px;Margin:0">
 ${consoleGifHtml(lang, copy.viewSite)}
 </td></tr></tbody>
