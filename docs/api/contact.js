@@ -273,7 +273,7 @@ const AUTOREPLY_COPY = {
 
 function notificationHtml({ lastname, firstname, email, project, message, country, os }) {
   const inner = `
-<h2 style="Margin:0 0 20px;font-family:lato,'helvetica neue',helvetica,arial,sans-serif;font-size:26px;line-height:32px;font-weight:normal;color:#333333">Nouvelle demande via tibzdesign.fr</h2>
+<h2 style="Margin:0 0 20px;font-family:lato,'helvetica neue',helvetica,arial,sans-serif;font-size:26px;line-height:32px;font-weight:normal;color:#333333">📬 Nouvelle demande via tibzdesign.fr</h2>
 <table width="100%" cellspacing="0" cellpadding="0" role="none" style="border-spacing:0px">
 <tbody>
 ${fieldRow('Nom', escapeHtml(lastname))}
@@ -352,7 +352,7 @@ module.exports = async function handler(req, res) {
       from: process.env.RESEND_FROM,
       to: process.env.CONTACT_TO || 'tibzdesign@gmail.com',
       replyTo: email,
-      subject: `Nouvelle demande de ${firstname} ${lastname}`.trim(),
+      subject: `📬 Nouvelle demande de ${firstname} ${lastname}`.trim(),
       html: notificationHtml(fields),
     });
   } catch (err) {
