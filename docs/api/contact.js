@@ -53,9 +53,6 @@ a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !im
   .adapt-img { width: 100% !important; height: auto !important; }
   .logo-img { width: 56px !important; }
 }
-.eye { display:inline-block; }
-@keyframes blink { 0%, 90% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
-.eye { animation: blink 7s infinite; }
 ${extraCss || ''}
 </style>
 </head>
@@ -155,8 +152,8 @@ function consoleGifHtml(lang, viewProjectLabel) {
 <img src="${CONSOLE_GIF_URL}" alt="${CONSOLE_LABEL}" width="540" class="adapt-img" style="display:block;width:100%;max-width:540px;height:auto;border:0;outline:none;text-decoration:none;margin:0;border-radius:12px 12px 0 0">
 </a>
 </td></tr>
-<tr align="center"><td style="padding:0;Margin:0;background-color:#f2f2f2;border-radius:0 0 12px 12px">
-<a target="_blank" href="${projectUrl}" style="display:block;padding:10px 0;text-decoration:none;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:13px;color:#1b3a1d">${viewProjectLabel} →</a>
+<tr align="center"><td style="padding:0;Margin:0;background-color:#000000;border-radius:0 0 12px 12px">
+<a target="_blank" href="${projectUrl}" style="display:block;padding:10px 0;text-decoration:none;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:13px;color:#ffffff">${viewProjectLabel} →</a>
 </td></tr>
 </tbody>
 </table>`;
@@ -171,7 +168,6 @@ const AUTOREPLY_COPY = {
     project: 'Projet',
     message: 'Message',
     viewProject: 'Voir le projet',
-    signature: 'Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)',
   },
   en: {
     subject: 'Your message has been sent — Tibz Design',
@@ -181,7 +177,6 @@ const AUTOREPLY_COPY = {
     project: 'Project',
     message: 'Message',
     viewProject: 'View project',
-    signature: 'May this creation spark your inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)',
   },
 };
 
@@ -219,7 +214,6 @@ ${fieldRow(copy.message, escapeHtml(message).replace(/\n/g, '<br>'))}
 <table cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
 <tbody><tr><td align="left" style="padding:0 20px 20px;Margin:0">
 ${consoleGifHtml(lang, copy.viewProject)}
-<p align="center" style="Margin:20px 0 0;font-family:lato,'helvetica neue',helvetica,arial,sans-serif;font-size:13px;color:#999999">${copy.signature}</p>
 </td></tr></tbody>
 </table>
 </td></tr></tbody>
