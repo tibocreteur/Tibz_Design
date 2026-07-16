@@ -61,7 +61,6 @@
     /* ou absolute, etc. */
     background-color: var(--backgroundaccueil);
     height: fit-content;
-    z-index: 100000000;
 }
 
 .regattaaffiche {
