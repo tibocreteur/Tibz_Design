@@ -1,0 +1,13 @@
+.tibz-info__hero-title .split-char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(40px);
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    will-change: opacity, transform;
+}
+
+.tibz-info__hero-title.split-in-view .split-char {
+    opacity: 1;
+    transform: translateY(0);
+}

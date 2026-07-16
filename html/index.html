@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/carousel.css">
     <link rel="stylesheet" href="../docs/public/css/outils/faq.css">
     <link rel="stylesheet" href="../docs/public/css/outils/information.css">
+    <link rel="stylesheet" href="../docs/public/css/outils/splittext.css">
 
 
     <!-- Précharger les images -->
@@ -125,11 +126,11 @@
 
         <p class="tibz-info__tag">{{apropos}}</p>
 
-        <div class="tibz-info__hero" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
+        <div class="tibz-info__hero">
             <h2 class="tibz-info__hero-title">
                 {{herotitle}}
             </h2>
-            <p class="tibz-info__hero-desc">
+            <p class="tibz-info__hero-desc" data-aos="fade-up" data-aos-duration="400" data-aos-anchor-placement="top-bottom">
                 {{herodesc}}
             </p>
         </div>
@@ -666,6 +667,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="../docs/public/js/splittext.js"></script>
     <script src="../docs/public/js/transition.js"></script>
     <script src="../docs/public/js/animationnavbar.js"></script>
 
