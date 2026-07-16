@@ -110,29 +110,32 @@
                 <img class="logocontact" src="./../public/image/logo/logon.png" style="display: none;"
                     alt="logo du site">
                 <h1 class="contact-title">Contact</h1>
-                <form action="https://formsubmit.co/tibzdesign@gmail.com" method="POST">
-                    <input id="casedemig" name="Nom" type="Name" placeholder="Nom" required
+                <p id="contact-success" class="contact-success" style="display:none;">Merci ! Votre message a bien été envoyé, je vous répondrai rapidement.</p>
+                <form id="contact-form" action="/api/contact" method="POST">
+                    <input id="casedemig" name="lastname" type="text" placeholder="Nom" required
                         class="contact-input" />
-                    <input id="casedemid" name="Prénom" type="firstname" placeholder="Prénom" required
+                    <input id="casedemid" name="firstname" type="text" placeholder="Prénom" required
                         class="contact-input" />
                     <input name="email" type="email" placeholder="Email" required class="contact-input"
                         autocomplete="family-name" />
-                    <input name="Projet" type="text" placeholder="Projet" class="contact-input"
+                    <input name="project" type="text" placeholder="Projet" class="contact-input"
                         autocomplete="given-name" />
                     <textarea name="message" rows="5" placeholder="Parle-moi de ton idée..." required
                         class="contact-textarea"></textarea>
 
-                    <!-- Personnalisation du mail -->
-                    <input type="hidden" name="_subject" value="Demande client !">
-                    <input type="hidden" name="Source" value="Formulaire tibz design">
-
-                    <!-- Redirection après envoi -->
+                    <input type="hidden" name="_lang" value="fr">
 
                     <button type="submit" class="contact-button">Envoyer<i
                             class="fa-solid fa-paper-plane"></i></button>
 
                 </form>
                 <p class="mentioncontact">En envoyant ce formulaire, j’accepte que mes données soient utilisées dans le cadre de cette prise de contact.</p>
+                <script>
+                    if (new URLSearchParams(location.search).get('sent') === 'true') {
+                        document.getElementById('contact-form').style.display = 'none';
+                        document.getElementById('contact-success').style.display = 'block';
+                    }
+                </script>
             </div>
         </section>
         <footer class="footerprojects" style="position: absolute; bottom: 0px;">

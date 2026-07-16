@@ -16,3 +16,8 @@
 
 # Intellij
 .idea/*
+
+# Node / secrets
+node_modules/
+.env
+.env.local

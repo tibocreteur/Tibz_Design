@@ -110,29 +110,32 @@
                 <img class="logocontact" src="../docs/public/image/logo/logon.png" style="display: none;"
                     alt="logo du site">
                 <h1 class="contact-title">{{contactme}}</h1>
-                <form action="https://formsubmit.co/tibzdesign@gmail.com" method="POST">
-                    <input id="casedemig" name="{{name}}" type="Name" placeholder="{{name}}" required
+                <p id="contact-success" class="contact-success" style="display:none;">{{sentok}}</p>
+                <form id="contact-form" action="/api/contact" method="POST">
+                    <input id="casedemig" name="lastname" type="text" placeholder="{{name}}" required
                         class="contact-input" />
-                    <input id="casedemid" name="{{firstname}}" type="firstname" placeholder="{{firstname}}" required
+                    <input id="casedemid" name="firstname" type="text" placeholder="{{firstname}}" required
                         class="contact-input" />
                     <input name="email" type="email" placeholder="Email" required class="contact-input"
                         autocomplete="family-name" />
-                    <input name="{{project}}" type="text" placeholder="{{project}}" class="contact-input"
+                    <input name="project" type="text" placeholder="{{project}}" class="contact-input"
                         autocomplete="given-name" />
                     <textarea name="message" rows="5" placeholder="{{textcontact}}" required
                         class="contact-textarea"></textarea>
 
-                    <!-- Personnalisation du mail -->
-                    <input type="hidden" name="_subject" value="Demande client !">
-                    <input type="hidden" name="Source" value="Formulaire {{nomboite}}">
-
-                    <!-- Redirection après envoi -->
+                    <input type="hidden" name="_lang" value="{{curentlangue}}">
 
                     <button type="submit" class="contact-button">{{send}}<i
                             class="fa-solid fa-paper-plane"></i></button>
 
                 </form>
                 <p class="mentioncontact">{{mentionenvoi}}</p>
+                <script>
+                    if (new URLSearchParams(location.search).get('sent') === 'true') {
+                        document.getElementById('contact-form').style.display = 'none';
+                        document.getElementById('contact-success').style.display = 'block';
+                    }
+                </script>
             </div>
         </section>
         <footer class="footerprojects" style="position: absolute; bottom: 0px;">
