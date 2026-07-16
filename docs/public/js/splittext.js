@@ -43,6 +43,6 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        initSplitText('.tibz-info__hero-title, .project-header-left h1, .nameproject h1', { stagger: 25, duration: 0.7 });
+        initSplitText('.tibz-info__hero-title, .project-header-left h1, .nameproject h1, .titredelexplication', { stagger: 25, duration: 0.7 });
     });
 })();
