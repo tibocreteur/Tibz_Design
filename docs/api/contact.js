@@ -29,7 +29,7 @@ const CONSOLE_LABEL = 'Console';
 const NTFY_TOPIC = 'tibzdesign-contact-k7m3qx91';
 
 function sendNtfyNotification({ lastname, firstname, email, message }) {
-  const preview = `${lastname} ${firstname}\n${email}\n${message}`.trim().slice(0, 300);
+  const preview = `${firstname} ${lastname}\n${message}`.trim().slice(0, 300);
   const payload = JSON.stringify({
     topic: NTFY_TOPIC,
     title: '📩 Nouvelle demande',
