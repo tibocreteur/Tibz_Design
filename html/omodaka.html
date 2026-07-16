@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="../docs/public/css/outils/latestprojects.css">
     <link rel="stylesheet" href="../docs/public/css/outils/transition.css">
+    <link rel="stylesheet" href="../docs/public/css/pages/headerproject.css">
     <link rel="stylesheet" href="../docs/public/css/outils/splittext.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWRPCHMJER"></script>
@@ -74,20 +75,42 @@
         <span>{{erreurun}}</span>
         <span>{{erreurdeux}}</span>
     </section>
-    <section class="top-page">
-        <section class="headeromodaka" id="scroll-image">
-            <img data-aos="zoom-in" data-aos-duration="900" class="logoomodaka"
-                src="../docs/public/image/omodaka/logo.png" alt="Image 1" class="logoomodaka">
-            <script src="../docs/public/js/animation.js"></script>
-        </section>
-        <div class="basdetoppage">
-            <a class="flechedubas" onclick="document.getElementById('section').scrollIntoView({behavior:'smooth'});">
-                <div class="double-arrow"></div>
-                <div class="double-arrow2"></div>
-            </a>
+    <section class="top-pagedeux">
+        <div class="project-header">
+            <div class="project-header-content">
+                <div class="project-header-left">
+                    <h1>Omodaka</h1>
+                    <p>{{presentationomodaka}}</p>
+                </div>
+                <div class="project-header-right">
+                    <div class="project-info-item">
+                        <span class="project-info-label">CLIENT</span>
+                        <span class="project-info-value">-</span>
+                    </div>
+                    <div class="project-info-item">
+                        <span class="project-info-label">{{year}}</span>
+                        <span class="project-info-value" style="text-decoration: underline var(--soulignage) 2px; text-underline-offset: 5px;">2025</span>
+                    </div>
+                    <div class="project-info-item">
+                        <span class="project-info-label">{{category}}</span>
+                        <span class="project-info-value">Branding</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="../docs/public/js/fleche.js"></script>
+        <div class="project-image-container">
+            <img id="scroll-image" data-aos="zoom-in" data-aos-duration="900"
+                src="../docs/public/image/omodaka/logo.png" alt="Omodaka" class="project-images">
+            <script src="../docs/public/js/animation.js"></script>
+        </div>
     </section>
+    <div class="basdetoppage">
+        <a class="flechedubas" onclick="document.getElementById('section').scrollIntoView({behavior:'smooth'});">
+            <div class="double-arrow"></div>
+            <div class="double-arrow2"></div>
+        </a>
+    </div>
+    <script src="../docs/public/js/fleche.js"></script>
     <section class="containproject">
         <section id="section" class="citation">
             <blockquote id="quote">{{citationomodaka}}</blockquote>

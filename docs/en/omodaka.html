@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./../public/css/outils/burgermenu.css">
     <link rel="stylesheet" href="./../public/css/outils/latestprojects.css">
     <link rel="stylesheet" href="./../public/css/outils/transition.css">
+    <link rel="stylesheet" href="./../public/css/pages/headerproject.css">
     <link rel="stylesheet" href="./../public/css/outils/splittext.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWRPCHMJER"></script>
@@ -74,20 +75,42 @@
         <span>This website is not yet available on mobile.</span>
         <span>I invite you to return from a computer for a better experience.</span>
     </section>
-    <section class="top-page">
-        <section class="headeromodaka" id="scroll-image">
-            <img data-aos="zoom-in" data-aos-duration="900" class="logoomodaka"
-                src="./../public/image/omodaka/logo.png" alt="Image 1" class="logoomodaka">
-            <script src="./../public/js/animation.js"></script>
-        </section>
-        <div class="basdetoppage">
-            <a class="flechedubas" onclick="document.getElementById('section').scrollIntoView({behavior:'smooth'});">
-                <div class="double-arrow"></div>
-                <div class="double-arrow2"></div>
-            </a>
+    <section class="top-pagedeux">
+        <div class="project-header">
+            <div class="project-header-content">
+                <div class="project-header-left">
+                    <h1>Omodaka</h1>
+                    <p><strong>Omodaka</strong> is a project I created to bring <strong>serenity</strong> and <strong>tranquility</strong> to those seeking refuge from the chaos of everyday life. My approach is based on the belief that <strong>calmness</strong> is essential to <strong>mental and emotional well-being</strong>.<br><br>The word <strong>Omodaka</strong> comes from <strong>Japanese (オモダカ)</strong>, where it refers to <strong>a water plant</strong> known as 'arrowhead' (Sagittaria trifolia in Latin). This plant, often found in <strong>peaceful environments</strong> like ponds and rivers, symbolizes <strong>tranquility</strong> and the <strong>purity of nature</strong>. The <strong>Omodaka</strong> project <strong>draws inspiration from landscapes around the world</strong>, capturing the essence of different places through unique fragrances.<br><br>Each scent reflects the atmosphere and emotions evoked by these regions, offering <strong>an immersive sensory experience</strong>. At <strong>Omodaka</strong>, each fragrance is created to take you on <strong>a calming and sensory journey</strong>, allowing you to reconnect with yourself and nature through the scent of these inspiring landscapes.</p>
+                </div>
+                <div class="project-header-right">
+                    <div class="project-info-item">
+                        <span class="project-info-label">CLIENT</span>
+                        <span class="project-info-value">-</span>
+                    </div>
+                    <div class="project-info-item">
+                        <span class="project-info-label">Year</span>
+                        <span class="project-info-value" style="text-decoration: underline var(--soulignage) 2px; text-underline-offset: 5px;">2025</span>
+                    </div>
+                    <div class="project-info-item">
+                        <span class="project-info-label">Category</span>
+                        <span class="project-info-value">Branding</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="./../public/js/fleche.js"></script>
+        <div class="project-image-container">
+            <img id="scroll-image" data-aos="zoom-in" data-aos-duration="900"
+                src="./../public/image/omodaka/logo.png" alt="Omodaka" class="project-images">
+            <script src="./../public/js/animation.js"></script>
+        </div>
     </section>
+    <div class="basdetoppage">
+        <a class="flechedubas" onclick="document.getElementById('section').scrollIntoView({behavior:'smooth'});">
+            <div class="double-arrow"></div>
+            <div class="double-arrow2"></div>
+        </a>
+    </div>
+    <script src="./../public/js/fleche.js"></script>
     <section class="containproject">
         <section id="section" class="citation">
             <blockquote id="quote">"A journey of a thousand miles begins with a single step." — Lao Tzu</blockquote>
