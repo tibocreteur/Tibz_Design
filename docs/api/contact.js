@@ -51,7 +51,11 @@ a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !im
 @media only screen and (max-width:600px) {
   .es-content, .es-header, .es-footer { width: 100% !important; }
   .adapt-img { width: 100% !important; height: auto !important; }
+  .logo-img { width: 56px !important; }
 }
+.eye { display:inline-block; }
+@keyframes blink { 0%, 90% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+.eye { animation: blink 7s infinite; }
 ${extraCss || ''}
 </style>
 </head>
@@ -69,7 +73,7 @@ ${extraCss || ''}
 <!--[if mso]><table style="width:530px" cellpadding="0" cellspacing="0"><tr><td style="width:255px" valign="top"><![endif]-->
 <table cellpadding="0" cellspacing="0" align="left" role="none" style="border-spacing:0px;float:left">
 <tbody><tr><td align="left" style="padding:0;Margin:0;width:255px">
-<img alt="Tibz Design" width="80" src="${LOGO_URL}" class="adapt-img" style="display:block;border:0;outline:none;text-decoration:none;margin:0">
+<img alt="Tibz Design" width="80" src="${LOGO_URL}" class="logo-img" style="display:block;width:80px;border:0;outline:none;text-decoration:none;margin:0">
 </td></tr></tbody>
 </table>
 <!--[if mso]></td><td style="width:20px"></td><td style="width:255px" valign="top"><![endif]-->
@@ -141,15 +145,20 @@ function fieldRow(label, value) {
 </td></tr>`;
 }
 
-function consoleGifHtml(lang) {
+function consoleGifHtml(lang, viewProjectLabel) {
   const projectUrl = `https://www.tibzdesign.fr/${lang}/${CONSOLE_SLUG}`;
   return `
 <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="border-spacing:0px">
-<tbody><tr align="center"><td style="padding:0;Margin:0">
+<tbody>
+<tr align="center"><td style="padding:0;Margin:0">
 <a target="_blank" href="${projectUrl}" style="text-decoration:none">
-<img src="${CONSOLE_GIF_URL}" alt="${CONSOLE_LABEL}" width="540" class="adapt-img" style="display:block;width:100%;max-width:540px;height:auto;border:0;outline:none;text-decoration:none;margin:0;border-radius:12px">
+<img src="${CONSOLE_GIF_URL}" alt="${CONSOLE_LABEL}" width="540" class="adapt-img" style="display:block;width:100%;max-width:540px;height:auto;border:0;outline:none;text-decoration:none;margin:0;border-radius:12px 12px 0 0">
 </a>
-</td></tr></tbody>
+</td></tr>
+<tr align="center"><td style="padding:0;Margin:0;background-color:#f2f2f2;border-radius:0 0 12px 12px">
+<a target="_blank" href="${projectUrl}" style="display:block;padding:10px 0;text-decoration:none;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:13px;color:#1b3a1d">${viewProjectLabel} →</a>
+</td></tr>
+</tbody>
 </table>`;
 }
 
@@ -161,7 +170,8 @@ const AUTOREPLY_COPY = {
     recapTitle: 'Récapitulatif de votre demande',
     project: 'Projet',
     message: 'Message',
-    showcase: "En attendant, un aperçu de mon dernier projet :",
+    viewProject: 'Voir le projet',
+    signature: 'Que cette création éveille votre inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)',
   },
   en: {
     subject: 'Your message has been sent — Tibz Design',
@@ -170,7 +180,8 @@ const AUTOREPLY_COPY = {
     recapTitle: 'Summary of your request',
     project: 'Project',
     message: 'Message',
-    showcase: 'In the meantime, a look at my latest project:',
+    viewProject: 'View project',
+    signature: 'May this creation spark your inspiration. (<span class="eye">•</span> ◡<span class="eye">•</span>)',
   },
 };
 
@@ -201,14 +212,14 @@ ${fieldRow(copy.project, escapeHtml(project))}
 ${fieldRow(copy.message, escapeHtml(message).replace(/\n/g, '<br>'))}
 </tbody>
 </table>
-<p style="Margin:8px 0 0;font-family:arial,'helvetica neue',helvetica,sans-serif;font-size:13px;color:#999999">${copy.showcase}</p>
 `;
   const showcase = `
 <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="border-spacing:0px;width:100%">
 <tbody><tr><td align="center" style="padding:0;Margin:0">
 <table cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" class="es-content-body" role="none" style="border-spacing:0px;background-color:#FFFFFF;width:580px">
 <tbody><tr><td align="left" style="padding:0 20px 20px;Margin:0">
-${consoleGifHtml(lang)}
+${consoleGifHtml(lang, copy.viewProject)}
+<p align="center" style="Margin:20px 0 0;font-family:lato,'helvetica neue',helvetica,arial,sans-serif;font-size:13px;color:#999999">${copy.signature}</p>
 </td></tr></tbody>
 </table>
 </td></tr></tbody>
