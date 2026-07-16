@@ -25,6 +25,24 @@ const CONSOLE_GIF_URL = 'https://www.tibzdesign.fr/public/video/console_1-email.
 const CONSOLE_SLUG = 'console';
 const CONSOLE_LABEL = 'Console';
 
+const NTFY_TOPIC = 'tibzdesign-contact-k7m3qx91';
+
+async function sendNtfyNotification({ lastname, firstname, email, project, message }) {
+  const preview = `${email}${project ? ' — ' + project : ''}\n${message}`.slice(0, 300);
+  await fetch('https://ntfy.sh/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      topic: NTFY_TOPIC,
+      title: `Nouvelle demande — ${firstname} ${lastname}`.trim(),
+      message: preview,
+      tags: ['envelope'],
+      priority: 4,
+      click: `mailto:${email}`,
+    }),
+  });
+}
+
 function readBody(req) {
   return new Promise((resolve, reject) => {
     let data = '';
@@ -277,6 +295,12 @@ module.exports = async function handler(req, res) {
     console.error('Resend contact email failed:', err);
     res.status(500).send('Failed to send message');
     return;
+  }
+
+  try {
+    await sendNtfyNotification(fields);
+  } catch (err) {
+    console.error('ntfy notification failed:', err);
   }
 
   try {
