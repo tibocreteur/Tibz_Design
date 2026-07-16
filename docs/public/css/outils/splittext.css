@@ -1,4 +1,4 @@
-.tibz-info__hero-title .split-char {
+.split-char {
     display: inline-block;
     opacity: 0;
     transform: translateY(40px);
@@ -7,7 +7,7 @@
     will-change: opacity, transform;
 }
 
-.tibz-info__hero-title.split-in-view .split-char {
+.split-in-view .split-char {
     opacity: 1;
     transform: translateY(0);
 }
