@@ -128,7 +128,7 @@ ${extraCss || ''}
 </style>
 </head>
 <body style="width:100%;height:100%;font-family:arial,'helvetica neue',helvetica,sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0">
-${preheader ? `<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${escapeHtml(preheader)}${'&zwnj;&nbsp;'.repeat(40)}</div>` : ''}
+${preheader ? `<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">${escapeHtml(preheader)}${'&zwnj;&nbsp;'.repeat(150)}</div>` : ''}
 <div dir="ltr" lang="fr" class="es-wrapper" style="background-color:#F6F6F6">
 <table width="100%" cellspacing="0" cellpadding="0" role="none" class="es-wrapper" style="border-spacing:0px;padding:0;Margin:0;width:100%">
 <tbody>
@@ -233,20 +233,20 @@ function consoleGifHtml(lang, viewSiteLabel) {
 
 const AUTOREPLY_COPY = {
   fr: {
-    subject: 'Votre message a bien été envoyé — Tibz Design',
+    subject: 'Votre message a bien été envoyé',
     heading: (firstname) => `Merci${firstname ? `, ${firstname}` : ''} !`,
     body: 'Votre message a bien été envoyé, je vous répondrai rapidement.',
-    preheader: (firstname) => `Merci${firstname ? ` ${firstname}` : ''}, votre message est bien parti — je vous réponds rapidement.`,
+    preheader: (firstname) => `Merci${firstname ? ` ${firstname}` : ''}, votre message est bien parti. Je vous réponds rapidement.`,
     recapTitle: 'Récapitulatif de votre demande',
     project: 'Projet',
     message: 'Message',
     viewSite: 'Voir mon site',
   },
   en: {
-    subject: 'Your message has been sent — Tibz Design',
+    subject: 'Your message has been sent',
     heading: (firstname) => `Thank you${firstname ? `, ${firstname}` : ''}!`,
     body: "Your message has been sent, I'll get back to you shortly.",
-    preheader: (firstname) => `Thanks${firstname ? ` ${firstname}` : ''}, your message is on its way — I'll get back to you shortly.`,
+    preheader: (firstname) => `Thanks${firstname ? ` ${firstname}` : ''}, your message is on its way. I'll get back to you shortly.`,
     recapTitle: 'Summary of your request',
     project: 'Project',
     message: 'Message',
@@ -266,7 +266,7 @@ ${fieldRow('Projet', escapeHtml(project))}
 ${fieldRow('Message', escapeHtml(message).replace(/\n/g, '<br>'))}
 </tbody>
 </table>`;
-  const preheader = `${firstname} ${lastname} — ${message}`.trim().slice(0, 130);
+  const preheader = `${firstname} ${lastname}: ${message}`.trim().slice(0, 130);
   return emailDocument(contentTable(inner), null, preheader);
 }
 
@@ -325,7 +325,7 @@ module.exports = async function handler(req, res) {
       from: process.env.RESEND_FROM,
       to: process.env.CONTACT_TO || 'tibzdesign@gmail.com',
       replyTo: email,
-      subject: `Nouvelle demande — ${firstname} ${lastname}`.trim(),
+      subject: `Nouvelle demande de ${firstname} ${lastname}`.trim(),
       html: notificationHtml(fields),
     });
   } catch (err) {
