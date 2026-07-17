@@ -161,6 +161,13 @@
 
 @media (max-width: 768px) {
 
+    .top-page:has(.contactsection) {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
     .contactsection {
         background: var(--backgroundaccueil);
         margin: 0;
