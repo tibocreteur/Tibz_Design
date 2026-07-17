@@ -191,7 +191,7 @@
     }
 
     .top-page:has(.contactsection) .socialfooter {
-        order: 1 !important;
+        order: 3 !important;
     }
 
     .top-page:has(.contactsection) .textfooterd {
@@ -199,7 +199,7 @@
     }
 
     .top-page:has(.contactsection) .textfooterg {
-        order: 3 !important;
+        order: 1 !important;
     }
 
     .top-page:has(.contactsection) .footerprojects {
