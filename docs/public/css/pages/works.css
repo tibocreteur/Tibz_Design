@@ -327,7 +327,8 @@ video {
     background-position: center;
 }
 
-.vimeo-container iframe {
+.vimeo-container iframe,
+.vimeo-container .vimeo-player-slot {
     position: absolute;
     top: 0;
     left: 0;

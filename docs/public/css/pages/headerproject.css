@@ -131,14 +131,15 @@
     -ms-user-select: none;
 }
 
-.project-video-wrapper iframe {
+.project-video-wrapper iframe,
+.project-video-wrapper .vimeo-player-slot {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: none;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 /* Si tu veux quand même garder les bords arrondis */
