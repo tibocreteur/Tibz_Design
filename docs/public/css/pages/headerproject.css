@@ -154,7 +154,7 @@
 /* Responsive */
 @media (max-width: 968px) {
     .project-header {
-        padding: 4rem var(--espacecote) 2rem;
+        padding: 4.5rem var(--espacecote) 2rem;
     }
 
     .project-header-content {
@@ -187,7 +187,7 @@
 
 @media (max-width: 640px) {
     .project-header {
-        padding: 3rem 1.5rem 1.5rem;
+        padding: 4.5rem 1.5rem 1.5rem;
     }
 
     .project-header-left h1 {
