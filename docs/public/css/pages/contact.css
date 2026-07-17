@@ -190,6 +190,18 @@
         padding-bottom: 0.5rem !important;
     }
 
+    .top-page:has(.contactsection) .socialfooter {
+        order: 1 !important;
+    }
+
+    .top-page:has(.contactsection) .textfooterd {
+        order: 2 !important;
+    }
+
+    .top-page:has(.contactsection) .textfooterg {
+        order: 3 !important;
+    }
+
     .top-page:has(.contactsection) .footerprojects {
         padding-block: 0.5rem !important;
     }
