@@ -274,7 +274,7 @@ section.latestprojectstitre {
         /* Permet aux panneaux de s'enrouler si l'espace est insuffisant */
         align-items: center;
         flex-shrink: 2;
-        gap: 2rem;
+        gap: var(--gapimage);
 
     }
 
