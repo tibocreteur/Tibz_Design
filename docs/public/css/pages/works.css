@@ -351,12 +351,10 @@ video {
     border-radius: 8px;
 }
 
-/* Adaptation mobile pour Vimeo */
-@media (max-width: 768px) {
-    .vimeo-container {
-        padding-bottom: 75%; /* Ratio plus adapté au mobile si besoin */
-    }
-}
+/* Les vidéos sources sont en 16:9 (640x360) -- garder le même ratio
+   que le desktop sur mobile, sinon Vimeo pillarbox/letterbox la vidéo
+   dans une boîte 4:3 et le poster (background-image, cover) reste
+   visible autour d'une vidéo plus petite que son cadre. */
 
 @media (max-width: 768px) {
 
