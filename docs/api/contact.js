@@ -70,9 +70,9 @@ function sendNtfyNotification({ lastname, firstname, email, message }) {
 
 function readBody(req) {
   return new Promise((resolve, reject) => {
-    let data = '';
-    req.on('data', (chunk) => { data += chunk; });
-    req.on('end', () => resolve(data));
+    const chunks = [];
+    req.on('data', (chunk) => { chunks.push(chunk); });
+    req.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
     req.on('error', reject);
   });
 }
