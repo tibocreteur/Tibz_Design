@@ -129,6 +129,11 @@
     max-height: 200px;
 }
 
+.contact-captcha {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
 .contact-input:focus,
 .contact-textarea:focus {
     border-color: var(--vertmarque);
@@ -261,6 +266,10 @@
     .contact-textarea {
         min-height: 55px;
         max-height: 55px;
+    }
+
+    .contact-captcha {
+        margin-bottom: 8px;
     }
 
     .contact-input:focus,

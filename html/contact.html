@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="../docs/public/css/outils/aos.css">
     <link rel="stylesheet" href="../docs/public/css/pages/index.css">
     <link rel="stylesheet" href="../docs/public/css/outils/transition.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWRPCHMJER"></script>
     <script>
@@ -123,6 +124,9 @@
                         autocomplete="given-name" />
                     <textarea name="message" rows="5" placeholder="{{textcontact}}" required
                         class="contact-textarea"></textarea>
+
+                    <div class="cf-turnstile contact-captcha" data-sitekey="{{turnstilesitekey}}"
+                        data-theme="light" data-size="flexible"></div>
 
                     <input type="hidden" name="_lang" value="{{curentlangue}}">
 

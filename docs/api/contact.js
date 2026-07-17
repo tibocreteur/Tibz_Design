@@ -68,6 +68,44 @@ function sendNtfyNotification({ lastname, firstname, email, message }) {
   });
 }
 
+function verifyTurnstile(token, remoteip) {
+  return new Promise((resolve, reject) => {
+    if (!token) { resolve(false); return; }
+
+    const payload = new URLSearchParams({
+      secret: process.env.TURNSTILE_SECRET_KEY || '',
+      response: token,
+      remoteip: remoteip || '',
+    }).toString();
+
+    const req = https.request(
+      'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Length': Buffer.byteLength(payload),
+        },
+      },
+      (res) => {
+        const chunks = [];
+        res.on('data', (chunk) => { chunks.push(chunk); });
+        res.on('end', () => {
+          try {
+            const data = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+            resolve(!!data.success);
+          } catch (err) {
+            reject(err);
+          }
+        });
+      }
+    );
+    req.on('error', reject);
+    req.write(payload);
+    req.end();
+  });
+}
+
 function readBody(req) {
   return new Promise((resolve, reject) => {
     const chunks = [];
@@ -342,6 +380,25 @@ module.exports = async function handler(req, res) {
   if (!email || !message) {
     res.status(400).send('Missing required fields');
     return;
+  }
+
+  if (!process.env.TURNSTILE_SECRET_KEY) {
+    console.warn('TURNSTILE_SECRET_KEY is not set -- skipping captcha verification.');
+  } else {
+    const turnstileToken = params.get('cf-turnstile-response') || '';
+    const clientIp = (req.headers['x-forwarded-for'] || '').split(',')[0].trim();
+
+    let captchaOk = false;
+    try {
+      captchaOk = await verifyTurnstile(turnstileToken, clientIp);
+    } catch (err) {
+      console.error('Turnstile verification request failed:', err);
+    }
+
+    if (!captchaOk) {
+      res.status(400).send('Captcha verification failed');
+      return;
+    }
   }
 
   const fields = {
