@@ -153,6 +153,38 @@
     animation: fadeIn 0.4s ease;
 }
 
+@media (max-width: 600px) {
+    .faq-container {
+        padding-bottom: 3rem;
+    }
+
+    .faq-question {
+        padding: 14px 14px 14px 20px;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: none;
+        line-height: 1.35;
+    }
+
+    .faq-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .faq-icon::before {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    .faq-answer-content {
+        padding: 0px 20px 20px 20px;
+        font-size: 0.9rem;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
