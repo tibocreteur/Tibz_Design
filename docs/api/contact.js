@@ -26,7 +26,7 @@ const CONSOLE_GIF_URL = 'https://www.tibzdesign.fr/public/video/console_1-email.
 const CONSOLE_SLUG = 'console';
 const CONSOLE_LABEL = 'Console';
 
-const CHECK_ICON = '<img src="https://www.tibzdesign.fr/public/image/icons/check-circle.png" width="24" height="24" alt="" style="display:inline-block;vertical-align:middle;margin-left:8px;border:0;outline:none;text-decoration:none">';
+const CHECK_ICON = '<img src="https://www.tibzdesign.fr/public/image/icons/check-circle.png" width="24" height="24" alt="" style="display:block;border:0;outline:none;text-decoration:none">';
 
 const NTFY_TOPIC = 'tibzdesign-contact-k7m3qx91';
 
@@ -253,7 +253,7 @@ function consoleGifHtml(lang, viewSiteLabel) {
 const AUTOREPLY_COPY = {
   fr: {
     subject: 'Votre message a bien été envoyé ✔️',
-    heading: (firstname) => `Merci${firstname ? `, ${firstname}` : ''} !${CHECK_ICON}`,
+    heading: (firstname) => `Merci${firstname ? `, ${firstname}` : ''} !`,
     body: 'Votre message a bien été envoyé, je vous répondrai rapidement.',
     preheader: (firstname) => `Merci${firstname ? ` ${firstname}` : ''}, votre message est bien parti. Je vous réponds rapidement.`,
     recapTitle: 'Récapitulatif de votre demande',
@@ -263,7 +263,7 @@ const AUTOREPLY_COPY = {
   },
   en: {
     subject: 'Your message has been sent ✔️',
-    heading: (firstname) => `Thank you${firstname ? `, ${firstname}` : ''}!${CHECK_ICON}`,
+    heading: (firstname) => `Thank you${firstname ? `, ${firstname}` : ''}!`,
     body: "Your message has been sent, I'll get back to you shortly.",
     preheader: (firstname) => `Thanks${firstname ? ` ${firstname}` : ''}, your message is on its way. I'll get back to you shortly.`,
     recapTitle: 'Summary of your request',
@@ -294,7 +294,12 @@ ${fieldRow('Système', escapeHtml(os))}
 function autoReplyHtml({ firstname, project, message }, lang) {
   const copy = AUTOREPLY_COPY[lang];
   const inner = `
-<h2 style="Margin:0;font-family:lato,'helvetica neue',helvetica,arial,sans-serif;font-size:32px;line-height:38px;font-weight:normal;color:#333333">${copy.heading(escapeHtml(firstname))}</h2>
+<table cellspacing="0" cellpadding="0" role="presentation" style="border-spacing:0px">
+<tbody><tr>
+<td style="padding:0;Margin:0;vertical-align:middle"><h2 style="Margin:0;font-family:lato,'helvetica neue',helvetica,arial,sans-serif;font-size:32px;line-height:38px;font-weight:normal;color:#333333">${copy.heading(escapeHtml(firstname))}</h2></td>
+<td style="padding:0 0 0 8px;Margin:0;vertical-align:middle">${CHECK_ICON}</td>
+</tr></tbody>
+</table>
 <p style="Margin:12px 0 24px;font-family:lato,'helvetica neue',helvetica,arial,sans-serif;font-size:14px;line-height:21px;color:#333333">${copy.body}</p>
 <table width="100%" cellspacing="0" cellpadding="0" role="none" style="border-spacing:0px;border-top:1px solid #eeeeee;padding-top:16px">
 <tbody>
