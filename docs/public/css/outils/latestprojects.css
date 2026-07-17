@@ -257,6 +257,10 @@ section.latestprojectstitre {
 
 @media (max-width: 768px) {
 
+    .latestprojectstitre {
+        padding: 2rem var(--espacecote);
+    }
+
     .infoprojets H1 {
         font-size: 2.5rem;
         padding: 0;
