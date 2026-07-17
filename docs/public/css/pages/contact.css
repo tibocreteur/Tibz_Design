@@ -169,12 +169,14 @@
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        padding-top: 10rem;
-        height: 85vh;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+        min-height: 100vh;
+        height: auto;
         width: 100%;
         gap: 1rem;
         padding-inline: var(--espacecote);
-        overflow: hidden;
+        overflow: visible;
     }
 
     .coordonnee img {
@@ -281,6 +283,13 @@
     .contact-button:hover {
         background-color: var(--vertmarque);
         color: var(--vertmarquedeux);
+    }
+
+    .footerprojects {
+        position: relative !important;
+        bottom: auto !important;
+        height: auto;
+        padding-block: 1.5rem;
     }
 }
 
