@@ -343,8 +343,8 @@ section.latestprojectstitre {
     }
 
     .infoprojets {
-        bottom: 15px;
-        left: 20px;
+        bottom: 0px;
+        left: 0px;
         gap: 0px;
     }
 
