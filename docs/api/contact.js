@@ -26,7 +26,7 @@ const CONSOLE_GIF_URL = 'https://www.tibzdesign.fr/public/video/console_1-email.
 const CONSOLE_SLUG = 'console';
 const CONSOLE_LABEL = 'Console';
 
-const CHECK_ICON = '<img src="https://www.tibzdesign.fr/public/image/icons/check-circle.png" width="22" height="22" alt="" style="display:inline-block;vertical-align:middle;margin-left:6px;border:0;outline:none;text-decoration:none">';
+const CHECK_ICON = '<img src="https://www.tibzdesign.fr/public/image/icons/check-circle.png" width="30" height="30" alt="" style="display:inline-block;vertical-align:middle;margin-left:8px;border:0;outline:none;text-decoration:none">';
 
 const NTFY_TOPIC = 'tibzdesign-contact-k7m3qx91';
 
