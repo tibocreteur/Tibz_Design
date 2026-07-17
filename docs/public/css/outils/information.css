@@ -130,6 +130,10 @@
   }
 
   @media (max-width: 600px) {
+      .tibz-info__section {
+          padding: 3rem 0vw 3rem !important;
+      }
+
       .tibz-info__section .tibz-info__hero-desc {
           flex: 1 1 100% !important;
           padding: 0 var(--espacecote) !important;
