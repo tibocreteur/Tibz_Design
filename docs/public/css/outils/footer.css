@@ -166,16 +166,25 @@
   }
 
   .footerlignetext {
-    gap: 1rem;
+    gap: 0.4rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .socialfooter {
     order: -1;
+  }
+
+  .socialfooter img {
+    width: 18px;
+  }
+
+  .textfooterg,
+  .textfooterd {
+    font-size: 0.75rem;
   }
 
   .textfooterg {

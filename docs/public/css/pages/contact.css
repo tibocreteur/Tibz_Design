@@ -187,36 +187,6 @@
         overflow: hidden;
     }
 
-    .top-page:has(.contactsection) .footerlignetext {
-        gap: 0.4rem !important;
-        padding-bottom: 0.5rem !important;
-    }
-
-    .top-page:has(.contactsection) .socialfooter {
-        order: 1 !important;
-    }
-
-    .top-page:has(.contactsection) .textfooterd {
-        order: 2 !important;
-    }
-
-    .top-page:has(.contactsection) .textfooterg {
-        order: 3 !important;
-    }
-
-    .top-page:has(.contactsection) .footerprojects {
-        padding-block: 0.5rem !important;
-    }
-
-    .top-page:has(.contactsection) .socialfooter img {
-        width: 18px !important;
-    }
-
-    .top-page:has(.contactsection) .textfooterg,
-    .top-page:has(.contactsection) .textfooterd {
-        font-size: 0.75rem !important;
-    }
-
     .coordonnee img {
         display: none;
     }
