@@ -176,14 +176,31 @@
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        padding-top: 6rem;
-        padding-bottom: 3rem;
-        min-height: 100vh;
+        padding-top: 4.5rem;
+        padding-bottom: 0.5rem;
         height: auto;
         width: 100%;
-        gap: 1rem;
+        gap: 0.5rem;
         padding-inline: var(--espacecote);
         overflow: visible;
+    }
+
+    .top-page:has(.contactsection) .footerlignetext {
+        gap: 0.4rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    .top-page:has(.contactsection) .footerprojects {
+        padding-block: 0.5rem !important;
+    }
+
+    .top-page:has(.contactsection) .socialfooter img {
+        width: 18px !important;
+    }
+
+    .top-page:has(.contactsection) .textfooterg,
+    .top-page:has(.contactsection) .textfooterd {
+        font-size: 0.75rem !important;
     }
 
     .coordonnee img {
@@ -208,7 +225,7 @@
         margin: 0;
         padding: 0;
         display: flex;
-        gap: 1rem;
+        gap: 0.4rem;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
@@ -233,33 +250,33 @@
 
     .contact-title {
         color: #000000;
-        font-size: 2rem;
+        font-size: 1.4rem;
         text-align: center;
         padding: 0px;
         margin: 0px;
         text-transform: uppercase;
         background-color: var(--vertmarque);
         padding-inline: 0.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .contact-input,
     .contact-textarea {
         font-family: var(--ibm);
         width: 100%;
-        padding: 12px 15px;
-        margin-bottom: 15px;
+        padding: 8px 12px;
+        margin-bottom: 8px;
         background-color: var(--backgroundaccueil);
         border: 1.8px solid #ddd;
         border-radius: 8px;
-        font-size: 1rem;
+        font-size: 0.9rem;
         resize: vertical;
         transition: border-color 0.3s ease;
     }
 
     .contact-textarea {
-        min-height: 100px;
-        max-height: 100px;
+        min-height: 55px;
+        max-height: 55px;
     }
 
     .contact-input:focus,
@@ -275,8 +292,8 @@
         color: grey;
         font-family: var(--ibm);
         border: none;
-        padding: 15px;
-        font-size: 1.1rem;
+        padding: 10px;
+        font-size: 1rem;
         border-radius: var(--anglebouton);
         cursor: pointer;
         font-weight: 600;
