@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tibzdesign-static",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "docs"],
+      "autoPort": true
+    }
+  ]
+}

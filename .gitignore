@@ -21,3 +21,7 @@
 node_modules/
 .env
 .env.local
+
+# Oversized raw exports (>100MB, breaks GitHub pushes) -- keep only the
+# compressed *-email.gif variant actually used by the contact form.
+docs/public/video/console_1.gif
