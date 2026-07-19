@@ -95,11 +95,8 @@
                 <!-- Logo Instagram cliquable -->
                 <!-- Bouton "ME CONTACTER" -->
                 <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
-                <div class="langButton">
-                    <a href="./../fr/index.html" data-lang="fr" class="currentlangnavindex">FR</a>
-                    <a href="./../en/index.html" data-lang="en" class="otherlangnavindex">EN</a>
-                    <a href="./../zh/index.html" data-lang="zh" class="otherlangnavindex">CH</a>
-                </div>
+                <a id="switch-lang" class="langButton" href="./../en/index.html"><span
+                        class="currentlangnavindex">FR</span><span class="otherlangnavindex">EN</span></a>
                 <button class="iconburger" id="burger-toggle">
                     <div class="barreburger"></div>
                     <div class="barreburger"></div>
@@ -657,7 +654,7 @@
                 sound.currentTime = 0;
                 sound.play();
 
-                const btn = document.querySelector('.langButton a[data-lang="en"]');
+                const btn = document.getElementById("switch-lang");
                 btn.classList.add("pulse-anim");
                 setTimeout(() => btn.classList.remove("pulse-anim"), 300);
                 btn.click();

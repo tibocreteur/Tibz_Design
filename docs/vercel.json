@@ -20,18 +20,6 @@
     },
     {
       "source": "/",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept-language",
-          "value": "(?<lang>zh.*)"
-        }
-      ],
-      "destination": "/zh/",
-      "permanent": false
-    },
-    {
-      "source": "/",
       "destination": "/en/",
       "permanent": false
     },
@@ -43,11 +31,6 @@
     {
       "source": "/en",
       "destination": "/en/",
-      "permanent": true
-    },
-    {
-      "source": "/zh",
-      "destination": "/zh/",
       "permanent": true
     }
   ]
