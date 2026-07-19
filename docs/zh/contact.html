@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
@@ -8,19 +8,19 @@
     <link rel="icon" href="./../public/image/logo/petitlogo.png" type="images/x-icon">
     <title>Contact - tibz design</title>
     <meta name="description"
-        content="Studio créatif freelance — motion design, 3D et direction artistique. Des projets sérieux, bien pensés et livrés dans les temps, pour des marques qui veulent un travail qui a vraiment de l'impact.">
+        content="自由创意工作室——动效设计、3D 与艺术指导。为真正看重实效的品牌，提供严谨、用心且准时交付的作品。">
     <meta property="og:site_name" content="Tibz Design">
-    <meta property="og:title" content="tibz design — Motion, 3D & Direction artistique">
+    <meta property="og:title" content="tibz design — 动效设计、3D 与艺术指导">
     <meta property="og:description"
-        content="Studio créatif freelance — motion design, 3D et direction artistique. Des projets sérieux, bien pensés et livrés dans les temps, pour des marques qui veulent un travail qui a vraiment de l'impact.">
+        content="自由创意工作室——动效设计、3D 与艺术指导。为真正看重实效的品牌，提供严谨、用心且准时交付的作品。">
     <meta property="og:image" content="https://www.tibzdesign.fr/_vercel/image?url=%2Fpublic%2Fimage%2Faxion%2Fgrand.jpg&w=1200&q=80">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="675">
     <meta property="og:url" content="https://www.tibzdesign.fr">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="tibz design — Motion, 3D & Direction artistique">
-    <meta name="twitter:description" content="Studio créatif freelance — motion design, 3D et direction artistique. Des projets sérieux, bien pensés et livrés dans les temps, pour des marques qui veulent un travail qui a vraiment de l'impact.">
+    <meta name="twitter:title" content="tibz design — 动效设计、3D 与艺术指导">
+    <meta name="twitter:description" content="自由创意工作室——动效设计、3D 与艺术指导。为真正看重实效的品牌，提供严谨、用心且准时交付的作品。">
     <meta name="twitter:image" content="https://www.tibzdesign.fr/_vercel/image?url=%2Fpublic%2Fimage%2Faxion%2Fgrand.jpg&w=1200&q=80">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,11 +74,11 @@
         <div class="social-contact">
             <!-- Logo Instagram cliquable -->
             <!-- Bouton "ME CONTACTER" -->
-            <a href="contact.html" class="navbar-button underline-hover"><span>Contact</span></a>
+            <a href="contact.html" class="navbar-button underline-hover"><span>联系</span></a>
             <div class="langButton">
-                <a href="./../fr/contact.html" data-lang="fr" class="currentlangnavindex">FR</a>
+                <a href="./../fr/contact.html" data-lang="fr" class="otherlangnavindex">FR</a>
                 <a href="./../en/contact.html" data-lang="en" class="otherlangnavindex">EN</a>
-                <a href="./../zh/contact.html" data-lang="zh" class="otherlangnavindex">CH</a>
+                <a href="./../zh/contact.html" data-lang="zh" class="currentlangnavindex">CH</a>
             </div>
             <button class="iconburger" id="burger-toggle">
                 <div class="barreburger"></div>
@@ -93,8 +93,8 @@
 
     <section class="error">
         <img class="errorlogo" src="./../public/image/logo.png" alt="">
-        <span>Ce site n'est pas encore disponible sur mobile.</span>
-        <span>Je vous invite à revenir depuis un ordinateur pour une meilleure expérience.</span>
+        <span>本网站尚未适配手机端。</span>
+        <span>建议您使用电脑访问，以获得更好的浏览体验。</span>
     </section>
     <section class="top-page">
         <section class="contactsection">
@@ -114,30 +114,30 @@
                 <!-- logo caché tu peu le remettre ;) -->
                 <img class="logocontact" src="./../public/image/logo/logon.png" style="display: none;"
                     alt="logo du site">
-                <h1 class="contact-title">Contact</h1>
-                <p id="contact-success" class="contact-success" style="display:none;">Merci ! Votre message a bien été envoyé, je vous répondrai rapidement.</p>
+                <h1 class="contact-title">联系</h1>
+                <p id="contact-success" class="contact-success" style="display:none;">谢谢！您的留言已成功发送，我会尽快回复您。</p>
                 <form id="contact-form" action="/api/contact" method="POST">
-                    <input id="casedemig" name="lastname" type="text" placeholder="Nom" required
+                    <input id="casedemig" name="lastname" type="text" placeholder="姓氏" required
                         class="contact-input" />
-                    <input id="casedemid" name="firstname" type="text" placeholder="Prénom" required
+                    <input id="casedemid" name="firstname" type="text" placeholder="名字" required
                         class="contact-input" />
                     <input name="email" type="email" placeholder="Email" required class="contact-input"
                         autocomplete="family-name" />
-                    <input name="project" type="text" placeholder="Projet" class="contact-input"
+                    <input name="project" type="text" placeholder="项目" class="contact-input"
                         autocomplete="given-name" />
-                    <textarea name="message" rows="5" placeholder="Parle-moi de ton idée..." required
+                    <textarea name="message" rows="5" placeholder="跟我聊聊你的想法……" required
                         class="contact-textarea"></textarea>
 
                     <div class="cf-turnstile contact-captcha" data-sitekey="0x4AAAAAAD4JVYiSkod3az52"
                         data-theme="light" data-size="flexible"></div>
 
-                    <input type="hidden" name="_lang" value="fr">
+                    <input type="hidden" name="_lang" value="zh">
 
-                    <button type="submit" class="contact-button">Envoyer<i
+                    <button type="submit" class="contact-button">发送<i
                             class="fa-solid fa-paper-plane"></i></button>
 
                 </form>
-                <p class="mentioncontact">En envoyant ce formulaire, j’accepte que mes données soient utilisées dans le cadre de cette prise de contact.</p>
+                <p class="mentioncontact">提交此表单即表示，我同意我的信息将被用于此次联系请求。</p>
                 <script>
                     if (new URLSearchParams(location.search).get('sent') === 'true') {
                         document.getElementById('contact-form').style.display = 'none';
@@ -161,7 +161,7 @@
                             <a href=https://www.behance.net/tibofromtibzdesign target="_blank"><img src="./../public/image/Logo Behance.svg"
                                     alt=""></a>
                         </div>
-                        <p data-key="footer" class="textfooterd">@2025 | © tibz design. Tous droits réservés.</p>
+                        <p data-key="footer" class="textfooterd">@2025 | © tibz design。保留所有权利。</p>
                     </div>
                 </li>
             </ul>
